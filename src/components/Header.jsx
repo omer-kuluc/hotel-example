@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Bell, Key, Menu, X } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 import { gsap } from 'gsap';
 
 const Header = () => {
@@ -38,15 +40,6 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { label: 'The Concierge', href: '#' },
-    { label: "Mendl's Patisserie", href: '#' },
-    { label: 'Society of the Crossed Keys', href: '#' },
-    { label: 'Transport', href: '#' },
-    { label: 'Memoirs', href: '#' },
-
-  ];
-
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
@@ -66,14 +59,39 @@ const Header = () => {
           <p className="header-subtitle">Republic of Zubrowka</p>
         </div>
 
+        {/* // const navItems = [
+  //   { label: 'The Concierge', href: '#' },
+  //   { label: "Mendl's Patisserie", href: '#' },
+  //   { label: 'Society of the Crossed Keys', href: '#' },
+  //   { label: 'Transport', href: '#' },
+  //   { label: 'Memoirs', href: '#' },
+
+  // ]; */}
+
         {/* Desktop Navigation */}
         <nav className="nav-desktop">
-          {navItems.map((item) => (
+          {/* {navItems.map((item) => (
             <a key={item.label} href={item.href} className="nav-item">
               {item.label}
               <span className="underline"></span>
             </a>
-          ))}
+          ))} */}
+          <Link className='nav-item' to="/concierge">The Concierge
+            <span className="underline"></span>
+          </Link>
+          <Link className='nav-item' to="/patisserie">Patisserie
+            <span className="underline"></span>
+          </Link>
+          <Link className='nav-item' to="/society">Society
+            <span className="underline"></span>
+          </Link>
+          <Link className='nav-item' to="/transportation">Transportation</Link>
+          <span className="underline"></span>
+
+          <Link className='nav-item' to="/memoirs">Memoirs
+            <span className="underline"></span>
+          </Link>
+
         </nav>
 
         {/* Mobil Menü Butonu */}
@@ -86,11 +104,27 @@ const Header = () => {
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <Key className="icon-large" size={48} />
-          {navItems.map((item) => (
+          {/* {navItems.map((item) => (
             <a key={item.label} href={item.href} onClick={() => setIsMenuOpen(false)} className="mobile-nav-item">
               {item.label}
             </a>
-          ))}
+          ))} */}
+          <Link className='mobile-nav-item' to="/concierge">The Concierge
+            <span className="underline"></span>
+          </Link>
+          <Link className='mobile-nav-item' to="/patisserie">Patisserie
+            <span className="underline"></span>
+          </Link>
+          <Link className='mobile-nav-item' to="/society">Society
+            <span className="underline"></span>
+          </Link>
+          <Link className='mobile-nav-item' to="/transportation">Transportation</Link>
+          <span className="underline"></span>
+
+          <Link className='mobile-nav-item' to="/memoirs">Memoirs
+            <span className="underline"></span>
+          </Link>
+
           <div className="footer">
             <p className="footer-text">Excellence is our Tradition</p>
           </div>
