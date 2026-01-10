@@ -2,7 +2,7 @@
 import React from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Sparkles, Key, PhoneCall } from 'lucide-react'; // İkonları ekledik
+import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront } from 'lucide-react'; // İkonları ekledik
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,7 +116,42 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* TRANSPORTATION SECTION */}
+      <section className="transport-section">
+        <div className="transport-container">
+          <div className="ticket-wrapper">
+            {/* Golden Ticket Visual */}
+            <div className="golden-ticket">
+              <div className="ticket-inner">
+                <div className="ticket-header">
+                  ZUBROWKA EXPRESS
+                </div>
+                <div className="ticket-route">
+                  <span>LUTZ</span> <ArrowRight size={14} /> <span>NEBELSBAD</span>
+                </div>
+                <div className="ticket-icon-top"><TrainFront size={16} /></div>
+                <div className="ticket-date">1932</div>
+              </div>
+            </div>
+          </div>
 
+          <div className="transport-text">
+            <h3 className="transport-title">
+              THE <span className="transport-highlight">TRANSPORT</span>
+            </h3>
+            <p className="transport-description">
+              Karlı zirvelere giden yolculuğunuz, konforun ve maceranın birleştiği noktadır.
+              Zubrowka Express'in lüks vagonları ve efsanevi fünikülerimiz ile Alp'lerin kalbine seyahat edin.
+            </p>
+            <div className="transport-actions">
+              <button className="transport-button">
+                BİLETİNİZİ AYIRTIN
+              </button>
+              <p className="transport-quote">"First Class accommodations, mandatory."</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

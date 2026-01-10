@@ -506,6 +506,153 @@
 
 /* society-mobile-end */
 
+CSS
+/* ========== MOBİL KISIM ========== */
+
+/* transport-mobile-start */
+.transport-section {
+  padding: 96px 0;
+  background-color: rgba(251, 196, 211, 0.05);
+  /* Budapest Pink %5 */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.transport-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.ticket-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.golden-ticket {
+  position: relative;
+  width: 288px;
+  /* 72 units */
+  height: 176px;
+  /* 44 units */
+  background-color: #d4af37;
+  border: 4px solid #3d1e3d;
+  padding: 4px;
+  box-shadow: 15px 15px 0px #3d1e3d;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.golden-ticket:hover {
+  transform: scale(1.05);
+}
+
+.ticket-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(61, 30, 61, 0.5);
+  background-color: #d4af37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ticket-header {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #3d1e3d;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  border-top: 1px solid rgba(61, 30, 61, 0.3);
+  border-bottom: 1px solid rgba(61, 30, 61, 0.3);
+  padding: 8px 32px;
+}
+
+.ticket-route {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+  color: rgba(61, 30, 61, 0.7);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.ticket-icon-top {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: rgba(61, 30, 61, 0.4);
+}
+
+.ticket-date {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: rgba(61, 30, 61, 0.4);
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.transport-text {
+  width: 100%;
+  text-align: center;
+}
+
+.transport-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: #3d1e3d;
+  /* Daha okunaklı olması için dark purple */
+}
+
+.transport-highlight {
+  color: #d4af37;
+}
+
+.transport-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #3d1e3d;
+}
+
+.transport-button {
+  padding: 12px 32px;
+  background-color: #3d1e3d;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transport-button:hover {
+  background-color: #d4af37;
+  color: #3d1e3d;
+}
+
+.transport-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.8);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+/* transport-mobile-end */
 
 /* ========== TABLET KISIM ========== */
 @media (width >=768px) {
@@ -597,6 +744,46 @@
 
   /* society-tablet-end */
 
+  /* transport-tablet-start */
+  .transport-container {
+    flex-direction: row;
+    /* Görsel solda, yazı sağda */
+  }
+
+  .ticket-wrapper {
+    width: 50%;
+  }
+
+  .golden-ticket {
+    width: 384px;
+    height: 224px;
+  }
+
+  .ticket-header {
+    font-size: 2.25rem;
+  }
+
+  .transport-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .transport-title {
+    font-size: 4.5rem;
+  }
+
+  .transport-description {
+    margin-left: 0;
+  }
+
+  .transport-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* transport-tablet-end */
+
 }
 
 
@@ -619,5 +806,12 @@
   }
 
   /* society-desktop-end */
+
+  /* transport-desktop-start */
+  .transport-title {
+    font-size: 5rem;
+  }
+
+  /* transport-desktop-end */
 
 }
