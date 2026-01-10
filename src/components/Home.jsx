@@ -2,8 +2,7 @@
 import React from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront } from 'lucide-react'; // İkonları ekledik
-
+import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
@@ -148,6 +147,44 @@ function Home() {
                 BİLETİNİZİ AYIRTIN
               </button>
               <p className="transport-quote">"First Class accommodations, mandatory."</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MEMOIRS SECTION */}
+      <section className="memoirs-section">
+        <div className="memoirs-container">
+          <div className="book-wrapper">
+            {/* Stylized Book Cover Visual */}
+            <div className="book-cover">
+              <div className="book-inner">
+                <BookOpen className="book-icon" size={48} />
+                <h3 className="book-title-text">The Grand Budapest Hotel</h3>
+                <div className="book-divider"></div>
+                <p className="book-author">By THE AUTHOR</p>
+                <div className="book-footer">
+                  <PenTool size={20} className="pen-icon" />
+                </div>
+              </div>
+              <div className="memoirs-badge">MEMOIRS</div>
+            </div>
+          </div>
+
+          <div className="memoirs-text">
+            <h3 className="memoirs-title">
+              THE <span className="memoirs-highlight">MEMOIRS</span>
+            </h3>
+            <p className="memoirs-description">
+              Yıllar sonra anlatılan bu hikaye, Zero Moustafa'nın anılarıyla hayat buluyor.
+              Kaybolmuş bir dünyanın, nezaketin ve unutulmaz dostlukların efsanevi dökümü.
+              Her sayfa, Zubrowka'nın altın çağını fısıldıyor.
+            </p>
+            <div className="memoirs-actions">
+              <button className="memoirs-button">
+                ANILARI KEŞFEDİN
+              </button>
+              <p className="memoirs-quote">"To be written with a steady hand."</p>
             </div>
           </div>
         </div>

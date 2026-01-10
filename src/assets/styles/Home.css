@@ -654,6 +654,164 @@ CSS
 
 /* transport-mobile-end */
 
+/* memoirs-mobile-start */
+.memoirs-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  /* Budapest Dark Purple */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.memoirs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.book-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-cover {
+  position: relative;
+  width: 256px;
+  height: 320px;
+  border: 4px solid #d4af37;
+  padding: 16px;
+  background-color: #fbc4d3;
+  /* Budapest Pink */
+  transform: rotate(3deg);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover:hover {
+  transform: rotate(0deg);
+}
+
+.book-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(61, 30, 61, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.book-icon {
+  color: #3d1e3d;
+  margin-bottom: 16px;
+}
+
+.book-title-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #3d1e3d;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.book-divider {
+  height: 1px;
+  width: 48px;
+  background-color: rgba(61, 30, 61, 0.4);
+  margin: 16px 0;
+}
+
+.book-author {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  color: #3d1e3d;
+  text-transform: uppercase;
+}
+
+.book-footer {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.pen-icon {
+  color: rgba(61, 30, 61, 0.4);
+}
+
+.memoirs-badge {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  padding: 8px 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.memoirs-text {
+  width: 100%;
+  text-align: center;
+}
+
+.memoirs-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.memoirs-highlight {
+  color: #d4af37;
+}
+
+.memoirs-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
+}
+
+.memoirs-button {
+  padding: 12px 32px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memoirs-button:hover {
+  background-color: #fbc4d3;
+  border-color: #fbc4d3;
+}
+
+.memoirs-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+/* memoirs-mobile-end */
+
 /* ========== TABLET KISIM ========== */
 @media (width >=768px) {
 
@@ -783,10 +941,46 @@ CSS
   }
 
   /* transport-tablet-end */
+  /* memoirs-tablet-start */
+  .memoirs-container {
+    flex-direction: row-reverse;
+    /* Görsel sağda, yazı solda */
+  }
 
+  .book-wrapper {
+    width: 50%;
+  }
+
+  .book-cover {
+    width: 288px;
+    height: 384px;
+  }
+
+  .book-title-text {
+    font-size: 1.875rem;
+  }
+
+  .memoirs-text {
+    width: 50%;
+    text-align: right;
+  }
+
+  .memoirs-title {
+    font-size: 4.5rem;
+  }
+
+  .memoirs-description {
+    margin-right: 0;
+  }
+
+  .memoirs-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* memoirs-tablet-end */
 }
-
-
 
 
 /* ========== DESKTOP KISIM ========== */
@@ -813,5 +1007,12 @@ CSS
   }
 
   /* transport-desktop-end */
+
+  /* memoirs-desktop-start */
+  .memoirs-title {
+    font-size: 5rem;
+  }
+
+  /* memoirs-desktop-end */
 
 }
