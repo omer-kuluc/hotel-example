@@ -76,14 +76,12 @@
 
 .nav-desktop {
   display: none;
-  /* Mobilde gizle */
-  gap: 32px;
   margin-top: 8px;
 }
 
 .nav-item {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.9rem;
   letter-spacing: 0.2em;
   color: #fbc4d3;
   text-transform: uppercase;
@@ -186,37 +184,17 @@
 /* Mobil için */
 @media (width>=768px) {
   .nav-desktop {
-    display: none;
-    /* 768px ve altı mobilde gizle */
-  }
-
-  .mobile-menu-overlay {
     display: flex;
-    /* Menü mobilde aktif */
+    gap: 6px;
+    padding-inline: 10px;
   }
 
   .header-title {
     font-size: 1.5rem;
-    /* Mobil için küçük başlık */
-  }
-}
-
-/* Tablet için */
-@media (width>=768px) {
-  .header-title {
-    font-size: 2.5rem;
-    /* Tablet için başlık */
-  }
-
-  .nav-desktop {
-    display: flex;
-    gap: 32px;
-    margin-top: 8px;
   }
 
   .menu-button {
     display: none;
-    /* Menü butonu tablet ve üstü için gizli */
   }
 }
 

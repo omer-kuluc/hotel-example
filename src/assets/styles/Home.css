@@ -1,3 +1,623 @@
-.home-container {
-  margin-top: 300px;
+/* concierge-mobile-start */
+.concierge-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  /* Budapest Dark Purple */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.concierge-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.perfume-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.perfume-bottle {
+  width: 256px;
+  height: 320px;
+  border: 4px solid #d4af37;
+  padding: 16px;
+  background-color: rgba(251, 196, 211, 0.05);
+  transform: rotate(-3deg);
+  transition: transform 0.5s ease;
+  position: relative;
+  box-shadow: 20px 20px 0px rgba(212, 175, 55, 0.1);
+  cursor: pointer;
+}
+
+.perfume-bottle:hover {
+  transform: rotate(0deg);
+}
+
+.perfume-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2d1b33;
+  padding: 24px;
+  text-align: center;
+}
+
+.perfume-sparkle {
+  color: #d4af37;
+  margin-bottom: 16px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.perfume-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #d4af37;
+}
+
+.perfume-divider {
+  height: 1px;
+  width: 48px;
+  background-color: rgba(212, 175, 55, 0.4);
+  margin: 16px 0;
+}
+
+.perfume-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  color: #fbc4d3;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.perfume-keys {
+  margin-top: auto;
+  padding-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+.key-icon {
+  color: rgba(212, 175, 55, 0.4);
+}
+
+.premium-tag {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  padding: 8px 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.concierge-text {
+  width: 100%;
+  text-align: center;
+}
+
+.concierge-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.concierge-highlight {
+  color: #d4af37;
+}
+
+.concierge-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
+}
+
+.concierge-button {
+  padding: 12px 32px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.concierge-button:hover {
+  background-color: #fbc4d3;
+  border-color: #fbc4d3;
+}
+
+.concierge-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+/* concierge-mobile-end */
+
+/* ========== MOBİL KISIM ========== */
+
+/* patisserie-mobile-start */
+.patisserie-section {
+  padding: 96px 0;
+  background: rgba(251, 196, 211, 0.1);
+  border-top: 4px double rgba(212, 175, 55, 0.2);
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.patisserie-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.patisserie-box-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mendls-box {
+  width: 256px;
+  height: 256px;
+  background-color: #fbc4d3;
+  border: 4px solid #3d1e3d;
+  box-shadow: 20px 20px 0px #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform: rotate(3deg);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.mendls-box:hover {
+  transform: rotate(0deg);
+}
+
+.box-content {
+  color: #3d1e3d;
+  text-align: center;
+  padding: 16px;
+  border: 2px solid #3d1e3d;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
+}
+
+.box-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #3d1e3d;
+  margin: 8px 0;
+}
+
+.box-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.box-product {
+  margin-top: 16px;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.box-badge {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background-color: #d4af37;
+  color: #3d1e3d;
+  padding: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.875rem;
+}
+
+.patisserie-text {
+  width: 100%;
+  text-align: center;
+}
+
+.patisserie-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: #fbc4d3;
+}
+
+.patisserie-highlight {
+  color: #d4af37;
+}
+
+.patisserie-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
+}
+
+.patisserie-button {
+  padding: 12px 32px;
+  background-color: #3d1e3d;
+  color: #fbc4d3;
+  border: 2px solid #fbc4d3;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.patisserie-button:hover {
+  background-color: #fbc4d3;
+  color: #3d1e3d;
+}
+
+/* patisserie-mobile-end */
+
+/* ========== MOBİL KISIM ========== */
+
+/* society-mobile-start */
+.society-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.society-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.society-visual-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.emblem-container {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dairesel Animasyonlar */
+.orbit-outer {
+  position: absolute;
+  inset: 0;
+  border: 4px solid #d4af37;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: spin 20s linear infinite;
+}
+
+.orbit-inner {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: spin 15s linear infinite reverse;
+}
+
+.emblem-core {
+  position: relative;
+  z-index: 10;
+  width: 192px;
+  height: 192px;
+  background-color: #2d1b33;
+  border: 4px solid #d4af37;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
+}
+
+.emblem-keys {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #d4af37;
+}
+
+.key-left {
+  transform: rotate(-45deg);
+}
+
+.key-right {
+  transform: rotate(45deg);
+}
+
+.emblem-divider {
+  height: 2px;
+  width: 96px;
+  background-color: rgba(212, 175, 55, 0.3);
+  margin: 8px 0;
+}
+
+.emblem-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.2em;
+  color: #d4af37;
+}
+
+.emblem-subtext {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 10px;
+  color: rgba(251, 196, 211, 0.6);
+  text-transform: uppercase;
+}
+
+/* Dekoratifler */
+.floating-phone {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  color: #d4af37;
+  animation: bounce 2s infinite;
+}
+
+.floating-key {
+  position: absolute;
+  top: 50%;
+  right: -32px;
+  color: rgba(212, 175, 55, 0.5);
+}
+
+.society-text {
+  width: 100%;
+  text-align: center;
+}
+
+.society-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.society-highlight {
+  color: #d4af37;
+}
+
+.society-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
+}
+
+.society-button {
+  padding: 12px 32px;
+  background-color: rgba(251, 196, 211, 0.05);
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.society-button:hover {
+  background-color: #d4af37;
+  color: #2d1b33;
+}
+
+.society-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* society-mobile-end */
+
+
+/* ========== TABLET KISIM ========== */
+@media (width >=768px) {
+
+  /* concierge-tablet-start */
+  .concierge-container {
+    flex-direction: row;
+  }
+
+
+  .concierge-title {
+    font-size: 5rem;
+  }
+
+  /* concierge-tablet-end */
+
+  /* patisserie-tablet-start */
+
+  .mendls-box {
+    width: 320px;
+    height: 320px;
+  }
+
+  .box-title {
+    font-size: 2.5rem;
+  }
+
+  .patisserie-container {
+    flex-direction: row;
+  }
+
+  .patisserie-box-wrapper {
+    width: 50%;
+  }
+
+  .patisserie-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .patisserie-title {
+    font-size: 4.5rem;
+  }
+
+  .patisserie-description {
+    font-size: 1.25rem;
+    margin-left: 0;
+  }
+
+  /* patisserie-tablet-end */
+
+  /* society-tablet-start */
+  .society-container {
+    flex-direction: row-reverse;
+  }
+
+  .society-visual-wrapper {
+    width: 50%;
+  }
+
+  .emblem-container {
+    width: 320px;
+    height: 320px;
+  }
+
+  .emblem-core {
+    width: 224px;
+    height: 224px;
+  }
+
+  .society-text {
+    width: 50%;
+    text-align: right;
+  }
+
+  .society-title {
+    font-size: 4.5rem;
+  }
+
+  .society-description {
+    margin-right: 0;
+  }
+
+  .society-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* society-tablet-end */
+
+}
+
+
+
+
+/* ========== DESKTOP KISIM ========== */
+@media (width >=1280px) {
+
+  /* patisserie-desktop-start */
+
+  .patisserie-title {
+    font-size: 5rem;
+  }
+
+  /* patisserie-desktop-end */
+
+  /* society-desktop-start */
+  .society-title {
+    font-size: 5rem;
+  }
+
+  /* society-desktop-end */
+
 }

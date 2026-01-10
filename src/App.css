@@ -81,7 +81,12 @@ h6 {
   min-height: 100vh;
 }
 
-.hero {
-  height: 70px;
-  background-color: #fff;
+.home-container,
+.concierge-container,
+.memoirs-container,
+.patisserie-container,
+.society-container,
+.transportation-container {
+  margin-top: 350px;
+  padding-inline: 15px;
 }

@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Memoriam() {
   return (
-    <div>Memoriam</div>
+    <div className='memoirs-container'>Memoriam</div>
   )
 }

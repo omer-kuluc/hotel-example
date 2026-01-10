@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Society() {
   return (
-    <div>Society</div>
+    <div className='society-container'>Society</div>
   )
 }

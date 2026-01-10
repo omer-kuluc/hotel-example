@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Transport() {
+export default function Transportation() {
   return (
-    <div>Transport</div>
+    <div className='transportation-container'>Transportation</div>
   )
 }

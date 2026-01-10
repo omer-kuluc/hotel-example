@@ -1,12 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Bell, Key, Menu, X } from 'lucide-react';
 import { Link } from "react-router-dom";
-
 import { gsap } from 'gsap';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Ekran boyutu 768px'in üzerindeyse menüyü kapat
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isMenuOpen) {
+        setIsMenuOpen(false); // Menüyü kapat
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize); // Temizleme işlemi
+  }, [isMenuOpen]);
 
   useEffect(() => {
     // GSAP animasyonları
@@ -27,6 +39,14 @@ const Header = () => {
       ease: 'power2.out',
     });
 
+    gsap.to(".animate-pulse", {
+      opacity: 0,
+      repeat: -1,  // Sonsuz tekrarlama
+      yoyo: true,  // İleri geri animasyon
+      duration: 1,  // Her bir animasyon döngüsü 1 saniye
+      ease: 'power1.inOut',  // Easing fonksiyonu
+    });
+
     const handleScroll = () => {
       const scrollPos = window.scrollY;
       if (scrollPos > 50) {
@@ -39,6 +59,11 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Menü öğesine tıklanıldığında menüyü kapatma fonksiyonu
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -59,23 +84,8 @@ const Header = () => {
           <p className="header-subtitle">Republic of Zubrowka</p>
         </div>
 
-        {/* // const navItems = [
-  //   { label: 'The Concierge', href: '#' },
-  //   { label: "Mendl's Patisserie", href: '#' },
-  //   { label: 'Society of the Crossed Keys', href: '#' },
-  //   { label: 'Transport', href: '#' },
-  //   { label: 'Memoirs', href: '#' },
-
-  // ]; */}
-
         {/* Desktop Navigation */}
         <nav className="nav-desktop">
-          {/* {navItems.map((item) => (
-            <a key={item.label} href={item.href} className="nav-item">
-              {item.label}
-              <span className="underline"></span>
-            </a>
-          ))} */}
           <Link className='nav-item' to="/concierge">The Concierge
             <span className="underline"></span>
           </Link>
@@ -85,13 +95,13 @@ const Header = () => {
           <Link className='nav-item' to="/society">Society
             <span className="underline"></span>
           </Link>
-          <Link className='nav-item' to="/transportation">Transportation</Link>
-          <span className="underline"></span>
+          <Link className='nav-item' to="/transportation">Transportation
+            <span className="underline"></span>
+          </Link>
 
           <Link className='nav-item' to="/memoirs">Memoirs
             <span className="underline"></span>
           </Link>
-
         </nav>
 
         {/* Mobil Menü Butonu */}
@@ -104,24 +114,19 @@ const Header = () => {
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <Key className="icon-large" size={48} />
-          {/* {navItems.map((item) => (
-            <a key={item.label} href={item.href} onClick={() => setIsMenuOpen(false)} className="mobile-nav-item">
-              {item.label}
-            </a>
-          ))} */}
-          <Link className='mobile-nav-item' to="/concierge">The Concierge
+          <Link className='mobile-nav-item' to="/concierge" onClick={handleMenuItemClick}>The Concierge
             <span className="underline"></span>
           </Link>
-          <Link className='mobile-nav-item' to="/patisserie">Patisserie
+          <Link className='mobile-nav-item' to="/patisserie" onClick={handleMenuItemClick}>Patisserie
             <span className="underline"></span>
           </Link>
-          <Link className='mobile-nav-item' to="/society">Society
+          <Link className='mobile-nav-item' to="/society" onClick={handleMenuItemClick}>Society
             <span className="underline"></span>
           </Link>
-          <Link className='mobile-nav-item' to="/transportation">Transportation</Link>
+          <Link className='mobile-nav-item' to="/transportation" onClick={handleMenuItemClick}>Transportation</Link>
           <span className="underline"></span>
 
-          <Link className='mobile-nav-item' to="/memoirs">Memoirs
+          <Link className='mobile-nav-item' to="/memoirs" onClick={handleMenuItemClick}>Memoirs
             <span className="underline"></span>
           </Link>
 
@@ -134,4 +139,4 @@ const Header = () => {
   );
 };
 
-export default Header;  // Default export
+export default Header;
