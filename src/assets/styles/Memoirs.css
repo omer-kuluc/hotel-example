@@ -1,0 +1,118 @@
+/* 4. ART SECTION (Boy with Apple) */
+.art-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.art-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.art-visual-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS Art: Frame */
+.painting-frame {
+  width: 220px;
+  height: 280px;
+  background-color: #d4af37;
+  /* Altın Çerçeve */
+  padding: 12px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  border: 2px solid #b8860b;
+}
+
+.painting-canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #3d1e3d;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.apple-shape {
+  width: 40px;
+  height: 40px;
+  background-color: #8b0000;
+  /* Elma Kırmızısı */
+  border-radius: 50%;
+  margin-bottom: 8px;
+  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.boy-silhouette {
+  width: 80px;
+  height: 100px;
+  background-color: #1a0e1a;
+  border-radius: 40px 40px 0 0;
+  opacity: 0.6;
+}
+
+.painting-label {
+  position: absolute;
+  bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.6rem;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.art-text {
+  width: 100%;
+  text-align: center;
+}
+
+.art-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  font-family: 'Playfair Display', serif;
+  color: #fbc4d3;
+  font-style: italic;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+@media (width>=768px) {
+
+  /* Art (Boy with Apple) */
+  .art-container {
+    flex-direction: row;
+  }
+
+  .art-visual-wrapper {
+    width: 50%;
+  }
+
+  .art-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .art-actions {
+    justify-content: flex-start;
+  }
+}

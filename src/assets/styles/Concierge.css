@@ -1,491 +1,620 @@
-/* GENEL SAYFA AYARLARI */
+/* GENEL AYARLAR */
 .concierge-page {
-  background-color: #f4f1ea;
-  /* Krem rengi kağıt dokusu */
+  background-color: #2d1b33;
+  /* Otel Moru - Ana Arka Plan */
   overflow-x: hidden;
   padding-top: 80px;
+  /* Header boşluğu */
 }
 
-/* HERO SECTION - GUSTAVE'S ENTRANCE */
+/* 1. HERO SECTION */
 .gustave-hero {
-  height: 90vh;
-  background-color: #3d1e3d;
-  /* Gustave Moru */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  border-bottom: 8px solid #d4af37;
-  position: relative;
-}
-
-/* İç Çerçeve */
-.hero-frame-border {
-  width: 100%;
-  max-width: 1000px;
-  height: 80%;
-  border: 2px solid rgba(212, 175, 55, 0.3);
-  outline: 10px double rgba(212, 175, 55, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle, rgba(75, 40, 75, 1) 0%, rgba(61, 30, 61, 1) 80%);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
-}
-
-.hero-icon-wrapper {
-  margin-bottom: 24px;
-}
-
-.hero-crossed-keys {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.key-icon {
-  color: #d4af37;
-  position: absolute;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
-}
-
-.left-key {
-  transform: rotate(-45deg);
-}
-
-.right-key {
-  transform: rotate(45deg);
-}
-
-.concierge-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 5rem;
-  color: #d4af37;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1;
-  text-shadow: 4px 4px 0px #1a0e1a;
-}
-
-.title-divider {
-  width: 120px;
-  height: 3px;
-  background-color: #fbc4d3;
-  /* Mendls pembesi kontrast için */
-  margin: 16px 0;
-}
-
-.concierge-subhead {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  color: #fbc4d3;
-  letter-spacing: 0.2em;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.hero-badges {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Bebas Neue', sans-serif;
-  color: #d4af37;
-  border: 1px solid #d4af37;
-  padding: 8px 24px;
-  border-radius: 50px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* PHILOSOPHY SECTION */
-.philosophy-section {
   padding: 80px 24px;
-  background-color: #f4f1ea;
-  color: #3d1e3d;
-  text-align: center;
-  border-bottom: 1px solid #d4af37;
-}
-
-.quote-container {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.quote-icon-start {
-  color: #d4af37;
-  opacity: 0.5;
-  margin-bottom: 16px;
-}
-
-.gustave-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  line-height: 1.4;
-  font-style: italic;
-  margin-bottom: 24px;
-}
-
-.quote-author {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
-  color: #8b0000;
-  /* Carnation Red */
-}
-
-.poem-link {
-  margin-top: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: 'Playfair Display', serif;
-  font-size: 0.9rem;
-  color: #3d1e3d;
-  opacity: 0.7;
-  border-top: 1px dashed #d4af37;
-  padding-top: 16px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* PANACHE SECTION - PERFUME */
-.panache-section {
-  padding: 100px 24px;
-  background-color: #1a0e1a;
-  /* Very Dark Purple */
-  color: white;
-  overflow: hidden;
-}
-
-.panache-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-}
-
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 4rem;
-  color: #d4af37;
-}
-
-.highlight-purple {
-  color: #c9a0dc;
-  /* Lilac */
-}
-
-.section-desc {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 400px;
-  margin-bottom: 16px;
-}
-
-.click-hint {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.9rem;
-  color: #d4af37;
-  opacity: 0.6;
-  letter-spacing: 0.1em;
-  animation: pulse 2s infinite;
-}
-
-/* CSS ART: PERFUME BOTTLE */
-.perfume-visual {
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.perfume-visual:active {
-  transform: scale(0.95);
-}
-
-/* Gövde */
-.bottle-body {
-  width: 160px;
-  height: 200px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
-  border: 2px solid rgba(212, 175, 55, 0.6);
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
-  overflow: hidden;
-  /* Sıvı taşmasın */
-}
-
-/* Sıvı */
-.bottle-liquid {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60%;
-  background-color: rgba(212, 175, 55, 0.4);
-  z-index: 1;
-  transition: height 0.3s;
-}
-
-/* Etiket */
-.bottle-label {
-  width: 80%;
-  height: 60%;
-  background-color: #1a0e1a;
-  border: 2px solid #d4af37;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #d4af37;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.1em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.bottle-label .small {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.8rem;
-  font-style: italic;
-  color: white;
-}
-
-/* Boyun ve Pompası */
-.bottle-neck {
-  width: 40px;
-  height: 20px;
-  background-color: #d4af37;
-  margin: 0 auto;
-  border: 1px solid #997b28;
-}
-
-.bottle-atomizer {
-  width: 30px;
-  height: 30px;
   background-color: #3d1e3d;
-  /* Kumaş pompa */
-  border-radius: 50%;
-  position: absolute;
-  top: -40px;
-  right: -20px;
-  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Boru */
-.bottle-atomizer::before {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 40px;
-  height: 20px;
-  border-top: 4px solid #d4af37;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(-30deg);
-}
-
-/* Spray Particles */
-.spray-particles {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  pointer-events: none;
-}
-
-.scent-particle {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  opacity: 0;
-}
-
-/* MENTORSHIP SECTION */
-.mentorship-section {
-  padding: 100px 24px;
-  background-color: #8b0000;
-  /* Halı Kırmızısı */
-  background-image: repeating-linear-gradient(45deg,
-      #8b0000,
-      #8b0000 10px,
-      #7a0000 10px,
-      #7a0000 20px);
-  color: white;
-  border-top: 4px solid #d4af37;
-  border-bottom: 4px solid #d4af37;
-}
-
-.mentorship-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 48px;
-}
-
-/* CSS ART: LOBBY BOY HAT */
-.lobby-hat {
-  width: 180px;
-  height: 100px;
-  background-color: #3d1e3d;
-  border-radius: 50% 50% 0 0 / 20% 20% 0 0;
-  /* Pillbox shape */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 8px solid #d4af37;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.hat-text {
-  font-family: 'Bebas Neue', sans-serif;
-  color: #d4af37;
-  font-size: 1.8rem;
-  letter-spacing: 0.1em;
-  transform: rotate(-5deg);
-}
-
-.mentorship-text {
-  text-align: center;
-}
-
-.mentorship-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
-  color: #d4af37;
-  margin-bottom: 16px;
-}
-
-.mentorship-desc {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  max-width: 600px;
-}
-
-.stats-box {
+  /* Daha koyu mor */
+  border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
-  gap: 32px;
-  margin-top: 32px;
 }
 
-.stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.stat-icon {
-  color: #d4af37;
-}
-
-/* FOOTER SOCIETY */
-.crossed-keys-society {
-  padding: 60px 24px;
-  background-color: #3d1e3d;
+.gustave-hero-content {
+  max-width: 800px;
   text-align: center;
-  color: #d4af37;
-}
-
-.society-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.society-emblem {
+.concierge-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.crossed-keys-icon {
   position: relative;
   width: 64px;
   height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16px;
 }
 
-.society-key {
+.ck-left {
   position: absolute;
+  transform: rotate(-45deg);
+  color: #d4af37;
 }
 
-.society-content h3 {
+.ck-right {
+  position: absolute;
+  transform: rotate(45deg);
+  color: #d4af37;
+}
+
+.badge-text {
   font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.2em;
-  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  font-size: 0.9rem;
+  color: #fbc4d3;
+  /* Pembe */
+  border: 1px solid #fbc4d3;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
-.society-content p {
+.gustave-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.gustave-title-char {
+  display: inline-block;
+}
+
+.hero-divider {
+  width: 80px;
+  height: 2px;
+  background-color: #fbc4d3;
+  margin: 8px 0;
+}
+
+.gustave-subtitle {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  opacity: 0.6;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
 }
 
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  .concierge-headline {
-    font-size: 7rem;
+.hero-stars {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* 2. PHILOSOPHY SECTION (Perfume) */
+.philosophy-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.philosophy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.philosophy-visual-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS Art: L'Air de Panache Bottle */
+.panache-bottle-container {
+  position: relative;
+  width: 160px;
+  height: 240px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottle-cap {
+  width: 40px;
+  height: 20px;
+  background-color: #d4af37;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #3d1e3d;
+}
+
+.bottle-neck {
+  width: 20px;
+  height: 10px;
+  background-color: #d4af37;
+  border: 1px solid #3d1e3d;
+}
+
+.bottle-body {
+  width: 140px;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 4px solid #d4af37;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.bottle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 80px;
+  background-color: #2d1b33;
+  border: 2px solid #d4af37;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+.bottle-label .tiny {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.6rem;
+  font-style: italic;
+  color: #fbc4d3;
+}
+
+.bottle-liquid {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70%;
+  background-color: rgba(212, 175, 55, 0.2);
+  z-index: 1;
+}
+
+.spray-mist {
+  position: absolute;
+  top: -40px;
+  width: 100px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.click-hint {
+  margin-top: 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fbc4d3;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.philosophy-text {
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.highlight {
+  color: #d4af37;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
+}
+
+.quote-block {
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* 3. LEGACY SECTION (Lobby Boy) */
+.legacy-section {
+  padding: 96px 0;
+  background-color: rgba(251, 196, 211, 0.05);
+  /* Budapest Pink %5 */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.legacy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.legacy-visual-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS Art: Lobby Hat */
+.lobby-hat-visual {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+.lobby-hat-visual:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.hat-top {
+  width: 160px;
+  height: 80px;
+  background-color: #3d1e3d;
+  /* Koyu Mor */
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  /* Pillbox şekli */
+  position: relative;
+  z-index: 2;
+  border: 2px solid #2d1b33;
+}
+
+.hat-band {
+  width: 164px;
+  height: 40px;
+  background-color: #3d1e3d;
+  border: 2px solid #2d1b33;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -2px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hat-text {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #d4af37;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.hat-badge {
+  position: absolute;
+  top: 10px;
+  z-index: 5;
+}
+
+.legacy-text {
+  width: 100%;
+  text-align: center;
+}
+
+/* 4. POETRY SECTION (The Orator) */
+.poetry-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  /* Dark Purple */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.poetry-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.poetry-visual-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS Art: Poetry Podium & Candle */
+.poetry-visual {
+  position: relative;
+  width: 240px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.podium-stand {
+  width: 120px;
+  height: 140px;
+  background-color: #3d1e3d;
+  border: 2px solid #d4af37;
+  border-top: none;
+  position: relative;
+}
+
+.podium-top {
+  width: 160px;
+  height: 40px;
+  background-color: #d4af37;
+  border: 2px solid #3d1e3d;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Open Book */
+.open-book {
+  position: absolute;
+  top: -20px;
+  width: 120px;
+  height: 60px;
+  display: flex;
+}
+
+.book-page {
+  width: 50%;
+  height: 100%;
+  background-color: #fbc4d3;
+  /* Pink Paper */
+  border: 1px solid #3d1e3d;
+}
+
+.left-page {
+  border-radius: 5px 0 0 5px;
+  transform: skewY(10deg);
+  border-right: none;
+  background: linear-gradient(to right, #eeb0c0, #fbc4d3);
+}
+
+.right-page {
+  border-radius: 0 5px 5px 0;
+  transform: skewY(-10deg);
+  border-left: 1px solid rgba(61, 30, 61, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 4px;
+}
+
+.text-lines {
+  height: 2px;
+  background-color: rgba(61, 30, 61, 0.4);
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* Candle */
+.candle-holder {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  z-index: 5;
+}
+
+.candle-body {
+  width: 12px;
+  height: 60px;
+  background-color: #fbc4d3;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.candle-flame {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 15px;
+  background-color: #d4af37;
+  /* Gold flame */
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+  animation: flicker 0.1s infinite alternate;
+}
+
+.poetry-text {
+  width: 100%;
+  text-align: center;
+}
+
+.poetry-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.recital-time {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #fbc4d3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.poetry-button {
+  padding: 12px 32px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.poetry-button:hover {
+  background-color: #fbc4d3;
+  border-color: #fbc4d3;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
   }
 
-  .panache-container {
+  100% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* FOOTER */
+.concierge-footer {
+  padding: 48px 0;
+  text-align: center;
+  background-color: #25162a;
+  /* Footer Darker */
+  color: rgba(212, 175, 55, 0.6);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.footer-society-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #d4af37;
+  letter-spacing: 0.2em;
+  margin-top: 8px;
+  font-style: normal;
+}
+
+
+/* ========== TABLET & DESKTOP DÜZENLEMELERİ ========== */
+
+/* Tablet (Home.css ile aynı breakpoint) */
+@media (width >=768px) {
+
+  .gustave-title {
+    font-size: 5rem;
+  }
+
+  /* Philosophy */
+  .philosophy-container {
     flex-direction: row;
-    justify-content: space-around;
   }
 
-  .panache-text {
+  .philosophy-visual-wrapper {
+    width: 50%;
+  }
+
+  .philosophy-text {
+    width: 50%;
     text-align: left;
-    width: 40%;
   }
 
-  .mentorship-content {
-    flex-direction: row;
-    justify-content: space-between;
+  .section-description {
+    margin-left: 0;
   }
 
-  .mentorship-text {
-    text-align: left;
-    width: 60%;
-  }
-
-  .stats-box {
+  .quote-block {
     justify-content: flex-start;
   }
 
-  .lobby-hat {
-    transform: scale(1.2) rotate(10deg);
+  /* Legacy (Lobby Boy) */
+  .legacy-container {
+    flex-direction: row-reverse;
+    /* Görsel sağda olsun */
+  }
+
+  .legacy-visual-wrapper {
+    width: 50%;
+  }
+
+  .legacy-text {
+    width: 50%;
+    text-align: right;
+  }
+
+  .section-description {
+    margin-right: 0;
+  }
+
+  /* Poetry (The Orator) */
+  .poetry-container {
+    flex-direction: row;
+  }
+
+  .poetry-visual-wrapper {
+    width: 50%;
+  }
+
+  .poetry-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .poetry-actions {
+    align-items: flex-start;
   }
 }
 
-@keyframes pulse {
-
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-
-  50% {
-    opacity: 1;
+/* Desktop (Home.css ile aynı breakpoint) */
+@media (width >=1280px) {
+  .gustave-title {
+    font-size: 7rem;
   }
 }

@@ -5,6 +5,8 @@ import './assets/styles/Header.css'
 import './assets/styles/Home.css'
 import './assets/styles/Memoirs.css'
 import './assets/styles/Patisserie.css'
+import './assets/styles/Concierge.css'
+import './assets/styles/Memoirs.css'
 
 import { BrowserRouter } from 'react-router-dom'
 
