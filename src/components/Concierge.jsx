@@ -1,25 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Key, Star, Quote, Crown, Feather, Mic } from 'lucide-react';
+import { Key, Star, Quote, Crown, Feather, User } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Concierge = () => {
   const containerRef = useRef(null);
-  const [sprayed, setSprayed] = useState(false);
-
-  // Parfüm sıkma efekti
-  const handleSpray = () => {
-    setSprayed(true);
-    gsap.fromTo(".spray-mist",
-      { opacity: 0, scale: 0.5, y: 10 },
-      { opacity: 0.8, scale: 1.5, y: -50, duration: 1, ease: "power2.out", onComplete: () => setSprayed(false) }
-    );
-  };
 
   useEffect(() => {
-    // Hero Başlık Animasyonu
+    // 1. Hero Başlık Animasyonu
     gsap.from('.gustave-title-char', {
       y: 50,
       opacity: 0,
@@ -28,7 +18,20 @@ const Concierge = () => {
       ease: 'back.out(1.7)',
     });
 
-    // Lobby Boy Şapkası Girişi
+    // 2. Gustave Suit (Üniforma) Animasyonu
+    gsap.from('.gustave-suit-visual', {
+      scrollTrigger: {
+        trigger: '.profile-section',
+        start: 'top 60%',
+      },
+      scale: 0.9,
+      y: 30,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'power3.out',
+    });
+
+    // 3. Lobby Boy Şapkası Girişi
     gsap.from('.lobby-hat-visual', {
       scrollTrigger: {
         trigger: '.legacy-section',
@@ -41,7 +44,7 @@ const Concierge = () => {
       ease: 'elastic.out(1, 0.5)',
     });
 
-    // Şiir Kürsüsü Animasyonu
+    // 4. Şiir Kürsüsü Animasyonu
     gsap.from('.poetry-visual', {
       scrollTrigger: {
         trigger: '.poetry-section',
@@ -59,7 +62,7 @@ const Concierge = () => {
   return (
     <div className="concierge-page" ref={containerRef}>
 
-      {/* HERO SECTION: M. GUSTAVE H. */}
+      {/* HERO SECTION */}
       <section className="gustave-hero">
         <div className="gustave-hero-content">
           <div className="concierge-badge">
@@ -89,41 +92,49 @@ const Concierge = () => {
         </div>
       </section>
 
-      {/* PHILOSOPHY SECTION (Perfume) */}
-      <section className="philosophy-section">
-        <div className="philosophy-container">
+      {/* PROFILE SECTION: THE INSTITUTION (Yeni Eklenen Kısım) */}
+      <section className="profile-section">
+        <div className="profile-container">
 
-          <div className="philosophy-visual-wrapper">
-            <div className="panache-bottle-container" onClick={handleSpray}>
-              <div className="bottle-cap"></div>
-              <div className="bottle-neck"></div>
-              <div className="bottle-body">
-                <div className="bottle-label">
-                  <span>L'AIR</span>
-                  <span className="tiny">de</span>
-                  <span>PANACHE</span>
-                </div>
-                <div className="bottle-liquid"></div>
+          <div className="profile-visual-wrapper">
+            {/* CSS Art: Gustave's Uniform */}
+            <div className="gustave-suit-visual">
+              <div className="suit-collar"></div>
+              <div className="suit-shirt">
+                <div className="bow-tie"></div>
               </div>
-              <div className="spray-mist"></div>
-              <div className="click-hint">(Click to Spray)</div>
+              <div className="suit-lapels">
+                <div className="lapel left-lapel"></div>
+                <div className="lapel right-lapel"></div>
+              </div>
+              <div className="suit-badge">
+                <Key size={16} className="badge-key-1" color="#d4af37" />
+                <Key size={16} className="badge-key-2" color="#d4af37" />
+              </div>
+              <div className="suit-buttons">
+                <div className="button"></div>
+                <div className="button"></div>
+                <div className="button"></div>
+              </div>
+              <div className="pocket-square"></div>
             </div>
           </div>
 
-          <div className="philosophy-text">
+          <div className="profile-text">
             <h3 className="section-title">
-              THE <span className="highlight">PANACHE</span>
+              THE <span className="highlight">INSTITUTION</span>
             </h3>
             <p className="section-description">
-              "Burası bir zamanlar insanlık olarak bilinen o barbar mezbahasında,
-              hâlâ medeniyetin cılız parıltılarını görebildiğiniz yerdir."
-              Mösyö Gustave, en zor anlarda bile L'Air de Panache kokusundan ödün vermez.
+              Mösyö Gustave, Grand Budapest Hotel'in sadece yöneticisi değil, ruhudur.
+              Kusursuz giyimi, şiirsel konuşması ve sarsılmaz disipliniyle,
+              barbarlığın ortasında medeniyetin son kalesini savunur.
             </p>
             <div className="quote-block">
               <Quote size={20} className="quote-icon" />
               <p>"Rudeness is merely the expression of fear."</p>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -158,7 +169,7 @@ const Concierge = () => {
         </div>
       </section>
 
-      {/* NEW: POETRY & DINNER SECTION */}
+      {/* POETRY & DINNER SECTION */}
       <section className="poetry-section">
         <div className="poetry-container">
 

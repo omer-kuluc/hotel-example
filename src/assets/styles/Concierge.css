@@ -99,14 +99,14 @@
   margin-top: 16px;
 }
 
-/* 2. PHILOSOPHY SECTION (Perfume) */
-.philosophy-section {
+/* 2. PROFILE SECTION (Gustave Suit) */
+.profile-section {
   padding: 96px 0;
   background-color: #2d1b33;
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
-.philosophy-container {
+.profile-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
@@ -116,105 +116,134 @@
   gap: 64px;
 }
 
-.philosophy-visual-wrapper {
+.profile-visual-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* CSS Art: L'Air de Panache Bottle */
-.panache-bottle-container {
+/* CSS Art: Gustave's Suit */
+.gustave-suit-visual {
+  width: 220px;
+  height: 260px;
+  background-color: #3d1e3d;
+  /* Suit Color */
+  border: 2px solid #2d1b33;
+  border-radius: 40px 40px 0 0;
   position: relative;
-  width: 160px;
-  height: 240px;
-  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.bottle-cap {
-  width: 40px;
-  height: 20px;
-  background-color: #d4af37;
-  border-radius: 4px 4px 0 0;
-  border: 1px solid #3d1e3d;
-}
-
-.bottle-neck {
-  width: 20px;
-  height: 10px;
-  background-color: #d4af37;
-  border: 1px solid #3d1e3d;
-}
-
-.bottle-body {
-  width: 140px;
-  height: 180px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-  border: 4px solid #d4af37;
-  border-radius: 16px;
-  position: relative;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
-.bottle-label {
+.suit-collar {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 80px;
-  background-color: #2d1b33;
-  border: 2px solid #d4af37;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #d4af37;
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 1.2rem;
-  z-index: 2;
-}
-
-.bottle-label .tiny {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.6rem;
-  font-style: italic;
-  color: #fbc4d3;
-}
-
-.bottle-liquid {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70%;
-  background-color: rgba(212, 175, 55, 0.2);
+  top: 0;
+  width: 120px;
+  height: 140px;
+  background-color: #fff;
+  /* Shirt */
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
   z-index: 1;
 }
 
-.spray-mist {
+.bow-tie {
+  width: 40px;
+  height: 20px;
+  background-color: #2d1b33;
+  /* Dark Tie */
   position: absolute;
-  top: -40px;
-  width: 100px;
-  height: 60px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  pointer-events: none;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 4px;
+  border: 1px solid #d4af37;
 }
 
-.click-hint {
-  margin-top: 16px;
-  font-family: 'Bebas Neue', sans-serif;
-  color: #fbc4d3;
-  opacity: 0.5;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+.suit-lapels {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 
-.philosophy-text {
+.lapel {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 180px;
+  background-color: #4b284b;
+  /* Lighter Purple for Lapel */
+  border: 1px solid #2d1b33;
+}
+
+.left-lapel {
+  left: 0;
+  border-radius: 0 0 20px 0;
+  transform: skewY(10deg);
+}
+
+.right-lapel {
+  right: 0;
+  border-radius: 0 0 0 20px;
+  transform: skewY(-10deg);
+}
+
+.suit-buttons {
+  position: absolute;
+  top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 4;
+}
+
+.button {
+  width: 16px;
+  height: 16px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #b8860b;
+}
+
+.suit-badge {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  /* On the Lapel */
+  z-index: 5;
+  display: flex;
+  transform: rotate(-15deg);
+}
+
+.badge-key-1 {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.badge-key-2 {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.pocket-square {
+  position: absolute;
+  top: 90px;
+  right: 35px;
+  width: 30px;
+  height: 10px;
+  background-color: #fff;
+  /* White Handkerchief */
+  z-index: 4;
+  transform: rotate(5deg);
+  border-top: 2px solid #4b284b;
+}
+
+.profile-text {
   width: 100%;
   text-align: center;
 }
@@ -552,16 +581,16 @@
     font-size: 5rem;
   }
 
-  /* Philosophy */
-  .philosophy-container {
+  /* Profile (Gustave Suit) */
+  .profile-container {
     flex-direction: row;
   }
 
-  .philosophy-visual-wrapper {
+  .profile-visual-wrapper {
     width: 50%;
   }
 
-  .philosophy-text {
+  .profile-text {
     width: 50%;
     text-align: left;
   }

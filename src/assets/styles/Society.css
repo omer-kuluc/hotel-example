@@ -1,0 +1,393 @@
+/* GENEL AYARLAR */
+.society-page {
+  background-color: #2d1b33;
+  /* Home.css ile uyumlu Koyu Mor */
+  overflow-x: hidden;
+  padding-top: 80px;
+  /* Header payı */
+}
+
+/* 1. HERO SECTION */
+.society-hero {
+  padding: 80px 24px;
+  background-color: #3d1e3d;
+  /* Scrolled Header rengi */
+  border-bottom: 4px double rgba(212, 175, 55, 0.4);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.emblem-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.emblem-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  border-top-color: #d4af37;
+  animation: spinSlow 20s linear infinite;
+}
+
+.hero-emblem-keys {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-icon {
+  position: absolute;
+  color: #d4af37;
+  filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+}
+
+.left-key {
+  transform: rotate(-45deg);
+}
+
+.right-key {
+  transform: rotate(45deg);
+}
+
+.society-main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.society-title-char {
+  display: inline-block;
+}
+
+.divider-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fbc4d3, transparent);
+  margin: 12px 0;
+}
+
+.society-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.4em;
+  color: #fbc4d3;
+}
+
+.society-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. THE NETWORK (Expanded List) */
+.network-section {
+  padding: 96px 24px;
+  background-color: #2d1b33;
+}
+
+.network-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.network-header {
+  text-align: center;
+  max-width: 600px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.highlight {
+  color: #d4af37;
+}
+
+.section-desc {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #fbc4d3;
+  line-height: 1.8;
+}
+
+/* GRID STRUCTURE */
+.network-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+/* CARD STYLING */
+.hotel-card {
+  background-color: #3d1e3d;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+/* Top Color Strip */
+.color-strip {
+  height: 6px;
+  width: 100%;
+}
+
+/* Pastel Colors (Film Palette) */
+.blue-strip {
+  background-color: #aec6cf;
+}
+
+.yellow-strip {
+  background-color: #fdfd96;
+}
+
+.green-strip {
+  background-color: #77dd77;
+}
+
+.pink-strip {
+  background-color: #fbc4d3;
+}
+
+.silver-strip {
+  background-color: #cfcfc4;
+}
+
+.gold-strip {
+  background-color: #d4af37;
+}
+
+/* Glowing Avatars */
+.concierge-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blue-glow {
+  box-shadow: 0 0 15px rgba(174, 198, 207, 0.3);
+}
+
+.yellow-glow {
+  box-shadow: 0 0 15px rgba(253, 253, 150, 0.3);
+}
+
+.green-glow {
+  box-shadow: 0 0 15px rgba(119, 221, 119, 0.3);
+}
+
+.pink-glow {
+  box-shadow: 0 0 15px rgba(251, 196, 211, 0.3);
+}
+
+.silver-glow {
+  box-shadow: 0 0 15px rgba(207, 207, 196, 0.3);
+}
+
+.gold-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Card Content */
+.card-inner {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.concierge-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.hotel-name {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card-divider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 16px 0;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #d4af37;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.icon-small {
+  opacity: 0.8;
+}
+
+/* Status Indicator */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.blue-dot {
+  background-color: #aec6cf;
+  box-shadow: 0 0 5px #aec6cf;
+}
+
+.yellow-dot {
+  background-color: #fdfd96;
+  box-shadow: 0 0 5px #fdfd96;
+}
+
+.green-dot {
+  background-color: #77dd77;
+  box-shadow: 0 0 5px #77dd77;
+}
+
+.pink-dot {
+  background-color: #fbc4d3;
+  box-shadow: 0 0 5px #fbc4d3;
+}
+
+.silver-dot {
+  background-color: #cfcfc4;
+  box-shadow: 0 0 5px #cfcfc4;
+}
+
+.gold-dot {
+  background-color: #d4af37;
+  box-shadow: 0 0 5px #d4af37;
+}
+
+
+/* FOOTER */
+.society-footer {
+  padding: 64px 0;
+  text-align: center;
+  background-color: #25162a;
+  /* Footer Darker */
+  color: #d4af37;
+  border-top: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+}
+
+.footer-sub {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* RESPONSIVE GRID */
+
+/* Tablet: 2 Sütun */
+@media (min-width: 768px) {
+  .network-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .society-main-title {
+    font-size: 5rem;
+  }
+}
+
+/* Desktop: 3 Sütun */
+@media (min-width: 1280px) {
+  .network-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .society-main-title {
+    font-size: 7rem;
+  }
+}
