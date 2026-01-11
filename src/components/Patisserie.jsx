@@ -1,7 +1,156 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Star, Gift, Truck, ChefHat, Heart, Utensils } from 'lucide-react';
 
-export default function Patisserie() {
+gsap.registerPlugin(ScrollTrigger);
+
+function Patisserie() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    // Başlık Animasyonu
+    gsap.from('.hero-title-char', {
+      y: 100,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 1.2,
+      ease: 'back.out(1.7)',
+    });
+
+    // Courtesan au Chocolat Katmanları (Aşağıdan yukarıya dizilme)
+    gsap.from('.pastry-layer', {
+      scrollTrigger: {
+        trigger: '.courtesan-wrapper',
+        start: 'top 70%',
+      },
+      y: -50,
+      opacity: 0,
+      stagger: 0.2, // Sırayla gelmesi için
+      duration: 0.8,
+      ease: 'bounce.out',
+    });
+
+    // Mendl's Kutusu Animasyonu
+    gsap.from('.delivery-box', {
+      scrollTrigger: {
+        trigger: '.delivery-section',
+        start: 'top 60%',
+      },
+      x: -100,
+      rotation: -15,
+      opacity: 0,
+      duration: 1.5,
+      ease: 'elastic.out(1, 0.5)',
+    });
+
+  }, []);
+
   return (
-    <div className='patisserie-container'>Patisserie</div>
-  )
-}
+    <div className="patisserie-page" ref={containerRef}>
+
+      {/* HERO SECTION */}
+      <section className="mendl-hero">
+        <div className="hero-content">
+          <div className="brand-logo">
+            <ChefHat size={48} className="brand-icon" />
+            <span className="est-text">EST. 1912</span>
+          </div>
+          <h1 className="mendl-title">
+            {"MENDL'S".split('').map((char, index) => (
+              <span key={index} className="hero-title-char">{char}</span>
+            ))}
+          </h1>
+          <p className="mendl-subtitle">HERR MENDL'S GENIUS RECIPES</p>
+          <div className="hero-decoration">
+            <Star size={16} fill="#d4af37" />
+            <div className="hero-line"></div>
+            <Star size={16} fill="#d4af37" />
+          </div>
+        </div>
+      </section>
+
+      {/* THE COURTESAN AU CHOCOLAT SHOWCASE */}
+      <section className="product-showcase">
+        <div className="showcase-container">
+
+          <div className="courtesan-wrapper">
+            {/* CSS ile çizilmiş Courtesan au Chocolat */}
+            <div className="courtesan-art">
+              <div className="pastry-top-bean pastry-layer"></div>
+              <div className="pastry-cream-top pastry-layer"></div>
+              <div className="pastry-tier-small pastry-layer"></div>
+              <div className="pastry-cream-mid pastry-layer"></div>
+              <div className="pastry-tier-medium pastry-layer"></div>
+              <div className="pastry-cream-bottom pastry-layer"></div>
+              <div className="pastry-tier-large pastry-layer"></div>
+              <div className="pastry-plate"></div>
+            </div>
+            <div className="price-tag">50 Klubecks</div>
+          </div>
+
+          <div className="product-details">
+            <h2 className="product-title">Courtesan <br /> <span className="highlight">au Chocolat</span></h2>
+            <p className="product-desc">
+              Tuzlu karamelli krema ile doldurulmuş, renkli sırlarla kaplanmış
+              ve titizlikle üst üste dizilmiş üç narin hamur işi kulesi.
+              Agatha'nın usta ellerinden çıkan, Zubrowka'nın en ikonik lezzeti.
+            </p>
+            <ul className="ingredients-list">
+              <li><Utensils size={14} /> Lavender-infused Glaze</li>
+              <li><Utensils size={14} /> Pistachio Cream</li>
+              <li><Utensils size={14} /> Tender Choux Pastry</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* DELIVERY / AGATHA SECTION */}
+      <section className="delivery-section">
+        <div className="delivery-container">
+          <div className="delivery-text-area">
+            <h3 className="section-title">SPECIAL <span className="blue-highlight">DELIVERY</span></h3>
+            <p className="section-text">
+              Lutz hapishanesine mi yoksa Büyük Otel'in balo salonuna mı?
+              Meşhur pembe kutularımız, mavi kurdelelerimizle mühürlenir.
+              Asla açılmadan teslim edilir (içinde kazma veya keski yoksa tabii).
+            </p>
+            <div className="quote-box">
+              <p>"Who's got the throat-slitter?"</p>
+            </div>
+            <button className="order-button">
+              <Truck size={18} style={{ marginRight: '8px' }} /> SİPARİŞ OLUŞTUR
+            </button>
+          </div>
+
+          <div className="box-visual-area">
+            {/* CSS ile Mendl's Kutusu */}
+            <div className="delivery-box">
+              <div className="box-lid">
+                <div className="ribbon-vertical"></div>
+                <div className="ribbon-horizontal"></div>
+                <div className="ribbon-bow">
+                  <div className="bow-left"></div>
+                  <div className="bow-right"></div>
+                </div>
+              </div>
+              <div className="box-body">
+                <span className="box-brand">Mendl's</span>
+                <div className="box-badge"><Gift size={12} /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER NOTE */}
+      <div className="patisserie-footer">
+        <Heart size={24} className="heart-icon" fill="#d4af37" />
+        <p>Made with love by Agatha</p>
+      </div>
+
+    </div>
+  );
+};
+
+export default Patisserie;

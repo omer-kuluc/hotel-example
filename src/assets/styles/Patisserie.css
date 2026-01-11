@@ -1,0 +1,495 @@
+/* GENEL SAYFA YAPISI */
+.patisserie-page {
+  background-color: #2d1b33;
+  /* Otelin koyu moru arka plan */
+  overflow-x: hidden;
+  padding-top: 80px;
+  /* Header payı */
+}
+
+/* HERO SECTION - MENDL'S */
+.mendl-hero {
+  height: 80vh;
+  background-color: #fbc4d3;
+  /* Mendl's Pembesi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 4px double #3d1e3d;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 2rem;
+  border: 4px solid #3d1e3d;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 20px 20px 0px rgba(61, 30, 61, 0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3d1e3d;
+  margin-bottom: 1rem;
+}
+
+.est-text {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.3em;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.mendl-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: #3d1e3d;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hero-title-char {
+  display: inline-block;
+}
+
+.mendl-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #2b4c7e;
+  /* Koyu Mavi Yazı */
+  margin-bottom: 1.5rem;
+}
+
+.hero-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #d4af37;
+}
+
+.hero-line {
+  width: 100px;
+  height: 2px;
+  background-color: #3d1e3d;
+}
+
+/* PRODUCT SHOWCASE - COURTESAN AU CHOCOLAT */
+.product-showcase {
+  padding: 6rem 1.5rem;
+  background-color: #2d1b33;
+  color: #fbc4d3;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.courtesan-wrapper {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(251, 196, 211, 0.1) 0%, rgba(45, 27, 51, 0) 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #d4af37;
+  color: #3d1e3d;
+  font-family: 'Bebas Neue', sans-serif;
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  transform: rotate(15deg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS ART: COURTESAN PASTRIES */
+.courtesan-art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.pastry-top-bean {
+  width: 12px;
+  height: 12px;
+  background-color: #5c3a21;
+  /* Çikolata */
+  border-radius: 50%;
+  margin-bottom: -2px;
+  z-index: 10;
+}
+
+.pastry-cream-top {
+  width: 20px;
+  height: 10px;
+  background-color: #fff;
+  /* Krema */
+  border-radius: 10px;
+  margin-bottom: -2px;
+  z-index: 9;
+}
+
+.pastry-tier-small {
+  width: 50px;
+  height: 45px;
+  background-color: #d8bfd8;
+  /* Lavanta / Mor */
+  border-radius: 50% 50% 40% 40%;
+  border-top: 3px solid rgba(255, 255, 255, 0.4);
+  z-index: 8;
+}
+
+.pastry-cream-mid {
+  width: 30px;
+  height: 12px;
+  background-color: #aec6cf;
+  /* Mavi Krema */
+  border-radius: 15px;
+  margin-top: -5px;
+  z-index: 7;
+}
+
+.pastry-tier-medium {
+  width: 70px;
+  height: 60px;
+  background-color: #98fb98;
+  /* Fıstık Yeşili */
+  border-radius: 50% 50% 45% 45%;
+  border-top: 3px solid rgba(255, 255, 255, 0.4);
+  margin-top: -5px;
+  z-index: 6;
+}
+
+.pastry-cream-bottom {
+  width: 40px;
+  height: 14px;
+  background-color: #fbc4d3;
+  /* Pembe Krema */
+  border-radius: 20px;
+  margin-top: -5px;
+  z-index: 5;
+}
+
+.pastry-tier-large {
+  width: 90px;
+  height: 80px;
+  background-color: #fbc4d3;
+  /* Pembe Taban */
+  border-radius: 50% 50% 40% 40%;
+  border-top: 3px solid rgba(255, 255, 255, 0.4);
+  margin-top: -5px;
+  z-index: 4;
+}
+
+.pastry-plate {
+  width: 140px;
+  height: 10px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  margin-top: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* PRODUCT TEXT */
+.product-details {
+  text-align: center;
+  max-width: 500px;
+}
+
+.product-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #d4af37;
+  font-style: italic;
+}
+
+.product-desc {
+  font-family: 'Open Sans', sans-serif;
+  color: #fbc4d3;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* DELIVERY SECTION */
+.delivery-section {
+  background-color: #aec6cf;
+  /* Mendl's Mavisi */
+  padding: 6rem 1.5rem;
+  border-top: 4px double #3d1e3d;
+  border-bottom: 4px double #3d1e3d;
+}
+
+.delivery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.delivery-text-area {
+  text-align: center;
+  color: #3d1e3d;
+}
+
+.blue-highlight {
+  color: #fff;
+  text-shadow: 2px 2px 0px rgba(61, 30, 61, 0.2);
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote-box {
+  border-left: 4px solid #fff;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.order-button {
+  background-color: #3d1e3d;
+  color: #fbc4d3;
+  border: 2px solid #3d1e3d;
+  padding: 12px 36px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: transparent;
+  color: #3d1e3d;
+}
+
+/* CSS ART: MENDL'S BOX */
+.box-visual-area {
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-lid {
+  width: 220px;
+  height: 40px;
+  background-color: #fbc4d3;
+  border: 3px solid #3d1e3d;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.box-body {
+  width: 200px;
+  height: 160px;
+  background-color: #fbc4d3;
+  border: 3px solid #3d1e3d;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Ribbon & Decoration */
+.ribbon-vertical {
+  width: 30px;
+  height: 100%;
+  background-color: #3664a7;
+  /* Koyu mavi kurdele */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 1px dashed rgba(255, 255, 255, 0.3);
+  border-right: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.ribbon-bow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 30px;
+  z-index: 10;
+}
+
+.bow-left,
+.bow-right {
+  width: 30px;
+  height: 30px;
+  background-color: #3664a7;
+  border: 2px solid #3d1e3d;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.bow-left {
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.bow-right {
+  right: 0;
+  transform: rotate(45deg);
+}
+
+.box-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: #3d1e3d;
+  z-index: 5;
+  letter-spacing: 2px;
+}
+
+.box-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #3d1e3d;
+  border: 1px solid #3d1e3d;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FOOTER */
+.patisserie-footer {
+  padding: 2rem;
+  background-color: #25162a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  gap: 8px;
+}
+
+/* RESPONSIVE */
+@media (width>=768px) {
+  .mendl-title {
+    font-size: 6rem;
+  }
+
+  .showcase-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .product-details {
+    text-align: left;
+  }
+
+  .ingredients-list {
+    align-items: flex-start;
+  }
+
+  .delivery-container {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .delivery-text-area {
+    text-align: left;
+    width: 50%;
+  }
+
+  .section-text {
+    margin-left: 0;
+  }
+
+  .delivery-box {
+    transform: scale(1.2);
+  }
+}
+
+@media (width>=1280px) {
+  .mendl-title {
+    font-size: 9rem;
+  }
+
+  .product-title {
+    font-size: 4.5rem;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Memoriam() {
+export default function Memoirs() {
   return (
-    <div className='memoirs-container'>Memoriam</div>
+    <div className='memoirs-inner-container'>Memoris</div>
   )
 }
