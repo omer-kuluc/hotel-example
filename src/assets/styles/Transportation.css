@@ -1,7 +1,7 @@
 /* GENEL AYARLAR */
 .transportation-page {
   background-color: #2d1b33;
-  /* Otel Moru */
+  /* Home.css ile uyumlu Koyu Mor */
   overflow-x: hidden;
   padding-top: 80px;
 }
@@ -62,8 +62,9 @@
   color: #fbc4d3;
 }
 
-/* COMMON SECTION STYLES */
+/* COMMON STYLES */
 .train-section,
+.cable-section,
 .funicular-section,
 .chase-section {
   padding: 96px 24px;
@@ -78,6 +79,11 @@
   flex-direction: column;
   align-items: center;
   gap: 64px;
+}
+
+.text-content {
+  text-align: center;
+  max-width: 600px;
 }
 
 .vehicle-title {
@@ -97,84 +103,78 @@
   font-size: 1.1rem;
   color: #fbc4d3;
   line-height: 1.8;
-  max-width: 500px;
-  margin: 0 auto 24px;
 }
 
-/* BADGES */
-.route-badge,
-.altitude-badge,
-.speed-badge {
-  display: inline-flex;
+.badge-row {
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  margin-top: 16px;
   font-family: 'Bebas Neue', sans-serif;
   color: #d4af37;
   border: 1px solid #d4af37;
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-inline: auto;
 }
 
-/* 2. THE ZUBROWKA EXPRESS (Green Train) */
+/* 2. TRAIN SECTION (Green) */
 .train-section {
   background-color: #2d1b33;
 }
 
-.train-track-container {
+.train-track-area {
   width: 100%;
   height: 200px;
   position: relative;
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  /* Tren ekrandan taşarken gizlensin */
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
 }
 
-/* Vagonların hepsini kapsayan container */
 .train-composition {
   display: flex;
   align-items: flex-end;
-  gap: 5px;
+  gap: 6px;
   position: absolute;
-  left: 0;
-  /* GSAP ile x ekseninde hareket ettirilecek */
+  /* GSAP x hareketini kontrol edecek */
 }
 
 /* Lokomotif */
 .locomotive {
-  width: 140px;
-  height: 100px;
+  width: 160px;
+  height: 110px;
   background-color: #4b5d16;
-  /* Army/Olive Green */
-  border: 2px solid #2d1b33;
-  border-radius: 10px 20px 0 0;
+  /* Army Green */
+  border: 2px solid #1a1a1a;
+  border-radius: 10px 30px 0 0;
   position: relative;
-  margin-right: 5px;
 }
 
 .engine-body {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .engine-window {
-  width: 40px;
-  height: 30px;
+  width: 50px;
+  height: 35px;
   background-color: #fdfd96;
-  /* Light Yellow */
+  border: 2px solid #1a1a1a;
   position: absolute;
   top: 10px;
   right: 10px;
-  border: 2px solid #2d1b33;
 }
 
 .stripe-line {
   position: absolute;
   bottom: 40px;
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: #d4af37;
 }
 
@@ -182,70 +182,47 @@
   position: absolute;
   top: -30px;
   left: 20px;
-  width: 25px;
+  width: 30px;
   height: 30px;
-  background-color: #333;
+  background-color: #1a1a1a;
   border-top: 4px solid #d4af37;
 }
 
 .cow-catcher {
   position: absolute;
   bottom: 0;
-  left: -15px;
+  left: -20px;
   width: 20px;
-  height: 40px;
-  background-color: #333;
+  height: 50px;
+  background-color: #1a1a1a;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-}
-
-.smoke {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  animation: puff 2s infinite;
-}
-
-.s1 {
-  width: 15px;
-  height: 15px;
-  top: -10px;
-  left: 0;
-}
-
-.s2 {
-  width: 25px;
-  height: 25px;
-  top: -30px;
-  left: 10px;
-  animation-delay: 0.5s;
 }
 
 /* Vagon */
 .wagon {
-  width: 120px;
-  height: 90px;
+  width: 140px;
+  height: 100px;
   background-color: #4b5d16;
-  /* Army Green */
-  border: 2px solid #2d1b33;
-  border-radius: 5px 5px 0 0;
+  border: 2px solid #1a1a1a;
   position: relative;
+  border-radius: 5px 5px 0 0;
 }
 
 .wagon-window {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: #fdfd96;
-  border: 2px solid #2d1b33;
+  border: 2px solid #1a1a1a;
   display: inline-block;
-  margin: 10px 0 0 10px;
+  margin: 15px 0 0 12px;
 }
 
 .wagon-text {
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   right: 10px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: #d4af37;
 }
 
@@ -259,7 +236,7 @@
 }
 
 .train-wheel {
-  background-color: #111;
+  background-color: #1a1a1a;
   border: 2px solid #555;
   border-radius: 50%;
   border-left: 2px solid #d4af37;
@@ -267,148 +244,190 @@
 }
 
 .big {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 
 .small {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
 }
 
 .rail-track {
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: #555;
-  z-index: 0;
 }
 
-@keyframes puff {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translateY(-40px) scale(1.5);
-    opacity: 0;
-  }
-}
-
-
-/* 3. THE ASCENT (Blue Funicular) */
-.funicular-section {
-  background-color: #87ceeb;
-  /* Sky Blue Back */
+/* 3. CABLE CAR (Teleferik) */
+.cable-section {
+  background-color: #a8cbf6;
+  /* Pastel Blue Sky */
   position: relative;
-  min-height: 500px;
+  border-top: 4px double #d4af37;
+}
+
+/* Gradient Overlay */
+.cable-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(45, 27, 51, 0.9) 0%, rgba(168, 203, 246, 0.3) 100%);
+}
+
+.cable-visual-area {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  z-index: 2;
   overflow: hidden;
 }
 
-/* Karışım efekti */
-.funicular-section::before {
-  content: '';
+.cables {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(45, 27, 51, 0.9) 0%, rgba(135, 206, 235, 0.3) 100%);
+}
+
+.wire {
+  position: absolute;
+  width: 120%;
+  height: 2px;
+  background-color: #333;
+  left: -10%;
+}
+
+.main-wire {
+  top: 30%;
+  transform: rotate(5deg);
+}
+
+.cross-wire {
+  top: 70%;
+  transform: rotate(-5deg);
+  opacity: 0.5;
+}
+
+.cable-cabin {
+  position: absolute;
+  /* GSAP will animate this */
+}
+
+.hanger {
+  width: 4px;
+  height: 40px;
+  background-color: #1a1a1a;
+  margin: 0 auto;
+}
+
+.cabin-body {
+  width: 100px;
+  height: 70px;
+  background-color: #fbc4d3;
+  /* Pink Cabin */
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cabin-window {
+  width: 70px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #1a1a1a;
+  opacity: 0.8;
+}
+
+.cabin-stripe {
+  width: 100%;
+  height: 4px;
+  background-color: #d4af37;
+  margin-top: 8px;
+}
+
+/* 4. FUNICULAR (Dik Ray) */
+.funicular-section {
+  background-color: #2d1b33;
 }
 
 .funicular-visual-area {
   position: relative;
   width: 300px;
   height: 300px;
-  z-index: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-/* Ray Sistemi (Container) */
-.sloped-track {
+.incline-track {
+  width: 60px;
+  height: 400px;
+  background-color: #555;
+  transform: rotate(30deg);
   position: relative;
-  width: 400px;
-  /* Ray uzunluğu */
-  height: 4px;
-  background-color: #333;
-  transform: rotate(-30deg);
-  /* Ray açısı */
-  /* Bu container içinde vagon hareket edecek */
-}
-
-/* Vagon (Rayın içinde absolute) */
-.funicular-car {
-  position: absolute;
-  top: -60px;
-  /* Rayın üstüne oturt */
-  left: 0;
-  /* Başlangıç noktası */
-  width: 80px;
-  height: 60px;
-  /* GSAP x ekseninde hareket ettirecek */
-}
-
-.car-hanger {
-  width: 4px;
-  height: 20px;
-  background-color: #333;
-  margin: 0 auto;
-}
-
-.car-body {
-  width: 100%;
-  height: 100%;
-  background-color: #6495ed;
-  /* Cornflower Blue (Funicular Color) */
-  border: 2px solid #333;
-  border-radius: 8px;
-  transform: skewX(10deg);
-  /* Eğim hissi */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  padding: 10px 0;
+  border-left: 4px solid #333;
+  border-right: 4px solid #333;
 }
 
-.car-windows {
-  display: flex;
-  gap: 4px;
-}
-
-.car-windows span {
-  width: 15px;
-  height: 20px;
-  background-color: #fff;
-  border: 1px solid #333;
-}
-
-.car-stripe {
+.rail-ties {
   width: 100%;
   height: 4px;
-  background-color: #d4af37;
-  margin: 5px 0;
+  background-color: #333;
 }
 
-.car-logo {
+.funicular-car {
+  position: absolute;
+  /* GSAP controls pos */
+  transform: rotate(30deg);
+  /* Ray ile aynı açı */
+}
+
+.funi-body {
+  width: 80px;
+  height: 120px;
+  background-color: #6495ed;
+  /* Cornflower Blue */
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.funi-window {
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #1a1a1a;
+}
+
+.funi-logo {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.6rem;
   color: #fff;
 }
 
-
-/* 4. THE CHASE (Icons) */
+/* 5. PURSUIT (Badges) */
 .chase-section {
-  background-color: #dcdcdc;
-  /* Gainsboro (Greyish) */
+  background-color: #f4f1ea;
+  /* Creamy Paper Color for contrast */
   border-top: 4px double #d4af37;
 }
 
-.chase-icons-wrapper {
+.badges-wrapper {
   display: flex;
   justify-content: center;
   gap: 48px;
@@ -416,288 +435,42 @@
 }
 
 .vehicle-badge {
-  width: 200px;
-  height: 200px;
-  border: 4px solid #d4af37;
-  border-radius: 50%;
-  background-color: #3d1e3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
-}
-
-.vehicle-badge:hover {
-  transform: scale(1.05);
-}
-
-.badge-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  transition: transform 0.3s;
+}
+
+.vehicle-badge:hover {
+  transform: translateY(-10px);
+}
+
+.badge-circle {
+  width: 160px;
+  height: 160px;
+  background-color: #3d1e3d;
+  /* Koyu Mor Daire */
+  border: 4px solid #d4af37;
+  /* Altın Çerçeve */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.badge-icon {
   color: #d4af37;
+  /* Altın İkon */
 }
 
 .badge-label {
   font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #2d1b33;
+  /* Dark text on light bg */
   letter-spacing: 0.1em;
-  font-size: 1.2rem;
-}
-
-.moto-badge .badge-inner {
-  color: #ccc;
-}
-
-/* Silver/Grey for Moto */
-.sled-badge .badge-inner {
-  color: #e6bf83;
-}
-
-/* Wood color for Sled */
-
-
-/* 5. GETAWAY (Taxi) - Mevcut Stiller */
-.getaway-section {
-  padding: 80px 0;
-  background-color: #1a0e1a;
-  border-bottom: 4px double rgba(212, 175, 55, 0.2);
-  position: relative;
-  overflow: hidden;
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.snow-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.falling-snow {
-  position: absolute;
-  top: -20px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.getaway-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 24px;
-}
-
-.vintage-car-visual {
-  width: 260px;
-  height: 200px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.8));
-}
-
-.taxi-roof {
-  width: 180px;
-  height: 45px;
-  background-color: #2c3e50;
-  border-radius: 50px 50px 10px 10px;
-  border: 2px solid #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  z-index: 2;
-}
-
-.taxi-sign {
-  background-color: #fdfd96;
-  color: #000;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.8rem;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-top: -10px;
-  border: 1px solid #000;
-  box-shadow: 0 0 10px #fdfd96;
-}
-
-.taxi-body {
-  width: 240px;
-  height: 120px;
-  background-color: #34495e;
-  border-radius: 10px 10px 20px 20px;
-  border: 2px solid #1a1a1a;
-  position: relative;
-  margin-top: -5px;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-}
-
-.windshield {
-  width: 180px;
-  height: 50px;
-  background-color: #8ccbe6;
-  border: 2px solid #1a1a1a;
-  margin-top: 5px;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  opacity: 0.9;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.silhouette {
-  background-color: #000;
-  border-radius: 50% 50% 0 0;
-  margin: 0 5px;
-  opacity: 0.7;
-}
-
-.driver {
-  width: 30px;
-  height: 30px;
-}
-
-.passenger-1 {
-  width: 25px;
-  height: 25px;
-}
-
-.passenger-2 {
-  width: 20px;
-  height: 20px;
-}
-
-.grill-area {
-  position: absolute;
-  bottom: 15px;
-  width: 80px;
-  height: 45px;
-  background-color: #95a5a6;
-  border: 2px solid #555;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.grill-lines {
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-}
-
-.lights {
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-}
-
-.headlight {
-  width: 36px;
-  height: 36px;
-  background-color: #fffac1;
-  border-radius: 50%;
-  border: 3px solid #777;
-  position: absolute;
-  box-shadow: 0 0 20px #fffac1;
-}
-
-.left {
-  left: 15px;
-}
-
-.right {
-  right: 15px;
-}
-
-.headlight-beams {
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: 400px;
-  background: linear-gradient(to bottom, rgba(255, 250, 193, 0.3), transparent);
-  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
-  pointer-events: none;
-  z-index: 10;
-}
-
-.bumper {
-  position: absolute;
-  bottom: -5px;
-  width: 260px;
-  height: 18px;
-  background-color: #bdc3c7;
-  border-radius: 10px;
-  border: 1px solid #555;
-}
-
-.plate {
-  position: absolute;
-  bottom: -18px;
-  background-color: #fff;
-  border: 1px solid #000;
-  padding: 2px 6px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.8rem;
-  color: #000;
-  z-index: 4;
-}
-
-.tires {
-  width: 100%;
-  position: absolute;
-  bottom: -5px;
-}
-
-.tire {
-  width: 30px;
-  height: 40px;
-  background-color: #000;
-  border-radius: 5px;
-  position: absolute;
-}
-
-.left-tire {
-  left: 20px;
-}
-
-.right-tire {
-  right: 20px;
-}
-
-.getaway-text-area {
-  text-align: center;
-  max-width: 500px;
-}
-
-.quote-box {
-  margin-top: 24px;
-  border-left: 4px solid #d4af37;
-  padding-left: 16px;
-  color: #fff;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.1rem;
 }
 
 /* FOOTER */
@@ -729,7 +502,14 @@
     text-align: left;
   }
 
-  .visual-content,
+  .center-text {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .train-track-area,
+  .cable-visual-area,
   .funicular-visual-area {
     width: 50%;
   }
@@ -738,17 +518,12 @@
     margin-left: 0;
   }
 
-  .chase-icons-wrapper {
-    gap: 64px;
+  .badges-wrapper {
+    gap: 80px;
   }
 
-  .getaway-content {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .getaway-text-area {
-    text-align: left;
+  .badge-row {
+    margin-left: 0;
   }
 }
 
