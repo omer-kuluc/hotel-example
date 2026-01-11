@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap';
-import { Key, Star, Quote, Crown, SprayCan, ScrollText, CheckCircle } from 'lucide-react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger'; // ScrollTrigger import edilmeli
+import { Quote, CheckCircle, SprayCan } from 'lucide-react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
   const [sprayed, setSprayed] = useState(false);
@@ -15,6 +18,7 @@ export default function Memoirs() {
   };
 
   useEffect(() => {
+    // Tablo Çerçevesi Animasyonu
     gsap.from('.painting-frame', {
       scrollTrigger: {
         trigger: '.art-section',
@@ -25,21 +29,56 @@ export default function Memoirs() {
       duration: 1.5,
       ease: 'power3.out',
     });
+
+    // Portre Öğeleri Animasyonu (Sırayla gelir)
+    gsap.from('.portrait-item', {
+      scrollTrigger: {
+        trigger: '.painting-frame',
+        start: 'top 70%',
+      },
+      y: 20,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 1,
+      ease: 'back.out(1.7)',
+    });
+
   }, []);
 
   return (
     <div className='memoirs-inner-container'>
-      {/* ART SECTION (Boy with Apple) */}
+
+      {/* ART SECTION (Boy with his Family) */}
       <section className="art-section">
         <div className="art-container">
 
           <div className="art-visual-wrapper">
-            {/* CSS Art: Boy with Apple (Frame & Canvas) */}
+            {/* CSS Art: Boy with his Family (Frame & Canvas) */}
             <div className="painting-frame">
               <div className="painting-canvas">
-                <div className="apple-shape"></div>
-                <div className="boy-silhouette"></div>
-                <div className="painting-label">BOY WITH APPLE</div>
+
+                <div className="family-portrait">
+                  {/* Zero: Lobby Boy Hat */}
+                  <div className="portrait-item zero-hat">
+                    <div className="hat-text">LOBBY BOY</div>
+                  </div>
+
+                  {/* Gustave: Purple Bow Tie */}
+                  <div className="portrait-item gustave-tie">
+                    <div className="tie-knot"></div>
+                    <div className="tie-wing left"></div>
+                    <div className="tie-wing right"></div>
+                  </div>
+
+                  {/* Agatha: Necklace */}
+                  <div className="portrait-item agatha-necklace">
+                    <div className="chain-left"></div>
+                    <div className="chain-right"></div>
+                    <div className="pendant-m">M</div>
+                  </div>
+                </div>
+
+                <div className="painting-label">BOY WITH HIS FAMILY</div>
               </div>
               <div className="frame-ornament"></div>
             </div>
@@ -50,22 +89,24 @@ export default function Memoirs() {
               THE <span className="highlight">INHERITANCE</span>
             </h3>
             <p className="section-description">
-              Madame D.'nin vasiyeti, paha biçilemez bir Rönesans tablosu.
-              "Boy with Apple". Johannes Van Hoytl the Younger tarafından yapıldı.
-              Bu tablo için savaşlar çıkar, aileler bölünür.
+              Madame D.'nin vasiyeti artık sadece bir elma değil.
+              Tablo, Zero'nun seçilmiş ailesini resmediyor:
+              Gustave'ın zarafeti, Zero'nun sadakati ve Agatha'nın masumiyeti.
+              Gerçek miras, kurulan bu bağlardır.
             </p>
             <div className="art-actions">
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Wrapped nicely</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>Priceless bond</span>
               </div>
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Stolen quietly</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>Saved forever</span>
               </div>
             </div>
           </div>
 
         </div>
       </section>
+
       {/* PHILOSOPHY SECTION (Perfume) */}
       <section className="philosophy-section">
         <div className="philosophy-container">

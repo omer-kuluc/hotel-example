@@ -1,7 +1,14 @@
-/* 4. ART SECTION (Boy with Apple) */
+/* GENEL */
+.memoirs-inner-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 4. ART SECTION (Boy with his Family) */
 .art-section {
   padding: 96px 0;
-  background-color: #2d1b33;
+  /* Nostaljik, Vintage Kadife Moru (Palete uygun ara ton) */
+  background-color: #3e2030;
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
@@ -23,21 +30,25 @@
 
 /* CSS Art: Frame */
 .painting-frame {
-  width: 220px;
-  height: 280px;
+  width: 260px;
+  height: 320px;
   background-color: #d4af37;
   /* Altın Çerçeve */
   padding: 12px;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    10px 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 2px solid #b8860b;
 }
 
+/* Tablo Zemini - Koyu Rönesans Havası */
 .painting-canvas {
   width: 100%;
   height: 100%;
-  background-color: #3d1e3d;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: #1a1510;
+  /* Koyu Yağlı Boya Zemini */
+  border: 2px solid rgba(0, 0, 0, 0.4);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -46,37 +57,160 @@
   overflow: hidden;
 }
 
-.apple-shape {
-  width: 40px;
-  height: 40px;
-  background-color: #8b0000;
-  /* Elma Kırmızısı */
-  border-radius: 50%;
-  margin-bottom: 8px;
-  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+.family-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
 }
 
-.boy-silhouette {
+/* ZERO: LOBBY BOY HAT */
+.zero-hat {
   width: 80px;
-  height: 100px;
-  background-color: #1a0e1a;
-  border-radius: 40px 40px 0 0;
-  opacity: 0.6;
+  height: 40px;
+  background-color: #3d1e3d;
+  /* Mor */
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  /* Pillbox */
+  border-bottom: 4px solid #d4af37;
+  /* Altın Şerit */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.painting-label {
-  position: absolute;
-  bottom: 10px;
-  font-family: 'Playfair Display', serif;
+.hat-text {
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 0.6rem;
   color: #d4af37;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-top: 10px;
+  transform: rotate(-5deg);
+}
+
+/* GUSTAVE: PURPLE BOW TIE */
+.gustave-tie {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tie-knot {
+  width: 10px;
+  height: 10px;
+  background-color: #5e2d5e;
+  /* Biraz daha açık mor */
+  border-radius: 2px;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.tie-wing {
+  width: 30px;
+  height: 20px;
+  background-color: #3d1e3d;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.tie-wing.left {
+  left: -25px;
+  clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+}
+
+.tie-wing.right {
+  right: -25px;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
+}
+
+/* AGATHA: M NECKLACE */
+.agatha-necklace {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.chain-left,
+.chain-right {
+  width: 40px;
+  height: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  /* İnce gümüş/beyaz zincir */
+  position: absolute;
+  top: 0;
+}
+
+.chain-left {
+  left: 5px;
+  transform: rotate(15deg);
+}
+
+.chain-right {
+  right: 5px;
+  transform: rotate(-15deg);
+}
+
+.pendant-m {
+  position: absolute;
+  top: 18px;
+  /* Zincirin bittiği yer */
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #fbc4d3;
+  /* Mendl's Pembesi */
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(251, 196, 211, 0.5);
+}
+
+/* TABLO ETİKETİ */
+.painting-label {
+  position: absolute;
+  bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.7rem;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 4px;
 }
 
 .art-text {
   width: 100%;
   text-align: center;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  color: white;
+}
+
+.highlight {
+  color: #d4af37;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fbc4d3;
 }
 
 .art-actions {
@@ -85,7 +219,7 @@
   gap: 24px;
   margin-top: 24px;
   font-family: 'Playfair Display', serif;
-  color: #fbc4d3;
+  color: #d4af37;
   font-style: italic;
 }
 
@@ -95,9 +229,7 @@
   gap: 8px;
 }
 
-
-
-/* 2. PHILOSOPHY SECTION (Perfume) */
+/* 2. PHILOSOPHY SECTION (Perfume) - Mevcut Stiller */
 .philosophy-section {
   padding: 96px 0;
   background-color: #2d1b33;
@@ -215,28 +347,6 @@
 .philosophy-text {
   width: 100%;
   text-align: center;
-}
-
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 24px;
-  letter-spacing: 0.1em;
-  color: white;
-}
-
-.highlight {
-  color: #d4af37;
-}
-
-.section-description {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
 }
 
 .quote-block {
