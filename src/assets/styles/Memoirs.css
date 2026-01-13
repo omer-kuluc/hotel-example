@@ -4,11 +4,13 @@
   overflow-x: hidden;
 }
 
-/* 4. ART SECTION (Boy with his Family) */
+/* =========================================
+   1. ART SECTION (The Inheritance)
+   ========================================= */
 .art-section {
   padding: 96px 0;
-  /* Nostaljik, Vintage Kadife Moru (Palete uygun ara ton) */
   background-color: #3e2030;
+  /* Vintage Kadife Mor */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
@@ -28,73 +30,71 @@
   justify-content: center;
 }
 
-/* CSS Art: Frame */
+/* Tablo Çerçevesi */
 .painting-frame {
-  width: 260px;
-  height: 320px;
+  width: 320px;
+  max-width: 90vw;
+  height: 280px;
   background-color: #d4af37;
-  /* Altın Çerçeve */
   padding: 12px;
   box-shadow:
     inset 0 0 20px rgba(0, 0, 0, 0.5),
     10px 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
   border: 2px solid #b8860b;
+  border-radius: 4px;
 }
 
-/* Tablo Zemini - Koyu Rönesans Havası */
 .painting-canvas {
   width: 100%;
   height: 100%;
   background-color: #1a1510;
-  /* Koyu Yağlı Boya Zemini */
   border: 2px solid rgba(0, 0, 0, 0.4);
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
+/* Aile Portresi */
 .family-portrait {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.portrait-item {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 20px;
 }
 
-/* ZERO: LOBBY BOY HAT */
-.zero-hat {
-  width: 80px;
-  height: 40px;
-  background-color: #3d1e3d;
-  /* Mor */
-  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  /* Pillbox */
-  border-bottom: 4px solid #d4af37;
-  /* Altın Şerit */
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.hat-text {
+.item-label {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.6rem;
-  color: #d4af37;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
   letter-spacing: 0.1em;
-  margin-top: 10px;
-  transform: rotate(-5deg);
+  margin-top: 8px;
 }
 
-/* GUSTAVE: PURPLE BOW TIE */
+/* Konumlar */
+.item-gustave {
+  top: 40px;
+  left: 40px;
+}
+
+.item-zero {
+  top: 30px;
+  right: 40px;
+}
+
+.item-agatha {
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Gustave Tie */
 .gustave-tie {
   position: relative;
   display: flex;
@@ -103,90 +103,110 @@
 }
 
 .tie-knot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #5e2d5e;
-  /* Biraz daha açık mor */
   border-radius: 2px;
   z-index: 2;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .tie-wing {
-  width: 30px;
-  height: 20px;
+  width: 36px;
+  height: 24px;
   background-color: #3d1e3d;
   position: absolute;
   border-radius: 4px;
+  border: 1px solid #2d1b33;
 }
 
 .tie-wing.left {
-  left: -25px;
+  left: -28px;
   clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
 }
 
 .tie-wing.right {
-  right: -25px;
+  right: -28px;
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
 }
 
-/* AGATHA: M NECKLACE */
+/* Zero Hat */
+.zero-hat {
+  width: 70px;
+  height: 35px;
+  background-color: #3d1e3d;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  border-bottom: 3px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hat-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.5rem;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+  transform: rotate(-5deg) translateY(2px);
+}
+
+/* Agatha Necklace */
 .agatha-necklace {
   position: relative;
   width: 100px;
-  height: 40px;
+  height: 30px;
   display: flex;
   justify-content: center;
 }
 
 .chain-left,
 .chain-right {
-  width: 40px;
+  width: 45px;
   height: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  /* İnce gümüş/beyaz zincir */
+  border-bottom: 1px solid rgba(251, 196, 211, 0.6);
   position: absolute;
-  top: 0;
+  top: -5px;
 }
 
 .chain-left {
-  left: 5px;
+  left: 2px;
   transform: rotate(15deg);
 }
 
 .chain-right {
-  right: 5px;
+  right: 2px;
   transform: rotate(-15deg);
 }
 
 .pendant-m {
   position: absolute;
-  top: 18px;
-  /* Zincirin bittiği yer */
+  top: 10px;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   font-style: italic;
   color: #fbc4d3;
-  /* Mendl's Pembesi */
-  font-size: 1.2rem;
-  text-shadow: 0 0 5px rgba(251, 196, 211, 0.5);
+  font-size: 1.4rem;
+  text-shadow: 0 0 8px rgba(251, 196, 211, 0.6);
 }
 
-/* TABLO ETİKETİ */
 .painting-label {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: 0.7rem;
   color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  padding-top: 4px;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
 }
 
-.art-text {
+/* Ortak Metin Stilleri */
+.art-text,
+.memoirs-text,
+.philosophy-text {
   width: 100%;
   text-align: center;
 }
@@ -229,7 +249,140 @@
   gap: 8px;
 }
 
-/* 2. PHILOSOPHY SECTION (Perfume) - Mevcut Stiller */
+/* =========================================
+   2. MEMOIRS BOOK SECTION
+   ========================================= */
+.memoirs-book-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  /* Dark Purple */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.memoirs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.book-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-cover {
+  position: relative;
+  width: 256px;
+  height: 320px;
+  border: 4px solid #d4af37;
+  padding: 16px;
+  background-color: #fbc4d3;
+  /* Budapest Pink */
+  transform: rotate(3deg);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover:hover {
+  transform: rotate(0deg);
+}
+
+.book-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(61, 30, 61, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.book-icon {
+  color: #3d1e3d;
+  margin-bottom: 16px;
+}
+
+.book-title-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #3d1e3d;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.book-divider {
+  height: 1px;
+  width: 48px;
+  background-color: rgba(61, 30, 61, 0.4);
+  margin: 16px 0;
+}
+
+.book-author {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  color: #3d1e3d;
+  text-transform: uppercase;
+}
+
+.book-footer {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.pen-icon {
+  color: rgba(61, 30, 61, 0.4);
+}
+
+.memoirs-badge {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  padding: 8px 16px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.memoirs-button {
+  padding: 12px 32px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  border: 2px solid #d4af37;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memoirs-button:hover {
+  background-color: #fbc4d3;
+  border-color: #fbc4d3;
+}
+
+.memoirs-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+/* =========================================
+   3. PHILOSOPHY SECTION (The Panache)
+   ========================================= */
 .philosophy-section {
   padding: 96px 0;
   background-color: #2d1b33;
@@ -252,7 +405,7 @@
   justify-content: center;
 }
 
-/* CSS Art: L'Air de Panache Bottle */
+/* CSS Art: L'Air de Panache */
 .panache-bottle-container {
   position: relative;
   width: 160px;
@@ -344,11 +497,6 @@
   letter-spacing: 0.1em;
 }
 
-.philosophy-text {
-  width: 100%;
-  text-align: center;
-}
-
 .quote-block {
   border-top: 1px solid rgba(212, 175, 55, 0.3);
   border-bottom: 1px solid rgba(212, 175, 55, 0.3);
@@ -361,10 +509,12 @@
   font-style: italic;
 }
 
+/* =========================================
+   RESPONSIVE DESIGN (Tablet & Desktop)
+   ========================================= */
+@media (min-width: 768px) {
 
-@media (width>=768px) {
-
-  /* Art (Boy with Apple) */
+  /* ART SECTION */
   .art-container {
     flex-direction: row;
   }
@@ -382,7 +532,46 @@
     justify-content: flex-start;
   }
 
-  /* Philosophy */
+  .painting-frame {
+    width: 360px;
+    height: 300px;
+  }
+
+  .item-gustave {
+    left: 60px;
+    top: 50px;
+  }
+
+  .item-zero {
+    right: 60px;
+    top: 40px;
+  }
+
+  .item-agatha {
+    bottom: 70px;
+  }
+
+  /* MEMOIRS BOOK SECTION */
+  .memoirs-container {
+    flex-direction: row-reverse;
+  }
+
+  .book-wrapper {
+    width: 50%;
+  }
+
+  .memoirs-text {
+    width: 50%;
+    text-align: right;
+  }
+
+  .memoirs-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* PHILOSOPHY SECTION */
   .philosophy-container {
     flex-direction: row;
   }
@@ -396,11 +585,18 @@
     text-align: left;
   }
 
-  .section-description {
-    margin-left: 0;
-  }
-
   .quote-block {
     justify-content: flex-start;
+  }
+
+  /* Genel */
+  .section-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .memoirs-text .section-description {
+    margin-left: auto;
+    margin-right: 0;
   }
 }
