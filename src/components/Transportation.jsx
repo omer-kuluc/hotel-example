@@ -228,7 +228,6 @@ const Transportation = () => {
       </section>
 
       {/* 4. THE PURSUIT (Moto & Sled - High Visibility Icons) */}
-      {/* 4. THE PURSUIT (Moto & Sled - High Visibility Icons) */}
       <section className="chase-section">
         <div className="section-container">
           <div className="text-content center-text">
