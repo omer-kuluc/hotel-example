@@ -1,14 +1,34 @@
-// Home.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+
+  useEffect(() => {
+    // --- YENİ EKLENEN KISIM: HOME SAYFA GİRİŞ ANİMASYONU ---
+    // Tüm konteynerin yumuşakça belirmesi
+    gsap.fromTo(".home-container",
+      { opacity: 0, scale: 0.98 }, // Hafif küçük ve görünmez başla
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        delay: 0.1 // Header ile çakışmaması için çok kısa bir gecikme
+      }
+    );
+
+    // ScrollTrigger'ların doğru hesaplanması için refresh
+    ScrollTrigger.refresh();
+  }, []);
+
   return (
-    <div className='home-container'>
-      {/* Concierge Section (Yeni Eklenen) */}
+    // 'home-container' animasyonun uygulanacağı ana kapsayıcıdır
+    <div className='home-container' style={{ opacity: 0 }}> {/* Başlangıçta gizli olsun diye inline style */}
+
+      {/* Concierge Section */}
       <section className="concierge-section">
         <div className="concierge-container">
           <div className="perfume-wrapper">
@@ -43,7 +63,8 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* Patisserie Section (Mevcut) */}
+
+      {/* Patisserie Section */}
       <section className="patisserie-section">
         <div className="patisserie-container">
           <div className="patisserie-box-wrapper">
@@ -71,16 +92,14 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* SOCIETY OF THE CROSSED KEYS SECTION */}
+
+      {/* SOCIETY SECTION */}
       <section className="society-section">
         <div className="society-container">
           <div className="society-visual-wrapper">
-            {/* "The Calling Tree" Dairesel Görsel */}
             <div className="emblem-container">
-              {/* Dönen Dış Halkalar */}
               <div className="orbit-outer"></div>
               <div className="orbit-inner"></div>
-
               <div className="emblem-core">
                 <div className="emblem-keys">
                   <Key size={40} className="key-left" />
@@ -90,8 +109,6 @@ function Home() {
                 <p className="emblem-text">SOCIETY</p>
                 <p className="emblem-subtext">The Calling Tree</p>
               </div>
-
-              {/* Dekoratif Hareketli Elementler */}
               <div className="floating-phone"><PhoneCall size={24} /></div>
               <div className="floating-key"><Key size={20} /></div>
             </div>
@@ -107,24 +124,20 @@ function Home() {
               Bir telefonla dünyalar yerinden oynar.
             </p>
             <div className="society-actions">
-              <button className="society-button">
-                CEMİYETE KATILIN
-              </button>
+              <button className="society-button">CEMİYETE KATILIN</button>
               <p className="society-quote">"Daima hizmetinizde, gizlilik esastır."</p>
             </div>
           </div>
         </div>
       </section>
+
       {/* TRANSPORTATION SECTION */}
       <section className="transport-section">
         <div className="transport-container">
           <div className="ticket-wrapper">
-            {/* Golden Ticket Visual */}
             <div className="golden-ticket">
               <div className="ticket-inner">
-                <div className="ticket-header">
-                  ZUBROWKA EXPRESS
-                </div>
+                <div className="ticket-header">ZUBROWKA EXPRESS</div>
                 <div className="ticket-route">
                   <span>LUTZ</span> <ArrowRight size={14} /> <span>NEBELSBAD</span>
                 </div>
@@ -143,9 +156,7 @@ function Home() {
               Zubrowka Express'in lüks vagonları ve efsanevi fünikülerimiz ile Alp'lerin kalbine seyahat edin.
             </p>
             <div className="transport-actions">
-              <button className="transport-button">
-                BİLETİNİZİ AYIRTIN
-              </button>
+              <button className="transport-button">BİLETİNİZİ AYIRTIN</button>
               <p className="transport-quote">"First Class accommodations, mandatory."</p>
             </div>
           </div>
@@ -156,7 +167,6 @@ function Home() {
       <section className="memoirs-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
-            {/* Stylized Book Cover Visual */}
             <div className="book-cover">
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
@@ -181,9 +191,7 @@ function Home() {
               Her sayfa, Zubrowka'nın altın çağını fısıldıyor.
             </p>
             <div className="memoirs-actions">
-              <button className="memoirs-button">
-                ANILARI KEŞFEDİN
-              </button>
+              <button className="memoirs-button">ANILARI KEŞFEDİN</button>
               <p className="memoirs-quote">"To be written with a steady hand."</p>
             </div>
           </div>
@@ -194,4 +202,3 @@ function Home() {
 }
 
 export default Home;
-
