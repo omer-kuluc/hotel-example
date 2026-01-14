@@ -8,26 +8,26 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fdfbf7;
-  /* Eski kağıt / Ekran beyazı */
+  /* Home.css ile uyumlu Koyu Mor */
+  background-color: #5e2d5e;
   z-index: 9999;
-  /* Her şeyin üstünde */
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #1a1a1a;
-  /* Simsiyah değil, koyu gri/siyah */
+  /* Yazı rengini gradient ile ezeceğiz ama fallback olarak pembe kalsın */
+  color: #fbc4d3;
   overflow: hidden;
 }
 
 /* Siyah Köşe Üçgenleri (Mobilde daha küçük: 60px) */
+/* Koyu mor zeminde siyah köşeler sinematik çerçeve etkisi yaratır */
 .corner {
   position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
   transition: all 0.5s ease;
-  /* Boyut değişimleri yumuşak olsun */
+  z-index: 10;
 }
 
 .top-left {
@@ -66,15 +66,34 @@
   align-items: center;
   gap: 12px;
   max-width: 90%;
+  position: relative;
+  z-index: 20;
+}
+
+/* MENDL'S GRADIENT TEXT STİLİ (Ortak Class) */
+.mendl-gradient-text {
+  background: linear-gradient(90deg, #fbc4d3 0%, #aec6cf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* Hafif parlama (Glow) efekti */
+  filter: drop-shadow(0 0 2px rgba(251, 196, 211, 0.3));
 }
 
 .loading-text-small {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   /* Mobil Font */
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   margin: 0;
   font-weight: 400;
+
+  /* Gradient Uygulaması */
+  background: linear-gradient(90deg, #fbc4d3 0%, #aec6cf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .loading-text-large {
@@ -86,11 +105,20 @@
   margin: 0;
   font-weight: 700;
   text-transform: uppercase;
+
+  /* Gradient Uygulaması */
+  background: linear-gradient(135deg, #fbc4d3 20%, #aec6cf 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Hafif gölge ile patlatma */
+  filter: drop-shadow(0 4px 0px rgba(0, 0, 0, 0.2));
 }
 
 /* Altyazı efekti */
 .loading-subtitle-container {
-  margin-top: 12px;
+  margin-top: 16px;
   position: relative;
 }
 
@@ -98,24 +126,13 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   /* Mobil Font */
-  color: transparent;
-  /* İçi boş */
-  -webkit-text-stroke: 0.5px #000;
-  /* Mobilde daha ince kenarlık */
   letter-spacing: 0.1em;
   position: relative;
   text-transform: uppercase;
-}
 
-.loading-subtitle::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  color: #000;
-  z-index: -1;
-  opacity: 0.3;
-  /* Mobilde gölgeyi biraz kıstım karışmasın diye */
+  /* İçi boş değil, Mendl's mavisi olsun */
+  color: #aec6cf;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Loading Bar */
@@ -123,28 +140,34 @@
   width: 220px;
   /* Mobilde daha dar */
   height: 4px;
-  background-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Silik beyaz zemin */
   margin-top: 24px;
   position: relative;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 .loading-bar-fill {
   width: 0%;
   height: 100%;
+  /* Çubuk Rengi: Altın (Mevcut paletle uyumlu) veya Mendl's Pembesi olabilir */
   background-color: #d4af37;
-  /* Projedeki Altın Rengi */
   position: absolute;
   left: 0;
   top: 0;
+  box-shadow: 0 0 10px #d4af37;
+  /* Glow efekti */
 }
 
 .loading-footer {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 0.7rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.4em;
   margin-top: 32px;
-  opacity: 0.6;
+  color: #fbc4d3;
+  /* Pembe */
+  opacity: 0.7;
 }
 
 
@@ -185,7 +208,6 @@
 
   .loading-subtitle {
     font-size: 1.5rem;
-    -webkit-text-stroke: 1px #000;
   }
 
   .loading-bar-wrapper {

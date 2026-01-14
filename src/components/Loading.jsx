@@ -5,33 +5,41 @@ import { gsap } from 'gsap';
 const Loading = ({ onComplete }) => {
   const containerRef = useRef(null);
   const barRef = useRef(null);
-  // GSAP Context temizliği için ref (React 18 Best Practice)
   const comp = useRef(null);
 
   useLayoutEffect(() => {
-    // GSAP Context oluşturuyoruz
     let ctx = gsap.context(() => {
+
+      // 1. ÖN HAZIRLIK (Saniyelik görünmeyi engeller)
+      // Elementleri anında görünmez yap ve başlangıç konumlarına al
+      gsap.set('.loading-text-small', { y: 20, opacity: 0 });
+      gsap.set('.loading-text-large', { scale: 0.9, opacity: 0 });
+      gsap.set('.loading-subtitle', { y: 10, opacity: 0 });
+      gsap.set(barRef.current, { width: '0%' });
+
+      // 2. ANA ANİMASYON
       const tl = gsap.timeline({
         onComplete: () => {
-          // Yükleme bitince yukarı doğru kaybolma
+          // Loading bitince perdeyi yukarı çek
           gsap.to(containerRef.current, {
             yPercent: -100,
-            duration: 1,
+            duration: 1.2,
             ease: "power4.inOut",
             onComplete: onComplete
           });
         }
       });
 
-      // 1. Metinlerin gelişi (.to kullanıyoruz çünkü başlangıçlarını aşağıda style ile verdik)
+      // Metinleri .to() ile görünür yapıyoruz
       tl.to('.loading-text-small', {
-        y: 0,           // Başlangıçta 20px aşağıdaydı, 0'a gelsin
-        opacity: 1,     // Görünür olsun
+        y: 0,
+        opacity: 1,
         duration: 0.8,
-        ease: "power3.out"
+        ease: "power3.out",
+        delay: 0.3 // Sayfa tam otursun diye minik gecikme
       })
         .to('.loading-text-large', {
-          scale: 1,       // Başlangıçta 0.9'du, 1 olsun
+          scale: 1,
           opacity: 1,
           duration: 1,
           ease: "power3.out"
@@ -43,57 +51,44 @@ const Loading = ({ onComplete }) => {
           ease: "power3.out"
         }, "-=0.6");
 
-      // 2. Loading Bar Dolumu
+      // Çubuğu doldur
       tl.to(barRef.current, {
         width: '100%',
         duration: 2.5,
         ease: "power1.inOut"
       });
 
-      // 3. Hafif bir bekleme
-      tl.to({}, { duration: 1 });
+      // Biraz bekle
+      tl.to({}, { duration: 0.5 });
 
-    }, comp); // Animasyonları bu component içine hapsediyoruz
+    }, comp);
 
-    return () => ctx.revert(); // Component kalkarsa animasyonları temizle
+    return () => ctx.revert();
   }, [onComplete]);
 
   return (
     <div className="loading-container" ref={containerRef}>
-      {/* Siyah Köşeler */}
       <div className="corner top-left"></div>
       <div className="corner top-right"></div>
       <div className="corner bottom-left"></div>
       <div className="corner bottom-right"></div>
 
-      {/* ref={comp} ile kapsamı belirliyoruz */}
       <div className="loading-content" ref={comp}>
-
-        {/* Başlangıçta görünmemeleri için style ekledik */}
-        <h2
-          className="loading-text-small"
-          style={{ opacity: 0, transform: 'translateY(20px)' }}
-        >
+        {/* Style ile de opacity 0 veriyoruz ki JS yüklenene kadar garanti olsun */}
+        <h2 className="loading-text-small" style={{ opacity: 0 }}>
           PLEASE WAIT WHILE WE
         </h2>
 
-        <h1
-          className="loading-text-large"
-          style={{ opacity: 0, transform: 'scale(0.9)' }}
-        >
+        <h1 className="loading-text-large" style={{ opacity: 0 }}>
           PREPARE YOUR STAY
         </h1>
 
         <div className="loading-subtitle-container">
-          <p
-            className="loading-subtitle"
-            style={{ opacity: 0, transform: 'translateY(10px)' }}
-          >
+          <p className="loading-subtitle" style={{ opacity: 0 }}>
             LÜTFEN ODANIZ HAZIRLANIRKEN BEKLEYİNİZ
           </p>
         </div>
 
-        {/* Loading Bar */}
         <div className="loading-bar-wrapper">
           <div className="loading-bar-fill" ref={barRef}></div>
         </div>
