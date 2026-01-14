@@ -462,58 +462,7 @@
   padding: 2px 0;
 }
 
-/* 5. PURSUIT (Badges) */
-.chase-section {
-  background-color: #f4f1ea;
-  /* Creamy Paper Color for contrast */
-  border-top: 4px double #d4af37;
-}
 
-.badges-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.vehicle-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  transition: transform 0.3s;
-}
-
-.vehicle-badge:hover {
-  transform: translateY(-10px);
-}
-
-.badge-circle {
-  width: 160px;
-  height: 160px;
-  background-color: #3d1e3d;
-  /* Koyu Mor Daire */
-  border: 4px solid #d4af37;
-  /* Altın Çerçeve */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.badge-icon {
-  color: #d4af37;
-  /* Altın İkon */
-}
-
-.badge-label {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
-  color: #2d1b33;
-  /* Dark text on light bg */
-  letter-spacing: 0.1em;
-}
 
 /* FOOTER */
 .trans-footer {
@@ -560,13 +509,6 @@
     margin-left: 0;
   }
 
-  .badges-wrapper {
-    gap: 80px;
-  }
-
-  .badge-row {
-    margin-left: 0;
-  }
 }
 
 @media (width >=1280px) {

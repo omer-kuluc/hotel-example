@@ -8,6 +8,8 @@ import './assets/styles/Patisserie.css'
 import './assets/styles/Society.css'
 import './assets/styles/Transportation.css'
 import './assets/styles/Memoirs.css'
+import './assets/styles/Loading.css'
+
 
 
 import { BrowserRouter } from 'react-router-dom'

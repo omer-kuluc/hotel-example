@@ -1,0 +1,241 @@
+/* =========================================
+   MOBILE FIRST (Varsayılan stiller)
+   ========================================= */
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fdfbf7;
+  /* Eski kağıt / Ekran beyazı */
+  z-index: 9999;
+  /* Her şeyin üstünde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a1a1a;
+  /* Simsiyah değil, koyu gri/siyah */
+  overflow: hidden;
+}
+
+/* Siyah Köşe Üçgenleri (Mobilde daha küçük: 60px) */
+.corner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: all 0.5s ease;
+  /* Boyut değişimleri yumuşak olsun */
+}
+
+.top-left {
+  top: 0;
+  left: 0;
+  border-width: 60px 60px 0 0;
+  border-color: #000 transparent transparent transparent;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #000 transparent transparent;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 60px 0 0 60px;
+  border-color: transparent transparent transparent #000;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 0 60px 60px;
+  border-color: transparent transparent #000 transparent;
+}
+
+/* İçerik Düzeni */
+.loading-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 90%;
+}
+
+.loading-text-small {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  /* Mobil Font */
+  letter-spacing: 0.1em;
+  margin: 0;
+  font-weight: 400;
+}
+
+.loading-text-large {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  /* Mobil Font */
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Altyazı efekti */
+.loading-subtitle-container {
+  margin-top: 12px;
+  position: relative;
+}
+
+.loading-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  /* Mobil Font */
+  color: transparent;
+  /* İçi boş */
+  -webkit-text-stroke: 0.5px #000;
+  /* Mobilde daha ince kenarlık */
+  letter-spacing: 0.1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.loading-subtitle::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  color: #000;
+  z-index: -1;
+  opacity: 0.3;
+  /* Mobilde gölgeyi biraz kıstım karışmasın diye */
+}
+
+/* Loading Bar */
+.loading-bar-wrapper {
+  width: 220px;
+  /* Mobilde daha dar */
+  height: 4px;
+  background-color: #e0e0e0;
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #d4af37;
+  /* Projedeki Altın Rengi */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.loading-footer {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  margin-top: 32px;
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   TABLET (768px ve üzeri)
+   ========================================= */
+@media (width >=768px) {
+
+  /* Köşeler büyüyor (90px) */
+  .top-left {
+    border-width: 90px 90px 0 0;
+  }
+
+  .top-right {
+    border-width: 0 90px 90px 0;
+  }
+
+  .bottom-left {
+    border-width: 90px 0 0 90px;
+  }
+
+  .bottom-right {
+    border-width: 0 0 90px 90px;
+  }
+
+  .loading-content {
+    gap: 16px;
+    max-width: 80%;
+  }
+
+  .loading-text-small {
+    font-size: 2rem;
+  }
+
+  .loading-text-large {
+    font-size: 5rem;
+  }
+
+  .loading-subtitle {
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #000;
+  }
+
+  .loading-bar-wrapper {
+    width: 300px;
+    margin-top: 32px;
+  }
+
+  .loading-footer {
+    font-size: 0.8rem;
+    margin-top: 48px;
+  }
+}
+
+
+/* =========================================
+   DESKTOP (1280px ve üzeri)
+   ========================================= */
+@media (width >=1280px) {
+
+  /* Köşeler Orijinal Boyutuna (120px) */
+  .top-left {
+    border-width: 120px 120px 0 0;
+  }
+
+  .top-right {
+    border-width: 0 120px 120px 0;
+  }
+
+  .bottom-left {
+    border-width: 120px 0 0 120px;
+  }
+
+  .bottom-right {
+    border-width: 0 0 120px 120px;
+  }
+
+  .loading-text-small {
+    font-size: 2.5rem;
+  }
+
+  .loading-text-large {
+    font-size: 7rem;
+    /* Desktopta daha da büyük */
+  }
+
+  .loading-subtitle {
+    font-size: 2rem;
+  }
+
+  .loading-bar-wrapper {
+    width: 400px;
+  }
+}

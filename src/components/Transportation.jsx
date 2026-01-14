@@ -69,19 +69,6 @@ const Transportation = () => {
       }
     );
 
-    // 5. İKONLAR (Moto & Sled)
-    gsap.from('.vehicle-badge', {
-      scrollTrigger: {
-        trigger: '.chase-section',
-        start: 'top 70%',
-      },
-      scale: 0,
-      opacity: 0,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: 'elastic.out(1, 0.5)',
-    });
-
   }, []);
 
   return (
@@ -227,65 +214,8 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 4. THE PURSUIT (Moto & Sled - High Visibility Icons) */}
-      <section className="chase-section">
-        <div className="section-container">
-          <div className="text-content center-text">
-            <h2 className="vehicle-title">THE <span className="highlight">PURSUIT</span></h2>
-            <p className="vehicle-desc">
-              Hız ve gizlilik. Jopling'in motosikleti ve karlı tepelerden inen o meşhur kızak.
-            </p>
-          </div>
 
-          <div className="badges-wrapper">
-            {/* Motorcycle Badge */}
-            <div className="vehicle-badge moto-badge">
-              <div className="badge-circle">
-                <svg className="motorcycle-svg" viewBox="0 0 200 120" fill="none">
-                  {/* Motorcycle Body */}
-                  <rect x="60" y="45" width="80" height="25" rx="5" fill="#d4af37" stroke="#2d1b33" strokeWidth="2" />
-                  {/* Front Wheel */}
-                  <circle cx="40" cy="85" r="20" fill="none" stroke="#d4af37" strokeWidth="4" />
-                  <circle cx="40" cy="85" r="12" fill="none" stroke="#d4af37" strokeWidth="2" />
-                  {/* Rear Wheel */}
-                  <circle cx="160" cy="85" r="20" fill="none" stroke="#d4af37" strokeWidth="4" />
-                  <circle cx="160" cy="85" r="12" fill="none" stroke="#d4af37" strokeWidth="2" />
-                  {/* Handlebars */}
-                  <path d="M20 45 L30 35 L50 35" stroke="#d4af37" strokeWidth="3" fill="none" />
-                  {/* Seat */}
-                  <ellipse cx="120" cy="42" rx="25" ry="8" fill="#d4af37" />
-                  {/* Frame */}
-                  <path d="M60 55 L40 85 M60 65 L160 85 M100 55 L160 85" stroke="#d4af37" strokeWidth="3" />
-                  {/* Exhaust */}
-                  <rect x="140" y="65" width="30" height="6" rx="3" fill="#d4af37" />
-                </svg>
-              </div>
-              <span className="badge-label">JOPLING'S MOTO</span>
-            </div>
 
-            {/* Sled Badge */}
-            <div className="vehicle-badge sled-badge">
-              <div className="badge-circle">
-                <svg className="sled-svg" viewBox="0 0 200 120" fill="none">
-                  {/* Sled Base */}
-                  <ellipse cx="100" cy="85" rx="80" ry="12" fill="#d4af37" stroke="#2d1b33" strokeWidth="2" />
-                  {/* Sled Runners */}
-                  <rect x="30" y="90" width="140" height="4" rx="2" fill="#d4af37" />
-                  <rect x="25" y="88" width="8" height="8" rx="4" fill="#d4af37" />
-                  <rect x="167" y="88" width="8" height="8" rx="4" fill="#d4af37" />
-                  {/* Sled Body */}
-                  <path d="M40 85 Q40 55 60 45 L140 45 Q160 55 160 85" fill="#d4af37" stroke="#2d1b33" strokeWidth="2" />
-                  {/* Handle/Rope */}
-                  <path d="M60 45 Q50 35 40 25 M80 45 Q70 35 60 25 M100 45 Q90 35 80 25" stroke="#d4af37" strokeWidth="3" fill="none" />
-                  {/* Decorative Lines */}
-                  <path d="M50 65 L150 65 M55 75 L145 75" stroke="#2d1b33" strokeWidth="1" opacity="0.6" />
-                </svg>
-              </div>
-              <span className="badge-label">THE SLED</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FOOTER */}
       <div className="trans-footer">
