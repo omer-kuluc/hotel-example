@@ -46,7 +46,6 @@ function Home() {
               <div className="premium-tag">PREMIUM</div>
             </div>
           </div>
-
           <div className="concierge-text">
             <h3 className="concierge-title">
               THE <span className="concierge-highlight">CONCIERGE</span>
@@ -55,7 +54,6 @@ function Home() {
               Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.</p>
             <div className="concierge-actions">
               <button className="concierge-button">MEET GASTON</button>
-              <p className="concierge-quote">"Never leave out L'Esprit d'Élégance."</p>
             </div>
           </div>
         </div>
@@ -67,7 +65,7 @@ function Home() {
           <div className="patisserie-box-wrapper">
             <div className="mendls-box">
               <div className="box-content">
-                <h3 className="box-title">MADEL</h3>
+                <h3 className="box-title">MADEL'S</h3>
                 <div className="box-divider"></div>
                 <p className="box-subtitle">Pâtissier</p>
                 <div className="box-product">Sérénité au Chocolat</div>
@@ -81,11 +79,9 @@ function Home() {
               THE <span className="patisserie-highlight">PATISSERIE</span>
             </h3>
             <p className="patisserie-description">
-              Efsanevi Mendl's kutularımızda sunulan Courtesan au Chocolat,
-              Torvonka'nın en tatlı sırrıdır. Her katman bir sanat eseri,
-              her ısırık bir anıdır.
+              Sérénité au Chocolat, offered in our legendary Madel's boxes, is Torvonka's sweetest secret. Each layer is a work of art, every bite a memory.
             </p>
-            <button className="patisserie-button">SİPARİŞ VERİN</button>
+            <button className="patisserie-button">EXPLORE MADEL'S</button>
           </div>
         </div>
       </section>
@@ -116,13 +112,12 @@ function Home() {
               THE <span className="society-highlight">SOCIETY</span>
             </h3>
             <p className="society-description">
-              Avrupa'nın en seçkin otellerini birbirine bağlayan gizli bir ağ.
-              Society of the Crossed Keys, en zor anlarda devreye giren bir yardımlaşma zinciridir.
-              Bir telefonla dünyalar yerinden oynar.
+              A secret network connecting Europe's most prestigious hotels.
+              The Society of the Silent Locks is a chain of assistance that comes into play during the most challenging times.
+              A single phone call can change everything.
             </p>
             <div className="society-actions">
-              <button className="society-button">CEMİYETE KATILIN</button>
-              <p className="society-quote">"Daima hizmetinizde, gizlilik esastır."</p>
+              <button className="society-button">JOIN THE SECRECY</button>
             </div>
           </div>
         </div>
@@ -154,7 +149,6 @@ function Home() {
             </p>
             <div className="transport-actions">
               <button className="transport-button">BİLETİNİZİ AYIRTIN</button>
-              <p className="transport-quote">"First Class accommodations, mandatory."</p>
             </div>
           </div>
         </div>

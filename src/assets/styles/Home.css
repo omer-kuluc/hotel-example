@@ -112,7 +112,7 @@
 
 .concierge-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -259,7 +259,7 @@
   right: -16px;
   background-color: #d4af37;
   color: #3d1e3d;
-  padding: 18px;
+  padding: 8px;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 0.875rem;
 }
@@ -506,15 +506,18 @@
 
 /* society-mobile-end */
 
-CSS
 /* ========== MOBİL KISIM ========== */
 
 /* transport-mobile-start */
 .transport-section {
   padding: 96px 0;
-  background-color: rgba(251, 196, 211, 0.05);
-  /* Budapest Pink %5 */
+  /* Önceki mavimsi renk yerine Patisserie ile aynı PEMBE tonu */
+  background: rgba(251, 196, 211, 0.1);
+
+  /* Üst ve Alt border eklenerek diğer "light" section'larla (Patisserie) eşitlendi */
+  border-top: 4px double rgba(212, 175, 55, 0.2);
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
+
   overflow: hidden;
 }
 
