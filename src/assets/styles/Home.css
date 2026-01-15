@@ -112,7 +112,7 @@
 
 .concierge-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -259,7 +259,7 @@
   right: -16px;
   background-color: #d4af37;
   color: #3d1e3d;
-  padding: 8px;
+  padding: 18px;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 0.875rem;
 }

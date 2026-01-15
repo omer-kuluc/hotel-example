@@ -108,6 +108,9 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="nav-desktop">
           {/* Linklere stil ekleyerek başlangıçta gizliyoruz */}
+          <Link className='nav-item' to="/" style={navItemStyle}>
+            Home <span className="underline"></span>
+          </Link>
           <Link className='nav-item' to="/concierge" style={navItemStyle}>
             The Concierge <span className="underline"></span>
           </Link>
@@ -135,6 +138,9 @@ const Header = () => {
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <Key className="icon-large" size={48} />
+          <Link className='mobile-nav-item' to="/" onClick={handleMenuItemClick}>Home
+            <span className="underline"></span>
+          </Link>
           <Link className='mobile-nav-item' to="/concierge" onClick={handleMenuItemClick}>The Concierge
             <span className="underline"></span>
           </Link>

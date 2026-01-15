@@ -136,7 +136,7 @@ function Patisserie() {
               </div>
               <div className="box-body">
                 <span className="box-brand">Mendl's</span>
-                <div className="box-badge"><Gift size={12} /></div>
+                <div className="patisserie-box-badge"><Gift size={12} /></div>
               </div>
             </div>
           </div>

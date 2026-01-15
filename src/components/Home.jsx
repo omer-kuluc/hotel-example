@@ -35,9 +35,9 @@ function Home() {
             <div className="perfume-bottle">
               <div className="perfume-inner">
                 <Sparkles className="perfume-sparkle" size={32} />
-                <h3 className="perfume-title">L'Air de Panache</h3>
+                <h3 className="perfume-title">L'Esprit d'Élégance</h3>
                 <div className="perfume-divider"></div>
-                <p className="perfume-subtitle">The Signature Scent of M. Gustave</p>
+                <p className="perfume-subtitle">The Signature Scent of M. Gaston</p>
                 <div className="perfume-keys">
                   <Key size={24} className="key-icon" />
                   <Key size={24} className="key-icon rotate-90" />
@@ -52,13 +52,10 @@ function Home() {
               THE <span className="concierge-highlight">CONCIERGE</span>
             </h3>
             <p className="concierge-description">
-              "Bir otel sadece bir binadan ibaret değildir." Monsieur Gustave H.,
-              Society of the Crossed Keys üyesi ve otelin sarsılmaz ruhudur.
-              Onun disiplini, her bir misafire kraliyet ailesindenmiş gibi hissettirir.
-            </p>
+              Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.</p>
             <div className="concierge-actions">
-              <button className="concierge-button">GUSTAVE İLE TANIŞIN</button>
-              <p className="concierge-quote">"L'Air de Panache'ı asla eksik etmeyin."</p>
+              <button className="concierge-button">MEET GASTON</button>
+              <p className="concierge-quote">"Never leave out L'Esprit d'Élégance."</p>
             </div>
           </div>
         </div>
