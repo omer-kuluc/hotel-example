@@ -112,7 +112,7 @@
 
 .concierge-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -271,7 +271,7 @@
 
 .patisserie-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: #fbc4d3;
@@ -438,7 +438,7 @@
 
 .society-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -548,7 +548,6 @@
   padding: 4px;
   box-shadow: 15px 15px 0px #3d1e3d;
   transition: transform 0.5s ease;
-  cursor: pointer;
 }
 
 .golden-ticket:hover {
@@ -597,8 +596,8 @@
 
 .ticket-date {
   position: absolute;
-  bottom: 8px;
-  right: 8px;
+  bottom: 4px;
+  right: 4px;
   color: rgba(61, 30, 61, 0.4);
   font-family: 'Bebas Neue', sans-serif;
 }
@@ -610,7 +609,7 @@
 
 .transport-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: #3d1e3d;
@@ -628,7 +627,7 @@
   max-width: 512px;
   margin-left: auto;
   margin-right: auto;
-  color: #3d1e3d;
+  color: #fbc4d3;
 }
 
 .transport-button {
@@ -645,14 +644,6 @@
 .transport-button:hover {
   background-color: #d4af37;
   color: #3d1e3d;
-}
-
-.transport-quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  color: rgba(212, 175, 55, 0.8);
-  font-size: 0.875rem;
-  margin-top: 16px;
 }
 
 /* transport-mobile-end */
@@ -803,14 +794,6 @@
 .memoirs-button:hover {
   background-color: #fbc4d3;
   border-color: #fbc4d3;
-}
-
-.memoirs-quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  color: rgba(212, 175, 55, 0.6);
-  font-size: 0.875rem;
-  margin-top: 16px;
 }
 
 /* memoirs-mobile-end */

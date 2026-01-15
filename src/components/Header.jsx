@@ -22,32 +22,27 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  // ANIMASYONLAR: useLayoutEffect ile render öncesi hazırlık
+  // ANIMASYONLAR
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
-      // 1. Header Title Animasyonu (.from yerine .to kullanıyoruz)
-      // Başlangıç değerleri aşağıda style={{...}} içinde verildi.
       gsap.to('.header-title', {
         duration: 1.5,
-        y: 0,           // -50'den 0'a
-        opacity: 1,     // 0'dan 1'e
-        scale: 1,       // 0.95'ten 1'e
+        y: 0,
+        opacity: 1,
+        scale: 1,
         ease: 'power3.out',
       });
 
-      // 2. Nav Linkleri Animasyonu
       gsap.to('nav a', {
         duration: 1,
-        opacity: 1,     // 0'dan 1'e
-        y: 0,           // 20'den 0'a
+        opacity: 1,
+        y: 0,
         stagger: 0.1,
         delay: 0.5,
         ease: 'power2.out',
       });
 
-      // 3. Pulse Animasyonu
-      // Bu sürekli bir döngü olduğu için .to ile başlatıyoruz
       gsap.to(".animate-pulse", {
         opacity: 0,
         repeat: -1,
@@ -56,12 +51,11 @@ const Header = () => {
         ease: 'power1.inOut',
       });
 
-    }, comp); // Scope olarak comp ref'ini kullanıyoruz
+    }, comp);
 
-    return () => ctx.revert(); // Temizlik
+    return () => ctx.revert();
   }, []);
 
-  // Scroll İşlemleri (Event Listener olduğu için useEffect uygundur)
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY;
@@ -80,16 +74,12 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  // Inline stiller ile başlangıç durumlarını (hidden) tanımlıyoruz.
-  // Bu sayede JS yüklenene kadar ekranda titreme olmaz.
   const titleStyle = { opacity: 0, transform: 'translateY(-50px) scale(0.95)' };
   const navItemStyle = { opacity: 0, transform: 'translateY(20px)', display: 'inline-block' };
 
   return (
-    // ref={comp} ile GSAP context'ini kapsayıcıya bağlıyoruz
     <header ref={comp} className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
-        {/* Üst Accent Line */}
         <div className="top-accent-line">
           <div className="line"></div>
           <div className="icons">
@@ -99,18 +89,21 @@ const Header = () => {
           <div className="line"></div>
         </div>
 
-        {/* Başlık / Logo */}
         <div className="title-container">
           <h1 className="header-title" style={titleStyle}>The Majestic Bellmont Hotel</h1>
-          <p className="header-subtitle">Republic of Torvonka</p>
+          <div className="middle-title-container">
+            <Link className='nav-item' to="/" >
+              HOME <span className="underline"></span>
+            </Link>
+            <p className="header-subtitle">Republic of Torvonka</p>
+            {/* Credits'e de underline efekti için span eklendi */}
+            <p className='nav-item'>
+              CREDITS <span className="underline"></span>
+            </p>
+          </div>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="nav-desktop">
-          {/* Linklere stil ekleyerek başlangıçta gizliyoruz */}
-          <Link className='nav-item' to="/" style={navItemStyle}>
-            Home <span className="underline"></span>
-          </Link>
           <Link className='nav-item' to="/concierge" style={navItemStyle}>
             The Concierge <span className="underline"></span>
           </Link>
@@ -128,13 +121,11 @@ const Header = () => {
           </Link>
         </nav>
 
-        {/* Mobil Menü Butonu */}
         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-button">
           {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobil Menü Overlay */}
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
           <Key className="icon-large" size={48} />

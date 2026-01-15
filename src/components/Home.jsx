@@ -131,7 +131,7 @@ function Home() {
               <div className="ticket-inner">
                 <div className="ticket-header">TORVONKA EXPRESS</div>
                 <div className="ticket-route">
-                  <span>LUTZ</span> <ArrowRight size={14} /> <span>NEBELSBAD</span>
+                  <span>VULST</span> <ArrowRight size={14} /> <span>BEMELSTAD</span>
                 </div>
                 <div className="ticket-icon-top"><TrainFront size={16} /></div>
                 <div className="ticket-date">1932</div>
@@ -144,11 +144,9 @@ function Home() {
               THE <span className="transport-highlight">TRANSPORT</span>
             </h3>
             <p className="transport-description">
-              Karlı zirvelere giden yolculuğunuz, konforun ve maceranın birleştiği noktadır.
-              Torvonka Express'in lüks vagonları ve efsanevi fünikülerimiz ile Alp'lerin kalbine seyahat edin.
-            </p>
+              Your journey to the snowy peaks is where comfort meets adventure. Travel to the heart of the Alps with Torvonka Express' luxurious carriages, our legendary funicular, and cable car.</p>
             <div className="transport-actions">
-              <button className="transport-button">BİLETİNİZİ AYIRTIN</button>
+              <button className="transport-button">HIT THE ROAD!</button>
             </div>
           </div>
         </div>
@@ -177,13 +175,11 @@ function Home() {
               THE <span className="memoirs-highlight">MEMOIRS</span>
             </h3>
             <p className="memoirs-description">
-              Yıllar sonra anlatılan bu hikaye, Zero Moustafa'nın anılarıyla hayat buluyor.
-              Kaybolmuş bir dünyanın, nezaketin ve unutulmaz dostlukların efsanevi dökümü.
-              Her sayfa, Torvonka'nın altın çağını fısıldıyor.
+              The legendary pieces of a lost world, kindness, love, and unforgettable friendships.
+              Each piece whispers the golden age of Torvonka.
             </p>
             <div className="memoirs-actions">
-              <button className="memoirs-button">ANILARI KEŞFEDİN</button>
-              <p className="memoirs-quote">"To be written with a steady hand."</p>
+              <button className="memoirs-button">LIVE THE PAST!</button>
             </div>
           </div>
         </div>

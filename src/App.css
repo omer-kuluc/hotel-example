@@ -77,6 +77,10 @@ h6 {
   isolation: isolate;
 }
 
+.mobile-none {
+  display: none;
+}
+
 
 .home-container,
 .concierge-page,
