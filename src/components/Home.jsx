@@ -67,10 +67,10 @@ function Home() {
           <div className="patisserie-box-wrapper">
             <div className="mendls-box">
               <div className="box-content">
-                <h3 className="box-title">MENDL'S</h3>
+                <h3 className="box-title">MADEL</h3>
                 <div className="box-divider"></div>
                 <p className="box-subtitle">Pâtissier</p>
-                <div className="box-product">Courtesan au Chocolat</div>
+                <div className="box-product">Sérénité au Chocolat</div>
               </div>
               <div className="box-badge">FRESHLY BAKED</div>
             </div>
@@ -82,7 +82,7 @@ function Home() {
             </h3>
             <p className="patisserie-description">
               Efsanevi Mendl's kutularımızda sunulan Courtesan au Chocolat,
-              Zubrowka'nın en tatlı sırrıdır. Her katman bir sanat eseri,
+              Torvonka'nın en tatlı sırrıdır. Her katman bir sanat eseri,
               her ısırık bir anıdır.
             </p>
             <button className="patisserie-button">SİPARİŞ VERİN</button>
@@ -134,7 +134,7 @@ function Home() {
           <div className="ticket-wrapper">
             <div className="golden-ticket">
               <div className="ticket-inner">
-                <div className="ticket-header">ZUBROWKA EXPRESS</div>
+                <div className="ticket-header">TORVONKA EXPRESS</div>
                 <div className="ticket-route">
                   <span>LUTZ</span> <ArrowRight size={14} /> <span>NEBELSBAD</span>
                 </div>
@@ -150,7 +150,7 @@ function Home() {
             </h3>
             <p className="transport-description">
               Karlı zirvelere giden yolculuğunuz, konforun ve maceranın birleştiği noktadır.
-              Zubrowka Express'in lüks vagonları ve efsanevi fünikülerimiz ile Alp'lerin kalbine seyahat edin.
+              Torvonka Express'in lüks vagonları ve efsanevi fünikülerimiz ile Alp'lerin kalbine seyahat edin.
             </p>
             <div className="transport-actions">
               <button className="transport-button">BİLETİNİZİ AYIRTIN</button>
@@ -167,7 +167,7 @@ function Home() {
             <div className="book-cover">
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
-                <h3 className="book-title-text">The Grand Budapest Hotel</h3>
+                <h3 className="book-title-text">The Majestic Bellmont Hotel</h3>
                 <div className="book-divider"></div>
                 <p className="book-author">By THE AUTHOR</p>
                 <div className="book-footer">
@@ -185,7 +185,7 @@ function Home() {
             <p className="memoirs-description">
               Yıllar sonra anlatılan bu hikaye, Zero Moustafa'nın anılarıyla hayat buluyor.
               Kaybolmuş bir dünyanın, nezaketin ve unutulmaz dostlukların efsanevi dökümü.
-              Her sayfa, Zubrowka'nın altın çağını fısıldıyor.
+              Her sayfa, Torvonka'nın altın çağını fısıldıyor.
             </p>
             <div className="memoirs-actions">
               <button className="memoirs-button">ANILARI KEŞFEDİN</button>

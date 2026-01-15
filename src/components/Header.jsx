@@ -101,8 +101,8 @@ const Header = () => {
 
         {/* Başlık / Logo */}
         <div className="title-container">
-          <h1 className="header-title" style={titleStyle}>The Grand Budapest Hotel</h1>
-          <p className="header-subtitle">Republic of Zubrowka</p>
+          <h1 className="header-title" style={titleStyle}>The Majestic Bellmont Hotel</h1>
+          <p className="header-subtitle">Republic of Torvonka</p>
         </div>
 
         {/* Desktop Navigation */}
