@@ -120,6 +120,7 @@
 
 .concierge-highlight {
   color: #d4af37;
+  display: block;
 }
 
 .concierge-description {
@@ -427,7 +428,7 @@
 .floating-key {
   position: absolute;
   top: 50%;
-  right: -32px;
+  right: -22px;
   color: rgba(212, 175, 55, 0.5);
 }
 
@@ -446,6 +447,7 @@
 
 .society-highlight {
   color: #d4af37;
+  display: block;
 }
 
 .society-description {
@@ -467,6 +469,7 @@
   letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-inline: auto;
 }
 
 .society-button:hover {
@@ -639,6 +642,7 @@
   letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-inline: auto;
 }
 
 .transport-button:hover {
@@ -768,6 +772,7 @@
 
 .memoirs-highlight {
   color: #d4af37;
+  display: block;
 }
 
 .memoirs-description {
@@ -778,6 +783,7 @@
   margin-left: auto;
   margin-right: auto;
   color: #fbc4d3;
+  text-align: center;
 }
 
 .memoirs-button {
@@ -789,6 +795,7 @@
   letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-inline: auto;
 }
 
 .memoirs-button:hover {
@@ -803,12 +810,14 @@
 
   /* concierge-tablet-start */
   .concierge-container {
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: row-reverse;
+    gap: 45px;
+    padding: 12px;
   }
 
-
   .concierge-title {
-    font-size: 5rem;
+    font-size: 2.5rem;
   }
 
   /* concierge-tablet-end */
@@ -825,20 +834,18 @@
   }
 
   .patisserie-container {
-    flex-direction: row;
-  }
-
-  .patisserie-box-wrapper {
-    width: 50%;
+    /* flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
   }
 
   .patisserie-text {
-    width: 50%;
-    text-align: left;
+    /* text-align: left; */
   }
 
   .patisserie-title {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
   }
 
   .patisserie-description {
@@ -850,11 +857,14 @@
 
   /* society-tablet-start */
   .society-container {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    gap: 45px;
     flex-direction: row-reverse;
   }
 
   .society-visual-wrapper {
-    width: 50%;
+    /* width: 50%; */
   }
 
   .emblem-container {
@@ -868,22 +878,23 @@
   }
 
   .society-text {
-    width: 50%;
-    text-align: right;
+    /* width: 50%; */
+    /* text-align: right; */
   }
 
   .society-title {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   .society-description {
-    margin-right: 0;
+    /* margin-right: 0; */
   }
 
   .society-actions {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
   }
 
   /* society-tablet-end */
@@ -891,11 +902,13 @@
   /* transport-tablet-start */
   .transport-container {
     flex-direction: row;
+    gap: 45px;
+    padding: 12px;
     /* Görsel solda, yazı sağda */
   }
 
   .ticket-wrapper {
-    width: 50%;
+    /* width: 50%; */
   }
 
   .golden-ticket {
@@ -907,17 +920,12 @@
     font-size: 2.25rem;
   }
 
-  .transport-text {
-    width: 50%;
-    text-align: left;
-  }
-
   .transport-title {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
   }
 
   .transport-description {
-    margin-left: 0;
+    /* margin-left: 0; */
   }
 
   .transport-actions {
@@ -930,11 +938,13 @@
   /* memoirs-tablet-start */
   .memoirs-container {
     flex-direction: row-reverse;
+    gap: 45px;
+    padding: 12px;
     /* Görsel sağda, yazı solda */
   }
 
   .book-wrapper {
-    width: 50%;
+    /* width: 50%; */
   }
 
   .book-cover {
@@ -947,16 +957,14 @@
   }
 
   .memoirs-text {
-    width: 50%;
-    text-align: right;
+    /* width: 50%; */
+    /* text-align: right; */
+    text-align: center;
   }
 
   .memoirs-title {
-    font-size: 4.5rem;
-  }
-
-  .memoirs-description {
-    margin-right: 0;
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   .memoirs-actions {
@@ -972,33 +980,12 @@
 /* ========== DESKTOP KISIM ========== */
 @media (width >=1280px) {
 
-  /* patisserie-desktop-start */
-
-  .patisserie-title {
-    font-size: 5rem;
-  }
-
-  /* patisserie-desktop-end */
-
-  /* society-desktop-start */
-  .society-title {
-    font-size: 5rem;
-  }
-
-  /* society-desktop-end */
-
-  /* transport-desktop-start */
-  .transport-title {
-    font-size: 5rem;
-  }
-
-  /* transport-desktop-end */
-
-  /* memoirs-desktop-start */
+  .concierge-title,
+  .patisserie-title,
+  .society-title,
+  .transport-title,
   .memoirs-title {
-    font-size: 5rem;
+    font-size: 4rem;
   }
-
-  /* memoirs-desktop-end */
 
 }
