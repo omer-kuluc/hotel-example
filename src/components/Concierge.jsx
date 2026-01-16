@@ -134,7 +134,7 @@ const Concierge = () => {
           </div>
 
           <div className="profile-text">
-            <h3 className="section-title">
+            <h3 className="profile-title">
               THE <span className="highlight">INSTITUTION</span>
             </h3>
             <p className="section-description">
@@ -169,7 +169,7 @@ const Concierge = () => {
           </div>
 
           <div className="legacy-text">
-            <h3 className="section-title">
+            <h3 className="legacy-title">
               THE <span className="highlight">PROTÉGÉ</span>
             </h3>
             <p className="section-description">
@@ -209,10 +209,10 @@ const Concierge = () => {
           </div>
 
           <div className="poetry-text">
-            <h3 className="section-title">
+            <h3 className="poetry-title">
               THE <span className="highlight">ORATOR</span>
             </h3>
-            <p className="section-description">
+            <p className="poetry-description">
               Çorba servisi yapılmadan hemen önce, salon sessizliğe bürünür.
               Mösyö Gustave, akşam yemeklerini romantik şiir resitalleriyle taçlandırır.
               Dizeler, tıpkı servis edilen şarap gibi eski ve kıymetlidir.
@@ -222,9 +222,6 @@ const Concierge = () => {
                 <Feather size={16} color="#d4af37" />
                 <span>Tonight's Selection: "The Painting"</span>
               </div>
-              <button className="poetry-button">
-                AKŞAM YEMEĞİNE KATILIN
-              </button>
             </div>
           </div>
 
@@ -234,7 +231,7 @@ const Concierge = () => {
       {/* FOOTER */}
       <div className="concierge-footer">
         <p>A member of</p>
-        <h4 className="footer-society-text">THE SOCIETY OF THE CROSSED KEYS</h4>
+        <h4 className="footer-society-text">THE SOCIETY OF THE SILENT LOCKS</h4>
       </div>
 
     </div>
