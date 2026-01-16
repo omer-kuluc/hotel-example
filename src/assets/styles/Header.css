@@ -211,12 +211,13 @@
   }
 
   .header-title {
-    font-size: 3rem;
+    font-size: 1.95rem;
+    margin-bottom: 25px;
   }
 
   .middle-title-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
     /* Elemanlar birbirine yapışmasın diye boşluk */
   }
@@ -235,6 +236,11 @@
   .header-title {
     font-size: 3rem;
     /* Desktop başlık */
+  }
+
+  .middle-title-container {
+    justify-content: space-around;
+    /* Elemanlar birbirine yapışmasın diye boşluk */
   }
 
   .nav-desktop {
