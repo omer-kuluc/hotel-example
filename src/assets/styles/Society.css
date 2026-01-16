@@ -76,6 +76,12 @@
   color: #d4af37;
   letter-spacing: 0.1em;
   line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  /* Kelimeler arası boşluk */
+  width: 100%;
 }
 
 .society-title-char {

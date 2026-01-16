@@ -59,6 +59,10 @@ const Concierge = () => {
 
   }, []);
 
+  // BAŞLIK DÜZELTME MANTIĞI:
+  const titleText = "MONSIEUR GASTON";
+  const words = titleText.split(" "); // Önce kelimelere böl ["MONSIEUR", "GASTON"]
+
   return (
     <div className="concierge-page" ref={containerRef}>
 
@@ -74,10 +78,19 @@ const Concierge = () => {
           </div>
 
           <h1 className="gustave-title">
-            {"MONSIEUR GUSTAVE H.".split('').map((char, index) => (
-              <span key={index} className="gustave-title-char">{char}</span>
+            {/* Kelimeleri döndür */}
+            {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
+                {/* Her kelimenin harflerini döndür */}
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} className="gustave-title-char" style={{ display: 'inline-block' }}>
+                    {char}
+                  </span>
+                ))}
+              </span>
             ))}
           </h1>
+
           <div className="hero-divider"></div>
           <p className="gustave-subtitle">
             "I keep the secrets, I serve the guests, I secure the legacy."

@@ -71,6 +71,9 @@ const Transportation = () => {
 
   }, []);
 
+  const titleText = "TRANSIT OPTIONS";
+  const words = titleText.split(" "); // Önce kelimelere böl ["MONSIEUR", "GASTON"]
+
   return (
     <div className='transportation-page' ref={containerRef}>
 
@@ -81,8 +84,16 @@ const Transportation = () => {
             <Ticket size={48} color="#d4af37" />
           </div>
           <h1 className="trans-title">
-            {"TRANSIT AUTHORITY".split('').map((char, index) => (
-              <span key={index} className="trans-title-char">{char}</span>
+            {/* Kelimeleri döndür */}
+            {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
+                {/* Her kelimenin harflerini döndür */}
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} className="trans-title-char" style={{ display: 'inline-block' }}>
+                    {char}
+                  </span>
+                ))}
+              </span>
             ))}
           </h1>
           <div className="divider-gold"></div>

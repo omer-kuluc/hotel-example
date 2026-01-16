@@ -52,6 +52,10 @@ const Society = () => {
 
   }, []);
 
+  const titleText = "THE SOCIETY";
+  const words = titleText.split(" "); // Önce kelimelere böl ["MONSIEUR", "GASTON"]
+
+
   return (
     <div className="society-page" ref={containerRef}>
 
@@ -66,8 +70,16 @@ const Society = () => {
             <div className="emblem-ring"></div>
           </div>
           <h1 className="society-main-title">
-            {"THE SOCIETY".split('').map((char, index) => (
-              <span key={index} className="society-title-char">{char}</span>
+            {/* Kelimeleri döndür */}
+            {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
+                {/* Her kelimenin harflerini döndür */}
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} className="society-title-char" style={{ display: 'inline-block' }}>
+                    {char}
+                  </span>
+                ))}
+              </span>
             ))}
           </h1>
           <div className="divider-line"></div>
