@@ -2,9 +2,14 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool } from 'lucide-react';
+// 1. useNavigate import edildi
+import { useNavigate } from 'react-router-dom';
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
+  // 2. Hook tanımlandı
+  const navigate = useNavigate();
 
   useEffect(() => {
     // --- YENİ EKLENEN KISIM: HOME SAYFA GİRİŞ ANİMASYONU ---
@@ -53,7 +58,12 @@ function Home() {
             <p className="concierge-description">
               Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.</p>
             <div className="concierge-actions">
-              <button className="concierge-button">MEET GASTON</button>
+              <button
+                className="concierge-button"
+                onClick={() => navigate('/concierge')}
+              >
+                MEET GASTON
+              </button>
             </div>
           </div>
         </div>
@@ -81,7 +91,12 @@ function Home() {
             <p className="patisserie-description">
               Sérénité au Chocolat, offered in our legendary Madel's boxes, is Torvonka's sweetest secret. Each layer is a work of art, every bite a memory.
             </p>
-            <button className="patisserie-button">EXPLORE MADEL'S</button>
+            <button
+              className="patisserie-button"
+              onClick={() => navigate('/patisserie')}
+            >
+              EXPLORE MADEL'S
+            </button>
           </div>
         </div>
       </section>
@@ -117,7 +132,12 @@ function Home() {
               A single phone call can change everything.
             </p>
             <div className="society-actions">
-              <button className="society-button">JOIN THE SECRECY</button>
+              <button
+                className="society-button"
+                onClick={() => navigate('/society')}
+              >
+                JOIN THE SECRECY
+              </button>
             </div>
           </div>
         </div>
@@ -146,7 +166,12 @@ function Home() {
             <p className="transport-description">
               Your journey to the snowy peaks is where comfort meets adventure. Travel to the heart of the Alps with Torvonka Express' luxurious carriages, our legendary funicular, and cable car.</p>
             <div className="transport-actions">
-              <button className="transport-button">HIT THE ROAD!</button>
+              <button
+                className="transport-button"
+                onClick={() => navigate('/transportation')}
+              >
+                HIT THE ROAD!
+              </button>
             </div>
           </div>
         </div>
@@ -179,7 +204,12 @@ function Home() {
               Each piece whispers the golden age of Torvonka.
             </p>
             <div className="memoirs-actions">
-              <button className="memoirs-button">LIVE THE PAST!</button>
+              <button
+                className="memoirs-button"
+                onClick={() => navigate('/memoirs')}
+              >
+                LIVE THE PAST!
+              </button>
             </div>
           </div>
         </div>
