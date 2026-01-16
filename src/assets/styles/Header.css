@@ -210,6 +210,7 @@
     padding-inline: 10px;
   }
 
+
   .header-title {
     font-size: 1.95rem;
     margin-bottom: 25px;
@@ -237,6 +238,12 @@
     font-size: 3rem;
     /* Desktop başlık */
   }
+
+  .nav-item {
+    font-size: 1.1rem;
+    /* Desktop nav item */
+  }
+
 
   .middle-title-container {
     justify-content: space-around;
