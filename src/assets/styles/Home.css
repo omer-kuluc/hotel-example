@@ -1,3 +1,12 @@
+.perfume-bottle,
+.mendls-box,
+.golden-ticket,
+.book-cover {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
 /* concierge-mobile-start */
 .concierge-section {
   padding: 96px 0;
@@ -411,7 +420,7 @@
 .emblem-subtext {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 10px;
+  font-size: 0.8rem;
   color: rgba(251, 196, 211, 0.6);
   text-transform: uppercase;
 }
@@ -834,14 +843,8 @@
   }
 
   .patisserie-container {
-    /* flex-direction: row; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: row;
     gap: 45px;
-  }
-
-  .patisserie-text {
-    /* text-align: left; */
   }
 
   .patisserie-title {
@@ -863,10 +866,6 @@
     flex-direction: row-reverse;
   }
 
-  .society-visual-wrapper {
-    /* width: 50%; */
-  }
-
   .emblem-container {
     width: 320px;
     height: 320px;
@@ -877,18 +876,9 @@
     height: 224px;
   }
 
-  .society-text {
-    /* width: 50%; */
-    /* text-align: right; */
-  }
-
   .society-title {
     font-size: 2.5rem;
     text-align: center;
-  }
-
-  .society-description {
-    /* margin-right: 0; */
   }
 
   .society-actions {
@@ -907,10 +897,6 @@
     /* Görsel solda, yazı sağda */
   }
 
-  .ticket-wrapper {
-    /* width: 50%; */
-  }
-
   .golden-ticket {
     width: 350px;
     height: 224px;
@@ -922,10 +908,6 @@
 
   .transport-title {
     font-size: 2.5rem;
-  }
-
-  .transport-description {
-    /* margin-left: 0; */
   }
 
   .transport-actions {
@@ -941,10 +923,6 @@
     gap: 45px;
     padding: 12px;
     /* Görsel sağda, yazı solda */
-  }
-
-  .book-wrapper {
-    /* width: 50%; */
   }
 
   .book-cover {
@@ -987,5 +965,43 @@
   .memoirs-title {
     font-size: 4rem;
   }
+
+  .concierge-description,
+  .patisserie-description,
+  .society-description,
+  .transport-description,
+  .memoirs-description {
+    font-size: 1.5rem;
+  }
+
+  /* patisserie-desktop-start */
+
+
+  .box-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .box-product {
+    font-size: 1rem;
+  }
+
+  /* patisserie-desktop-end */
+
+  /* society-desktop-start */
+
+  .emblem-subtext {
+    font-size: 1rem;
+  }
+
+  /* society-desktop-end */
+
+  /* transport-desktop-start */
+  .golden-ticket {
+    width: 450px;
+    height: 256px;
+  }
+
+  /* transport-desktop-end */
+
 
 }
