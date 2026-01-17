@@ -61,11 +61,11 @@
 }
 
 .header-title {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bold;
   color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.2px;
 }
 
 .header-title:hover {
@@ -78,10 +78,10 @@
 
 .header-subtitle {
   /* font-family: 'Bebas Neue', sans-serif; */
-  font-size: 1rem;
+  font-size: 24px;
   font-style: italic;
   color: #fbc4d3;
-  letter-spacing: 0.5em;
+  letter-spacing: 8px;
   opacity: 0.8;
   margin-top: 8px;
   text-transform: uppercase;
@@ -95,12 +95,12 @@
 /* --- DÜZELTME BURADA --- */
 .nav-item {
   /* font-family: 'Bebas Neue', sans-serif; */
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
+  font-size: 16px;
+  letter-spacing: 2.5px;
   color: #fbc4d3;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.25rem 0;
+  padding: 4px;
   position: relative;
 
   /* Bu iki satır sorunu çözer: */
@@ -177,7 +177,7 @@
 .mobile-nav-item {
   /* font-family: 'Playfair Display', serif; */
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #fbc4d3;
   text-decoration: none;
   margin-bottom: 24px;
@@ -198,7 +198,7 @@
   /* font-family: 'Bebas Neue', sans-serif; */
   color: #d4af37;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.6px;
 }
 
 /* Mobil için */
@@ -215,7 +215,7 @@
 
 
   .header-title {
-    font-size: 1.95rem;
+    font-size: 30px;
     margin-bottom: 25px;
   }
 
@@ -238,12 +238,12 @@
 /* Desktop için */
 @media (width>=1280px) {
   .header-title {
-    font-size: 3rem;
+    font-size: 70px;
     /* Desktop başlık */
   }
 
   .nav-item {
-    font-size: 1.1rem;
+    font-size: 20px;
     /* Desktop nav item */
   }
 
