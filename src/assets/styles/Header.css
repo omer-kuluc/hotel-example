@@ -238,12 +238,12 @@
 /* Desktop için */
 @media (width>=1280px) {
   .header-title {
-    font-size: 70px;
+    font-size: 50px;
     /* Desktop başlık */
   }
 
   .nav-item {
-    font-size: 20px;
+    font-size: 16px;
     /* Desktop nav item */
   }
 
