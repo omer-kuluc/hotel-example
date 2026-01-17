@@ -87,7 +87,7 @@
 
 .perfume-subtitle {
   font-size: 14px;
-  letter-spacing: 0.2em;
+  letter-spacing: 2.8px;
   color: #fbc4d3;
   opacity: 0.6;
   text-transform: uppercase;
@@ -123,7 +123,7 @@
 .concierge-title {
   font-size: 32px;
   margin-bottom: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 3.2px;
   color: white;
 }
 
@@ -148,7 +148,7 @@
   background-color: #d4af37;
   color: #2d1b33;
   border: 2px solid #d4af37;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -239,7 +239,7 @@
 
 .box-title {
   font-size: 36px;
-  letter-spacing: -0.05em;
+  letter-spacing: -1.8px
 }
 
 .box-divider {
@@ -258,7 +258,7 @@
 .box-product {
   margin-top: 16px;
   font-size: 12px;
-  letter-spacing: 0.2em;
+  letter-spacing: 2.4px;
   text-transform: uppercase;
 }
 
@@ -280,7 +280,8 @@
 .patisserie-title {
   font-size: 32px;
   margin-bottom: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 3.2px;
+  ;
   color: #fbc4d3;
 }
 
@@ -303,7 +304,7 @@
   background-color: #3d1e3d;
   color: #fbc4d3;
   border: 2px solid #fbc4d3;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -408,7 +409,7 @@
 
 .emblem-text {
   font-size: 18px;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   color: #d4af37;
 }
 
@@ -444,7 +445,7 @@
 .society-title {
   font-size: 32px;
   margin-bottom: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 3.2px;
   color: white;
 }
 
@@ -468,7 +469,7 @@
   background-color: rgba(251, 196, 211, 0.05);
   color: #d4af37;
   border: 2px solid #d4af37;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-inline: auto;
@@ -574,7 +575,7 @@
 .ticket-header {
   color: #3d1e3d;
   font-size: 24px;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   border-top: 1px solid rgba(61, 30, 61, 0.3);
   border-bottom: 1px solid rgba(61, 30, 61, 0.3);
   padding: 8px 32px;
@@ -613,7 +614,7 @@
 .transport-title {
   font-size: 32px;
   margin-bottom: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 3.2px;
   color: #3d1e3d;
   /* Daha okunaklı olması için dark purple */
 }
@@ -637,7 +638,7 @@
   background-color: #3d1e3d;
   color: #d4af37;
   border: 2px solid #d4af37;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-inline: auto;
@@ -728,7 +729,7 @@
 
 .book-author {
   font-size: 14px;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   color: #3d1e3d;
   text-transform: uppercase;
 }
@@ -761,7 +762,7 @@
 .memoirs-title {
   font-size: 48px;
   margin-bottom: 24px;
-  letter-spacing: 0.1em;
+  letter-spacing: 4.8px;
   color: white;
 }
 
@@ -786,7 +787,7 @@
   background-color: #d4af37;
   color: #2d1b33;
   border: 2px solid #d4af37;
-  letter-spacing: 0.2em;
+  letter-spacing: 4.8px;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-inline: auto;
