@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote, CheckCircle, BookOpen, PenTool } from 'lucide-react';
@@ -6,6 +6,8 @@ import { Quote, CheckCircle, BookOpen, PenTool } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
+  const containerRef = useRef(null);
+
   const [sprayed, setSprayed] = useState(false);
 
   // --- SAYFA GİRİŞ ANİMASYONU ---
@@ -75,7 +77,7 @@ export default function Memoirs() {
   }, []);
 
   return (
-    <div className='memoirs-inner-container'>
+    <div className='memoirs-page' ref={containerRef}>
 
       {/* 2. THE MEMOIRS BOOK SECTION (Yeni Eklenen) */}
       <section className="memoirs-book-section">
