@@ -74,7 +74,7 @@
 .perfume-title {
 
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 29px;
   color: #d4af37;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .perfume-subtitle {
-  font-size: 0.875rem;
+  font-size: 14px;
   letter-spacing: 0.2em;
   color: #fbc4d3;
   opacity: 0.6;
@@ -111,7 +111,7 @@
   background-color: #d4af37;
   color: #2d1b33;
   padding: 8px 16px;
-  font-size: 1.25rem;
+  font-size: 20px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
@@ -133,7 +133,8 @@
 }
 
 .concierge-description {
-  font-size: 1.125rem;
+  font-size: 18px;
+  ;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
@@ -161,7 +162,7 @@
 
   font-style: italic;
   color: rgba(212, 175, 55, 0.6);
-  font-size: 0.875rem;
+  font-size: 14px;
   margin-top: 16px;
 }
 
@@ -237,7 +238,7 @@
 }
 
 .box-title {
-  font-size: 2.25rem;
+  font-size: 36px;
   letter-spacing: -0.05em;
 }
 
@@ -251,12 +252,12 @@
 .box-subtitle {
 
   font-style: italic;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .box-product {
   margin-top: 16px;
-  font-size: 0.75rem;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -268,7 +269,7 @@
   background-color: #d4af37;
   color: #3d1e3d;
   padding: 8px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .patisserie-text {
@@ -277,7 +278,7 @@
 }
 
 .patisserie-title {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: #fbc4d3;
@@ -288,7 +289,7 @@
 }
 
 .patisserie-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
@@ -406,7 +407,7 @@
 }
 
 .emblem-text {
-  font-size: 1.125rem;
+  font-size: 18px;
   letter-spacing: 0.2em;
   color: #d4af37;
 }
@@ -414,7 +415,7 @@
 .emblem-subtext {
 
   font-style: italic;
-  font-size: 0.8rem;
+  font-size: 13px;
   color: rgba(251, 196, 211, 0.6);
   text-transform: uppercase;
 }
@@ -441,7 +442,7 @@
 }
 
 .society-title {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -453,7 +454,7 @@
 }
 
 .society-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
@@ -572,7 +573,7 @@
 
 .ticket-header {
   color: #3d1e3d;
-  font-size: 1.5rem;
+  font-size: 24px;
   letter-spacing: 0.2em;
   border-top: 1px solid rgba(61, 30, 61, 0.3);
   border-bottom: 1px solid rgba(61, 30, 61, 0.3);
@@ -587,7 +588,7 @@
   color: rgba(61, 30, 61, 0.7);
 
   font-style: italic;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .ticket-icon-top {
@@ -610,7 +611,7 @@
 }
 
 .transport-title {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: #3d1e3d;
@@ -622,7 +623,7 @@
 }
 
 .transport-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
@@ -712,7 +713,7 @@
 .book-title-text {
 
   font-style: italic;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #3d1e3d;
   margin-bottom: 8px;
   line-height: 1.2;
@@ -726,7 +727,7 @@
 }
 
 .book-author {
-  font-size: 0.875rem;
+  font-size: 14px;
   letter-spacing: 0.2em;
   color: #3d1e3d;
   text-transform: uppercase;
@@ -748,7 +749,7 @@
   background-color: #d4af37;
   color: #2d1b33;
   padding: 8px 16px;
-  font-size: 1.25rem;
+  font-size: 20px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
@@ -758,7 +759,7 @@
 }
 
 .memoirs-title {
-  font-size: 3rem;
+  font-size: 48px;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -770,7 +771,7 @@
 }
 
 .memoirs-description {
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
@@ -810,7 +811,7 @@
   }
 
   .concierge-title {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   /* concierge-tablet-end */
@@ -823,7 +824,7 @@
   }
 
   .box-title {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .patisserie-container {
@@ -832,11 +833,11 @@
   }
 
   .patisserie-title {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .patisserie-description {
-    font-size: 1.25rem;
+    font-size: 20px;
     margin-left: 0;
   }
 
@@ -887,11 +888,11 @@
   }
 
   .ticket-header {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 
   .transport-title {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 
   .transport-actions {
@@ -915,7 +916,7 @@
   }
 
   .book-title-text {
-    font-size: 1.875rem;
+    font-size: 30px;
   }
 
   .memoirs-text {
@@ -925,7 +926,7 @@
   }
 
   .memoirs-title {
-    font-size: 2.5rem;
+    font-size: 40px;
     text-align: center;
   }
 
@@ -962,11 +963,11 @@
 
 
   .box-subtitle {
-    font-size: 1.25rem;
+    font-size: 16px;
   }
 
   .box-product {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   /* patisserie-desktop-end */
@@ -974,7 +975,7 @@
   /* society-desktop-start */
 
   .emblem-subtext {
-    font-size: 1rem;
+    font-size: 16px;
   }
 
   /* society-desktop-end */
