@@ -14,9 +14,6 @@
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
-    font-size: 16px !important;
-    -webkit-text-size-adjust: 100%;
-    /* Mobil cihazların otomatik büyütmesini engeller */
   }
 }
 
@@ -27,10 +24,6 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: #5e2d5e;
   color: #fff;
-  font-size: 16px;
-  /* Fallback */
-  overflow-x: hidden;
-  /* Yatay taşmayı engelle */
 }
 
 /* 6. Improve media defaults */
