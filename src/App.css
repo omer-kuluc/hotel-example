@@ -88,8 +88,35 @@ h6 {
 .patisserie-page,
 .society-page,
 .transportation-page {
-  margin-top: 350px;
-  padding-inline: 15px;
+  margin-top: 15em;
   min-height: 100vh;
+  padding-inline: 15px;
 
+}
+
+
+@media (width >=768px) {
+
+  .home-container,
+  .concierge-page,
+  .memoirs-page,
+  .patisserie-page,
+  .society-page,
+  .transportation-page {
+    padding-inline: 25px;
+
+  }
+}
+
+@media (width >=768px) {
+
+  .home-container,
+  .concierge-page,
+  .memoirs-page,
+  .patisserie-page,
+  .society-page,
+  .transportation-page {
+    padding-inline: 40px;
+
+  }
 }

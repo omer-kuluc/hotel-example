@@ -9,13 +9,14 @@
 
 /* 1. HERO SECTION */
 .gustave-hero {
-  padding: 60px 16px;
+  padding: 40px 16px;
   /* Padding azaltıldı */
   background-color: #3d1e3d;
   /* Daha koyu mor */
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .gustave-hero-content {
@@ -25,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 0.3rem;
+  padding: 0.35rem;
   /* Padding azaltıldı */
   border: 4px solid #3d1e3d;
   background: rgba(255, 255, 255, 0.1);
@@ -102,12 +103,16 @@
   margin: 8px 0;
 }
 
-.gustave-subtitle {
+.gustave-subtitle,
+.rudeness-quote {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1rem;
+}
+
+.gustave-subtitle {
   color: rgba(255, 255, 255, 0.8);
-  max-width: 500px;
+
 }
 
 .hero-stars {
@@ -267,9 +272,16 @@
   border-top: 2px solid #4b284b;
 }
 
-.profile-text {
+
+.profile-text,
+.legacy-text,
+.poetry-text {
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .profile-title {
@@ -278,20 +290,22 @@
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
+  text-align: center;
 }
 
 .highlight {
   color: #d4af37;
 }
 
-.profile-text .section-description {
+.concierge-description,
+.legacy-description,
+.poetry-description {
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 24px;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   color: #fbc4d3;
+  text-align: center;
 }
 
 .quote-block {
@@ -301,10 +315,14 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #d4af37;
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 0.9rem;
+}
+
+.rudeness-quote {
+  color: #d4af37;
+
 }
 
 /* 3. LEGACY SECTION (Lobby Boy) */
@@ -547,22 +565,13 @@
   letter-spacing: 0.1em;
 }
 
-.poetry-description {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
-}
-
 .poetry-actions {
   margin-top: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  padding: 5px 10px;
 }
 
 .recital-time {
@@ -572,7 +581,7 @@
   color: #fbc4d3;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   border: 1px dashed rgba(212, 175, 55, 0.5);
   padding: 6px 12px;
   border-radius: 50px;
@@ -604,7 +613,7 @@
 
 .footer-society-text {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1em;
   color: #d4af37;
   letter-spacing: 0.2em;
   margin-top: 8px;
@@ -617,12 +626,36 @@
 /* Tablet (Home.css ile aynı breakpoint) */
 @media (width >=768px) {
 
+  .gustave-hero-content {
+    padding: 0.7rem;
+  }
+
+  .badge-text {
+    letter-spacing: 0.3em;
+    font-size: 1rem;
+    padding: 6px 18px;
+  }
+
   .gustave-title {
     font-size: 5rem;
   }
 
-  .profile-title {
-    font-size: 2.5rem;
+  .profile-title,
+  .legacy-title,
+  .poetry-title {
+    font-size: 2rem;
+  }
+
+  .concierge-description,
+  .legacy-description,
+  .poetry-description {
+    font-size: 1.3rem;
+  }
+
+  .gustave-subtitle,
+  .rudeness-quote,
+  .poetry-note {
+    font-size: 1.15rem;
   }
 
   /* Profile (Gustave Suit) - Boyutları artır */
@@ -684,9 +717,10 @@
     text-align: left;
   }
 
+  /* 
   .profile-text .section-description {
     margin-left: 0;
-  }
+  } */
 
   .quote-block {
     justify-content: flex-start;
@@ -728,9 +762,10 @@
     text-align: right;
   }
 
+  /* 
   .profile-text .section-description {
     margin-right: 0;
-  }
+  } */
 
   /* Poetry (The Orator) - Boyutları artır */
   .poetry-container {
@@ -782,11 +817,38 @@
   .poetry-actions {
     align-items: flex-start;
   }
+
+  /* FOOTER-tablet */
+
+  .footer-society-text {
+    font-size: 1.25em;
+    letter-spacing: 0.25em;
+    margin-top: 16px;
+  }
+
 }
 
 /* Desktop (Home.css ile aynı breakpoint) */
 @media (width >=1280px) {
   .gustave-title {
     font-size: 7rem;
+  }
+
+  .profile-title,
+  .legacy-title,
+  .poetry-title {
+    font-size: 2.5rem;
+  }
+
+  .concierge-description,
+  .legacy-description,
+  .poetry-description {
+    font-size: 1.5rem;
+  }
+
+  .gustave-subtitle,
+  .rudeness-quote,
+  .poetry-note {
+    font-size: 1.2rem;
   }
 }

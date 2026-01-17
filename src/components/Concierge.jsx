@@ -106,7 +106,7 @@ const Concierge = () => {
 
           <div className="hero-divider"></div>
           <p className="gustave-subtitle">
-            "I keep the secrets, I serve the guests, I secure the legacy."
+            "He keeps the secrets, he serves the guests, he secures the legacy."
           </p>
           <div className="hero-stars">
             <Star size={16} fill="#d4af37" />
@@ -150,14 +150,14 @@ const Concierge = () => {
             <h3 className="profile-title">
               THE <span className="highlight">INSTITUTION</span>
             </h3>
-            <p className="section-description">
-              Mösyö Gustave, Grand Budapest Hotel'in sadece yöneticisi değil, ruhudur.
-              Kusursuz giyimi, şiirsel konuşması ve sarsılmaz disipliniyle,
-              barbarlığın ortasında medeniyetin son kalesini savunur.
+            <p className="concierge-description">
+              Mr. Gaston is not just the doorman of the Majestic Bellmont Hotel, but its very soul.
+              With his impeccable attire, poetic speech, and unwavering discipline,
+              he defends the last bastion of civilization in the midst of barbarism.
             </p>
             <div className="quote-block">
               <Quote size={20} className="quote-icon" />
-              <p>"Rudeness is merely the expression of fear."</p>
+              <p className='rudeness-quote'>"He sees rudeness as a sign of fear."</p>
             </div>
           </div>
 
@@ -173,7 +173,7 @@ const Concierge = () => {
             <div className="lobby-hat-visual">
               <div className="hat-top"></div>
               <div className="hat-band">
-                <span className="hat-text">LOBBY BOY</span>
+                <span className="hat-text">THE PROTEGE</span>
               </div>
               <div className="hat-badge">
                 <Crown size={12} color="#d4af37" />
@@ -185,10 +185,10 @@ const Concierge = () => {
             <h3 className="legacy-title">
               THE <span className="highlight">PROTÉGÉ</span>
             </h3>
-            <p className="section-description">
-              "Sıfır mı? Ne garip bir isim." <br />
-              Bir Concierge asla yalnız değildir. Zero Moustafa, Mösyö Gustave'ın
-              en sadık dostu, varisi ve sağ koludur. Tecrübe sıfır olsa da, sadakat sonsuzdur.
+            <p className="legacy-description">
+              The loyal assistant and adventure partner of the Concierge.
+              In the hotel, he remains always present yet never noticed.
+              He understands what others despise and remembers it well.
             </p>
           </div>
 
@@ -226,14 +226,14 @@ const Concierge = () => {
               THE <span className="highlight">ORATOR</span>
             </h3>
             <p className="poetry-description">
-              Çorba servisi yapılmadan hemen önce, salon sessizliğe bürünür.
-              Mösyö Gustave, akşam yemeklerini romantik şiir resitalleriyle taçlandırır.
-              Dizeler, tıpkı servis edilen şarap gibi eski ve kıymetlidir.
+              Just before the soup is served, the dining room falls into silence.
+              Monsieur Gaston crowns the evening meals with romantic poetry recitals.
+              The verses, like the wine served, are old and precious.
             </p>
             <div className="poetry-actions">
               <div className="recital-time">
                 <Feather size={16} color="#d4af37" />
-                <span>Tonight's Selection: "The Painting"</span>
+                <p className='poetry-note'>"Some of his poems can have up to 46 stanzas."</p>
               </div>
             </div>
           </div>
