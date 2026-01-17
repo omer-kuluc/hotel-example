@@ -300,7 +300,7 @@
   color: #d4af37;
 }
 
-.concierge-description,
+.profile-description,
 .legacy-description,
 .poetry-description {
   font-size: 1.125rem;
@@ -649,7 +649,7 @@
     font-size: 2rem;
   }
 
-  .concierge-description,
+  .profile-description,
   .legacy-description,
   .poetry-description {
     font-size: 1.3rem;
@@ -843,7 +843,7 @@
     font-size: 2.5rem;
   }
 
-  .concierge-description,
+  .profile-description,
   .legacy-description,
   .poetry-description {
     font-size: 1.5rem;

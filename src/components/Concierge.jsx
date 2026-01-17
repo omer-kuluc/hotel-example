@@ -150,7 +150,7 @@ const Concierge = () => {
             <h3 className="profile-title">
               THE <span className="highlight">INSTITUTION</span>
             </h3>
-            <p className="concierge-description">
+            <p className="profile-description">
               Mr. Gaston is not just the doorman of the Majestic Bellmont Hotel, but its very soul.
               With his impeccable attire, poetic speech, and unwavering discipline,
               he defends the last bastion of civilization in the midst of barbarism.

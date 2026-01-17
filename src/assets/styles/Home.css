@@ -121,7 +121,7 @@
 }
 
 .concierge-title {
-  font-size: 2rem;
+  font-size: 32px;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -947,7 +947,7 @@
   .society-title,
   .transport-title,
   .memoirs-title {
-    font-size: 4rem;
+    font-size: 48px;
   }
 
   .concierge-description,
@@ -955,7 +955,7 @@
   .society-description,
   .transport-description,
   .memoirs-description {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
 
   /* patisserie-desktop-start */
