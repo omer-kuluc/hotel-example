@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* GENEL AYARLAR */
 .transportation-page {
   background-color: #2d1b33;
   /* Home.css ile uyumlu Koyu Mor */
   overflow-x: hidden;
   padding-top: 80px;
+  font-family: 'Afacad', sans-serif;
+
 }
 
 /* 1. HERO SECTION */
@@ -36,7 +40,6 @@
 }
 
 .trans-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   color: #d4af37;
   letter-spacing: 0.1em;
@@ -63,7 +66,6 @@
 }
 
 .trans-subtitle {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.3em;
   color: #fbc4d3;
@@ -94,7 +96,6 @@
 }
 
 .vehicle-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: white;
   margin-bottom: 16px;
@@ -106,7 +107,6 @@
 }
 
 .vehicle-desc {
-  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   color: #fbc4d3;
   line-height: 1.8;
@@ -118,7 +118,6 @@
   justify-content: center;
   gap: 8px;
   margin-top: 16px;
-  font-family: 'Bebas Neue', sans-serif;
   color: #d4af37;
   border: 1px solid #d4af37;
   padding: 4px 12px;
@@ -228,7 +227,6 @@
   position: absolute;
   bottom: 25px;
   right: 10px;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 0.7rem;
   color: #d4af37;
 }
@@ -457,7 +455,6 @@
 
 /* Logo Metni */
 .funi-logo {
-  font-family: 'Bebas Neue', sans-serif;
   /* Yazı Rengi: Rich Mahogany */
   color: #3B1415ff;
   font-size: 1rem;
@@ -477,7 +474,6 @@
   text-align: center;
   background-color: #25162a;
   color: #d4af37;
-  font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.2em;
 }
 

@@ -1,6 +1,7 @@
 /* =========================================
    MOBILE FIRST (Varsayılan stiller)
    ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
 .loading-container {
   position: fixed;
@@ -17,6 +18,8 @@
   /* Yazı rengini gradient ile ezeceğiz ama fallback olarak pembe kalsın */
   color: #fbc4d3;
   overflow: hidden;
+  font-family: 'Afacad', sans-serif;
+
 }
 
 /* Siyah Köşe Üçgenleri (Mobilde daha küçük: 60px) */
@@ -82,7 +85,7 @@
 }
 
 .loading-text-small {
-  font-family: 'Bebas Neue', sans-serif;
+
   font-size: 1.5rem;
   /* Mobil Font */
   letter-spacing: 0.15em;
@@ -97,7 +100,7 @@
 }
 
 .loading-text-large {
-  font-family: 'Bebas Neue', sans-serif;
+
   font-size: 3.5rem;
   /* Mobil Font */
   letter-spacing: 0.05em;
@@ -123,7 +126,7 @@
 }
 
 .loading-subtitle {
-  font-family: 'Bebas Neue', sans-serif;
+
   font-size: 1.2rem;
   /* Mobil Font */
   letter-spacing: 0.1em;
@@ -161,7 +164,7 @@
 }
 
 .loading-footer {
-  font-family: 'Bebas Neue', sans-serif;
+
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   margin-top: 32px;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* GENEL SAYFA YAPISI */
 .patisserie-page {
   background-color: #2d1b33;
@@ -5,6 +7,8 @@
   overflow-x: hidden;
   padding-top: 80px;
   /* Header payı */
+  font-family: 'Afacad', sans-serif;
+
 }
 
 /* HERO SECTION - MENDL'S */
@@ -38,14 +42,12 @@
 }
 
 .est-text {
-  font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.3em;
   font-size: 0.9rem;
   margin-top: 4px;
 }
 
 .mendl-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 4rem;
   color: #3d1e3d;
   line-height: 1;
@@ -61,7 +63,6 @@
 }
 
 .mendl-subtitle {
-  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.2rem;
   color: #2b4c7e;
@@ -115,7 +116,6 @@
   right: 0;
   background-color: #d4af37;
   color: #3d1e3d;
-  font-family: 'Bebas Neue', sans-serif;
   padding: 8px 16px;
   font-size: 1.2rem;
   transform: rotate(15deg);
@@ -218,7 +218,6 @@
 }
 
 .product-title {
-  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   line-height: 1.1;
   color: #fff;
@@ -231,7 +230,6 @@
 }
 
 .product-desc {
-  font-family: 'Open Sans', sans-serif;
   color: #fbc4d3;
   line-height: 1.8;
   margin-bottom: 2rem;
@@ -245,7 +243,6 @@
   flex-direction: column;
   gap: 12px;
   color: #d4af37;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.1em;
 }
@@ -286,13 +283,11 @@
 }
 
 .section-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
 .section-text {
-  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   margin-bottom: 2rem;
   max-width: 500px;
@@ -314,7 +309,6 @@
   color: #fbc4d3;
   border: 2px solid #3d1e3d;
   padding: 12px 36px;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
   display: inline-flex;
@@ -412,7 +406,6 @@
 }
 
 .box-brand {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: #3d1e3d;
   z-index: 5;
@@ -441,7 +434,6 @@
   flex-direction: column;
   align-items: center;
   color: #d4af37;
-  font-family: 'Playfair Display', serif;
   font-style: italic;
   gap: 8px;
 }

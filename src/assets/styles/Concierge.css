@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* GENEL AYARLAR */
 .concierge-page {
   background-color: #2d1b33;
@@ -5,6 +7,7 @@
   overflow-x: hidden;
   padding-top: 80px;
   /* Header boşluğu */
+  font-family: 'Afacad', sans-serif;
 }
 
 /* 1. HERO SECTION */
@@ -66,7 +69,7 @@
 }
 
 .badge-text {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   letter-spacing: 0.3em;
   font-size: 0.8rem;
   /* Font küçültüldü */
@@ -78,7 +81,7 @@
 }
 
 .gustave-title {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   color: #d4af37;
   letter-spacing: 0.1em;
@@ -105,7 +108,7 @@
 
 .gustave-subtitle,
 .rudeness-quote {
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 1rem;
 }
@@ -285,7 +288,7 @@
 }
 
 .profile-title {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
@@ -315,7 +318,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 0.9rem;
 }
@@ -397,7 +400,7 @@
 }
 
 .hat-text {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   color: #d4af37;
   font-size: 1.2rem;
   letter-spacing: 0.1em;
@@ -415,7 +418,7 @@
 }
 
 .legacy-title {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
@@ -559,7 +562,7 @@
 }
 
 .poetry-title {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
@@ -575,7 +578,7 @@
 }
 
 .recital-time {
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 0.9rem;
   color: #fbc4d3;
@@ -607,12 +610,12 @@
   background-color: #25162a;
   /* Footer Darker */
   color: rgba(212, 175, 55, 0.6);
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
 }
 
 .footer-society-text {
-  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 1em;
   color: #d4af37;
   letter-spacing: 0.2em;

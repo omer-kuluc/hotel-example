@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
 /* GENEL AYARLAR */
 .society-page {
   background-color: #2d1b33;
@@ -5,6 +7,8 @@
   overflow-x: hidden;
   padding-top: 80px;
   /* Header payı */
+  font-family: 'Afacad', sans-serif;
+
 }
 
 /* 1. HERO SECTION */
@@ -71,7 +75,6 @@
 }
 
 .society-main-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3.5rem;
   color: #d4af37;
   letter-spacing: 0.1em;
@@ -96,14 +99,12 @@
 }
 
 .society-subtitle {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.4em;
   color: #fbc4d3;
 }
 
 .society-quote {
-  font-family: 'Playfair Display', serif;
   font-style: italic;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 8px;
@@ -140,7 +141,6 @@
 }
 
 .section-title {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 3rem;
   color: white;
   margin-bottom: 16px;
@@ -152,7 +152,6 @@
 }
 
 .section-desc {
-  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   color: #fbc4d3;
   line-height: 1.8;
@@ -261,7 +260,6 @@
 }
 
 .concierge-name {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.5rem;
   color: #fff;
   letter-spacing: 0.1em;
@@ -269,7 +267,6 @@
 }
 
 .hotel-name {
-  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
@@ -286,7 +283,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Bebas Neue', sans-serif;
   color: #d4af37;
   font-size: 0.9rem;
   margin-bottom: 12px;
@@ -301,7 +297,6 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   background-color: rgba(0, 0, 0, 0.2);
@@ -361,14 +356,12 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.2em;
   margin-bottom: 8px;
 }
 
 .footer-sub {
-  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
