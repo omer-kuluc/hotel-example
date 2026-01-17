@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote, CheckCircle, BookOpen, PenTool } from 'lucide-react';
@@ -7,6 +7,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
   const [sprayed, setSprayed] = useState(false);
+
+  // --- SAYFA GİRİŞ ANİMASYONU ---
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
+      gsap.fromTo(containerRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5, ease: "power4.out" }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+  // -----------------------------
 
   // Parfüm sıkma efekti
   const handleSpray = () => {

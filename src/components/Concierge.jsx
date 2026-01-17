@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Key, Star, Quote, Crown, Feather, User } from 'lucide-react';
@@ -7,6 +7,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Concierge = () => {
   const containerRef = useRef(null);
+  // --- SAYFA GİRİŞ ANİMASYONU ---
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
+      gsap.fromTo(containerRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.5, ease: "power4.out" }
+      );
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+  // -----------------------------
 
   useEffect(() => {
     // 1. Hero Başlık Animasyonu
