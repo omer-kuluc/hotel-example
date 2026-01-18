@@ -71,11 +71,11 @@ function Patisserie() {
             <span className="est-text">EST. 1912</span>
           </div>
           <h1 className="mendl-title">
-            {"MENDL'S".split('').map((char, index) => (
+            {"MADEL'S".split('').map((char, index) => (
               <span key={index} className="hero-title-char">{char}</span>
             ))}
           </h1>
-          <p className="mendl-subtitle">HERR MENDL'S GENIUS RECIPES</p>
+          <p className="mendl-subtitle">HERR MADEL'S GENIUS RECIPES</p>
           <div className="hero-decoration">
             <Star size={16} fill="#d4af37" />
             <div className="hero-line"></div>
@@ -100,15 +100,14 @@ function Patisserie() {
               <div className="pastry-tier-large pastry-layer"></div>
               <div className="pastry-plate"></div>
             </div>
-            <div className="price-tag">50 Klubecks</div>
+            <div className="price-tag">50 Tulpek</div>
           </div>
 
           <div className="product-details">
-            <h2 className="product-title">Courtesan <br /> <span className="highlight">au Chocolat</span></h2>
+            <h2 className="product-title">Sérénité<br /><span className="highlight">au Chocolat</span></h2>
             <p className="product-desc">
-              Tuzlu karamelli krema ile doldurulmuş, renkli sırlarla kaplanmış
-              ve titizlikle üst üste dizilmiş üç narin hamur işi kulesi.
-              Agatha'nın usta ellerinden çıkan, Zubrowka'nın en ikonik lezzeti.
+              Three delicate pastry towers filled with caramel cream, covered in colorful glazes, and meticulously stacked.
+              The most iconic flavor of Torvonka, crafted by Althea's expert hands.
             </p>
             <ul className="ingredients-list">
               <li><Utensils size={14} /> Lavender-infused Glaze</li>
@@ -123,18 +122,15 @@ function Patisserie() {
       <section className="delivery-section">
         <div className="delivery-container">
           <div className="delivery-text-area">
-            <h3 className="section-title">SPECIAL <span className="blue-highlight">DELIVERY</span></h3>
-            <p className="section-text">
-              Lutz hapishanesine mi yoksa Büyük Otel'in balo salonuna mı?
-              Meşhur pembe kutularımız, mavi kurdelelerimizle mühürlenir.
-              Asla açılmadan teslim edilir (içinde kazma veya keski yoksa tabii).
+            <h3 className="delivery-title">SPECIAL <span className="blue-highlight">DELIVERY</span></h3>
+            <p className="delivery-text">
+              To the prison or to the hotel's ballroom?
+              Our famous pink boxes are sealed with blue ribbons.
+              Delivered without ever being opened (unless there's a chisel inside, of course).
             </p>
             <div className="quote-box">
-              <p>"Who's got the throat-slitter?"</p>
+              <Truck size={18} style={{ marginRight: '8px' }} />
             </div>
-            <button className="order-button">
-              <Truck size={18} style={{ marginRight: '8px' }} /> SİPARİŞ OLUŞTUR
-            </button>
           </div>
 
           <div className="box-visual-area">
@@ -149,7 +145,7 @@ function Patisserie() {
                 </div>
               </div>
               <div className="box-body">
-                <span className="box-brand">Mendl's</span>
+                <span className="box-brand">MADEL'S</span>
                 <div className="patisserie-box-badge"><Gift size={12} /></div>
               </div>
             </div>
@@ -160,7 +156,7 @@ function Patisserie() {
       {/* FOOTER NOTE */}
       <div className="patisserie-footer">
         <Heart size={24} className="heart-icon" fill="#d4af37" />
-        <p>Made with love by Agatha</p>
+        <p>Made with love by Althea</p>
       </div>
 
     </div>
