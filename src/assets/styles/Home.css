@@ -120,25 +120,32 @@
 }
 
 .concierge-title {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 3.2px;
   color: white;
 }
 
-.concierge-highlight {
+.concierge-highlight,
+.society-highlight,
+.transport-highlight,
+.memoirs-highlight,
+.patisserie-highlight {
   color: #d4af37;
   display: block;
 }
 
-.concierge-description {
-  font-size: 18px;
-  ;
+
+.concierge-description,
+.patisserie-description,
+.society-description,
+.transport-description,
+.memoirs-description {
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   color: #fbc4d3;
 }
 
@@ -277,26 +284,14 @@
 }
 
 .patisserie-title {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 3.2px;
   ;
   color: #fbc4d3;
 }
 
-.patisserie-highlight {
-  color: #d4af37;
-}
 
-.patisserie-description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
-}
 
 .patisserie-button {
   padding: 12px 32px;
@@ -442,26 +437,12 @@
 }
 
 .society-title {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 3.2px;
   color: white;
 }
 
-.society-highlight {
-  color: #d4af37;
-  display: block;
-}
-
-.society-description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
-}
 
 .society-button {
   padding: 12px 32px;
@@ -611,25 +592,11 @@
 }
 
 .transport-title {
-  font-size: 32px;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 3.2px;
   color: #3d1e3d;
   /* Daha okunaklı olması için dark purple */
-}
-
-.transport-highlight {
-  color: #d4af37;
-}
-
-.transport-description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
 }
 
 .transport-button {
@@ -759,27 +726,12 @@
 }
 
 .memoirs-title {
-  font-size: 48px;
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 4.8px;
   color: white;
 }
 
-.memoirs-highlight {
-  color: #d4af37;
-  display: block;
-}
-
-.memoirs-description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 32px;
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fbc4d3;
-  text-align: center;
-}
 
 .memoirs-button {
   padding: 12px 32px;
@@ -920,8 +872,6 @@
   }
 
   .memoirs-text {
-    /* width: 50%; */
-    /* text-align: right; */
     text-align: center;
   }
 
