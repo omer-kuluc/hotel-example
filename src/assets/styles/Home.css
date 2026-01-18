@@ -16,7 +16,6 @@
   /* Budapest Dark Purple */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
   overflow: hidden;
-  font-family: 'Afacad', sans-serif;
 }
 
 .concierge-container {
@@ -148,7 +147,7 @@
   background-color: #d4af37;
   color: #2d1b33;
   border: 2px solid #d4af37;
-  letter-spacing: 4.8px;
+  letter-spacing: 0.2em;
   cursor: pointer;
   transition: all 0.3s ease;
 }
