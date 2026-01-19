@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Key, Phone, PhoneCall, Bell, MapPin, Globe, Radio, Star, Users } from 'lucide-react';
+import { Key, Phone, PhoneCall, Bell, MapPin, Globe, Radio, Star, Users, Quote } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +67,7 @@ const Society = () => {
   }, []);
 
   const titleText = "THE SOCIETY";
-  const words = titleText.split(" "); // Önce kelimelere böl ["MONSIEUR", "GASTON"]
+  const words = titleText.split(" ");
 
 
   return (
@@ -86,10 +86,10 @@ const Society = () => {
           <h1 className="society-main-title">
             {/* Kelimeleri döndür */}
             {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
+              <span key={wordIndex} className="title-word">
                 {/* Her kelimenin harflerini döndür */}
                 {word.split('').map((char, charIndex) => (
-                  <span key={charIndex} className="society-title-char" style={{ display: 'inline-block' }}>
+                  <span key={charIndex} className="society-title-char" >
                     {char}
                   </span>
                 ))}
@@ -107,8 +107,8 @@ const Society = () => {
         <div className="network-container">
 
           <div className="network-header">
-            <h2 className="section-title">THE <span className="highlight">CALLING</span> TREE</h2>
-            <p className="section-desc">
+            <h2 className="network-title">THE <span className="highlight">NETWORK</span></h2>
+            <p className="network-desc">
               Bir Concierge asla çaresiz değildir. Bir telefonla, Avrupa'nın dört bir yanındaki
               kardeşlerimiz ayağa kalkar. Zincir kopmaz, hizmet aksamaz.
             </p>
@@ -236,6 +236,44 @@ const Society = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+
+      {/* 3. PHILOSOPHY SECTION (Perfume) */}
+      <section className="philosophy-section">
+        <div className="philosophy-container">
+
+          <div className="philosophy-visual-wrapper">
+            <div className="panache-bottle-container" >
+              <div className="bottle-cap"></div>
+              <div className="bottle-neck"></div>
+              <div className="bottle-body">
+                <div className="bottle-label">
+                  <span>L'AIR</span>
+                  <span className="tiny">de</span>
+                  <span>PANACHE</span>
+                </div>
+                <div className="bottle-liquid"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="philosophy-text">
+            <h3 className="section-title">
+              THE <span className="highlight">PANACHE</span>
+            </h3>
+            <p className="section-description">
+              "Burası bir zamanlar insanlık olarak bilinen o barbar mezbahasında,
+              hâlâ medeniyetin cılız parıltılarını görebildiğiniz yerdir."
+              Mösyö Gustave, en zor anlarda bile L'Air de Panache kokusundan ödün vermez.
+            </p>
+            <div className="quote-block">
+              <Quote size={20} className="quote-icon" />
+              <p>"Rudeness is merely the expression of fear."</p>
+            </div>
           </div>
         </div>
       </section>

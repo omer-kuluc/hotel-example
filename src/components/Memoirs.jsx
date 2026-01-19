@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Memoirs() {
   const containerRef = useRef(null);
 
-  const [sprayed, setSprayed] = useState(false);
 
   // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
@@ -24,14 +23,7 @@ export default function Memoirs() {
   }, []);
   // -----------------------------
 
-  // Parfüm sıkma efekti
-  const handleSpray = () => {
-    setSprayed(true);
-    gsap.fromTo(".spray-mist",
-      { opacity: 0, scale: 0.5, y: 10 },
-      { opacity: 0.8, scale: 1.5, y: -50, duration: 1, ease: "power2.out", onComplete: () => setSprayed(false) }
-    );
-  };
+
 
   useEffect(() => {
     // 1. Tablo Animasyonu
@@ -182,43 +174,6 @@ export default function Memoirs() {
       </section>
 
 
-      {/* 3. PHILOSOPHY SECTION (Perfume) */}
-      <section className="philosophy-section">
-        <div className="philosophy-container">
-
-          <div className="philosophy-visual-wrapper">
-            <div className="panache-bottle-container" onClick={handleSpray}>
-              <div className="bottle-cap"></div>
-              <div className="bottle-neck"></div>
-              <div className="bottle-body">
-                <div className="bottle-label">
-                  <span>L'AIR</span>
-                  <span className="tiny">de</span>
-                  <span>PANACHE</span>
-                </div>
-                <div className="bottle-liquid"></div>
-              </div>
-              <div className="spray-mist"></div>
-              <div className="click-hint">(Click to Spray)</div>
-            </div>
-          </div>
-
-          <div className="philosophy-text">
-            <h3 className="section-title">
-              THE <span className="highlight">PANACHE</span>
-            </h3>
-            <p className="section-description">
-              "Burası bir zamanlar insanlık olarak bilinen o barbar mezbahasında,
-              hâlâ medeniyetin cılız parıltılarını görebildiğiniz yerdir."
-              Mösyö Gustave, en zor anlarda bile L'Air de Panache kokusundan ödün vermez.
-            </p>
-            <div className="quote-block">
-              <Quote size={20} className="quote-icon" />
-              <p>"Rudeness is merely the expression of fear."</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
     </div>
   )
