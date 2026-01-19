@@ -104,7 +104,7 @@ function Patisserie() {
           </div>
 
           <div className="product-details">
-            <h2 className="product-title">Sérénité<br /><span className="highlight">au Chocolat</span></h2>
+            <h2 className="product-title">Sérénité<span className="highlight">au Chocolat</span></h2>
             <p className="product-desc">
               Three delicate pastry towers filled with caramel cream, covered in colorful glazes, and meticulously stacked.
               The most iconic flavor of Torvonka, crafted by Althea's expert hands.
@@ -129,7 +129,8 @@ function Patisserie() {
               Delivered without ever being opened (unless there's a chisel inside, of course).
             </p>
             <div className="quote-box">
-              <Truck size={18} style={{ marginRight: '8px' }} />
+              <Truck size={18} />
+              <p className='truck-text'>: Yes, it’s really this small in real life.</p>
             </div>
           </div>
 
