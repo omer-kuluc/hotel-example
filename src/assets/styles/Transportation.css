@@ -39,7 +39,7 @@
 }
 
 .trans-title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #d4af37;
   letter-spacing: 0.1em;
   line-height: 1;
@@ -65,8 +65,8 @@
 }
 
 .trans-subtitle {
-  font-size: 1.2rem;
-  letter-spacing: 0.3em;
+  font-size: 1rem;
+  letter-spacing: 0.4em;
   color: #fbc4d3;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .vehicle-title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   margin-bottom: 16px;
   letter-spacing: 0.1em;
@@ -106,7 +106,7 @@
 }
 
 .vehicle-desc {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #fbc4d3;
   line-height: 1.8;
 }
@@ -274,12 +274,12 @@
 }
 
 /* Gradient Overlay */
-.cable-section::before {
+/* .cable-section::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(45, 27, 51, 0.9) 0%, rgba(168, 203, 246, 0.3) 100%);
-}
+} */
 
 .cable-visual-area {
   position: relative;

@@ -111,7 +111,7 @@ const Transportation = () => {
             ))}
           </h1>
           <div className="divider-gold"></div>
-          <p className="trans-subtitle">REPUBLIC OF ZUBROWKA</p>
+          <p className="trans-subtitle">REPUBLIC OF TORVONKA</p>
         </div>
       </section>
 
@@ -121,8 +121,7 @@ const Transportation = () => {
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">EXPRESS</span></h2>
             <p className="vehicle-desc">
-              Lutz ve Nebelsbad arasındaki demir yolu. Askeri yeşil vagonlar,
-              buğulu camlar ve sınır kontrolleri.
+              The railway between Vunzt and Bemelstad. Fogged windows and border controls.
             </p>
           </div>
 
