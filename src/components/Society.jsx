@@ -97,7 +97,7 @@ const Society = () => {
             ))}
           </h1>
           <div className="divider-line"></div>
-          <p className="society-subtitle">OF THE CROSSED KEYS</p>
+          <p className="society-subtitle">OF THE SILENT LOCKS</p>
           <p className="society-quote">"We are always there."</p>
         </div>
       </section>
@@ -250,9 +250,8 @@ const Society = () => {
               <div className="bottle-neck"></div>
               <div className="bottle-body">
                 <div className="bottle-label">
-                  <span>L'AIR</span>
-                  <span className="tiny">de</span>
-                  <span>PANACHE</span>
+                  <p className='bottle-label-text'>L'Esprit </p>
+                  <p className='bottle-label-text'>d'Élégance</p>
                 </div>
                 <div className="bottle-liquid"></div>
               </div>
@@ -261,17 +260,14 @@ const Society = () => {
           </div>
 
           <div className="philosophy-text">
-            <h3 className="section-title">
-              THE <span className="highlight">PANACHE</span>
+            <h3 className="philosophy-text-title">
+              THE <span className="highlight">SCENT</span>
             </h3>
-            <p className="section-description">
-              "Burası bir zamanlar insanlık olarak bilinen o barbar mezbahasında,
-              hâlâ medeniyetin cılız parıltılarını görebildiğiniz yerdir."
-              Mösyö Gustave, en zor anlarda bile L'Air de Panache kokusundan ödün vermez.
-            </p>
+            <p className="philosophy-text-description">
+              Each member always has a bottle on hand. You never know when you might need it, especially if you're in a tight spot. It's a lifesaver. </p>
             <div className="quote-block">
               <Quote size={20} className="quote-icon" />
-              <p>"Rudeness is merely the expression of fear."</p>
+              <p className='philosophy-quote'>"A few drops can mask even the most unpleasant scents."</p>
             </div>
           </div>
         </div>
@@ -281,7 +277,7 @@ const Society = () => {
       <div className="society-footer">
         <div className="footer-content">
           <Star size={16} fill="#d4af37" color="#d4af37" />
-          <p>CONFEDERACY OF THE CROSSED KEYS</p>
+          <p className='footer-motto'>CONFEDERACY OF THE SILENT LOCKS</p>
           <Star size={16} fill="#d4af37" color="#d4af37" />
         </div>
         <p className="footer-sub">Excellence. Discretion. Loyalty.</p>

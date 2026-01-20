@@ -267,7 +267,7 @@
 }
 
 .concierge-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #fff;
   letter-spacing: 0.1em;
   margin-bottom: 4px;
@@ -365,7 +365,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+  gap: 48px;
 }
 
 .philosophy-visual-wrapper {
@@ -379,7 +379,6 @@
   position: relative;
   width: 160px;
   height: 240px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -416,8 +415,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 80px;
+  width: 110px;
+  height: 90px;
   background-color: #2d1b33;
   border: 2px solid #d4af37;
   display: flex;
@@ -426,14 +425,11 @@
   justify-content: center;
   color: #d4af37;
   letter-spacing: 0.1em;
-  font-size: 1.2rem;
   z-index: 2;
 }
 
-.bottle-label .tiny {
-  font-size: 0.6rem;
-  font-style: italic;
-  color: #fbc4d3;
+.bottle-label-text {
+  font-size: 0.9rem;
 }
 
 .bottle-liquid {
@@ -445,6 +441,23 @@
   z-index: 1;
 }
 
+.philosophy-text-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+}
+
+.philosophy-text-description {
+  font-size: 1.125rem;
+  color: #fbc4d3;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
 
 .quote-block {
   border-top: 1px solid rgba(212, 175, 55, 0.3);
@@ -454,19 +467,25 @@
   align-items: center;
   gap: 12px;
   color: #d4af37;
+
+}
+
+.philosophy-quote {
   font-style: italic;
+  font-size: 1rem;
 }
 
 
 
 /* FOOTER */
 .society-footer {
-  padding: 64px 0;
+  padding: 64px 0px;
   text-align: center;
   background-color: #25162a;
   /* Footer Darker */
   color: #d4af37;
   border-top: 4px double rgba(212, 175, 55, 0.2);
+
 }
 
 .footer-content {
@@ -474,9 +493,11 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+
+.footer-motto {
   font-size: 1.2rem;
   letter-spacing: 0.2em;
-  margin-bottom: 8px;
 }
 
 .footer-sub {
@@ -497,8 +518,33 @@
     font-size: 5rem;
   }
 
+  .society-subtitle,
+  .society-quote {
+    font-size: 1.2rem;
+  }
+
+  /* NETWORK SECTION */
+
+  .network-title {
+    font-size: 2.25rem;
+  }
+
+  .network-desc {
+    font-size: 1.25rem;
+  }
+
+  .concierge-name {
+    font-size: 1.4rem;
+  }
+
+  .hotel-name,
+  .location-info {
+    font-size: 1.125rem;
+  }
 
   /* PHILOSOPHY SECTION */
+
+  /*PERFUME*/
   .philosophy-container {
     flex-direction: row;
   }
@@ -507,15 +553,65 @@
     width: 50%;
   }
 
+  .panache-bottle-container {
+    width: 180px;
+    height: 270px;
+  }
+
+  .bottle-cap {
+    width: 50px;
+    height: 30px;
+  }
+
+  .bottle-neck {
+    width: 30px;
+    height: 20px;
+  }
+
+  .bottle-body {
+    width: 150px;
+    height: 190px;
+  }
+
+  .bottle-label-text {
+    font-size: 1.125rem;
+  }
+
+
+  /*philosophy-text*/
+
+
   .philosophy-text {
     width: 50%;
     text-align: left;
+  }
+
+  .philosophy-text-title {
+    font-size: 2.25rem;
+  }
+
+  .philosophy-text-description {
+    font-size: 1.25rem;
   }
 
   .quote-block {
     justify-content: flex-start;
   }
 
+  .philosophy-quote {
+    font-size: 1.125rem;
+  }
+
+  /*footer*/
+
+
+  .footer-motto {
+    font-size: 1.3rem;
+  }
+
+  .footer-sub {
+    font-size: 1.125rem;
+  }
 }
 
 /* Desktop: 3 Sütun */
@@ -527,4 +623,6 @@
   .society-main-title {
     font-size: 7rem;
   }
+
+
 }
