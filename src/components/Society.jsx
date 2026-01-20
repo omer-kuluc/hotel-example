@@ -109,48 +109,47 @@ const Society = () => {
           <div className="network-header">
             <h2 className="network-title">THE <span className="highlight">NETWORK</span></h2>
             <p className="network-desc">
-              Bir Concierge asla çaresiz değildir. Bir telefonla, Avrupa'nın dört bir yanındaki
-              kardeşlerimiz ayağa kalkar. Zincir kopmaz, hizmet aksamaz.
+              A concierge is never helpless. With just one phone call, they can connect with other members of the community across Europe. The chain never breaks, and service never falters.
             </p>
           </div>
 
           <div className="network-grid">
 
-            {/* 1. HOTEL IVANHOE (Blue - M. Ivan) */}
+            {/* 1. HOTEL IVANHOE (Brown - M. Ivan) */}
             <div className="hotel-card card-ivanhoe">
-              <div className="color-strip blue-strip"></div>
+              <div className="color-strip brown-strip"></div>
               <div className="card-inner">
-                <div className="concierge-avatar blue-glow">
-                  <PhoneCall size={24} className="ringing-icon" color="#aec6cf" />
+                <div className="concierge-avatar brown-glow">
+                  <PhoneCall size={24} className="ringing-icon" color="#a46743" />
                 </div>
-                <h3 className="concierge-name">M. IVAN</h3>
-                <span className="hotel-name">Hotel Ivanhoe</span>
+                <h3 className="concierge-name">M. IGOR</h3>
+                <span className="hotel-name">Hotel Excalia</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>Lutz</span>
+                  <MapPin size={14} className="icon-small" /> <span>Vunzt</span>
                 </div>
                 <div className="status-indicator">
-                  <div className="status-dot blue-dot"></div>
+                  <div className="status-dot brown-dot"></div>
                   <span>CONNECTED</span>
                 </div>
               </div>
             </div>
 
-            {/* 2. THE FLANAGAN (Yellow - M. Georges) */}
+            {/* 2. THE FLANAGAN (Orange - M. Georges) */}
             <div className="hotel-card card-flanagan">
-              <div className="color-strip yellow-strip"></div>
+              <div className="color-strip green-strip"></div>
               <div className="card-inner">
-                <div className="concierge-avatar yellow-glow">
-                  <Phone size={24} className="ringing-icon" color="#fdfd96" />
+                <div className="concierge-avatar green-glow">
+                  <Phone size={24} className="ringing-icon" color="#77dd77" />
                 </div>
-                <h3 className="concierge-name">M. GEORGES</h3>
-                <span className="hotel-name">The Flanagan</span>
+                <h3 className="concierge-name">M. ROGEAU</h3>
+                <span className="hotel-name">Château Lévance</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>Riviera</span>
+                  <MapPin size={14} className="icon-small" /> <span>Toledeux</span>
                 </div>
                 <div className="status-indicator">
-                  <div className="status-dot yellow-dot"></div>
+                  <div className="status-dot green-dot"></div>
                   <span>RELAYING</span>
                 </div>
               </div>
@@ -158,39 +157,39 @@ const Society = () => {
 
             {/* 3. RITZ IMPERIAL (Green - M. Dino) */}
             <div className="hotel-card card-ritz">
-              <div className="color-strip green-strip"></div>
+              <div className="color-strip orange-strip"></div>
               <div className="card-inner">
-                <div className="concierge-avatar green-glow">
-                  <Bell size={24} className="ringing-icon" color="#77dd77" />
+                <div className="concierge-avatar orange-glow">
+                  <Bell size={24} className="ringing-icon" color="#9f462b" />
                 </div>
-                <h3 className="concierge-name">M. DINO</h3>
-                <span className="hotel-name">Ritz Imperial</span>
+                <h3 className="concierge-name">M. ALDONI</h3>
+                <span className="hotel-name">Palazzo Spricessa</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>Pratzen Park</span>
+                  <MapPin size={14} className="icon-small" /> <span>Lunafresca</span>
                 </div>
                 <div className="status-indicator">
-                  <div className="status-dot green-dot"></div>
+                  <div className="status-dot orange-dot"></div>
                   <span>ALERTED</span>
                 </div>
               </div>
             </div>
 
-            {/* 4. PALACE HOTEL (Pink - M. Robin) */}
+            {/* 4. PALACE HOTEL (Blue - M. Robin) */}
             <div className="hotel-card card-palace">
-              <div className="color-strip pink-strip"></div>
+              <div className="color-strip blue-strip"></div>
               <div className="card-inner">
-                <div className="concierge-avatar pink-glow">
-                  <PhoneCall size={24} className="ringing-icon" color="#fbc4d3" />
+                <div className="concierge-avatar blue-glow">
+                  <PhoneCall size={24} className="ringing-icon" color="#aec6cf" />
                 </div>
-                <h3 className="concierge-name">M. ROBIN</h3>
-                <span className="hotel-name">Palace Hotel</span>
+                <h3 className="concierge-name">M. BENOIR</h3>
+                <span className="hotel-name">Côte de Flore</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>Brabant</span>
+                  <MapPin size={14} className="icon-small" /> <span>Bosconne</span>
                 </div>
                 <div className="status-indicator">
-                  <div className="status-dot pink-dot"></div>
+                  <div className="status-dot blue-dot"></div>
                   <span>STANDBY</span>
                 </div>
               </div>
@@ -201,13 +200,13 @@ const Society = () => {
               <div className="color-strip silver-strip"></div>
               <div className="card-inner">
                 <div className="concierge-avatar silver-glow">
-                  <Radio size={24} className="ringing-icon" color="#d3d3d3" />
+                  <Radio size={24} className="ringing-icon" color="#a9253f" />
                 </div>
-                <h3 className="concierge-name">M. MARTIN</h3>
-                <span className="hotel-name">Excelsior</span>
+                <h3 className="concierge-name">M. MELVIN</h3>
+                <span className="hotel-name">Rizot Voyage</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>North</span>
+                  <MapPin size={14} className="icon-small" /> <span>Pormontier</span>
                 </div>
                 <div className="status-indicator">
                   <div className="status-dot silver-dot"></div>

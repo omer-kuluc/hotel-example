@@ -196,24 +196,24 @@
 }
 
 /* Pastel Colors (Film Palette) */
-.blue-strip {
-  background-color: #aec6cf;
-}
-
-.yellow-strip {
-  background-color: #fdfd96;
+.brown-strip {
+  background-color: #a36a52;
 }
 
 .green-strip {
   background-color: #77dd77;
 }
 
-.pink-strip {
-  background-color: #fbc4d3;
+.orange-strip {
+  background-color: #AB4E2F;
+}
+
+.blue-strip {
+  background-color: #6379a3;
 }
 
 .silver-strip {
-  background-color: #cfcfc4;
+  background-color: #814153;
 }
 
 .gold-strip {
@@ -233,19 +233,19 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.blue-glow {
+.brown-glow {
   box-shadow: 0 0 15px rgba(174, 198, 207, 0.3);
-}
-
-.yellow-glow {
-  box-shadow: 0 0 15px rgba(253, 253, 150, 0.3);
 }
 
 .green-glow {
   box-shadow: 0 0 15px rgba(119, 221, 119, 0.3);
 }
 
-.pink-glow {
+.orange-glow {
+  box-shadow: 0 0 15px rgba(253, 253, 150, 0.3);
+}
+
+.blue-glow {
   box-shadow: 0 0 15px rgba(251, 196, 211, 0.3);
 }
 
@@ -317,14 +317,9 @@
   border-radius: 50%;
 }
 
-.blue-dot {
+.brown-dot {
   background-color: #aec6cf;
   box-shadow: 0 0 5px #aec6cf;
-}
-
-.yellow-dot {
-  background-color: #fdfd96;
-  box-shadow: 0 0 5px #fdfd96;
 }
 
 .green-dot {
@@ -332,7 +327,13 @@
   box-shadow: 0 0 5px #77dd77;
 }
 
-.pink-dot {
+
+.orange-dot {
+  background-color: #fdfd96;
+  box-shadow: 0 0 5px #fdfd96;
+}
+
+.blue-dot {
   background-color: #fbc4d3;
   box-shadow: 0 0 5px #fbc4d3;
 }

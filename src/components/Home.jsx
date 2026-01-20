@@ -151,7 +151,7 @@ function Home() {
               <div className="ticket-inner">
                 <div className="ticket-header">TORVONKA EXPRESS</div>
                 <div className="ticket-route">
-                  <span>VULST</span> <ArrowRight size={14} /> <span>BEMELSTAD</span>
+                  <span>VUNZT</span> <ArrowRight size={14} /> <span>BEMELSTAD</span>
                 </div>
                 <div className="ticket-icon-top"><TrainFront size={16} /></div>
                 <div className="ticket-date">1932</div>
