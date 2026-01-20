@@ -65,7 +65,7 @@ function Patisserie() {
 
       {/* HERO SECTION */}
       <section className="mendl-hero">
-        <div className="hero-content">
+        <div className="patisserie-hero-content">
           <div className="brand-logo">
             <ChefHat size={48} className="brand-icon" />
             <span className="est-text">EST. 1912</span>

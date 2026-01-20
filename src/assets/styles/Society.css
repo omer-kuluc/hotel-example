@@ -21,11 +21,14 @@
   position: relative;
 }
 
-.hero-content {
+.society-hero-content {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 4px double rgba(212, 175, 55, 0.4);
+  padding: 40px 24px;
+  background: rgba(0, 0, 0, 0.2);
   gap: 16px;
   max-width: 800px;
 }

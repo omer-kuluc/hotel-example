@@ -51,21 +51,44 @@ const Transportation = () => {
       ease: 'linear'
     });
 
-    // 3. TELEFERİK (Çapraz teller üzerinde)
-    gsap.fromTo('.cable-cabin',
-      { x: '-50px', y: '20px' },
-      {
-        x: '80vw',
-        y: '-50px',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.cable-section',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 2,
+    // 3. TELEFERİK (RESPONSIVE ANİMASYON)
+    let mm = gsap.matchMedia();
+
+    // > 768px (Desktop/Tablet)
+    mm.add("(min-width: 768px)", () => {
+      gsap.fromTo('.cable-cabin',
+        { x: '-100px', y: '50px' }, // Başlangıç
+        {
+          x: '80vw',
+          y: '180px', // Orijinal Yükseklik (Mevcut kodun)
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.cable-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 2,
+          }
         }
-      }
-    );
+      );
+    });
+
+    // < 768px (Mobil)
+    mm.add("(max-width: 767px)", () => {
+      gsap.fromTo('.cable-cabin',
+        { x: '-50px', y: '30px' }, // Mobilde daha yakın başlasın
+        {
+          x: '100vw',
+          y: '120px', // Mobilde daha az yükselsin
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.cable-section',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 2,
+          }
+        }
+      );
+    });
 
     // 4. FÜNİKÜLER (Dik tırmanış)
     gsap.fromTo('.funicular-car',
@@ -86,7 +109,7 @@ const Transportation = () => {
   }, []);
 
   const titleText = "TRANSIT OPTIONS";
-  const words = titleText.split(" "); // Önce kelimelere böl ["MONSIEUR", "GASTON"]
+  const words = titleText.split(" ");
 
   return (
     <div className='transportation-page' ref={containerRef}>
@@ -98,10 +121,8 @@ const Transportation = () => {
             <Ticket size={48} color="#d4af37" />
           </div>
           <h1 className="trans-title">
-            {/* Kelimeleri döndür */}
             {words.map((word, wordIndex) => (
               <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
-                {/* Her kelimenin harflerini döndür */}
                 {word.split('').map((char, charIndex) => (
                   <span key={charIndex} className="trans-title-char" style={{ display: 'inline-block' }}>
                     {char}
@@ -117,7 +138,7 @@ const Transportation = () => {
 
       {/* 1. THE ZUBROWKA EXPRESS (Green Train) */}
       <section className="train-section">
-        <div className="section-container">
+        <div className="train-section-container">
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">EXPRESS</span></h2>
             <p className="vehicle-desc">
@@ -126,10 +147,7 @@ const Transportation = () => {
           </div>
 
           <div className="train-track-area">
-            {/* Tren Grubu */}
             <div className="train-composition">
-
-              {/* LOKOMOTİF */}
               <div className="locomotive">
                 <div className="chimney"><div className="smoke"></div></div>
                 <div className="engine-body">
@@ -142,37 +160,31 @@ const Transportation = () => {
                   <div className="train-wheel big"></div>
                 </div>
               </div>
-
-              {/* VAGON 1 */}
               <div className="wagon">
                 <div className="wagon-body">
                   <div className="wagon-window"></div>
                   <div className="wagon-window"></div>
                   <div className="stripe-line"></div>
-                  <span className="wagon-text">ZB-01</span>
+                  <span className="wagon-text">VB-01</span>
                 </div>
                 <div className="wheels-container">
                   <div className="train-wheel small"></div>
                   <div className="train-wheel small"></div>
                 </div>
               </div>
-
-              {/* VAGON 2 */}
               <div className="wagon">
                 <div className="wagon-body">
                   <div className="wagon-window"></div>
                   <div className="wagon-window"></div>
                   <div className="stripe-line"></div>
-                  <span className="wagon-text">ZB-02</span>
+                  <span className="wagon-text">VB-02</span>
                 </div>
                 <div className="wheels-container">
                   <div className="train-wheel small"></div>
                   <div className="train-wheel small"></div>
                 </div>
               </div>
-
             </div>
-            {/* Ray */}
             <div className="rail-track"></div>
           </div>
         </div>
@@ -180,7 +192,7 @@ const Transportation = () => {
 
       {/* 2. THE CABLE CAR (Teleferik - Çapraz Teller) */}
       <section className="cable-section">
-        <div className="section-container">
+        <div className="cable-section-container">
           <div className="text-content center-text">
             <h2 className="vehicle-title">THE <span className="highlight">CABLE CAR</span></h2>
             <p className="vehicle-desc">
@@ -207,7 +219,7 @@ const Transportation = () => {
 
       {/* 3. THE FUNICULAR (Füniküler - Dik Ray) */}
       <section className="funicular-section">
-        <div className="section-container reverse-layout">
+        <div className="funicularsection-container reverse-layout">
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">FUNICULAR</span></h2>
             <p className="vehicle-desc">
@@ -237,9 +249,6 @@ const Transportation = () => {
           </div>
         </div>
       </section>
-
-
-
 
       {/* FOOTER */}
       <div className="trans-footer">

@@ -75,7 +75,7 @@ const Society = () => {
 
       {/* HERO SECTION */}
       <section className="society-hero">
-        <div className="hero-content">
+        <div className="society-hero-content">
           <div className="emblem-wrapper">
             <div className="hero-emblem-keys">
               <Key size={64} className="key-icon left-key" />

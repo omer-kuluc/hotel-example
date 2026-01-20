@@ -12,7 +12,15 @@
 /* 1. HERO SECTION */
 .trans-hero {
   padding: 80px 24px;
-  background-color: #3d1e3d;
+  background: linear-gradient(to bottom,
+      #4a2649 0%,
+      /* Koyu mor (header'a yakın) */
+      #5e3a5d 30%,
+      /* Orta mor-kahve karışımı */
+      #6b4a5e 60%,
+      /* Mor-kahverengi geçiş */
+      #8b6f6a 100%);
+  /* Toprak tonuna yaklaşan kahverengi */
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
@@ -25,6 +33,8 @@
   align-items: center;
   gap: 16px;
   max-width: 900px;
+  background-color: rgba(61, 30, 61, 0.5);
+
 }
 
 .ticket-icon-wrapper {
@@ -80,7 +90,9 @@
   overflow: hidden;
 }
 
-.section-container {
+.train-section-container,
+.cable-section-container,
+.funicularsection-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -127,7 +139,19 @@
 
 /* 2. TRAIN SECTION (Green) */
 .train-section {
-  background-color: #2d1b33;
+  background: linear-gradient(to bottom,
+      #f4d4c2 0%,
+      #f4d4c2 25%,
+      #92756b 45%,
+      #919098 55%,
+      #567083 75%,
+      #1a242c 100%);
+
+  /* Bölüm sınırları için paletteki koyu renklerden biriyle çerçeve */
+  border-top: 4px double #503a31;
+  /* rock */
+  border-bottom: 4px double #503a31;
+  /* rock */
 }
 
 .train-track-area {
@@ -152,7 +176,7 @@
 .locomotive {
   width: 160px;
   height: 110px;
-  background-color: #4b5d16;
+  background-color: #031218;
   /* Army Green */
   border: 2px solid #1a1a1a;
   border-radius: 10px 30px 0 0;
@@ -207,7 +231,7 @@
 .wagon {
   width: 140px;
   height: 100px;
-  background-color: #4b5d16;
+  background-color: #05343E;
   border: 2px solid #1a1a1a;
   position: relative;
   border-radius: 5px 5px 0 0;
@@ -267,7 +291,7 @@
 
 /* 3. CABLE CAR (Teleferik) */
 .cable-section {
-  background-color: #a8cbf6;
+  background: linear-gradient(to bottom, #d8dbd1, #8e8f8c, #444a53, #69696a, #27303c);
   /* Pastel Blue Sky */
   position: relative;
   border-top: 4px double #d4af37;
@@ -329,7 +353,7 @@
 .cabin-body {
   width: 100px;
   height: 70px;
-  background-color: #fbc4d3;
+  background-color: #4b5781;
   /* Pink Cabin */
   border: 2px solid #1a1a1a;
   border-radius: 10px;
@@ -351,7 +375,7 @@
 .cabin-stripe {
   width: 100%;
   height: 4px;
-  background-color: #d4af37;
+  background-color: #cec5a8;
   margin-top: 8px;
 }
 
@@ -482,7 +506,9 @@
     font-size: 5rem;
   }
 
-  .section-container {
+  .train-section-container,
+  .cable-section-container,
+  .funicularsection-container {
     flex-direction: row;
   }
 
