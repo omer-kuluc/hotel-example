@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Quote, CheckCircle, BookOpen, PenTool, Key, Star } from 'lucide-react';
+import { CheckCircle, BookOpen, PenTool, Key, Star, FileText } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,28 +52,18 @@ export default function Memoirs() {
       ease: 'power2.out',
     });
 
-    // 2. ANAHTAR (KEY) ANİMASYONU (YENİ)
-    const tlKey = gsap.timeline({
+    // 2. Job Application Animasyonu (YENİ)
+    gsap.from('.job-paper', {
       scrollTrigger: {
-        trigger: '.key-section',
-        start: 'top 65%',
-      }
-    });
-
-    tlKey.from('.crossed-keys-wrapper', {
-      scale: 0,
-      rotation: -180,
+        trigger: '.job-section',
+        start: 'top 60%',
+      },
+      y: 50,
+      rotation: 5,
       opacity: 0,
       duration: 1.2,
-      ease: 'back.out(1.5)'
-    })
-      .from('.key-star', {
-        scale: 0,
-        opacity: 0,
-        stagger: 0.2,
-        duration: 0.5,
-        ease: 'back.out'
-      }, "-=0.5");
+      ease: 'power3.out',
+    });
 
     // 3. Tablo Animasyonu
     gsap.from('.painting-frame', {
@@ -100,6 +90,29 @@ export default function Memoirs() {
       ease: 'back.out(1.7)',
     });
 
+    // 4. Anahtar (Key) Animasyonu
+    const tlKey = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.key-section',
+        start: 'top 65%',
+      }
+    });
+
+    tlKey.from('.crossed-keys-wrapper', {
+      scale: 0,
+      rotation: -180,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'back.out(1.5)'
+    })
+      .from('.key-star', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: 'back.out'
+      }, "-=0.5");
+
   }, []);
 
   const titleText = "ZUBROWKA TALES";
@@ -108,7 +121,7 @@ export default function Memoirs() {
   return (
     <div className='memoirs-page' ref={containerRef}>
 
-      {/* --- HERO SECTION (Güncellendi) --- */}
+      {/* --- HERO SECTION --- */}
       <section className="memoirs-hero">
         <div className="memoirs-hero-content">
           <div className="hero-ornament-top"></div>
@@ -136,7 +149,7 @@ export default function Memoirs() {
         </div>
       </section>
 
-      {/* --- MEMOIRS BOOK SECTION --- */}
+      {/* --- 1. MEMOIRS BOOK SECTION --- */}
       <section className="memoirs-book-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
@@ -159,56 +172,73 @@ export default function Memoirs() {
               THE <span className="highlight">BOOK</span>
             </h3>
             <p className="section-description">
-              Yıllar sonra anlatılan bu hikaye, Zero Moustafa'nın anılarıyla hayat buluyor.
-              Kaybolmuş bir dünyanın, nezaketin ve unutulmaz dostlukların efsanevi dökümü.
-              Her sayfa, Zubrowka'nın altın çağını fısıldıyor.
+              Years later, this story told comes to life with the memories of The Protege.
+              A written seal of a lost world, love, and friendships.
+              Each page whispers the golden age of Zubrowka and the Majestic Bellmont Hotel.
             </p>
             <div className="memoirs-actions">
               <button className="memoirs-button">
                 ANILARI KEŞFEDİN
               </button>
-              <p className="memoirs-quote">"To be written with a steady hand."</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- KEY SECTION (YENİ EKLENEN KISIM) --- */}
-      <section className="key-section">
-        <div className="key-container">
+      {/* --- 2. JOB APPLICATION SECTION (YENİ) --- */}
+      <section className="job-section">
+        <div className="job-container">
 
-          <div className="key-visual-wrapper">
-            <div className="crossed-keys-badge">
-              <div className="crossed-keys-wrapper">
-                {/* Çapraz Anahtarlar */}
-                <Key className="key-icon left-key" size={80} />
-                <Key className="key-icon right-key" size={80} />
+          <div className="job-visual-wrapper">
+            <div className="job-paper">
+              <div className="paper-header">
+                <FileText size={24} className="paper-icon" />
+                <span>OFFICIAL APPLICATION</span>
               </div>
-              <div className="stars-wrapper">
-                <Star className="key-star s1" size={16} fill="#d4af37" />
-                <Star className="key-star s2" size={24} fill="#d4af37" />
-                <Star className="key-star s3" size={16} fill="#d4af37" />
+              <div className="paper-body">
+                <div className="form-row">
+                  <span className="form-label">POSITION:</span>
+                  <span className="form-value typewriter">Lobby Boy</span>
+                </div>
+                <div className="form-row">
+                  <span className="form-label">EXPERIENCE:</span>
+                  <div className="stamp-box">
+                    <span className="stamp-text">ZERO</span>
+                  </div>
+                </div>
+                <div className="form-row">
+                  <span className="form-label">EDUCATION:</span>
+                  <div className="stamp-box">
+                    <span className="stamp-text">ZERO</span>
+                  </div>
+                </div>
+                <div className="form-row">
+                  <span className="form-label">FAMILY:</span>
+                  <div className="stamp-box">
+                    <span className="stamp-text">ZERO</span>
+                  </div>
+                </div>
+              </div>
+              <div className="paper-footer">
+                <span className="hired-stamp">HIRED</span>
               </div>
             </div>
-            <div className="key-label">SOCIETY OF THE CROSSED KEYS</div>
           </div>
 
-          <div className="key-text">
+          <div className="job-text">
             <h3 className="section-title">
-              THE <span className="highlight">KEYS</span>
+              THE <span className="highlight">CANDIDATE</span>
             </h3>
             <p className="section-description">
-              M. Gustave için anahtarlar sadece kapıları değil, kalpleri de açardı.
-              Bu sembol, "Çapraz Anahtarlar Cemiyeti"nin sarsılmaz sadakatini ve
-              Zero'ya devredilen o büyük sorumluluğu temsil eder.
-              Gerçek hizmet, görünmez bağlarla kurulur.
-            </p>
-            <div className="key-actions">
+              A young man with nothing and a hotel with everything.
+              What Gaston sought was not accomplishments on paper,
+              but the sparkle of loyalty in the eyes. The Protege, contrary to its name, found everything with this hotel and gave it all to the hotel. </p>
+            <div className="job-actions">
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Ultimate Discretion</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>Hired on the spot</span>
               </div>
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Unwavering Loyalty</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>A new beginning</span>
               </div>
             </div>
           </div>
@@ -216,7 +246,7 @@ export default function Memoirs() {
         </div>
       </section>
 
-      {/* --- ART SECTION --- */}
+      {/* --- 3. ART SECTION --- */}
       <section className="art-section">
         <div className="art-container">
 
@@ -250,7 +280,7 @@ export default function Memoirs() {
                     <span className="item-label">THE LOVE</span>
                   </div>
                 </div>
-                <div className="painting-label">PORTRAIT OF A FAMILY</div>
+                <div className="painting-label">A BOY WITH A FAMILY</div>
               </div>
               <div className="frame-ornament"></div>
             </div>
@@ -258,7 +288,7 @@ export default function Memoirs() {
 
           <div className="art-text">
             <h3 className="section-title">
-              THE <span className="highlight">INHERITANCE</span>
+              THE <span className="highlight">PAINTING</span>
             </h3>
             <p className="section-description">
               Madame D.'nin vasiyeti artık sadece bir elma değil.
@@ -272,6 +302,49 @@ export default function Memoirs() {
               </div>
               <div className="check-item">
                 <CheckCircle size={16} color="#d4af37" /> <span>Saved forever</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* --- 4. KEY SECTION (GÜNCELLENDİ) --- */}
+      <section className="key-section">
+        <div className="key-container">
+
+          <div className="key-visual-wrapper">
+            <div className="crossed-keys-badge">
+              <div className="crossed-keys-wrapper">
+                {/* Çapraz Anahtarlar */}
+                <Key className="key-icon left-key" size={80} />
+                <Key className="key-icon right-key" size={80} />
+              </div>
+              <div className="stars-wrapper">
+                <Star className="key-star s1" size={16} fill="#d4af37" />
+                <Star className="key-star s2" size={24} fill="#d4af37" />
+                <Star className="key-star s3" size={16} fill="#d4af37" />
+              </div>
+            </div>
+            <div className="key-label">SOCIETY OF THE CROSSED KEYS</div>
+          </div>
+
+          <div className="key-text">
+            <h3 className="section-title">
+              THE <span className="highlight">MISSION</span>
+            </h3>
+            <p className="section-description">
+              Bu anahtarlar sadece kapıları değil, kaderleri de birbirine bağladı.
+              Gustave'ın sarsılmaz otoritesini, Zero'ya devredilen büyük mirası
+              ve Agatha'nın tehlike anındaki cesaretini temsil eder.
+              Üç farklı kalp, tek bir amaç uğruna kilitlendi.
+            </p>
+            <div className="key-actions">
+              <div className="check-item">
+                <CheckCircle size={16} color="#d4af37" /> <span>Gustave's Honor</span>
+              </div>
+              <div className="check-item">
+                <CheckCircle size={16} color="#d4af37" /> <span>Agatha's Bravery</span>
               </div>
             </div>
           </div>

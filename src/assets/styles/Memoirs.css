@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Courier+Prime:wght@400;700&display=swap');
 
 /* GENEL */
 .memoirs-page {
@@ -10,9 +10,8 @@
   font-family: 'Afacad', sans-serif;
 }
 
-
 /* =========================================
-   1. HERO SECTION (Tasarlandı)
+   1. HERO SECTION
    ========================================= */
 .memoirs-hero {
   padding: 60px 16px;
@@ -229,16 +228,16 @@
 }
 
 /* =========================================
-   3. KEY SECTION (YENİ)
+   3. JOB APPLICATION SECTION (YENİ)
    ========================================= */
-.key-section {
+.job-section {
   padding: 96px 0;
-  background-color: #361b36;
-  /* Biraz farklı ton */
+  background-color: #3e2030;
+  /* Koyu vintage mor */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
-.key-container {
+.job-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
@@ -248,95 +247,119 @@
   gap: 64px;
 }
 
-.key-visual-wrapper {
+.job-visual-wrapper {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.job-paper {
+  width: 280px;
+  height: 360px;
+  background-color: #fdfbf7;
+  /* Parşömen rengi */
+  color: #2d1b33;
+  padding: 24px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+  transform: rotate(-2deg);
+  position: relative;
+  font-family: 'Courier Prime', monospace;
+  /* Daktilo fontu */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
-.crossed-keys-badge {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, #4a254a 0%, #2d1b33 70%);
-  border-radius: 50%;
-  border: 4px solid #d4af37;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
-}
-
-.crossed-keys-wrapper {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.key-icon {
+.job-paper::before {
+  content: '';
   position: absolute;
-  color: #d4af37;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
-}
-
-.left-key {
-  transform: rotate(45deg);
-}
-
-.right-key {
-  transform: rotate(-45deg);
-}
-
-.stars-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(#fdfbf7, #fdfbf7 23px, #e8e6e1 24px);
+  opacity: 0.3;
+  pointer-events: none;
 }
 
-.key-star {
-  position: absolute;
-  color: #d4af37;
+.paper-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 2px solid #2d1b33;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 
-.key-star.s1 {
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+.paper-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.key-star.s2 {
-  bottom: 20px;
-  left: 20%;
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.key-star.s3 {
-  bottom: 20px;
-  right: 20%;
-}
-
-.key-label {
-  margin-top: 24px;
-  font-size: 0.9rem;
-  color: #d4af37;
-  letter-spacing: 0.2em;
+.form-label {
+  font-size: 0.85rem;
+  font-weight: bold;
   text-transform: uppercase;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  padding-top: 8px;
 }
 
-.key-actions {
+.typewriter {
+  font-size: 1rem;
+}
+
+/* Damga Efekti */
+.stamp-box {
+  border: 2px solid #c41e3a;
+  /* Kırmızı mühür rengi */
+  padding: 2px 8px;
+  border-radius: 4px;
+  transform: rotate(-8deg);
+  opacity: 0.9;
+}
+
+.stamp-text {
+  color: #c41e3a;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.paper-footer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px dashed #2d1b33;
+}
+
+.hired-stamp {
+  font-size: 1.5rem;
+  color: #2e8b57;
+  /* Yeşil onay rengi */
+  font-weight: bold;
+  border: 3px double #2e8b57;
+  padding: 4px 16px;
+  transform: rotate(5deg);
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.job-actions {
   display: flex;
   justify-content: center;
   gap: 24px;
   margin-top: 24px;
-  color: #fbc4d3;
+  color: #d4af37;
+  font-style: italic;
 }
 
 /* =========================================
@@ -344,7 +367,7 @@
    ========================================= */
 .art-section {
   padding: 96px 0;
-  background-color: #3e2030;
+  background-color: #2d1b33;
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
@@ -532,9 +555,120 @@
   opacity: 0.8;
 }
 
+/* =========================================
+   5. KEY SECTION (GÜNCELLENDİ)
+   ========================================= */
+.key-section {
+  padding: 96px 0;
+  background-color: #361b36;
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.key-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.key-visual-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crossed-keys-badge {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #4a254a 0%, #2d1b33 70%);
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.crossed-keys-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-icon {
+  position: absolute;
+  color: #d4af37;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.left-key {
+  transform: rotate(45deg);
+}
+
+.right-key {
+  transform: rotate(-45deg);
+}
+
+.stars-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.key-star {
+  position: absolute;
+  color: #d4af37;
+}
+
+.key-star.s1 {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.key-star.s2 {
+  bottom: 20px;
+  left: 20%;
+}
+
+.key-star.s3 {
+  bottom: 20px;
+  right: 20%;
+}
+
+.key-label {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #d4af37;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 8px;
+}
+
+.key-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  color: #fbc4d3;
+}
+
 /* Ortak Metin Stilleri */
 .art-text,
 .memoirs-text,
+.job-text,
 .key-text,
 .philosophy-text {
   width: 100%;
@@ -560,15 +694,6 @@
   margin-left: auto;
   margin-right: auto;
   color: #fbc4d3;
-}
-
-.art-actions {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 24px;
-  color: #d4af37;
-  font-style: italic;
 }
 
 .check-item {
@@ -639,9 +764,27 @@
     align-items: flex-end;
   }
 
-  /* KEY SECTION (Zikzak yapısı için düz sıralı) */
-  .key-container {
+  /* JOB APPLICATION SECTION */
+  .job-container {
     flex-direction: row;
+  }
+
+  .job-visual-wrapper {
+    width: 50%;
+  }
+
+  .job-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .job-actions {
+    justify-content: flex-start;
+  }
+
+  /* KEY SECTION (Zikzak yapısı: Düz, Artık en sonda) */
+  .key-container {
+    flex-direction: row-reverse;
   }
 
   .key-visual-wrapper {
@@ -650,11 +793,13 @@
 
   .key-text {
     width: 50%;
-    text-align: left;
+    text-align: right;
   }
 
   .key-actions {
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   /* Genel */
@@ -664,6 +809,11 @@
   }
 
   .memoirs-text .section-description {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .key-text .section-description {
     margin-left: auto;
     margin-right: 0;
   }
