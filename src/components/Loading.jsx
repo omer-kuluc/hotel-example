@@ -76,16 +76,16 @@ const Loading = ({ onComplete }) => {
       <div className="loading-content" ref={comp}>
         {/* Style ile de opacity 0 veriyoruz ki JS yüklenene kadar garanti olsun */}
         <h2 className="loading-text-small" style={{ opacity: 0 }}>
-          PLEASE WAIT WHILE WE
+          WHETHER YOUR SCREEN SIZE
         </h2>
 
         <h1 className="loading-text-large" style={{ opacity: 0 }}>
-          PREPARE YOUR STAY
+          16:9
         </h1>
 
         <div className="loading-subtitle-container">
           <p className="loading-subtitle" style={{ opacity: 0 }}>
-            LÜTFEN ODANIZ HAZIRLANIRKEN BEKLEYİNİZ
+            YOU CAN WATCH IT ANY DEVICE
           </p>
         </div>
 

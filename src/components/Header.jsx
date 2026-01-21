@@ -1,11 +1,14 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Bell, Key, Menu, X } from 'lucide-react';
+import { Bell, Key, Menu, X, Star } from 'lucide-react'; // Star ikonunu ekledim
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Yeni State: Credits dialogunu kontrol etmek için
+  const [showCredits, setShowCredits] = useState(false);
 
   // GSAP kapsamı için referans
   const comp = useRef(null);
@@ -96,8 +99,9 @@ const Header = () => {
               HOME <span className="underline"></span>
             </Link>
             <p className="header-subtitle">Republic of Torvonka</p>
-            {/* Credits'e de underline efekti için span eklendi */}
-            <p className='nav-item'>
+
+            {/* CREDITS BUTONU: onClick eklendi */}
+            <p className='nav-item' onClick={() => setShowCredits(true)}>
               CREDITS <span className="underline"></span>
             </p>
           </div>
@@ -148,11 +152,36 @@ const Header = () => {
             <span className="underline"></span>
           </Link>
 
+
           <div className="footer">
             <p className="footer-text">Excellence is our Tradition</p>
           </div>
         </div>
       </div>
+
+      {/* --- CREDITS MODAL --- */}
+      {showCredits && (
+        <div className="credits-overlay" onClick={() => setShowCredits(false)}>
+          <div className="credits-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={() => setShowCredits(false)}>
+              <X size={24} />
+            </button>
+
+            <div className="credits-content">
+              <Star size={32} className="credits-star" fill="#d4af37" />
+              <h2 className="credits-title">A TRIBUTE</h2>
+              <div className="credits-divider"></div>
+              <p className="credits-text">
+                This project is a creative tribute to the aesthetic world of <strong>Wes Anderson'</strong>.
+                It is a non-commercial, fan-made exploration of UI/UX design and GSAP animations."
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+      )}
+
     </header>
   );
 };

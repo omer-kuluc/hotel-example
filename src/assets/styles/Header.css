@@ -200,6 +200,112 @@
   letter-spacing: 1.6px;
 }
 
+/* --------------------------------------------------
+   CREDITS MODAL STYLES (YENİ EKLENEN KISIM)
+-------------------------------------------------- */
+.credits-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 27, 51, 0.85);
+  /* Koyu mor perde */
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.credits-modal {
+  background-color: #d1a958;
+  /* Parşömen rengi (Filmdeki mektuplar gibi) */
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  border: 4px double #d4af37;
+  /* Altın Çerçeve */
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #ebcdeb;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-modal-btn:hover {
+  transform: scale(1.1);
+  color: #d4af37;
+}
+
+.credits-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.credits-star {
+  color: #6e266b;
+  margin-bottom: 8px;
+}
+
+.credits-title {
+  color: #5e2d5e;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.credits-divider {
+  width: 60px;
+  height: 2px;
+  background-color: #af0f5f;
+}
+
+.credits-text {
+  color: #8b0d66;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* Mobil için */
 @media (width>=768px) {
   .header-content {
@@ -237,7 +343,7 @@
 /* Desktop için */
 @media (width>=1280px) {
   .header-title {
-    font-size: 50px;
+    font-size: 4rem;
     /* Desktop başlık */
   }
 
