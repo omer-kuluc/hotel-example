@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Bell, Key, Menu, X, Star } from 'lucide-react'; // Star ikonunu ekledim
+import { Bell, Key, Menu, X, Star } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 
@@ -100,7 +100,7 @@ const Header = () => {
             </Link>
             <p className="header-subtitle">Republic of Torvonka</p>
 
-            {/* CREDITS BUTONU: onClick eklendi */}
+            {/* CREDITS BUTONU */}
             <p className='nav-item' onClick={() => setShowCredits(true)}>
               CREDITS <span className="underline"></span>
             </p>
@@ -152,7 +152,6 @@ const Header = () => {
             <span className="underline"></span>
           </Link>
 
-
           <div className="footer">
             <p className="footer-text">Excellence is our Tradition</p>
           </div>
@@ -168,15 +167,14 @@ const Header = () => {
             </button>
 
             <div className="credits-content">
+              {/* Star rengini CSS ile yöneteceğiz veya fill prop'unu güncelleyeceğiz */}
               <Star size={32} className="credits-star" fill="#d4af37" />
               <h2 className="credits-title">A TRIBUTE</h2>
               <div className="credits-divider"></div>
               <p className="credits-text">
-                This project is a creative tribute to the aesthetic world of <strong>Wes Anderson'</strong>.
-                It is a non-commercial, fan-made exploration of UI/UX design and GSAP animations."
-
+                This project is a creative tribute to the aesthetic world of <strong>Wes Anderson</strong>.
+                It is a non-commercial, fan-made exploration of UI/UX design and GSAP animations.
               </p>
-
             </div>
           </div>
         </div>

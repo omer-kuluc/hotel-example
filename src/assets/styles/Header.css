@@ -201,7 +201,7 @@
 }
 
 /* --------------------------------------------------
-   CREDITS MODAL STYLES (YENİ EKLENEN KISIM)
+   CREDITS MODAL STYLES (GÜNCELLENDİ: Pembe/Mor/Altın)
 -------------------------------------------------- */
 .credits-overlay {
   position: fixed;
@@ -209,8 +209,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(45, 27, 51, 0.85);
-  /* Koyu mor perde */
+  background-color: rgba(61, 30, 61, 0.8);
+  /* Koyu mor saydam perde */
   backdrop-filter: blur(5px);
   z-index: 1000;
   display: flex;
@@ -220,17 +220,17 @@
 }
 
 .credits-modal {
-  background-color: #d1a958;
-  /* Parşömen rengi (Filmdeki mektuplar gibi) */
+  /* Mendl's Kutusu Pembesi */
+  background-color: #fbc4d3;
   width: 90%;
   max-width: 500px;
   padding: 40px;
-  border: 4px double #d4af37;
-  /* Altın Çerçeve */
+  /* Otel Moru çerçeve */
+  border: 4px double #5e2d5e;
   border-radius: 4px;
   position: relative;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -240,7 +240,8 @@
   right: 10px;
   background: none;
   border: none;
-  color: #ebcdeb;
+  color: #5e2d5e;
+  /* Mor renk */
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -248,6 +249,7 @@
 .close-modal-btn:hover {
   transform: scale(1.1);
   color: #d4af37;
+  /* Hover'da altın sarısı */
 }
 
 .credits-content {
@@ -258,30 +260,40 @@
 }
 
 .credits-star {
-  color: #6e266b;
+  color: #d4af37;
+  /* Altın yıldız */
   margin-bottom: 8px;
 }
 
 .credits-title {
   color: #5e2d5e;
-  font-size: 1.2rem;
+  /* Koyu mor başlık */
+  font-size: 1.4rem;
   letter-spacing: 0.2em;
   margin: 0;
+  font-weight: bold;
 }
 
 .credits-divider {
   width: 60px;
   height: 2px;
-  background-color: #af0f5f;
+  background-color: #d4af37;
+  /* Altın çizgi */
 }
 
 .credits-text {
-  color: #8b0d66;
-  font-size: 1rem;
+  color: #5e2d5e;
+  /* Mor metin */
+  font-size: 1.1rem;
   line-height: 1.6;
+  font-family: 'Afacad', sans-serif;
 }
 
-
+.credits-text strong {
+  color: #5e2d5e;
+  text-decoration: underline;
+  text-decoration-color: #d4af37;
+}
 
 
 @keyframes fadeIn {
@@ -363,6 +375,4 @@
     gap: 32px;
     margin-top: 8px;
   }
-
-
 }
