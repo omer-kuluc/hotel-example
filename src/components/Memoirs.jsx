@@ -7,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
   const containerRef = useRef(null);
-  const bookRef = useRef(null); // Kitap referansı
 
   // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
@@ -20,28 +19,6 @@ export default function Memoirs() {
 
     return () => ctx.revert();
   }, []);
-
-  // --- KİTAP HOVER ANİMASYONLARI (GSAP) ---
-  const handleBookEnter = () => {
-    gsap.to(bookRef.current, {
-      rotationY: 0,
-      rotate: 0,
-      scale: 1.05,
-      duration: 0.6,
-      ease: "power2.out"
-    });
-  };
-
-  const handleBookLeave = () => {
-    gsap.to(bookRef.current, {
-      rotationY: 0,
-      rotate: 3, // Başlangıçtaki hafif eğiklik
-      scale: 1,
-      duration: 0.6,
-      ease: "power2.out"
-    });
-  };
-  // ----------------------------------------
 
   useEffect(() => {
     // Hero Harf Animasyonu
@@ -62,25 +39,18 @@ export default function Memoirs() {
       ease: 'power2.out'
     });
 
-    // 1. Kitap Giriş Animasyonu (SMOOTH & OPTİMİZE EDİLDİ)
-    gsap.fromTo(bookRef.current,
-      {
-        rotationY: 60, // 90 yerine 60 daha yumuşak görünür
-        opacity: 0,
-        z: -100 // Derinlikten gelsin
+    // 1. Kitap Giriş Animasyonu (GÜNCELLENDİ: Dönme yok, kağıt gibi beliriyor)
+    gsap.from('.book-cover', {
+      scrollTrigger: {
+        trigger: '.memoirs-book-section',
+        start: 'top 65%',
       },
-      {
-        scrollTrigger: {
-          trigger: '.memoirs-book-section',
-          start: 'top 65%',
-        },
-        rotationY: 0,
-        z: 0,
-        opacity: 1,
-        duration: 2, // Süre uzatıldı, daha smooth
-        ease: 'power4.out', // En yumuşak bitiş
-      }
-    );
+      y: 60,            // Aşağıdan yukarı
+      rotation: -3,     // Hafif eğiklik
+      opacity: 0,
+      duration: 1.5,
+      ease: 'power3.out',
+    });
 
     // 2. Job Application Animasyonu
     gsap.from('.job-paper', {
@@ -171,7 +141,8 @@ export default function Memoirs() {
           <div className="hero-divider"></div>
 
           <div className="hero-subtitle">
-            <span className="vol-text">VOL. I — 1932</span>
+            {/* GÜNCELLENDİ: 1932 - ∞ */}
+            <span className="vol-text">1932 — ∞</span>
             <p className="hero-desc">"Bir otelden fazlası, kayıp bir zamanın hatırası."</p>
           </div>
 
@@ -183,12 +154,7 @@ export default function Memoirs() {
       <section className="memoirs-book-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
-            <div
-              className="book-cover"
-              ref={bookRef}
-              onMouseEnter={handleBookEnter}
-              onMouseLeave={handleBookLeave}
-            >
+            <div className="book-cover">
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
                 <h3 className="book-title-text">The Grand Budapest Hotel</h3>
@@ -303,12 +269,16 @@ export default function Memoirs() {
                     </div>
                   </div>
 
-                  {/* SAĞ ÜST: AGATHA (Kolye - Güncellendi) */}
+                  {/* SAĞ ÜST: AGATHA (Kolye - GÜNCELLENDİ) */}
                   <div className="portrait-item item-agatha">
                     <div className="agatha-necklace">
-                      {/* Sütyen görünümü kalktı, tek zincir */}
-                      <div className="necklace-chain"></div>
-                      <div className="pendant-a">A</div>
+                      {/* Mavi Kurdeleler */}
+                      <div className="ribbon-left"></div>
+                      <div className="ribbon-right"></div>
+                      {/* Pembe Kolye Ucu */}
+                      <div className="pendant-body">
+                        <span className="pendant-letter">A</span>
+                      </div>
                     </div>
                   </div>
 
@@ -377,15 +347,15 @@ export default function Memoirs() {
         </div>
       </section>
 
-      {/* --- FOOTER (Güncellendi) --- */}
+      {/* --- FOOTER (GÜNCELLENDİ) --- */}
       <footer className="memoirs-footer">
         <div className="footer-content">
           <Heart size={16} color="#d4af37" className="footer-icon" />
           <p className="footer-text">
-            "We are but fleeting guests in the grand lobby of history.
-            May our stay be gracious, and our departure, impeccable."
+            These are the silent artifacts of a golden age.
+            Carefully preserved to tell a story that time can never erase.
           </p>
-          <span className="footer-sign">— THE CONCIERGE</span>
+          <span className="footer-sign">ARCHIVE OF TORVONKA</span>
         </div>
       </footer>
 
