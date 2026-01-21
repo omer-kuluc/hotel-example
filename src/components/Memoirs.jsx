@@ -1,18 +1,16 @@
-import React, { useEffect, useLayoutEffect, useState, useRef } from 'react'
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Quote, CheckCircle, BookOpen, PenTool } from 'lucide-react';
+import { Quote, CheckCircle, BookOpen, PenTool, Key, Star } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
   const containerRef = useRef(null);
 
-
   // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
@@ -23,10 +21,61 @@ export default function Memoirs() {
   }, []);
   // -----------------------------
 
-
-
   useEffect(() => {
-    // 1. Tablo Animasyonu
+    // Hero Harf Animasyonu
+    gsap.from('.memoirs-title-char', {
+      y: 50,
+      opacity: 0,
+      stagger: 0.05,
+      duration: 1,
+      ease: 'back.out(1.7)',
+    });
+
+    // Hero Alt Metin Animasyonu
+    gsap.from('.hero-subtitle', {
+      y: 20,
+      opacity: 0,
+      delay: 1,
+      duration: 0.8,
+      ease: 'power2.out'
+    });
+
+    // 1. Kitap Animasyonu
+    gsap.from('.book-cover', {
+      scrollTrigger: {
+        trigger: '.memoirs-book-section',
+        start: 'top 60%',
+      },
+      rotationY: 90,
+      opacity: 0,
+      duration: 1.5,
+      ease: 'power2.out',
+    });
+
+    // 2. ANAHTAR (KEY) ANİMASYONU (YENİ)
+    const tlKey = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.key-section',
+        start: 'top 65%',
+      }
+    });
+
+    tlKey.from('.crossed-keys-wrapper', {
+      scale: 0,
+      rotation: -180,
+      opacity: 0,
+      duration: 1.2,
+      ease: 'back.out(1.5)'
+    })
+      .from('.key-star', {
+        scale: 0,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: 'back.out'
+      }, "-=0.5");
+
+    // 3. Tablo Animasyonu
     gsap.from('.painting-frame', {
       scrollTrigger: {
         trigger: '.art-section',
@@ -51,31 +100,46 @@ export default function Memoirs() {
       ease: 'back.out(1.7)',
     });
 
-    // 2. Kitap Animasyonu (Yeni)
-    gsap.from('.book-cover', {
-      scrollTrigger: {
-        trigger: '.memoirs-book-section',
-        start: 'top 60%',
-      },
-      rotationY: 90, // Kitap açılıyormuş gibi
-      opacity: 0,
-      duration: 1.5,
-      ease: 'power2.out',
-    });
-
-    // 3. Parfüm Animasyonu
-    // (Manuel tetikleniyor, otomatik animasyon gerekirse buraya eklenebilir)
-
   }, []);
+
+  const titleText = "ZUBROWKA TALES";
+  const words = titleText.split(" ");
 
   return (
     <div className='memoirs-page' ref={containerRef}>
 
-      {/* 2. THE MEMOIRS BOOK SECTION (Yeni Eklenen) */}
+      {/* --- HERO SECTION (Güncellendi) --- */}
+      <section className="memoirs-hero">
+        <div className="memoirs-hero-content">
+          <div className="hero-ornament-top"></div>
+
+          <h1 className="memoirs-title">
+            {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 15px' }}>
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} className="memoirs-title-char" style={{ display: 'inline-block' }}>
+                    {char}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </h1>
+
+          <div className="hero-divider"></div>
+
+          <div className="hero-subtitle">
+            <span className="vol-text">VOL. I — 1932</span>
+            <p className="hero-desc">"Bir otelden fazlası, kayıp bir zamanın hatırası."</p>
+          </div>
+
+          <div className="hero-ornament-bottom"></div>
+        </div>
+      </section>
+
+      {/* --- MEMOIRS BOOK SECTION --- */}
       <section className="memoirs-book-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
-            {/* Stylized Book Cover Visual */}
             <div className="book-cover">
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
@@ -92,7 +156,7 @@ export default function Memoirs() {
 
           <div className="memoirs-text">
             <h3 className="section-title">
-              THE <span className="highlight">MEMOIRS</span>
+              THE <span className="highlight">BOOK</span>
             </h3>
             <p className="section-description">
               Yıllar sonra anlatılan bu hikaye, Zero Moustafa'nın anılarıyla hayat buluyor.
@@ -108,14 +172,57 @@ export default function Memoirs() {
           </div>
         </div>
       </section>
-      {/* 1. ART SECTION (Boy with his Family) */}
+
+      {/* --- KEY SECTION (YENİ EKLENEN KISIM) --- */}
+      <section className="key-section">
+        <div className="key-container">
+
+          <div className="key-visual-wrapper">
+            <div className="crossed-keys-badge">
+              <div className="crossed-keys-wrapper">
+                {/* Çapraz Anahtarlar */}
+                <Key className="key-icon left-key" size={80} />
+                <Key className="key-icon right-key" size={80} />
+              </div>
+              <div className="stars-wrapper">
+                <Star className="key-star s1" size={16} fill="#d4af37" />
+                <Star className="key-star s2" size={24} fill="#d4af37" />
+                <Star className="key-star s3" size={16} fill="#d4af37" />
+              </div>
+            </div>
+            <div className="key-label">SOCIETY OF THE CROSSED KEYS</div>
+          </div>
+
+          <div className="key-text">
+            <h3 className="section-title">
+              THE <span className="highlight">KEYS</span>
+            </h3>
+            <p className="section-description">
+              M. Gustave için anahtarlar sadece kapıları değil, kalpleri de açardı.
+              Bu sembol, "Çapraz Anahtarlar Cemiyeti"nin sarsılmaz sadakatini ve
+              Zero'ya devredilen o büyük sorumluluğu temsil eder.
+              Gerçek hizmet, görünmez bağlarla kurulur.
+            </p>
+            <div className="key-actions">
+              <div className="check-item">
+                <CheckCircle size={16} color="#d4af37" /> <span>Ultimate Discretion</span>
+              </div>
+              <div className="check-item">
+                <CheckCircle size={16} color="#d4af37" /> <span>Unwavering Loyalty</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* --- ART SECTION --- */}
       <section className="art-section">
         <div className="art-container">
 
           <div className="art-visual-wrapper">
             <div className="painting-frame">
               <div className="painting-canvas">
-
                 {/* Aile Portresi */}
                 <div className="family-portrait">
                   <div className="portrait-item item-gustave">
@@ -143,7 +250,6 @@ export default function Memoirs() {
                     <span className="item-label">THE LOVE</span>
                   </div>
                 </div>
-
                 <div className="painting-label">PORTRAIT OF A FAMILY</div>
               </div>
               <div className="frame-ornament"></div>
@@ -172,8 +278,6 @@ export default function Memoirs() {
 
         </div>
       </section>
-
-
 
     </div>
   )

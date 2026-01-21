@@ -1,21 +1,351 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* GENEL */
-.memoirs-inner-container {
-  width: 100%;
+.memoirs-page {
+  background-color: #2d1b33;
+  /* Otel Moru - Ana Arka Plan */
   overflow-x: hidden;
+  padding-top: 80px;
+  /* Header boşluğu */
+  font-family: 'Afacad', sans-serif;
+}
 
+
+/* =========================================
+   1. HERO SECTION (Tasarlandı)
+   ========================================= */
+.memoirs-hero {
+  padding: 60px 16px;
+  background-color: #3d1e3d;
+  border-bottom: 4px double rgba(212, 175, 55, 0.4);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-image: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, rgba(61, 30, 61, 0) 70%);
+}
+
+.memoirs-hero-content {
+  min-height: 40vh;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 2rem;
+  border: 4px solid #d4af37;
+  outline: 4px solid #3d1e3d;
+  outline-offset: -12px;
+  background: rgba(45, 27, 51, 0.8);
+  box-shadow:
+    0 0 0 8px #d4af37,
+    20px 20px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero-ornament-top,
+.hero-ornament-bottom {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 10px 0;
+}
+
+.memoirs-title {
+  font-size: 3.5rem;
+  color: #d4af37;
+  letter-spacing: 0.15em;
+  line-height: 1.1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  text-shadow: 2px 2px 0px #3d1e3d;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.memoirs-title-char {
+  display: inline-block;
+}
+
+.hero-divider {
+  width: 120px;
+  height: 3px;
+  background-color: #fbc4d3;
+  margin: 16px 0;
+  border-radius: 2px;
+}
+
+.hero-subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.vol-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.3em;
+  color: #fbc4d3;
+  font-weight: bold;
+  border: 1px solid #fbc4d3;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  font-style: italic;
+  max-width: 400px;
 }
 
 /* =========================================
-   1. ART SECTION (The Inheritance)
+   2. MEMOIRS BOOK SECTION
+   ========================================= */
+.memoirs-book-section {
+  padding: 96px 0;
+  background-color: #2d1b33;
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.memoirs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.book-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.book-cover {
+  position: relative;
+  width: 256px;
+  height: 320px;
+  border: 4px solid #d4af37;
+  padding: 16px;
+  background-color: #fbc4d3;
+  transform: rotate(3deg);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.book-cover:hover {
+  transform: rotate(0deg);
+}
+
+.book-inner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(61, 30, 61, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.book-icon {
+  color: #3d1e3d;
+  margin-bottom: 16px;
+}
+
+.book-title-text {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #3d1e3d;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.book-divider {
+  height: 1px;
+  width: 48px;
+  background-color: rgba(61, 30, 61, 0.4);
+  margin: 16px 0;
+}
+
+.book-author {
+  font-size: 0.875rem;
+  letter-spacing: 0.2em;
+  color: #3d1e3d;
+  text-transform: uppercase;
+}
+
+.book-footer {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.pen-icon {
+  color: rgba(61, 30, 61, 0.4);
+}
+
+.memoirs-badge {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  padding: 8px 16px;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.memoirs-button {
+  padding: 12px 32px;
+  background-color: #d4af37;
+  color: #2d1b33;
+  border: 2px solid #d4af37;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.memoirs-button:hover {
+  background-color: #fbc4d3;
+  border-color: #fbc4d3;
+}
+
+.memoirs-quote {
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.6);
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
+
+/* =========================================
+   3. KEY SECTION (YENİ)
+   ========================================= */
+.key-section {
+  padding: 96px 0;
+  background-color: #361b36;
+  /* Biraz farklı ton */
+  border-bottom: 4px double rgba(212, 175, 55, 0.2);
+}
+
+.key-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.key-visual-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.crossed-keys-badge {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #4a254a 0%, #2d1b33 70%);
+  border-radius: 50%;
+  border: 4px solid #d4af37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+}
+
+.crossed-keys-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-icon {
+  position: absolute;
+  color: #d4af37;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.left-key {
+  transform: rotate(45deg);
+}
+
+.right-key {
+  transform: rotate(-45deg);
+}
+
+.stars-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.key-star {
+  position: absolute;
+  color: #d4af37;
+}
+
+.key-star.s1 {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.key-star.s2 {
+  bottom: 20px;
+  left: 20%;
+}
+
+.key-star.s3 {
+  bottom: 20px;
+  right: 20%;
+}
+
+.key-label {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: #d4af37;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 8px;
+}
+
+.key-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  color: #fbc4d3;
+}
+
+/* =========================================
+   4. ART SECTION (The Inheritance)
    ========================================= */
 .art-section {
   padding: 96px 0;
   background-color: #3e2030;
-  /* Vintage Kadife Mor */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
-
 }
 
 .art-container {
@@ -34,7 +364,6 @@
   justify-content: center;
 }
 
-/* Tablo Çerçevesi */
 .painting-frame {
   width: 320px;
   max-width: 90vw;
@@ -206,6 +535,7 @@
 /* Ortak Metin Stilleri */
 .art-text,
 .memoirs-text,
+.key-text,
 .philosophy-text {
   width: 100%;
   text-align: center;
@@ -245,132 +575,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-/* =========================================
-   2. MEMOIRS BOOK SECTION
-   ========================================= */
-.memoirs-book-section {
-  padding: 96px 0;
-  background-color: #2d1b33;
-  /* Dark Purple */
-  border-bottom: 4px double rgba(212, 175, 55, 0.2);
-  overflow: hidden;
-}
-
-.memoirs-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 64px;
-}
-
-.book-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.book-cover {
-  position: relative;
-  width: 256px;
-  height: 320px;
-  border: 4px solid #d4af37;
-  padding: 16px;
-  background-color: #fbc4d3;
-  /* Budapest Pink */
-  transform: rotate(3deg);
-  transition: transform 0.5s ease;
-  cursor: pointer;
-  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.book-cover:hover {
-  transform: rotate(0deg);
-}
-
-.book-inner {
-  width: 100%;
-  height: 100%;
-  border: 2px solid rgba(61, 30, 61, 0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  text-align: center;
-}
-
-.book-icon {
-  color: #3d1e3d;
-  margin-bottom: 16px;
-}
-
-.book-title-text {
-  font-style: italic;
-  font-size: 1.5rem;
-  color: #3d1e3d;
-  margin-bottom: 8px;
-  line-height: 1.2;
-}
-
-.book-divider {
-  height: 1px;
-  width: 48px;
-  background-color: rgba(61, 30, 61, 0.4);
-  margin: 16px 0;
-}
-
-.book-author {
-  font-size: 0.875rem;
-  letter-spacing: 0.2em;
-  color: #3d1e3d;
-  text-transform: uppercase;
-}
-
-.book-footer {
-  margin-top: auto;
-  padding-top: 32px;
-}
-
-.pen-icon {
-  color: rgba(61, 30, 61, 0.4);
-}
-
-.memoirs-badge {
-  position: absolute;
-  bottom: -24px;
-  right: -24px;
-  background-color: #d4af37;
-  color: #2d1b33;
-  padding: 8px 16px;
-  font-size: 1.25rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.memoirs-button {
-  padding: 12px 32px;
-  background-color: #d4af37;
-  color: #2d1b33;
-  border: 2px solid #d4af37;
-  letter-spacing: 0.2em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.memoirs-button:hover {
-  background-color: #fbc4d3;
-  border-color: #fbc4d3;
-}
-
-.memoirs-quote {
-  font-style: italic;
-  color: rgba(212, 175, 55, 0.6);
-  font-size: 0.875rem;
-  margin-top: 16px;
 }
 
 /* =========================================
@@ -435,6 +639,24 @@
     align-items: flex-end;
   }
 
+  /* KEY SECTION (Zikzak yapısı için düz sıralı) */
+  .key-container {
+    flex-direction: row;
+  }
+
+  .key-visual-wrapper {
+    width: 50%;
+  }
+
+  .key-text {
+    width: 50%;
+    text-align: left;
+  }
+
+  .key-actions {
+    justify-content: flex-start;
+  }
+
   /* Genel */
   .section-description {
     margin-left: 0;
@@ -444,5 +666,9 @@
   .memoirs-text .section-description {
     margin-left: auto;
     margin-right: 0;
+  }
+
+  .memoirs-title {
+    font-size: 4.5rem;
   }
 }
