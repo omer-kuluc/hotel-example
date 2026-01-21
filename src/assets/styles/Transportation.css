@@ -111,6 +111,7 @@
   color: white;
   margin-bottom: 16px;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .highlight {
@@ -121,6 +122,7 @@
   font-size: 1.15rem;
   color: #fbc4d3;
   line-height: 1.8;
+  text-align: center;
 }
 
 .badge-row {
@@ -496,8 +498,16 @@
   padding: 40px;
   text-align: center;
   background-color: #25162a;
+
+}
+
+.trans-note-text {
   color: #d4af37;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* RESPONSIVE */
@@ -506,10 +516,22 @@
     font-size: 5rem;
   }
 
+  .trans-subtitle {
+    font-size: 1.15rem;
+  }
+
   .train-section-container,
   .cable-section-container,
   .funicularsection-container {
     flex-direction: row;
+  }
+
+  .vehicle-title {
+    font-size: 2.25rem;
+  }
+
+  .vehicle-desc {
+    font-size: 1.25rem;
   }
 
   .reverse-layout {
@@ -537,10 +559,23 @@
     margin-left: 0;
   }
 
+  .trans-note-text {
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+
 }
 
 @media (width >=1280px) {
   .trans-title {
     font-size: 7rem;
+  }
+
+  .vehicle-title {
+    font-size: 2.5rem;
+  }
+
+  .vehicle-desc {
+    font-size: 1.3rem;
   }
 }

@@ -142,7 +142,7 @@ const Transportation = () => {
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">EXPRESS</span></h2>
             <p className="vehicle-desc">
-              The railway between Vunzt and Bemelstad. Fogged windows and border controls.
+              The railway between Vunzt and Bemelstad. Fogged windows and border controls. It is important that your documents are with you so that you can feel more comfortable.
             </p>
           </div>
 
@@ -196,7 +196,8 @@ const Transportation = () => {
           <div className="text-content center-text">
             <h2 className="vehicle-title">THE <span className="highlight">CABLE CAR</span></h2>
             <p className="vehicle-desc">
-              Gözlemevi'ne giden sisli yol. Çapraz tellerin üzerinde süzülen yalnız bir kabin.
+              The misty road to the observatory. A solitary cabin gliding on the crossed wires.
+              During the journey, who you are may be asked over and over again.
             </p>
           </div>
 
@@ -223,9 +224,7 @@ const Transportation = () => {
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">FUNICULAR</span></h2>
             <p className="vehicle-desc">
-              Otelin kapısına tırmanan dik raylı sistem. Mavi vagonlar,
-              karlı zirvelere meydan okur.
-            </p>
+              A steep rail system climbing to the location of the hotel. An impressive journey experience accompanied by the hum of the wind and the creaking of the tracks. </p>
             <div className="badge-row">
               <Mountain size={16} color="#d4af37" /> <span>Steep Incline</span>
             </div>
@@ -252,7 +251,7 @@ const Transportation = () => {
 
       {/* FOOTER */}
       <div className="trans-footer">
-        <p>TRANSIT AUTHORITY OF ZUBROWKA</p>
+        <p className='trans-note-text'>P.S : If you have dark and shady friends, you can take a motorcycle; if you're a member of a secret society, you can take a taxi; and if you're really desperate, you can even reach your destination by ski.</p>
       </div>
     </div>
   );
