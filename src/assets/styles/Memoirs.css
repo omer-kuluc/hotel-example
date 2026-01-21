@@ -16,7 +16,7 @@
    1. HERO SECTION
    ========================================= */
 .memoirs-hero {
-  padding: 60px 16px;
+  padding: 40px 16px;
   background-color: #3d1e3d;
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
@@ -35,14 +35,12 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 2rem;
+  padding: 1rem;
   border: 4px solid #d4af37;
   outline: 4px solid #3d1e3d;
   outline-offset: -12px;
   background: rgba(45, 27, 51, 0.8);
-  box-shadow:
-    0 0 0 8px #d4af37,
-    20px 20px 0px rgba(0, 0, 0, 0.3);
+
   position: relative;
 }
 
@@ -55,9 +53,9 @@
 }
 
 .memoirs-title {
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #d4af37;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   line-height: 1.1;
   display: flex;
   flex-wrap: wrap;
@@ -97,8 +95,9 @@
   border-radius: 20px;
 }
 
-.hero-desc {
-  font-size: 1.2rem;
+.memoirs-hero-desc {
+  margin-top: 15px;
+  font-size: 0.9rem;
   color: #e0e0e0;
   font-style: italic;
   max-width: 400px;
@@ -237,7 +236,6 @@
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
   transform: rotate(-2deg);
   position: relative;
-  font-family: 'Courier Prime', monospace;
   display: flex;
   flex-direction: column;
 }
@@ -480,70 +478,88 @@
 .hat-text {
   font-size: 0.6rem;
   color: #d4af37;
-  font-family: 'Courier Prime', monospace;
   font-weight: bold;
   letter-spacing: 0.1em;
   transform: translateY(2px);
+  text-align: center;
 }
 
 /* Agatha Necklace (GÜNCELLENDİ: Görsele uygun tasarım) */
+/* =========================================
+   AGATHA NECKLACE (MOBILE FIRST)
+   ========================================= */
+
+/* 1. Konteynır (Mobil: Küçük) */
 .agatha-necklace {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  /* 100px'den düşürüldü */
+  height: 60px;
+  /* 100px'den düşürüldü */
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 15px;
+  left: 25px;
 }
 
-/* Mavi Kurdeleler (V Şeklinde) */
+/* 2. Mavi Kurdeleler (Mobil: İnce ve Kısa) */
 .ribbon-left,
 .ribbon-right {
   position: absolute;
-  width: 8px;
-  height: 50px;
+  width: 5px;
+  /* 8px'den düşürüldü */
+  height: 30px;
+  /* 50px'den düşürüldü */
   background-color: #6a8db3;
-  /* Soluk mavi kurdele rengi */
-  top: -10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  /* Soluk mavi */
+  top: -5px;
+  /* Konum ayarlandı */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .ribbon-left {
   transform: rotate(15deg);
-  left: 42px;
+  left: 25px;
+  /* Mobilde merkeze hizalama */
 }
 
 .ribbon-right {
   transform: rotate(-15deg);
-  right: 42px;
+  right: 25px;
+  /* Mobilde merkeze hizalama */
 }
 
-/* Pembe/Somon Yuvarlak Kolye Ucu */
+/* 3. Pembe Kolye Ucu (Mobil: Küçük Yuvarlak) */
 .pendant-body {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 36px;
+  /* 60px'den düşürüldü */
+  height: 36px;
+  /* 60px'den düşürüldü */
   background-color: #d8a4a4;
-  /* Görseldeki pembemsi/kahve ton */
+  /* Pembemsi/kahve */
   border-radius: 50%;
-  border: 2px solid #5c4033;
-  /* Koyu kahve çerçeve */
+  border: 1.5px solid #5c4033;
+  /* Çerçeve inceltildi */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   z-index: 2;
-  top: 15px;
+  top: 8px;
+  /* Dikey konum ayarlandı */
 }
 
-/* Kolye İçindeki 'A' Harfi */
+/* 4. 'A' Harfi (Mobil: Küçük Font) */
 .pendant-letter {
-  font-family: 'Courier Prime', monospace;
-  font-size: 2rem;
+  font-size: 1rem;
+  /* 2rem'den düşürüldü */
   color: #5c4033;
-  /* Koyu kahve yazı */
   font-weight: bold;
 }
+
+
 
 .painting-label {
   position: absolute;
@@ -710,8 +726,11 @@
   text-align: center;
 }
 
-.section-title {
-  font-size: 3rem;
+.memoirs-text-title,
+.job-text-title,
+.art-text-title,
+.key-text-title {
+  font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
   color: white;
@@ -721,13 +740,12 @@
   color: #d4af37;
 }
 
-.section-description {
+.memoir-page-desc {
   font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 32px;
   max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   color: #fbc4d3;
 }
 
@@ -741,6 +759,22 @@
    RESPONSIVE DESIGN (Tablet & Desktop)
    ========================================= */
 @media (min-width: 768px) {
+
+  .memoirs-text-title,
+  .job-text-title,
+  .art-text-title,
+  .key-text-title {
+    font-size: 2.25rem;
+  }
+
+  .memoir-page-desc {
+    font-size: 1.25rem;
+  }
+
+  .memoirs-hero-desc {
+    font-size: 1.2rem;
+  }
+
 
   /* ART SECTION */
   .art-container {
@@ -812,12 +846,23 @@
 
 
   /* Genel */
-  .section-description {
-    margin-left: auto;
-    margin-right: auto;
+  .memoir-page-desc {
+    margin-inline: auto;
   }
 
   .memoirs-title {
     font-size: 4.5rem;
   }
+
+  .memoirs-text-title,
+  .job-text-title,
+  .art-text-title,
+  .key-text-title {
+    font-size: 2.5rem;
+  }
+
+  .memoir-page-desc {
+    font-size: 1.3rem;
+  }
+
 }

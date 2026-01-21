@@ -115,7 +115,7 @@ export default function Memoirs() {
 
   }, []);
 
-  const titleText = "ZUBROWKA TALES";
+  const titleText = "TORVONKA TALES";
   const words = titleText.split(" ");
 
   return (
@@ -143,7 +143,7 @@ export default function Memoirs() {
           <div className="hero-subtitle">
             {/* GÜNCELLENDİ: 1932 - ∞ */}
             <span className="vol-text">1932 — ∞</span>
-            <p className="hero-desc">"Bir otelden fazlası, kayıp bir zamanın hatırası."</p>
+            <p className="memoirs-hero-desc">"More than a hotel, a memory of a lost time."</p>
           </div>
 
           <div className="hero-ornament-bottom"></div>
@@ -169,13 +169,13 @@ export default function Memoirs() {
           </div>
 
           <div className="memoirs-text">
-            <h3 className="section-title">
+            <h3 className="memoirs-text-title">
               THE <span className="highlight">BOOK</span>
             </h3>
-            <p className="section-description">
+            <p className="memoir-page-desc">
               Years later, this story told comes to life with the memories of The Protege.
               A written seal of a lost world, love, and friendships.
-              Each page whispers the golden age of Zubrowka and the Majestic Bellmont Hotel.
+              Each page whispers the golden age of Torvonka and the Majestic Bellmont Hotel.
             </p>
           </div>
         </div>
@@ -222,10 +222,10 @@ export default function Memoirs() {
           </div>
 
           <div className="job-text">
-            <h3 className="section-title">
+            <h3 className="job-text-title">
               THE <span className="highlight">CANDIDATE</span>
             </h3>
-            <p className="section-description">
+            <p className="memoir-page-desc">
               A young man with nothing and a hotel with everything.
               What Gaston sought was not accomplishments on paper,
               but the sparkle of loyalty in the eyes. The Protege, contrary to its name, found everything with this hotel and gave it all to the hotel. </p>
@@ -265,7 +265,7 @@ export default function Memoirs() {
                   {/* ORTA: ZERO (Şapka) */}
                   <div className="portrait-item item-zero">
                     <div className="zero-hat">
-                      <div className="hat-text">LOBBY BOY</div>
+                      <div className="hat-text">The Protege</div>
                     </div>
                   </div>
 
@@ -284,17 +284,17 @@ export default function Memoirs() {
 
                 </div>
 
-                <div className="painting-label">OBJECTS OF MEMORY</div>
+                <div className="painting-label">A BOY WITH A FAMILY </div>
               </div>
               <div className="frame-ornament"></div>
             </div>
           </div>
 
           <div className="art-text">
-            <h3 className="section-title">
+            <h3 className="art-text-title">
               THE <span className="highlight">PAINTING</span>
             </h3>
-            <p className="section-description">
+            <p className="memoir-page-desc">
               This painting by Hendrik Van Janssen is a reflection of three individuals from the past.
               It was inspired by a photograph of ‘The Protégé’ and those who shaped his life.
               It mirrors what remains of those days and that photograph: a bowtie, a hat, and a necklace.
@@ -333,10 +333,10 @@ export default function Memoirs() {
           </div>
 
           <div className="key-text">
-            <h3 className="section-title">
-              THE <span className="highlight">MISSION</span>
+            <h3 className="key-text-title">
+              THE <span className="highlight">MEANING</span>
             </h3>
-            <p className="section-description">
+            <p className="memoir-page-desc">
               The Key; <p>For some, it was the crest of a secret society.</p>
               <p>For another, a symbol of courage worn as a necklace.</p>
               <p>And for someone else, the only remaining bond to their loved ones.</p>
@@ -350,7 +350,6 @@ export default function Memoirs() {
       {/* --- FOOTER (GÜNCELLENDİ) --- */}
       <footer className="memoirs-footer">
         <div className="footer-content">
-          <Heart size={16} color="#d4af37" className="footer-icon" />
           <p className="footer-text">
             These are the silent artifacts of a golden age.
             Carefully preserved to tell a story that time can never erase.
