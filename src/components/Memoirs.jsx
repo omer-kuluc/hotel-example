@@ -1,12 +1,13 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { CheckCircle, BookOpen, PenTool, Key, Star, FileText } from 'lucide-react';
+import { CheckCircle, BookOpen, PenTool, Key, Star, FileText, Heart } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Memoirs() {
   const containerRef = useRef(null);
+  const bookRef = useRef(null); // Kitap referansı
 
   // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
@@ -19,7 +20,28 @@ export default function Memoirs() {
 
     return () => ctx.revert();
   }, []);
-  // -----------------------------
+
+  // --- KİTAP HOVER ANİMASYONLARI (GSAP) ---
+  const handleBookEnter = () => {
+    gsap.to(bookRef.current, {
+      rotationY: 0,
+      rotate: 0,
+      scale: 1.05,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+  };
+
+  const handleBookLeave = () => {
+    gsap.to(bookRef.current, {
+      rotationY: 0,
+      rotate: 3, // Başlangıçtaki hafif eğiklik
+      scale: 1,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+  };
+  // ----------------------------------------
 
   useEffect(() => {
     // Hero Harf Animasyonu
@@ -40,19 +62,27 @@ export default function Memoirs() {
       ease: 'power2.out'
     });
 
-    // 1. Kitap Animasyonu
-    gsap.from('.book-cover', {
-      scrollTrigger: {
-        trigger: '.memoirs-book-section',
-        start: 'top 60%',
+    // 1. Kitap Giriş Animasyonu (SMOOTH & OPTİMİZE EDİLDİ)
+    gsap.fromTo(bookRef.current,
+      {
+        rotationY: 60, // 90 yerine 60 daha yumuşak görünür
+        opacity: 0,
+        z: -100 // Derinlikten gelsin
       },
-      rotationY: 90,
-      opacity: 0,
-      duration: 1.5,
-      ease: 'power2.out',
-    });
+      {
+        scrollTrigger: {
+          trigger: '.memoirs-book-section',
+          start: 'top 65%',
+        },
+        rotationY: 0,
+        z: 0,
+        opacity: 1,
+        duration: 2, // Süre uzatıldı, daha smooth
+        ease: 'power4.out', // En yumuşak bitiş
+      }
+    );
 
-    // 2. Job Application Animasyonu (YENİ)
+    // 2. Job Application Animasyonu
     gsap.from('.job-paper', {
       scrollTrigger: {
         trigger: '.job-section',
@@ -153,7 +183,12 @@ export default function Memoirs() {
       <section className="memoirs-book-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
-            <div className="book-cover">
+            <div
+              className="book-cover"
+              ref={bookRef}
+              onMouseEnter={handleBookEnter}
+              onMouseLeave={handleBookLeave}
+            >
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
                 <h3 className="book-title-text">The Grand Budapest Hotel</h3>
@@ -176,16 +211,11 @@ export default function Memoirs() {
               A written seal of a lost world, love, and friendships.
               Each page whispers the golden age of Zubrowka and the Majestic Bellmont Hotel.
             </p>
-            <div className="memoirs-actions">
-              <button className="memoirs-button">
-                ANILARI KEŞFEDİN
-              </button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* --- 2. JOB APPLICATION SECTION (YENİ) --- */}
+      {/* --- 2. JOB APPLICATION SECTION --- */}
       <section className="job-section">
         <div className="job-container">
 
@@ -253,34 +283,38 @@ export default function Memoirs() {
           <div className="art-visual-wrapper">
             <div className="painting-frame">
               <div className="painting-canvas">
-                {/* Aile Portresi */}
+
+                {/* Nesneler */}
                 <div className="family-portrait">
+
+                  {/* SOL ALT: GUSTAVE (Papyon) */}
                   <div className="portrait-item item-gustave">
                     <div className="gustave-tie">
                       <div className="tie-knot"></div>
                       <div className="tie-wing left"></div>
                       <div className="tie-wing right"></div>
                     </div>
-                    <span className="item-label">THE MENTOR</span>
                   </div>
 
+                  {/* ORTA: ZERO (Şapka) */}
                   <div className="portrait-item item-zero">
                     <div className="zero-hat">
                       <div className="hat-text">LOBBY BOY</div>
                     </div>
-                    <span className="item-label">THE PROTÉGÉ</span>
                   </div>
 
+                  {/* SAĞ ÜST: AGATHA (Kolye - Güncellendi) */}
                   <div className="portrait-item item-agatha">
                     <div className="agatha-necklace">
-                      <div className="chain-left"></div>
-                      <div className="chain-right"></div>
-                      <div className="pendant-m">M</div>
+                      {/* Sütyen görünümü kalktı, tek zincir */}
+                      <div className="necklace-chain"></div>
+                      <div className="pendant-a">A</div>
                     </div>
-                    <span className="item-label">THE LOVE</span>
                   </div>
+
                 </div>
-                <div className="painting-label">A BOY WITH A FAMILY</div>
+
+                <div className="painting-label">OBJECTS OF MEMORY</div>
               </div>
               <div className="frame-ornament"></div>
             </div>
@@ -291,17 +325,16 @@ export default function Memoirs() {
               THE <span className="highlight">PAINTING</span>
             </h3>
             <p className="section-description">
-              Madame D.'nin vasiyeti artık sadece bir elma değil.
-              Tablo, Zero'nun seçilmiş ailesini resmediyor:
-              Gustave'ın zarafeti, Zero'nun sadakati ve Agatha'nın masumiyeti.
-              Gerçek miras, kurulan bu bağlardır.
+              This painting by Hendrik Van Janssen is a reflection of three individuals from the past.
+              It was inspired by a photograph of ‘The Protégé’ and those who shaped his life.
+              It mirrors what remains of those days and that photograph: a bowtie, a hat, and a necklace.
             </p>
             <div className="art-actions">
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Priceless bond</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>Wrapped nicely</span>
               </div>
               <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Saved forever</span>
+                <CheckCircle size={16} color="#d4af37" /> <span>Stolen quickly</span>
               </div>
             </div>
           </div>
@@ -309,7 +342,7 @@ export default function Memoirs() {
         </div>
       </section>
 
-      {/* --- 4. KEY SECTION (GÜNCELLENDİ) --- */}
+      {/* --- 4. KEY SECTION --- */}
       <section className="key-section">
         <div className="key-container">
 
@@ -326,7 +359,7 @@ export default function Memoirs() {
                 <Star className="key-star s3" size={16} fill="#d4af37" />
               </div>
             </div>
-            <div className="key-label">SOCIETY OF THE CROSSED KEYS</div>
+            <div className="key-label">THE KEY</div>
           </div>
 
           <div className="key-text">
@@ -334,23 +367,27 @@ export default function Memoirs() {
               THE <span className="highlight">MISSION</span>
             </h3>
             <p className="section-description">
-              Bu anahtarlar sadece kapıları değil, kaderleri de birbirine bağladı.
-              Gustave'ın sarsılmaz otoritesini, Zero'ya devredilen büyük mirası
-              ve Agatha'nın tehlike anındaki cesaretini temsil eder.
-              Üç farklı kalp, tek bir amaç uğruna kilitlendi.
+              The Key; <p>For some, it was the crest of a secret society.</p>
+              <p>For another, a symbol of courage worn as a necklace.</p>
+              <p>And for someone else, the only remaining bond to their loved ones.</p>
+              The Key meant something different to everyone, yet they all chose to live through those meanings.
             </p>
-            <div className="key-actions">
-              <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Gustave's Honor</span>
-              </div>
-              <div className="check-item">
-                <CheckCircle size={16} color="#d4af37" /> <span>Agatha's Bravery</span>
-              </div>
-            </div>
           </div>
 
         </div>
       </section>
+
+      {/* --- FOOTER (Güncellendi) --- */}
+      <footer className="memoirs-footer">
+        <div className="footer-content">
+          <Heart size={16} color="#d4af37" className="footer-icon" />
+          <p className="footer-text">
+            "We are but fleeting guests in the grand lobby of history.
+            May our stay be gracious, and our departure, impeccable."
+          </p>
+          <span className="footer-sign">— THE CONCIERGE</span>
+        </div>
+      </footer>
 
     </div>
   )
