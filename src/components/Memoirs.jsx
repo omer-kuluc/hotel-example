@@ -157,7 +157,7 @@ export default function Memoirs() {
             <div className="book-cover">
               <div className="book-inner">
                 <BookOpen className="book-icon" size={48} />
-                <h3 className="book-title-text">The Grand Budapest Hotel</h3>
+                <h3 className="book-title-text">The Majestic Bellmont Hotel</h3>
                 <div className="book-divider"></div>
                 <p className="book-author">By THE AUTHOR</p>
                 <div className="book-footer">

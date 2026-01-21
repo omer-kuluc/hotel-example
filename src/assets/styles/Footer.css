@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Courier+Prime:wght@400;700&display=swap');
+
+/* =========================================
+   MOBILE (BASE STYLES)
+   ========================================= */
+.gb-footer {
+  width: 100%;
+  background-color: #26162b;
+  /* Sayfa arka planından bir ton daha koyu */
+  border-top: 4px double rgba(212, 175, 55, 0.3);
+  /* Vintage Altın Çizgi */
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  font-family: 'Afacad', sans-serif;
+  box-sizing: border-box;
+}
+
+.gb-footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Dekorasyon (Çizgi - Anahtar - Çizgi) */
+.footer-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.footer-decoration .line {
+  height: 1px;
+  width: 40px;
+  /* Mobilde kısa çizgiler */
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+}
+
+.footer-icon {
+  color: #d4af37;
+  transform: rotate(45deg);
+}
+
+/* Metin Grubu */
+.footer-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-disclaimer {
+  color: rgba(251, 196, 211, 0.8);
+  /* Soluk Pembe */
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.footer-film-title {
+  font-family: 'Courier Prime', monospace;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-film-title .highlight {
+  display: block;
+  color: #d4af37;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 4px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Credits (En alt kısım) */
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  /* Mobilde alt alta */
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.footer-credits .dot {
+  display: none;
+  /* Mobilde noktayı gizle */
+}
+
+/* =========================================
+   TABLET (min-width: 768px)
+   ========================================= */
+@media (width >=768px) {
+  .gb-footer {
+    padding: 48px 32px;
+  }
+
+  .footer-decoration .line {
+    width: 80px;
+    /* Çizgiler uzar */
+  }
+
+  .footer-disclaimer {
+    font-size: 1rem;
+  }
+
+  .footer-film-title {
+    font-size: 1rem;
+  }
+
+  .footer-film-title .highlight {
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+  }
+
+  .footer-credits {
+    flex-direction: row;
+    /* Yan yana gelir */
+    gap: 12px;
+  }
+
+  .footer-credits .dot {
+    display: inline-block;
+    /* Nokta görünür */
+    color: #d4af37;
+    font-size: 1.2em;
+  }
+}
+
+/* =========================================
+   DESKTOP (min-width: 1280px)
+   ========================================= */
+@media (width >=1280px) {
+  .gb-footer {
+    padding: 60px 40px;
+  }
+
+  .gb-footer-content {
+    max-width: 800px;
+    gap: 24px;
+  }
+
+  .footer-decoration .line {
+    width: 120px;
+    /* Çizgiler daha da uzar */
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    /* Solid yerine gradient */
+  }
+
+  .footer-disclaimer {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .footer-film-title .highlight {
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover Efekti: Sadece desktopta */
+  .gb-footer:hover .footer-film-title .highlight {
+    color: #fbc4d3;
+    /* Üzerine gelince pembeleşsin */
+    text-shadow: 0 0 10px rgba(251, 196, 211, 0.4);
+  }
+
+  .footer-credits {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .gb-footer:hover .footer-credits {
+    opacity: 0.8;
+  }
+}

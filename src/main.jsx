@@ -9,6 +9,7 @@ import './assets/styles/Society.css'
 import './assets/styles/Transportation.css'
 import './assets/styles/Memoirs.css'
 import './assets/styles/Loading.css'
+import './assets/styles/Footer.css'
 
 
 

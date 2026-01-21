@@ -242,7 +242,7 @@ const Transportation = () => {
               <div className="funi-body">
                 <div className="funi-window"></div>
                 <div className="funi-window"></div>
-                <div className="funi-logo">GB</div>
+                <div className="funi-logo">MB</div>
               </div>
             </div>
           </div>

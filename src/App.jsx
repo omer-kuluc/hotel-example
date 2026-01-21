@@ -11,6 +11,7 @@ import Transportation from './components/Transportation.jsx'
 import Memoirs from './components/Memoirs.jsx'
 import NotFoundPage from './components/NotFoundPage.jsx'
 import Loading from './components/Loading.jsx'
+import Footer from './components/Footer.jsx'
 
 // Sayfa geçişlerinde içeriği saran ve animasyonla gösteren bileşen
 const PageWrapper = ({ children }) => {
@@ -53,6 +54,7 @@ function App() {
               <Route path='*' element={<NotFoundPage />} />
             </Routes>
           </PageWrapper>
+          <Footer />
         </>
       )}
     </>
