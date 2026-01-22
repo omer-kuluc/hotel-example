@@ -52,7 +52,7 @@
   margin: 10px 0;
 }
 
-.memoirs-title {
+.memoirs-page-title {
   font-size: 2rem;
   color: #d4af37;
   letter-spacing: 0.1em;
@@ -537,7 +537,7 @@
   /* 60px'den düşürüldü */
   height: 36px;
   /* 60px'den düşürüldü */
-  background-color: #d8a4a4;
+  background-color: #c7a1a0;
   /* Pembemsi/kahve */
   border-radius: 50%;
   border: 1.5px solid #5c4033;
@@ -555,7 +555,7 @@
 .pendant-letter {
   font-size: 1rem;
   /* 2rem'den düşürüldü */
-  color: #5c4033;
+  color: #9e6a67;
   font-weight: bold;
 }
 
@@ -798,6 +798,12 @@
     height: 300px;
   }
 
+  .pendant-letter {
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+
+
   /* MEMOIRS BOOK SECTION */
   .memoirs-container {
     flex-direction: row-reverse;
@@ -850,7 +856,7 @@
     margin-inline: auto;
   }
 
-  .memoirs-title {
+  .memoirs-page-title {
     font-size: 4.5rem;
   }
 
