@@ -11,7 +11,7 @@
 
 /* 1. HERO SECTION */
 .trans-hero {
-  padding: 80px 24px;
+  padding: 40px 24px;
   background: linear-gradient(to bottom,
       #4a2649 0%,
       /* Koyu mor (header'a yakın) */
@@ -34,7 +34,7 @@
   gap: 16px;
   max-width: 900px;
   background-color: rgba(61, 30, 61, 0.5);
-
+  padding: 20px;
 }
 
 .ticket-icon-wrapper {

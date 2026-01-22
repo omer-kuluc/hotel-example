@@ -15,16 +15,15 @@
   height: 80vh;
   background-color: #fbc4d3;
   /* Mendl's Pembesi */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   border-bottom: 4px double #3d1e3d;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .patisserie-hero-content {
   text-align: center;
-  padding: 4rem;
+  padding: 40px 24px;
   border: 4px solid #3d1e3d;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 20px 20px 0px rgba(61, 30, 61, 0.2);
