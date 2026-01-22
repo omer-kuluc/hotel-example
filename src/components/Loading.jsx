@@ -93,7 +93,7 @@ const Loading = ({ onComplete }) => {
           <div className="loading-bar-fill" ref={barRef}></div>
         </div>
 
-        <p className="loading-footer">REPUBLIC OF ZUBROWKA</p>
+        <p className="loading-footer">REPUBLIC OF TORVONKA</p>
       </div>
     </div>
   );

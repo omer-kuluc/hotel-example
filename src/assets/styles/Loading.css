@@ -37,28 +37,28 @@
   top: 0;
   left: 0;
   border-width: 60px 60px 0 0;
-  border-color: #000 transparent transparent transparent;
+  border-color: #2d1b33 transparent transparent transparent;
 }
 
 .top-right {
   top: 0;
   right: 0;
   border-width: 0 60px 60px 0;
-  border-color: transparent #000 transparent transparent;
+  border-color: transparent #2d1b33 transparent transparent;
 }
 
 .bottom-left {
   bottom: 0;
   left: 0;
   border-width: 60px 0 0 60px;
-  border-color: transparent transparent transparent #000;
+  border-color: transparent transparent transparent #2d1b33;
 }
 
 .bottom-right {
   bottom: 0;
   right: 0;
   border-width: 0 0 60px 60px;
-  border-color: transparent transparent #000 transparent;
+  border-color: transparent transparent #2d1b33 transparent;
 }
 
 /* İçerik Düzeni */
