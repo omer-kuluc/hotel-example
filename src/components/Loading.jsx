@@ -80,12 +80,12 @@ const Loading = ({ onComplete }) => {
         </h2>
 
         <h1 className="loading-text-large" style={{ opacity: 0 }}>
-          16:9
+          16:9 OR NOT
         </h1>
 
         <div className="loading-subtitle-container">
           <p className="loading-subtitle" style={{ opacity: 0 }}>
-            YOU CAN WATCH IT ANY DEVICE
+            YOU CAN WATCH IT ON ANY DEVICE
           </p>
         </div>
 
