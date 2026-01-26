@@ -743,84 +743,105 @@
 .book-cover {
   position: relative;
   width: 256px;
-  height: 320px;
-  border: 4px solid #d4af37;
-  padding: 16px;
+  height: 340px;
+  /* Görseldeki Pudra Pembesi */
   background-color: #fbc4d3;
-  /* Budapest Pink */
+  /* Kenar kontürü: Night Shadz (Koyu Kırmızı/Vişne) */
+  border: 4px solid #b33f53;
+  padding: 12px;
   transform: rotate(3deg);
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
-  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
+  /* Kağıt ve cilt dokusu için hafif gölge */
+  box-shadow:
+    inset 5px 0 10px rgba(179, 63, 83, 0.2),
+    15px 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .book-cover:hover {
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(1.05);
 }
 
 .book-inner {
   width: 100%;
   height: 100%;
-  border: 2px solid rgba(61, 30, 61, 0.3);
+  /* İçteki ince çerçeve kontürü */
+  border: 2px solid #b33f53;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 24px;
+  justify-content: space-between;
+  padding: 20px 10px;
   text-align: center;
 }
 
-.book-icon {
-  color: #3d1e3d;
-  margin-bottom: 16px;
+/* Otel illüstrasyonu yerine geçen ikon */
+.book-illustration-icon {
+  color: #b33f53;
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
-.book-title-text {
-
-  font-style: italic;
-  font-size: 24px;
-  color: #3d1e3d;
-  margin-bottom: 8px;
-  line-height: 1.2;
+.book-title-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #b33f53;
 }
 
-.book-divider {
-  height: 1px;
-  width: 48px;
-  background-color: rgba(61, 30, 61, 0.4);
-  margin: 16px 0;
+.book-top-text,
+.book-bottom-text {
+  font-size: 12px;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
-.book-author {
-  font-size: 14px;
-  letter-spacing: 4.8px;
-  color: #3d1e3d;
+.book-title {
+  /* Ana yazı rengi: Night Shadz */
+  color: #b33f53 !important;
+  font-family: 'Afacad', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin: 5px 0;
   text-transform: uppercase;
 }
 
-.book-footer {
-  margin-top: auto;
-  padding-top: 32px;
+.book-divider {
+  height: 2px;
+  width: 60%;
+  background-color: #b33f53;
+  margin: 10px 0;
+}
+
+.book-author {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #b33f53;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .pen-icon {
-  color: rgba(61, 30, 61, 0.4);
+  color: #b33f53;
+  opacity: 0.7;
 }
 
 .memoirs-badge {
   position: absolute;
-  bottom: -24px;
-  right: -24px;
-  background-color: #d4af37;
-  color: #2d1b33;
-  padding: 8px 16px;
-  font-size: 20px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-}
-
-.memoirs-text {
-  width: 100%;
-  text-align: center;
+  bottom: 20px;
+  right: -15px;
+  /* Rozet: Filmdeki mühür/etiket havası */
+  background-color: #b33f53;
+  color: #fbc4d3;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transform: rotate(-5deg);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fbc4d3;
 }
 
 .memoirs-title {
