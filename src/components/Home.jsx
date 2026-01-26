@@ -59,8 +59,54 @@ function Home() {
         y: 10,
         opacity: 0,
         duration: 1.2,
-        delay: 0.2, // Başlıktan hemen sonra gelmesi için
+        delay: 0.2,
         ease: "power1.out"
+      });
+    });
+
+    // --- BUTON ANİMASYONLARI (SCROLL & HOVER) ---
+
+    const buttons = gsap.utils.toArray("button[class$='-button']");
+
+    buttons.forEach(btn => {
+      // 1. Giriş Animasyonu (Scroll ile)
+      gsap.from(btn, {
+        scrollTrigger: {
+          trigger: btn,
+          start: "top 95%",
+        },
+        y: 15,
+        opacity: 0,
+        duration: 1,
+        delay: 0.4,
+        ease: "power2.out"
+      });
+
+      // 2. Etkileşim Animasyonları (Hover)
+      btn.addEventListener("mouseenter", () => {
+        gsap.to(btn, {
+          scale: 1.05,
+          letterSpacing: "0.25em", // Yazının hafifçe açılması premium bir hava katar
+          duration: 0.4,
+          ease: "power2.out"
+        });
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        gsap.to(btn, {
+          scale: 1,
+          letterSpacing: "0.2em", // Orijinal değere dönüş (CSS'teki letter-spacing değerine göre ayarla)
+          duration: 0.4,
+          ease: "power2.inOut"
+        });
+      });
+
+      btn.addEventListener("mousedown", () => {
+        gsap.to(btn, { scale: 0.95, duration: 0.1 }); // Tıklama hissi
+      });
+
+      btn.addEventListener("mouseup", () => {
+        gsap.to(btn, { scale: 1.05, duration: 0.1 });
       });
     });
 
@@ -252,24 +298,18 @@ function Home() {
           <div className="book-wrapper">
             <div className="book-cover">
               <div className="book-inner">
-                {/* Üstteki anahtar süslemeleri temsilen ikon */}
                 <Hotel className="book-illustration-icon" size={60} />
-
                 <div className="book-title-area">
                   <span className="book-top-text">THE</span>
                   <h3 className="book-title home-page-title">GRAND BUDAPEST</h3>
                   <span className="book-bottom-text">HOTEL</span>
                 </div>
-
                 <div className="book-divider"></div>
-
                 <p className="book-author">By THE AUTHOR</p>
-
                 <div className="book-footer">
                   <PenTool size={18} className="pen-icon" />
                 </div>
               </div>
-              {/* Rozet filmdeki mühür havasında */}
               <div className="memoirs-badge">MEMOIRS</div>
             </div>
           </div>
