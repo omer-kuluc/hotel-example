@@ -421,6 +421,8 @@
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
+  text-align: center;
+
 }
 
 /* 4. POETRY SECTION (The Orator) */
@@ -561,10 +563,11 @@
 }
 
 .poetry-title {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
+  text-align: center;
+
 }
 
 .poetry-actions {
@@ -645,13 +648,13 @@
   .profile-title,
   .legacy-title,
   .poetry-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .profile-description,
   .legacy-description,
   .poetry-description {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .gustave-subtitle,
