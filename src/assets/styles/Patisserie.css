@@ -311,7 +311,7 @@
 }
 
 /* SECTION TEXT */
-.delivery-text {
+.delivery-desc {
   font-size: 1.125rem;
   margin-bottom: 2rem;
   max-width: 500px;
@@ -481,7 +481,7 @@
   }
 
   .product-desc,
-  .delivery-text {
+  .delivery-desc {
     font-size: 1.25rem;
   }
 
@@ -525,7 +525,7 @@
   }
 
   .product-desc,
-  .delivery-text {
+  .delivery-desc {
     font-size: 1.4rem;
   }
 

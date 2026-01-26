@@ -11,7 +11,7 @@ function Patisserie() {
   // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
+      // Sayfa yüklenirken yumuşakça belirsin
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
@@ -20,10 +20,9 @@ function Patisserie() {
 
     return () => ctx.revert();
   }, []);
-  // -----------------------------
 
   useEffect(() => {
-    // Başlık Animasyonu
+    // 1. Hero Başlık Animasyonu (Harf harf zıplama)
     gsap.from('.hero-title-char', {
       y: 100,
       opacity: 0,
@@ -32,7 +31,7 @@ function Patisserie() {
       ease: 'back.out(1.7)',
     });
 
-    // Courtesan au Chocolat Katmanları (Aşağıdan yukarıya dizilme)
+    // 2. Courtesan au Chocolat Katmanları (Aşağıdan yukarıya dizilme)
     gsap.from('.pastry-layer', {
       scrollTrigger: {
         trigger: '.courtesan-wrapper',
@@ -40,12 +39,12 @@ function Patisserie() {
       },
       y: -50,
       opacity: 0,
-      stagger: 0.2, // Sırayla gelmesi için
+      stagger: 0.2,
       duration: 0.8,
       ease: 'bounce.out',
     });
 
-    // Mendl's Kutusu Animasyonu
+    // 3. Mendl's Kutusu Animasyonu
     gsap.from('.delivery-box', {
       scrollTrigger: {
         trigger: '.delivery-section',
@@ -58,6 +57,41 @@ function Patisserie() {
       ease: 'elastic.out(1, 0.5)',
     });
 
+    // --- MİNİMAL METİN ANİMASYONLARI (YENİ ENTEGRASYON) ---
+
+    // Alt Başlıklar için sade bir yükselme
+    gsap.utils.toArray(".patisserie-page-title").forEach(title => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 20,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out"
+      });
+    });
+
+    // Açıklama metinleri için daha yumuşak ve hafif bir beliriş
+    gsap.utils.toArray(".patisserie-description").forEach(desc => {
+      gsap.from(desc, {
+        scrollTrigger: {
+          trigger: desc,
+          start: "top 90%",
+          toggleActions: "play none none none"
+        },
+        y: 10,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.2,
+        ease: "power1.out"
+      });
+    });
+
+    // ScrollTrigger'ların doğru hesaplanması için refresh
+    ScrollTrigger.refresh();
   }, []);
 
   return (
@@ -89,7 +123,6 @@ function Patisserie() {
         <div className="showcase-container">
 
           <div className="courtesan-wrapper">
-            {/* CSS ile çizilmiş Courtesan au Chocolat */}
             <div className="courtesan-art">
               <div className="pastry-top-bean pastry-layer"></div>
               <div className="pastry-cream-top pastry-layer"></div>
@@ -104,8 +137,8 @@ function Patisserie() {
           </div>
 
           <div className="product-details">
-            <h2 className="product-title">Sérénité<span className="highlight">au Chocolat</span></h2>
-            <p className="product-desc">
+            <h2 className="product-title patisserie-page-title">Sérénité <span className="highlight">au Chocolat</span></h2>
+            <p className="product-desc patisserie-description">
               Three delicate pastry towers filled with caramel cream, covered in colorful glazes, and meticulously stacked.
               The most iconic flavor of Torvonka, crafted by Althea's expert hands.
             </p>
@@ -122,8 +155,8 @@ function Patisserie() {
       <section className="delivery-section">
         <div className="delivery-container">
           <div className="delivery-text-area">
-            <h3 className="delivery-title">SPECIAL <span className="blue-highlight">DELIVERY</span></h3>
-            <p className="delivery-text">
+            <h3 className="delivery-title patisserie-page-title">SPECIAL <span className="blue-highlight">DELIVERY</span></h3>
+            <p className="delivery-desc patisserie-description">
               To the prison or to the hotel's ballroom?
               Our famous pink boxes are sealed with blue ribbons.
               Delivered without ever being opened (unless there's a chisel inside, of course).
@@ -135,7 +168,6 @@ function Patisserie() {
           </div>
 
           <div className="box-visual-area">
-            {/* CSS ile Mendl's Kutusu */}
             <div className="delivery-box">
               <div className="box-lid">
                 <div className="ribbon-vertical"></div>
