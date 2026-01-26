@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool } from 'lucide-react';
+import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool, Star, Hotel, ConciergeBell, Mountain, Coffee } from 'lucide-react';
 // 1. useNavigate import edildi
 import { useNavigate } from 'react-router-dom';
 
@@ -24,6 +24,15 @@ function Home() {
         delay: 0.1 // Header ile çakışmaması için çok kısa bir gecikme
       }
     );
+    // İkonların bulunduğu yerde ritmik ve yavaşça süzülmesi
+    gsap.to(".intro-float-icon, .main-icon-wrapper", {
+      y: 70, // Hafif yukarı hareket
+      duration: 5,
+      ease: "power2.inOut",
+      repeat: -1,
+      yoyo: true,
+
+    });
 
     // ScrollTrigger'ların doğru hesaplanması için refresh
     ScrollTrigger.refresh();
@@ -32,7 +41,42 @@ function Home() {
   return (
     // 'home-container' animasyonun uygulanacağı ana kapsayıcıdır
     <div className='home-container' style={{ opacity: 0 }}> {/* Başlangıçta gizli olsun diye inline style */}
+      <section className="intro-section">
+        <div className="intro-container">
+          {/* İkon Sahnesi */}
+          <div className="intro-icon-stage">
+            <div className="icon-group">
+              <Key className="intro-float-icon k-1" size={32} />
 
+              <Key className="intro-float-icon k-1" size={32} />
+              <div className="main-icon-wrapper">
+                <Hotel className="intro-main-hotel" size={80} />
+                <ConciergeBell className="intro-bell" size={40} />
+              </div>
+              <Key className="intro-float-icon k-1" size={32} />
+              <Key className="intro-float-icon k-1" size={32} />
+
+            </div>
+          </div>
+
+          {/* Metin Alanı */}
+          <div className="intro-content">
+            <h1 className="intro-title">
+              THE HOTEL <span className="gold-text">MUSEUM</span>
+            </h1>
+            <div className="intro-line-wrapper">
+              <span className="ornament-line"></span>
+              <Star size={16} fill="#d4af37" />
+              <span className="ornament-line"></span>
+            </div>
+            <p className="intro-lead">
+              Welcome to the Republic of Torvonka. This museum is a curated homage
+              to a vanishing era of elegance, the art of hospitality, and the
+              whimsical beauty that resides in the heart of the Alps.
+            </p>
+          </div>
+        </div>
+      </section>
       {/* Concierge Section */}
       <section className="concierge-section">
         <div className="concierge-container">
