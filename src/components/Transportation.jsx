@@ -1,111 +1,103 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Ticket, Mountain, Gauge, Bike, Wind, TramFront } from 'lucide-react';
+import { Ticket, Mountain } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Transportation = () => {
   const containerRef = useRef(null);
 
-  // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
+    // gsap.context tüm animasyonları bir arada tutar ve temizlemeyi (cleanup) kolaylaştırır
     let ctx = gsap.context(() => {
-      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
+
+      // 1. Sayfa Giriş Animasyonu
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
       );
-    }, containerRef);
 
-    return () => ctx.revert();
-  }, []);
-  // -----------------------------
+      // 2. Hero Başlık Animasyonu
+      gsap.from('.trans-title-char', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 1,
+        ease: 'back.out(1.7)',
+      });
 
-  useEffect(() => {
-    // 1. Hero Başlık
-    gsap.from('.trans-title-char', {
-      y: 50, opacity: 0, stagger: 0.05, duration: 1, ease: 'back.out(1.7)',
-    });
+      // 3. Tren Animasyonu (Sürekli dönen tekerlekler)
+      gsap.to('.train-wheel', {
+        rotation: -360,
+        repeat: -1,
+        duration: 1.5,
+        ease: 'linear'
+      });
 
-    // 2. TREN ANİMASYONU (Daha stabil scroll)
-    const trainTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.train-section',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1, // Scroll ile akıcı hareket
-      }
-    });
-
-    trainTl.fromTo('.train-composition',
-      { x: '100%' },
-      { x: '-150%', ease: 'none' }
-    );
-
-    // Tekerlekler sürekli döner
-    gsap.to('.train-wheel', {
-      rotation: -360,
-      repeat: -1,
-      duration: 1.5,
-      ease: 'linear'
-    });
-
-    // 3. TELEFERİK (RESPONSIVE ANİMASYON)
-    let mm = gsap.matchMedia();
-
-    // > 768px (Desktop/Tablet)
-    mm.add("(min-width: 768px)", () => {
-      gsap.fromTo('.cable-cabin',
-        { x: '-100px', y: '50px' }, // Başlangıç
+      // 4. Tren Scroll Hareketi
+      gsap.fromTo('.train-composition',
+        { x: '100%' },
         {
-          x: '80vw',
-          y: '180px', // Orijinal Yükseklik (Mevcut kodun)
+          x: '-150%',
           ease: 'none',
           scrollTrigger: {
-            trigger: '.cable-section',
+            trigger: '.train-section',
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 2,
+            scrub: 1,
           }
         }
       );
-    });
 
-    // < 768px (Mobil)
-    mm.add("(max-width: 767px)", () => {
-      gsap.fromTo('.cable-cabin',
-        { x: '-50px', y: '30px' }, // Mobilde daha yakın başlasın
+      // 5. Responsive Animasyonlar (MatchMedia)
+      let mm = gsap.matchMedia();
+
+      mm.add({
+        isDesktop: "(min-width: 768px)",
+        isMobile: "(max-width: 767px)"
+      }, (context) => {
+        let { isDesktop } = context.conditions;
+
+        // Teleferik Animasyonu
+        gsap.fromTo('.cable-cabin',
+          {
+            x: isDesktop ? '-100px' : '-50px',
+            y: isDesktop ? '50px' : '30px'
+          },
+          {
+            x: isDesktop ? '80vw' : '100vw',
+            y: isDesktop ? '180px' : '120px',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.cable-section',
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 2,
+            }
+          }
+        );
+      });
+
+      // 6. Füniküler Animasyonu
+      gsap.fromTo('.funicular-car',
+        { y: '200px', x: '-100px' },
         {
-          x: '100vw',
-          y: '120px', // Mobilde daha az yükselsin
+          y: '-100px',
+          x: '50px',
           ease: 'none',
           scrollTrigger: {
-            trigger: '.cable-section',
+            trigger: '.funicular-section',
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 2,
+            scrub: 1,
           }
         }
       );
-    });
 
-    // 4. FÜNİKÜLER (Dik tırmanış)
-    gsap.fromTo('.funicular-car',
-      { y: '200px', x: '-100px' },
-      {
-        y: '-100px',
-        x: '50px',
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.funicular-section',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1,
-        }
-      }
-    );
+    }, containerRef); // Scope olarak containerRef kullanıyoruz
 
+    return () => ctx.revert(); // Ekran değiştiğinde veya bileşen silindiğinde her şeyi temizle
   }, []);
 
   const titleText = "TRANSIT OPTIONS";
@@ -190,7 +182,7 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 2. THE CABLE CAR (Teleferik - Çapraz Teller) */}
+      {/* 2. THE CABLE CAR (Teleferik) */}
       <section className="cable-section">
         <div className="cable-section-container">
           <div className="text-content center-text">
@@ -218,7 +210,7 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 3. THE FUNICULAR (Füniküler - Dik Ray) */}
+      {/* 3. THE FUNICULAR (Füniküler) */}
       <section className="funicular-section">
         <div className="funicularsection-container reverse-layout">
           <div className="text-content">

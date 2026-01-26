@@ -336,12 +336,12 @@ export default function Memoirs() {
             <h3 className="key-text-title">
               THE <span className="highlight">MEANING</span>
             </h3>
-            <p className="memoir-page-desc">
+            <div className="memoir-page-desc">
               The Key; <p>For some, it was the crest of a secret society.</p>
               <p>For another, a symbol of courage worn as a necklace.</p>
               <p>And for someone else, the only remaining bond to their loved ones.</p>
               The Key meant something different to everyone, yet they all chose to live through those meanings.
-            </p>
+            </div>
           </div>
 
         </div>
