@@ -82,32 +82,7 @@ function Home() {
         ease: "power2.out"
       });
 
-      // 2. Etkileşim Animasyonları (Hover)
-      btn.addEventListener("mouseenter", () => {
-        gsap.to(btn, {
-          scale: 1.05,
-          letterSpacing: "0.25em", // Yazının hafifçe açılması premium bir hava katar
-          duration: 0.4,
-          ease: "power2.out"
-        });
-      });
 
-      btn.addEventListener("mouseleave", () => {
-        gsap.to(btn, {
-          scale: 1,
-          letterSpacing: "0.2em", // Orijinal değere dönüş (CSS'teki letter-spacing değerine göre ayarla)
-          duration: 0.4,
-          ease: "power2.inOut"
-        });
-      });
-
-      btn.addEventListener("mousedown", () => {
-        gsap.to(btn, { scale: 0.95, duration: 0.1 }); // Tıklama hissi
-      });
-
-      btn.addEventListener("mouseup", () => {
-        gsap.to(btn, { scale: 1.05, duration: 0.1 });
-      });
     });
 
     ScrollTrigger.refresh();
@@ -143,6 +118,7 @@ function Home() {
               Welcome to the Republic of Torvonka. This museum is a curated homage
               to a vanishing era of elegance, the art of hospitality, and the
               whimsical beauty that resides in the heart of the Alps.
+              It aims to reflect the spirit and atmosphere of that lost era by expressing the symbols of the time.
             </p>
           </div>
         </div>
@@ -230,7 +206,7 @@ function Home() {
                 </div>
                 <div className="emblem-divider"></div>
                 <p className="emblem-text">SOCIETY</p>
-                <p className="emblem-subtext">The Calling Tree</p>
+                <p className="emblem-subtext">The Network</p>
               </div>
               <div className="floating-phone"><PhoneCall size={24} /></div>
               <div className="floating-key"><Key size={20} /></div>
@@ -301,7 +277,7 @@ function Home() {
                 <Hotel className="book-illustration-icon" size={60} />
                 <div className="book-title-area">
                   <span className="book-top-text">THE</span>
-                  <h3 className="book-title home-page-title">GRAND BUDAPEST</h3>
+                  <h3 className="book-title home-page-title">MAJESTIC BELLMONT</h3>
                   <span className="book-bottom-text">HOTEL</span>
                 </div>
                 <div className="book-divider"></div>
