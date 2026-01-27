@@ -42,8 +42,18 @@
 .icon-group {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   color: #d4af37;
+}
+
+.key-floor-group {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.floor-number {
+  opacity: 0.5;
 }
 
 .main-icon-wrapper {

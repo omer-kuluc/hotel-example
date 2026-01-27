@@ -23,8 +23,8 @@ function Home() {
     );
 
     // İkonların süzülme animasyonu
-    gsap.to(".intro-float-icon, .main-icon-wrapper", {
-      y: 80,
+    gsap.to(".intro-float-icon, .key-floor-group p, .main-icon-wrapper", {
+      y: 75,
       duration: 5,
       ease: "power2.inOut",
       repeat: -1,
@@ -94,14 +94,39 @@ function Home() {
         <div className="intro-container">
           <div className="intro-icon-stage">
             <div className="icon-group">
-              <Key className="intro-float-icon k-1" size={32} />
-              <Key className="intro-float-icon k-1" size={32} />
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>0</p>
+              </div>
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>1</p>
+              </div>
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>2</p>
+              </div>
+
               <div className="main-icon-wrapper">
                 <Hotel className="intro-main-hotel" size={80} />
                 <ConciergeBell className="intro-bell" size={40} />
               </div>
-              <Key className="intro-float-icon k-1" size={32} />
-              <Key className="intro-float-icon k-1" size={32} />
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>3</p>
+              </div>
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>4</p>
+              </div>
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>5</p>
+              </div>
+              <div className="key-floor-group">
+                <Key className="intro-float-icon k-1" size={16} />
+                <p className='floor-number'>6</p>
+              </div>
             </div>
           </div>
 
