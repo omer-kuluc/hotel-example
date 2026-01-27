@@ -13,16 +13,12 @@ function Home() {
     // --- GENEL SAYFA GİRİŞİ ---
     gsap.fromTo(".home-container",
       { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1.2,
-        ease: "power2.out",
-      }
+      { opacity: 1, duration: 1.2, ease: "power2.out" }
     );
 
-    // İkonların süzülme animasyonu (Keys ve Wrapper için devam ediyor)
-    gsap.to(".intro-float-icon, .main-icon-wrapper", {
-      y: 15, // Hareket mesafesi biraz makul seviyeye çekildi (75 çok fazlaydı)
+    // İkonların süzülme animasyonu
+    gsap.to(".intro-float-icon", {
+      y: 15,
       duration: 3,
       ease: "power2.inOut",
       repeat: -1,
@@ -31,63 +27,65 @@ function Home() {
 
     // --- ASANSÖR SİMÜLASYONU (FLOOR LOGIC) ---
     const floors = gsap.utils.toArray('.floor-number');
-    const elevatorTl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.2 });
+    const elevatorTl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.5 });
 
-    // 1. Otel İkonunun Yükselmesi
+    const elevatorDuration = 10; // Hareket süresi
+    const elevatorStartOffset = 0.5; // ASANSÖRÜN 0. KATTA BEKLEME SÜRESİ (Fiziksel duruş)
+    const holdAtTop = 1.2; // 6. katta bekleme
+    const step = elevatorDuration / (floors.length - 1);
+
+    // 1. Asansörün (Otel İkonu) Hareketi
+    // elevatorStartOffset (1.5s) kadar bekler, sonra harekete geçer.
     elevatorTl.to(".intro-main-hotel", {
-      y: -150,
-      duration: 10,
-      ease: "power1.inOut"
-    }, 0);
+      y: -200,
+      duration: elevatorDuration,
+      ease: "none"
+    }, elevatorStartOffset);
 
-    // 2. Kat Numaralarının Sırayla Yanması
+    // 2. Kat Numaralarının Senkronizasyonu
     floors.forEach((floor, i) => {
-      // Sayı parlar
+      // 0. kat timeline başlar başlamaz (0. saniyede) parlar.
+      // Diğer katlar, asansör hareket etmeye başladıktan (1.5s + seyahat süresi) sonra yanar.
+      const onTime = i === 0 ? 0 : elevatorStartOffset + (i * step);
+
+      // KATI YAK
       elevatorTl.to(floor, {
         color: "#ffffff",
-        opacity: 1,
+        opacity: 1.5,
         textShadow: "0 0 8px rgba(212, 175, 55, 0.8)",
-        duration: 1
-      }, i * (12 / floors.length));
+        duration: 0.1
+      }, onTime);
 
-      // Bir sonraki sayıya geçerken mevcut olan söner (sonuncu hariç yoyo'da zaten dönecek)
+      // KATI SÖNDÜR
       if (i < floors.length - 1) {
+        // 0. kat, asansörün TAM HAREKET ETTİĞİ AN (1.5s) söner.
+        // Diğerleri bir sonraki kat yanacağı an söner.
+        const offTime = i === 0 ? elevatorStartOffset : elevatorStartOffset + ((i + 1) * step);
+
         elevatorTl.to(floor, {
           color: "#d4af37",
           opacity: 0.5,
           textShadow: "none",
-          duration: 1
-        }, (i + 1) * (12 / floors.length));
+          duration: 0.1
+        }, offTime);
       }
     });
+
+    // 3. TEPE NOKTASINDA BEKLEME
+    elevatorTl.to({}, { duration: holdAtTop });
 
     // --- MİNİMAL METİN ANİMASYONLARI ---
     gsap.utils.toArray(".home-page-title").forEach(title => {
       gsap.from(title, {
-        scrollTrigger: {
-          trigger: title,
-          start: "top 80%",
-          toggleActions: "play none none none"
-        },
-        y: 20,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out"
+        scrollTrigger: { trigger: title, start: "top 80%", toggleActions: "play none none none" },
+        y: 20, opacity: 0, duration: 1, ease: "power2.out"
       });
     });
 
     gsap.utils.toArray(".home-desc-text").forEach(desc => {
       gsap.from(desc, {
-        scrollTrigger: {
-          trigger: desc,
-          start: "top 85%",
-          toggleActions: "play none none none"
-        },
-        y: 10,
-        opacity: 0,
-        duration: 1.2,
-        delay: 0.2,
-        ease: "power1.out"
+        scrollTrigger: { trigger: desc, start: "top 85%", toggleActions: "play none none none" },
+        y: 10, opacity: 0, duration: 1.2, delay: 0.2, ease: "power1.out"
       });
     });
 
@@ -95,15 +93,8 @@ function Home() {
     const buttons = gsap.utils.toArray("button[class$='-button']");
     buttons.forEach(btn => {
       gsap.from(btn, {
-        scrollTrigger: {
-          trigger: btn,
-          start: "top 95%",
-        },
-        y: 15,
-        opacity: 0,
-        duration: 1,
-        delay: 0.4,
-        ease: "power2.out"
+        scrollTrigger: { trigger: btn, start: "top 95%" },
+        y: 15, opacity: 0, duration: 1, delay: 0.4, ease: "power2.out"
       });
     });
 
@@ -166,13 +157,12 @@ function Home() {
               Welcome to the Republic of Torvonka. This museum is a curated homage
               to a vanishing era of elegance, the art of hospitality, and the
               whimsical beauty that resides in the heart of the Alps.
-              It aims to reflect the spirit and atmosphere of that lost era by expressing the symbols of the time.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Concierge Section */}
+      {/* DİĞER SECTIONLAR (Aynı Şekilde Devam Ediyor) */}
       <section className="concierge-section">
         <div className="concierge-container">
           <div className="perfume-wrapper">
@@ -195,7 +185,8 @@ function Home() {
               THE <span className="concierge-highlight">CONCIERGE</span>
             </h3>
             <p className="concierge-description home-desc-text">
-              Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.</p>
+              Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.
+            </p>
             <div className="concierge-actions">
               <button className="concierge-button" onClick={() => navigate('/concierge')}>MEET GASTON</button>
             </div>
@@ -203,7 +194,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Patisserie Section */}
       <section className="patisserie-section">
         <div className="patisserie-container">
           <div className="patisserie-box-wrapper">
@@ -222,14 +212,13 @@ function Home() {
               THE <span className="patisserie-highlight">PATISSERIE</span>
             </h3>
             <p className="patisserie-description home-desc-text">
-              Sérénité au Chocolat, offered in our legendary Madel's boxes, is Torvonka's sweetest secret. Each layer is a work of art, every bite a memory.
+              Sérénité au Chocolat, offered in our legendary Madel's boxes, is Torvonka's sweetest secret.
             </p>
             <button className="patisserie-button" onClick={() => navigate('/patisserie')}>EXPLORE MADEL'S</button>
           </div>
         </div>
       </section>
 
-      {/* SOCIETY SECTION */}
       <section className="society-section">
         <div className="society-container">
           <div className="society-visual-wrapper">
@@ -255,8 +244,6 @@ function Home() {
             </h3>
             <p className="society-description home-desc-text">
               A secret network connecting Europe's most prestigious hotels.
-              The Society of the Silent Locks is a chain of assistance that comes into play during the most challenging times.
-              A single phone call can change everything.
             </p>
             <div className="society-actions">
               <button className="society-button" onClick={() => navigate('/society')}>JOIN THE SECRECY</button>
@@ -265,7 +252,6 @@ function Home() {
         </div>
       </section>
 
-      {/* TRANSPORTATION SECTION */}
       <section className="transport-section">
         <div className="transport-container">
           <div className="ticket-wrapper">
@@ -285,7 +271,8 @@ function Home() {
               THE <span className="transport-highlight">TRANSPORT</span>
             </h3>
             <p className="transport-description home-desc-text">
-              Your journey to the snowy peaks is where comfort meets adventure. Travel to the heart of the Alps with Torvonka Express' luxurious carriages, our legendary funicular, and cable car.</p>
+              Your journey to the snowy peaks is where comfort meets adventure.
+            </p>
             <div className="transport-actions">
               <button className="transport-button" onClick={() => navigate('/transportation')}>HIT THE ROAD!</button>
             </div>
@@ -293,7 +280,6 @@ function Home() {
         </div>
       </section>
 
-      {/* MEMOIRS SECTION */}
       <section className="memoirs-section">
         <div className="memoirs-container">
           <div className="book-wrapper">
@@ -320,7 +306,6 @@ function Home() {
             </h3>
             <p className="memoirs-description home-desc-text">
               The legendary pieces of a lost world, kindness, love, and unforgettable friendships.
-              Each piece whispers the golden age of Torvonka.
             </p>
             <div className="memoirs-actions">
               <button className="memoirs-button" onClick={() => navigate('/memoirs')}>LIVE THE PAST!</button>
