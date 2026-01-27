@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* GENEL AYARLAR */
 .transportation-page {
   background-color: #2d1b33;
-  /* Home.css ile uyumlu Koyu Mor */
   overflow-x: hidden;
   padding-top: 80px;
 
@@ -14,13 +12,9 @@
   padding: 40px 24px;
   background: linear-gradient(to bottom,
       #4a2649 0%,
-      /* Koyu mor (header'a yakın) */
       #5e3a5d 30%,
-      /* Orta mor-kahve karışımı */
       #6b4a5e 60%,
-      /* Mor-kahverengi geçiş */
       #8b6f6a 100%);
-  /* Toprak tonuna yaklaşan kahverengi */
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
@@ -57,7 +51,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  /* Kelimeler arası boşluk */
   width: 100%;
 }
 
@@ -80,7 +73,6 @@
   color: #fbc4d3;
 }
 
-/* COMMON STYLES */
 .train-section,
 .cable-section,
 .funicular-section,
@@ -139,7 +131,6 @@
   margin-inline: auto;
 }
 
-/* 2. TRAIN SECTION (Green) */
 .train-section {
   background: linear-gradient(to bottom,
       #f4d4c2 0%,
@@ -149,11 +140,8 @@
       #567083 75%,
       #1a242c 100%);
 
-  /* Bölüm sınırları için paletteki koyu renklerden biriyle çerçeve */
   border-top: 4px double #503a31;
-  /* rock */
   border-bottom: 4px double #503a31;
-  /* rock */
 }
 
 .train-track-area {
@@ -171,15 +159,12 @@
   align-items: flex-end;
   gap: 6px;
   position: absolute;
-  /* GSAP x hareketini kontrol edecek */
 }
 
-/* Lokomotif */
 .locomotive {
   width: 160px;
   height: 110px;
   background-color: #031218;
-  /* Army Green */
   border: 2px solid #1a1a1a;
   border-radius: 10px 30px 0 0;
   position: relative;
@@ -229,7 +214,6 @@
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
-/* Vagon */
 .wagon {
   width: 140px;
   height: 100px;
@@ -256,7 +240,6 @@
   color: #d4af37;
 }
 
-/* Tekerlekler */
 .wheels-container {
   position: absolute;
   bottom: -15px;
@@ -270,7 +253,6 @@
   border: 2px solid #555;
   border-radius: 50%;
   border-left: 2px solid #d4af37;
-  /* Dönüşü görmek için */
 }
 
 .big {
@@ -291,21 +273,12 @@
   background-color: #555;
 }
 
-/* 3. CABLE CAR (Teleferik) */
+/* 3. CABLE CAR */
 .cable-section {
   background: linear-gradient(to bottom, #d8dbd1, #8e8f8c, #444a53, #69696a, #27303c);
-  /* Pastel Blue Sky */
   position: relative;
   border-top: 4px double #d4af37;
 }
-
-/* Gradient Overlay */
-/* .cable-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(45, 27, 51, 0.9) 0%, rgba(168, 203, 246, 0.3) 100%);
-} */
 
 .cable-visual-area {
   position: relative;
@@ -342,7 +315,6 @@
 
 .cable-cabin {
   position: absolute;
-  /* GSAP will animate this */
 }
 
 .hanger {
@@ -356,7 +328,6 @@
   width: 100px;
   height: 70px;
   background-color: #4b5781;
-  /* Pink Cabin */
   border: 2px solid #1a1a1a;
   border-radius: 10px;
   display: flex;
@@ -381,22 +352,15 @@
   margin-top: 8px;
 }
 
-/* 4. FUNICULAR (Dik Ray - Yeni Renk Paleti) */
+/* 4. FUNICULAR  */
 .funicular-section {
-  /* Ana Zemin: Shadow Grey */
   background-color: #35262B;
 
-  /* Karışım (Karma): Yukarıdan aşağıya (Açık pustan, koyu zemine) */
   background: linear-gradient(180deg,
       #86686E 0%,
-      /* Smoky Rose: Tepedeki puslu hava */
       #35262B 40%,
-      /* Shadow Grey: Orta atmosfer */
       #6F321F 80%,
-      /* Brandy: Toprak/Kaya tonları */
-      #1D1610 100%
-      /* Coffee Bean: En dipteki karanlık */
-    );
+      #1D1610 100%);
 }
 
 .funicular-visual-area {
@@ -408,14 +372,9 @@
   align-items: center;
 }
 
-/* Ray Sistemi */
-/* --- SADECE VAGON VE RAY ALANI (Transportation.css) --- */
-
-/* Ray Sistemi */
 .incline-track {
   width: 80px;
   height: 500px;
-  /* Zemin: Shadow Grey'den Dark Coffee'ye hafif geçiş */
   background: linear-gradient(to bottom, #35262Bff, #1D1610ff);
   transform: rotate(30deg);
   position: relative;
@@ -423,7 +382,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* Ray Kenarları: Rich Mahogany */
   border-left: 6px solid #3B1415ff;
   border-right: 6px solid #3B1415ff;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
@@ -433,12 +391,10 @@
 .rail-ties {
   width: 100%;
   height: 6px;
-  /* Ray Tahtaları: Clay Soil */
   background-color: #80504Eff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Vagon Hareketi */
 .funicular-car {
   position: absolute;
   transform: rotate(30deg);
@@ -446,14 +402,10 @@
   filter: drop-shadow(5px 10px 10px rgba(0, 0, 0, 0.6));
 }
 
-/* Vagon Gövdesi (GRADIENTLİ) */
 .funi-body {
   width: 90px;
   height: 130px;
-  /* Gradient: Burnt Peach'ten Clay Soil'e geçiş (Görseldeki ışık/gölge etkisi) */
   background: linear-gradient(135deg, #E07D60ff 0%, #80504Eff 100%);
-
-  /* Çerçeve: Rich Mahogany */
   border: 4px solid #3B1415ff;
   border-radius: 12px;
   display: flex;
@@ -461,39 +413,27 @@
   align-items: center;
   justify-content: space-around;
   padding: 10px;
-
-  /* İç Parlama */
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
 
-/* Vagon Camları (GRADIENTLİ) */
 .funi-window {
   width: 60px;
   height: 35px;
-  /* Cam: Smoky Rose'dan Shadow Grey'e geçiş (Puslu cam) */
   background: linear-gradient(to bottom, #8C574Cff 0%, #35262Bff 100%);
-
-  /* Çerçeve: Rich Mahogany */
   border: 2px solid #3B1415ff;
   border-radius: 4px;
 }
 
-/* Logo Metni */
 .funi-logo {
-  /* Yazı Rengi: Rich Mahogany */
   color: #3B1415ff;
   font-size: 1rem;
   letter-spacing: 2px;
   font-weight: bold;
-  /* Çizgiler: Clay Soil */
   border-top: 2px solid #80504Eff;
   border-bottom: 2px solid #80504Eff;
   padding: 2px 0;
 }
 
-
-
-/* FOOTER */
 .trans-footer {
   padding: 40px;
   text-align: center;
@@ -510,7 +450,6 @@
   margin: 0 auto;
 }
 
-/* RESPONSIVE */
 @media (width >=768px) {
   .trans-title {
     font-size: 5rem;
@@ -559,7 +498,6 @@
     font-size: 1.15rem;
     font-style: italic;
   }
-
 }
 
 @media (width >=1280px) {
