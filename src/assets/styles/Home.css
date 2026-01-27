@@ -83,6 +83,7 @@
 
 .intro-float-icon {
   opacity: 0.7;
+  width: 16px;
 }
 
 /* Metin Stilleri */
@@ -893,6 +894,11 @@
     font-size: 1.25rem;
   }
 
+  .intro-float-icon {
+    width: 24px;
+  }
+
+
 
   /* concierge-tablet-start */
   .concierge-container {
@@ -1032,6 +1038,10 @@
 
 /* ========== DESKTOP KISIM ========== */
 @media (width >=1280px) {
+
+  .intro-float-icon {
+    width: 64px;
+  }
 
   .intro-title,
   .concierge-title,

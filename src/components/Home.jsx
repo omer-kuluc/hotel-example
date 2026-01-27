@@ -117,15 +117,15 @@ function Home() {
           <div className="intro-icon-stage">
             <div className="icon-group">
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>0</p>
               </div>
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>1</p>
               </div>
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>2</p>
               </div>
 
@@ -135,19 +135,19 @@ function Home() {
               </div>
 
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>3</p>
               </div>
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>4</p>
               </div>
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>5</p>
               </div>
               <div className="key-floor-group">
-                <Key className="intro-float-icon k-1" size={16} />
+                <Key className="intro-float-icon k-1" />
                 <p className='floor-number'>6</p>
               </div>
             </div>
