@@ -78,6 +78,12 @@
   width: 100%;
 }
 
+.gustave-title-word {
+  display: 'inline-block';
+  white-space: 'nowrap';
+  margin: '0 10px';
+}
+
 .gustave-title-char {
   display: inline-block;
 }
