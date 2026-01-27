@@ -1,6 +1,3 @@
-/* =========================================
-   MOBILE FIRST (Varsayılan stiller)
-   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
 .loading-container {
@@ -9,21 +6,17 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* Home.css ile uyumlu Koyu Mor */
   background-color: #5e2d5e;
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Yazı rengini gradient ile ezeceğiz ama fallback olarak pembe kalsın */
   color: #fbc4d3;
   overflow: hidden;
   font-family: 'Afacad', sans-serif;
 
 }
 
-/* Siyah Köşe Üçgenleri (Mobilde daha küçük: 60px) */
-/* Koyu mor zeminde siyah köşeler sinematik çerçeve etkisi yaratır */
 .corner {
   position: absolute;
   width: 0;
@@ -61,7 +54,6 @@
   border-color: transparent transparent #2d1b33 transparent;
 }
 
-/* İçerik Düzeni */
 .loading-content {
   text-align: center;
   display: flex;
@@ -73,26 +65,20 @@
   z-index: 20;
 }
 
-/* MENDL'S GRADIENT TEXT STİLİ (Ortak Class) */
 .mendl-gradient-text {
   background: linear-gradient(90deg, #fbc4d3 0%, #aec6cf 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  /* Hafif parlama (Glow) efekti */
   filter: drop-shadow(0 0 2px rgba(251, 196, 211, 0.3));
 }
 
 .loading-text-small {
-
   font-size: 1.5rem;
-  /* Mobil Font */
   letter-spacing: 0.15em;
   margin: 0;
   font-weight: 400;
-
-  /* Gradient Uygulaması */
   background: linear-gradient(90deg, #fbc4d3 0%, #aec6cf 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -100,51 +86,37 @@
 }
 
 .loading-text-large {
-
   font-size: 3.5rem;
-  /* Mobil Font */
   letter-spacing: 0.05em;
   line-height: 0.9;
   margin: 0;
   font-weight: 700;
   text-transform: uppercase;
-
-  /* Gradient Uygulaması */
   background: linear-gradient(135deg, #fbc4d3 20%, #aec6cf 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* Hafif gölge ile patlatma */
   filter: drop-shadow(0 4px 0px rgba(0, 0, 0, 0.2));
 }
 
-/* Altyazı efekti */
 .loading-subtitle-container {
   margin-top: 16px;
   position: relative;
 }
 
 .loading-subtitle {
-
   font-size: 1.2rem;
-  /* Mobil Font */
   letter-spacing: 0.1em;
   position: relative;
   text-transform: uppercase;
-
-  /* İçi boş değil, Mendl's mavisi olsun */
   color: #aec6cf;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Loading Bar */
 .loading-bar-wrapper {
   width: 220px;
-  /* Mobilde daha dar */
   height: 4px;
   background-color: rgba(255, 255, 255, 0.1);
-  /* Silik beyaz zemin */
   margin-top: 24px;
   position: relative;
   overflow: hidden;
@@ -154,32 +126,24 @@
 .loading-bar-fill {
   width: 0%;
   height: 100%;
-  /* Çubuk Rengi: Altın (Mevcut paletle uyumlu) veya Mendl's Pembesi olabilir */
   background-color: #d4af37;
   position: absolute;
   left: 0;
   top: 0;
   box-shadow: 0 0 10px #d4af37;
-  /* Glow efekti */
 }
 
 .loading-footer {
-
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   margin-top: 32px;
   color: #fbc4d3;
-  /* Pembe */
   opacity: 0.7;
 }
 
 
-/* =========================================
-   TABLET (768px ve üzeri)
-   ========================================= */
 @media (width >=768px) {
 
-  /* Köşeler büyüyor (90px) */
   .top-left {
     border-width: 90px 90px 0 0;
   }
@@ -225,12 +189,8 @@
 }
 
 
-/* =========================================
-   DESKTOP (1280px ve üzeri)
-   ========================================= */
 @media (width >=1280px) {
 
-  /* Köşeler Orijinal Boyutuna (120px) */
   .top-left {
     border-width: 120px 120px 0 0;
   }
@@ -253,7 +213,6 @@
 
   .loading-text-large {
     font-size: 7rem;
-    /* Desktopta daha da büyük */
   }
 
   .loading-subtitle {

@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Courier+Prime:wght@400;700&display=swap');
 
-/* =========================================
-   MOBILE (BASE STYLES)
-   ========================================= */
 .gb-footer {
   width: 100%;
   background-color: #26162b;
-  /* Sayfa arka planından bir ton daha koyu */
   border-top: 4px double rgba(212, 175, 55, 0.3);
-  /* Vintage Altın Çizgi */
   padding: 32px 16px;
   display: flex;
   justify-content: center;
@@ -28,7 +23,6 @@
   text-align: center;
 }
 
-/* Dekorasyon (Çizgi - Anahtar - Çizgi) */
 .footer-decoration {
   display: flex;
   align-items: center;
@@ -41,7 +35,6 @@
 .footer-decoration .line {
   height: 1px;
   width: 40px;
-  /* Mobilde kısa çizgiler */
   background-color: #d4af37;
   transition: width 0.3s ease;
 }
@@ -60,7 +53,6 @@
   transform: rotate(45deg);
 }
 
-/* Metin Grubu */
 .footer-text-group {
   display: flex;
   flex-direction: column;
@@ -69,7 +61,6 @@
 
 .footer-disclaimer {
   color: rgba(251, 196, 211, 0.8);
-  /* Soluk Pembe */
   font-size: 0.85rem;
   line-height: 1.5;
   font-style: italic;
@@ -97,11 +88,9 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Credits (En alt kısım) */
 .footer-credits {
   display: flex;
   flex-direction: column;
-  /* Mobilde alt alta */
   align-items: center;
   gap: 6px;
   font-size: 0.7rem;
@@ -113,12 +102,8 @@
 
 .footer-credits .dot {
   display: none;
-  /* Mobilde noktayı gizle */
 }
 
-/* =========================================
-   TABLET (min-width: 768px)
-   ========================================= */
 @media (width >=768px) {
   .gb-footer {
     padding: 48px 32px;
@@ -126,7 +111,6 @@
 
   .footer-decoration .line {
     width: 80px;
-    /* Çizgiler uzar */
   }
 
   .footer-disclaimer {
@@ -144,21 +128,16 @@
 
   .footer-credits {
     flex-direction: row;
-    /* Yan yana gelir */
     gap: 12px;
   }
 
   .footer-credits .dot {
     display: inline-block;
-    /* Nokta görünür */
     color: #d4af37;
     font-size: 1.2em;
   }
 }
 
-/* =========================================
-   DESKTOP (min-width: 1280px)
-   ========================================= */
 @media (width >=1280px) {
   .gb-footer {
     padding: 60px 40px;
@@ -171,9 +150,7 @@
 
   .footer-decoration .line {
     width: 120px;
-    /* Çizgiler daha da uzar */
     background: linear-gradient(90deg, transparent, #d4af37, transparent);
-    /* Solid yerine gradient */
   }
 
   .footer-disclaimer {
@@ -187,10 +164,8 @@
     transition: color 0.3s ease;
   }
 
-  /* Hover Efekti: Sadece desktopta */
   .gb-footer:hover .footer-film-title .highlight {
     color: #fbc4d3;
-    /* Üzerine gelince pembeleşsin */
     text-shadow: 0 0 10px rgba(251, 196, 211, 0.4);
   }
 
