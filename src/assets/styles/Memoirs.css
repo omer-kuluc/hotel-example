@@ -760,6 +760,10 @@
    ========================================= */
 @media (min-width: 768px) {
 
+  .memoirs-page-title {
+    font-size: 5rem;
+  }
+
   .memoirs-text-title,
   .job-text-title,
   .art-text-title,
@@ -769,6 +773,8 @@
 
   .memoir-page-desc {
     font-size: 1.25rem;
+    margin-inline: auto;
+
   }
 
   .memoirs-hero-desc {
@@ -850,14 +856,11 @@
     width: 50%;
   }
 
+}
 
-  /* Genel */
-  .memoir-page-desc {
-    margin-inline: auto;
-  }
-
+@media (width>=1280px) {
   .memoirs-page-title {
-    font-size: 4.5rem;
+    font-size: 7rem;
   }
 
   .memoirs-text-title,
@@ -870,5 +873,4 @@
   .memoir-page-desc {
     font-size: 1.3rem;
   }
-
 }
