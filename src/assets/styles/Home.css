@@ -10,6 +10,7 @@
 }
 
 /* --- INTRO SECTION --- */
+/* --- INTRO SECTION --- */
 .intro-section {
   padding: 75px 0 100px;
   background-color: #371044;
@@ -33,10 +34,13 @@
 .intro-icon-stage {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 220px;
+  /* Asansör hareketi için alan genişletildi */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  /* En aşağıdan başlasın */
+  padding-bottom: 20px;
 }
 
 .icon-group {
@@ -50,10 +54,14 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
+  align-items: center;
 }
 
 .floor-number {
   opacity: 0.5;
+  margin: 0;
+  font-weight: bold;
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .main-icon-wrapper {
@@ -63,7 +71,10 @@
   align-items: center;
   gap: 10px;
   color: #fbc4d3;
-  /* Pembe vurgu */
+}
+
+.intro-main-hotel {
+  will-change: transform;
 }
 
 .intro-bell {
@@ -114,8 +125,6 @@
   margin: 0 auto;
   font-weight: 300;
 }
-
-
 
 
 /* concierge-mobile-start */

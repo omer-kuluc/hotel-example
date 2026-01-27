@@ -2,13 +2,11 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Sparkles, Key, PhoneCall, ArrowRight, TrainFront, BookOpen, PenTool, Star, Hotel, ConciergeBell } from 'lucide-react';
-// 1. useNavigate import edildi
 import { useNavigate } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
-  // 2. Hook tanımlandı
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,18 +20,48 @@ function Home() {
       }
     );
 
-    // İkonların süzülme animasyonu
-    gsap.to(".intro-float-icon, .key-floor-group p, .main-icon-wrapper", {
-      y: 75,
-      duration: 5,
+    // İkonların süzülme animasyonu (Keys ve Wrapper için devam ediyor)
+    gsap.to(".intro-float-icon, .main-icon-wrapper", {
+      y: 15, // Hareket mesafesi biraz makul seviyeye çekildi (75 çok fazlaydı)
+      duration: 3,
       ease: "power2.inOut",
       repeat: -1,
       yoyo: true,
     });
 
-    // --- MİNİMAL METİN ANİMASYONLARI ---
+    // --- ASANSÖR SİMÜLASYONU (FLOOR LOGIC) ---
+    const floors = gsap.utils.toArray('.floor-number');
+    const elevatorTl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.2 });
 
-    // Başlıklar için sade bir yükselme
+    // 1. Otel İkonunun Yükselmesi
+    elevatorTl.to(".intro-main-hotel", {
+      y: -150,
+      duration: 10,
+      ease: "power1.inOut"
+    }, 0);
+
+    // 2. Kat Numaralarının Sırayla Yanması
+    floors.forEach((floor, i) => {
+      // Sayı parlar
+      elevatorTl.to(floor, {
+        color: "#ffffff",
+        opacity: 1,
+        textShadow: "0 0 8px rgba(212, 175, 55, 0.8)",
+        duration: 1
+      }, i * (12 / floors.length));
+
+      // Bir sonraki sayıya geçerken mevcut olan söner (sonuncu hariç yoyo'da zaten dönecek)
+      if (i < floors.length - 1) {
+        elevatorTl.to(floor, {
+          color: "#d4af37",
+          opacity: 0.5,
+          textShadow: "none",
+          duration: 1
+        }, (i + 1) * (12 / floors.length));
+      }
+    });
+
+    // --- MİNİMAL METİN ANİMASYONLARI ---
     gsap.utils.toArray(".home-page-title").forEach(title => {
       gsap.from(title, {
         scrollTrigger: {
@@ -48,7 +76,6 @@ function Home() {
       });
     });
 
-    // Açıklamalar için çok daha yumuşak ve hafif bir beliriş
     gsap.utils.toArray(".home-desc-text").forEach(desc => {
       gsap.from(desc, {
         scrollTrigger: {
@@ -64,12 +91,9 @@ function Home() {
       });
     });
 
-    // --- BUTON ANİMASYONLARI (SCROLL & HOVER) ---
-
+    // --- BUTON ANİMASYONLARI ---
     const buttons = gsap.utils.toArray("button[class$='-button']");
-
     buttons.forEach(btn => {
-      // 1. Giriş Animasyonu (Scroll ile)
       gsap.from(btn, {
         scrollTrigger: {
           trigger: btn,
@@ -81,8 +105,6 @@ function Home() {
         delay: 0.4,
         ease: "power2.out"
       });
-
-
     });
 
     ScrollTrigger.refresh();
@@ -111,6 +133,7 @@ function Home() {
                 <Hotel className="intro-main-hotel" size={80} />
                 <ConciergeBell className="intro-bell" size={40} />
               </div>
+
               <div className="key-floor-group">
                 <Key className="intro-float-icon k-1" size={16} />
                 <p className='floor-number'>3</p>
@@ -174,12 +197,7 @@ function Home() {
             <p className="concierge-description home-desc-text">
               Monsieur Gaston, who lived during the hotel's brightest years, is a figure who continued to carry the faint lights of civilization even in the darkest times of humanity.</p>
             <div className="concierge-actions">
-              <button
-                className="concierge-button"
-                onClick={() => navigate('/concierge')}
-              >
-                MEET GASTON
-              </button>
+              <button className="concierge-button" onClick={() => navigate('/concierge')}>MEET GASTON</button>
             </div>
           </div>
         </div>
@@ -199,7 +217,6 @@ function Home() {
               <div className="box-badge">FRESHLY BAKED</div>
             </div>
           </div>
-
           <div className="patisserie-text">
             <h3 className="patisserie-title home-page-title">
               THE <span className="patisserie-highlight">PATISSERIE</span>
@@ -207,12 +224,7 @@ function Home() {
             <p className="patisserie-description home-desc-text">
               Sérénité au Chocolat, offered in our legendary Madel's boxes, is Torvonka's sweetest secret. Each layer is a work of art, every bite a memory.
             </p>
-            <button
-              className="patisserie-button"
-              onClick={() => navigate('/patisserie')}
-            >
-              EXPLORE MADEL'S
-            </button>
+            <button className="patisserie-button" onClick={() => navigate('/patisserie')}>EXPLORE MADEL'S</button>
           </div>
         </div>
       </section>
@@ -237,7 +249,6 @@ function Home() {
               <div className="floating-key"><Key size={20} /></div>
             </div>
           </div>
-
           <div className="society-text">
             <h3 className="society-title home-page-title">
               THE <span className="society-highlight">SOCIETY</span>
@@ -248,12 +259,7 @@ function Home() {
               A single phone call can change everything.
             </p>
             <div className="society-actions">
-              <button
-                className="society-button"
-                onClick={() => navigate('/society')}
-              >
-                JOIN THE SECRECY
-              </button>
+              <button className="society-button" onClick={() => navigate('/society')}>JOIN THE SECRECY</button>
             </div>
           </div>
         </div>
@@ -274,7 +280,6 @@ function Home() {
               </div>
             </div>
           </div>
-
           <div className="transport-text">
             <h3 className="transport-title home-page-title">
               THE <span className="transport-highlight">TRANSPORT</span>
@@ -282,12 +287,7 @@ function Home() {
             <p className="transport-description home-desc-text">
               Your journey to the snowy peaks is where comfort meets adventure. Travel to the heart of the Alps with Torvonka Express' luxurious carriages, our legendary funicular, and cable car.</p>
             <div className="transport-actions">
-              <button
-                className="transport-button"
-                onClick={() => navigate('/transportation')}
-              >
-                HIT THE ROAD!
-              </button>
+              <button className="transport-button" onClick={() => navigate('/transportation')}>HIT THE ROAD!</button>
             </div>
           </div>
         </div>
@@ -314,7 +314,6 @@ function Home() {
               <div className="memoirs-badge">MEMOIRS</div>
             </div>
           </div>
-
           <div className="memoirs-text">
             <h3 className="memoirs-title home-page-title">
               THE <span className="memoirs-highlight">MEMOIRS</span>
@@ -324,12 +323,7 @@ function Home() {
               Each piece whispers the golden age of Torvonka.
             </p>
             <div className="memoirs-actions">
-              <button
-                className="memoirs-button"
-                onClick={() => navigate('/memoirs')}
-              >
-                LIVE THE PAST!
-              </button>
+              <button className="memoirs-button" onClick={() => navigate('/memoirs')}>LIVE THE PAST!</button>
             </div>
           </div>
         </div>
