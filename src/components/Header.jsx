@@ -7,13 +7,10 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Yeni State: Credits dialogunu kontrol etmek için
   const [showCredits, setShowCredits] = useState(false);
 
-  // GSAP kapsamı için referans
   const comp = useRef(null);
 
-  // Ekran boyutu 768px'in üzerindeyse menüyü kapat
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isMenuOpen) {
@@ -25,7 +22,6 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  // ANIMASYONLAR
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
@@ -167,7 +163,6 @@ const Header = () => {
             </button>
 
             <div className="credits-content">
-              {/* Star rengini CSS ile yöneteceğiz veya fill prop'unu güncelleyeceğiz */}
               <Star size={32} className="credits-star" fill="#d4af37" />
               <h2 className="credits-title">A TRIBUTE</h2>
               <div className="credits-divider"></div>

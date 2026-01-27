@@ -11,13 +11,11 @@ const Transportation = () => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
-      // 1. Sayfa Giriş Animasyonu
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
       );
 
-      // 2. Hero Başlık Animasyonu
       gsap.from('.trans-title-char', {
         y: 50,
         opacity: 0,
@@ -26,7 +24,6 @@ const Transportation = () => {
         ease: 'back.out(1.7)',
       });
 
-      // --- YENİ: Araç Başlık ve Açıklama Animasyonları ---
       const vehicleTexts = gsap.utils.toArray('.text-content');
 
       vehicleTexts.forEach((section) => {
@@ -54,9 +51,7 @@ const Transportation = () => {
             ease: 'power3.out',
           }, "-=0.5");
       });
-      // --------------------------------------------------
 
-      // 3. Tren Animasyonu (Sürekli dönen tekerlekler)
       gsap.to('.train-wheel', {
         rotation: -360,
         repeat: -1,
@@ -64,7 +59,6 @@ const Transportation = () => {
         ease: 'linear'
       });
 
-      // 4. Tren Scroll Hareketi
       gsap.fromTo('.train-composition',
         { x: '100%' },
         {
@@ -79,7 +73,6 @@ const Transportation = () => {
         }
       );
 
-      // 5. Responsive Animasyonlar (MatchMedia)
       let mm = gsap.matchMedia();
 
       mm.add({
@@ -88,7 +81,6 @@ const Transportation = () => {
       }, (context) => {
         let { isDesktop } = context.conditions;
 
-        // Teleferik Animasyonu
         gsap.fromTo('.cable-cabin',
           {
             x: isDesktop ? '-100px' : '-50px',
@@ -108,7 +100,6 @@ const Transportation = () => {
         );
       });
 
-      // 6. Füniküler Animasyonu
       gsap.fromTo('.funicular-car',
         { y: '200px', x: '-100px' },
         {
@@ -157,7 +148,7 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 1. THE ZUBROWKA EXPRESS */}
+      {/* 1. THE EXPRESS */}
       <section className="train-section">
         <div className="train-section-container">
           <div className="text-content">

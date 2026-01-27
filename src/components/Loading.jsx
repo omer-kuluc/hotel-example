@@ -10,17 +10,13 @@ const Loading = ({ onComplete }) => {
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
 
-      // 1. ÖN HAZIRLIK (Saniyelik görünmeyi engeller)
-      // Elementleri anında görünmez yap ve başlangıç konumlarına al
       gsap.set('.loading-text-small', { y: 20, opacity: 0 });
       gsap.set('.loading-text-large', { scale: 0.9, opacity: 0 });
       gsap.set('.loading-subtitle', { y: 10, opacity: 0 });
       gsap.set(barRef.current, { width: '0%' });
 
-      // 2. ANA ANİMASYON
       const tl = gsap.timeline({
         onComplete: () => {
-          // Loading bitince perdeyi yukarı çek
           gsap.to(containerRef.current, {
             yPercent: -100,
             duration: 1.2,
@@ -30,13 +26,12 @@ const Loading = ({ onComplete }) => {
         }
       });
 
-      // Metinleri .to() ile görünür yapıyoruz
       tl.to('.loading-text-small', {
         y: 0,
         opacity: 1,
         duration: 0.8,
         ease: "power3.out",
-        delay: 0.3 // Sayfa tam otursun diye minik gecikme
+        delay: 0.3
       })
         .to('.loading-text-large', {
           scale: 1,
@@ -51,14 +46,12 @@ const Loading = ({ onComplete }) => {
           ease: "power3.out"
         }, "-=0.6");
 
-      // Çubuğu doldur
       tl.to(barRef.current, {
         width: '100%',
         duration: 2.5,
         ease: "power1.inOut"
       });
 
-      // Biraz bekle
       tl.to({}, { duration: 0.5 });
 
     }, comp);
@@ -74,7 +67,6 @@ const Loading = ({ onComplete }) => {
       <div className="corner bottom-right"></div>
 
       <div className="loading-content" ref={comp}>
-        {/* Style ile de opacity 0 veriyoruz ki JS yüklenene kadar garanti olsun */}
         <h2 className="loading-text-small" style={{ opacity: 0 }}>
           WHETHER YOUR SCREEN SIZE
         </h2>

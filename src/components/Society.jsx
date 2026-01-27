@@ -8,10 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Society = () => {
   const containerRef = useRef(null);
 
-  // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Sayfa yüklenirken yumuşakça belirsin (Flaşlamayı önler)
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
@@ -20,10 +18,8 @@ const Society = () => {
 
     return () => ctx.revert();
   }, []);
-  // -----------------------------
 
   useEffect(() => {
-    // 1. Hero: Anahtarların Dönüşü
     gsap.fromTo('.hero-emblem-keys',
       { rotation: 0, scale: 0.8, opacity: 0 },
       { rotation: 360, scale: 1, opacity: 1, duration: 1.5, ease: "back.out(1.2)" }
@@ -37,7 +33,6 @@ const Society = () => {
       ease: 'back.out(1.7)',
     });
 
-    // --- YENİ: Başlık ve Açıklama Metin Animasyonları ---
     const textSections = gsap.utils.toArray('.network-header, .philosophy-text');
 
     textSections.forEach((section) => {
@@ -63,10 +58,9 @@ const Society = () => {
           opacity: 0,
           duration: 0.8,
           ease: 'power2.out',
-        }, "-=0.5"); // Başlık bitmeden başlasın
+        }, "-=0.5");
     });
 
-    // 2. Network Grid Animasyonu
     gsap.from('.hotel-card', {
       scrollTrigger: {
         trigger: '.network-grid',
@@ -79,7 +73,6 @@ const Society = () => {
       ease: 'power3.out',
     });
 
-    // 3. Telefonların Çalması (Sürekli Loop)
     gsap.to('.ringing-icon', {
       rotation: 20,
       duration: 0.15,
@@ -88,7 +81,6 @@ const Society = () => {
       ease: "linear",
     });
 
-    // Status Işıkları (Pulse)
     gsap.to('.status-dot', {
       opacity: 0.4,
       duration: 0.8,

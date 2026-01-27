@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Memoirs() {
   const containerRef = useRef(null);
 
-  // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(containerRef.current,
@@ -21,7 +20,6 @@ export default function Memoirs() {
   }, []);
 
   useEffect(() => {
-    // Hero Harf Animasyonu
     gsap.from('.memoirs-title-char', {
       y: 50,
       opacity: 0,
@@ -30,7 +28,6 @@ export default function Memoirs() {
       ease: 'back.out(1.7)',
     });
 
-    // Hero Alt Metin Animasyonu
     gsap.from('.hero-subtitle', {
       y: 20,
       opacity: 0,
@@ -39,20 +36,18 @@ export default function Memoirs() {
       ease: 'power2.out'
     });
 
-    // 1. Kitap Giriş Animasyonu (GÜNCELLENDİ: Dönme yok, kağıt gibi beliriyor)
     gsap.from('.book-cover', {
       scrollTrigger: {
         trigger: '.memoirs-book-section',
         start: 'top 65%',
       },
-      y: 60,            // Aşağıdan yukarı
-      rotation: -3,     // Hafif eğiklik
+      y: 60,
+      rotation: -3,
       opacity: 0,
       duration: 1.5,
       ease: 'power3.out',
     });
 
-    // 2. Job Application Animasyonu
     gsap.from('.job-paper', {
       scrollTrigger: {
         trigger: '.job-section',
@@ -65,7 +60,6 @@ export default function Memoirs() {
       ease: 'power3.out',
     });
 
-    // 3. Tablo Animasyonu
     gsap.from('.painting-frame', {
       scrollTrigger: {
         trigger: '.art-section',
@@ -90,7 +84,6 @@ export default function Memoirs() {
       ease: 'back.out(1.7)',
     });
 
-    // 4. Anahtar (Key) Animasyonu
     const tlKey = gsap.timeline({
       scrollTrigger: {
         trigger: '.key-section',
@@ -141,7 +134,6 @@ export default function Memoirs() {
           <div className="hero-divider"></div>
 
           <div className="hero-subtitle">
-            {/* GÜNCELLENDİ: 1932 - ∞ */}
             <span className="vol-text">1932 — ∞</span>
             <p className="memoirs-hero-desc">"More than a hotel, a memory of a lost time."</p>
           </div>
@@ -250,10 +242,8 @@ export default function Memoirs() {
             <div className="painting-frame">
               <div className="painting-canvas">
 
-                {/* Nesneler */}
                 <div className="family-portrait">
 
-                  {/* SOL ALT: GUSTAVE (Papyon) */}
                   <div className="portrait-item item-gustave">
                     <div className="gustave-tie">
                       <div className="tie-knot"></div>
@@ -262,20 +252,16 @@ export default function Memoirs() {
                     </div>
                   </div>
 
-                  {/* ORTA: ZERO (Şapka) */}
                   <div className="portrait-item item-zero">
                     <div className="zero-hat">
                       <div className="hat-text">The Protege</div>
                     </div>
                   </div>
 
-                  {/* SAĞ ÜST: AGATHA (Kolye - GÜNCELLENDİ) */}
                   <div className="portrait-item item-agatha">
                     <div className="agatha-necklace">
-                      {/* Mavi Kurdeleler */}
                       <div className="ribbon-left"></div>
                       <div className="ribbon-right"></div>
-                      {/* Pembe Kolye Ucu */}
                       <div className="pendant-body">
                         <span className="pendant-letter">A</span>
                       </div>
@@ -319,7 +305,6 @@ export default function Memoirs() {
           <div className="key-visual-wrapper">
             <div className="crossed-keys-badge">
               <div className="crossed-keys-wrapper">
-                {/* Çapraz Anahtarlar */}
                 <Key className="key-icon left-key" size={80} />
                 <Key className="key-icon right-key" size={80} />
               </div>

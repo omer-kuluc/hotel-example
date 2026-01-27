@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="gb-footer">
       <div className="gb-footer-content">
 
-        {/* Dekoratif Üst Kısım */}
         <div className="footer-decoration">
           <div className="line"></div>
           <div className="icon-wrapper">
@@ -15,7 +14,6 @@ export default function Footer() {
           <div className="line"></div>
         </div>
 
-        {/* Ana Metin */}
         <div className="footer-text-group">
           <p className="footer-disclaimer">
             This project is a non-commercial tribute, lovingly inspired by
@@ -26,7 +24,6 @@ export default function Footer() {
           </h4>
         </div>
 
-        {/* Alt Bilgi (Credits) */}
         <div className="footer-credits">
           <span>Not affiliated with Searchlight Pictures</span>
           <span className="dot">•</span>

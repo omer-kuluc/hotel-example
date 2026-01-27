@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Concierge = () => {
   const containerRef = useRef(null);
 
-  // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(containerRef.current,
@@ -21,7 +20,6 @@ const Concierge = () => {
   }, []);
 
   useEffect(() => {
-    // 1. Hero Başlık Animasyonu
     gsap.from('.gustave-title-char', {
       y: 50,
       opacity: 0,
@@ -30,7 +28,6 @@ const Concierge = () => {
       ease: 'back.out(1.7)',
     });
 
-    // 2. Görsel Sanatlar (Uniform, Hat, Podium) Animasyonları
     gsap.from('.gustave-suit-visual', {
       scrollTrigger: { trigger: '.profile-section', start: 'top 60%' },
       scale: 0.9, y: 30, opacity: 0, duration: 1.2, ease: 'power3.out',
@@ -46,9 +43,6 @@ const Concierge = () => {
       scale: 0.9, y: 30, opacity: 0, duration: 1.5, ease: 'power3.out',
     });
 
-    // --- MİNİMAL METİN ANİMASYONLARI (YENİ) ---
-
-    // Sayfa Başlıkları için sade bir yükselme
     gsap.utils.toArray(".concierge-page-title").forEach(title => {
       gsap.from(title, {
         scrollTrigger: {
@@ -63,7 +57,6 @@ const Concierge = () => {
       });
     });
 
-    // Açıklama metinleri için daha yumuşak bir beliriş
     gsap.utils.toArray(".concierge-desc").forEach(desc => {
       gsap.from(desc, {
         scrollTrigger: {

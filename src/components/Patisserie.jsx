@@ -8,10 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 function Patisserie() {
   const containerRef = useRef(null);
 
-  // --- SAYFA GİRİŞ ANİMASYONU ---
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // Sayfa yüklenirken yumuşakça belirsin
       gsap.fromTo(containerRef.current,
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power4.out" }
@@ -22,7 +20,6 @@ function Patisserie() {
   }, []);
 
   useEffect(() => {
-    // 1. Hero Başlık Animasyonu (Harf harf zıplama)
     gsap.from('.hero-title-char', {
       y: 100,
       opacity: 0,
@@ -31,7 +28,6 @@ function Patisserie() {
       ease: 'back.out(1.7)',
     });
 
-    // 2. Courtesan au Chocolat Katmanları (Aşağıdan yukarıya dizilme)
     gsap.from('.pastry-layer', {
       scrollTrigger: {
         trigger: '.courtesan-wrapper',
@@ -44,7 +40,6 @@ function Patisserie() {
       ease: 'bounce.out',
     });
 
-    // 3. Mendl's Kutusu Animasyonu
     gsap.from('.delivery-box', {
       scrollTrigger: {
         trigger: '.delivery-section',
@@ -57,9 +52,6 @@ function Patisserie() {
       ease: 'elastic.out(1, 0.5)',
     });
 
-    // --- MİNİMAL METİN ANİMASYONLARI (YENİ ENTEGRASYON) ---
-
-    // Alt Başlıklar için sade bir yükselme
     gsap.utils.toArray(".patisserie-page-title").forEach(title => {
       gsap.from(title, {
         scrollTrigger: {
@@ -74,7 +66,6 @@ function Patisserie() {
       });
     });
 
-    // Açıklama metinleri için daha yumuşak ve hafif bir beliriş
     gsap.utils.toArray(".patisserie-description").forEach(desc => {
       gsap.from(desc, {
         scrollTrigger: {
@@ -90,7 +81,6 @@ function Patisserie() {
       });
     });
 
-    // ScrollTrigger'ların doğru hesaplanması için refresh
     ScrollTrigger.refresh();
   }, []);
 
@@ -151,7 +141,7 @@ function Patisserie() {
         </div>
       </section>
 
-      {/* DELIVERY / AGATHA SECTION */}
+      {/* DELIVERY SECTION */}
       <section className="delivery-section">
         <div className="delivery-container">
           <div className="delivery-text-area">
