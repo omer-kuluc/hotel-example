@@ -243,7 +243,7 @@
   color: #fbc4d3;
   line-height: 1.8;
   margin-bottom: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 600;
   max-width: 500px;
 }
@@ -306,8 +306,9 @@
 
 .blue-highlight {
   font-style: italic;
-  color: #daeaf1;
+  color: #f9fcfd;
   display: block;
+  margin-bottom: 1rem;
 }
 
 /* SECTION TEXT */
@@ -485,12 +486,6 @@
     font-size: 1.25rem;
   }
 
-
-
-  .blue-highlight {
-    display: inline-block;
-  }
-
   .delivery-box {
     transform: scale(1.2);
   }
@@ -521,12 +516,12 @@
 
   .product-title,
   .delivery-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .product-desc,
   .delivery-desc {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
 
