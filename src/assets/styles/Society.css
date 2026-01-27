@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* GENEL AYARLAR */
 .society-page {
   background-color: #2d1b33;
-  /* Home.css ile uyumlu Koyu Mor */
   overflow-x: hidden;
   padding-top: 80px;
-  /* Header payı */
 
 }
 
@@ -14,7 +11,6 @@
 .society-hero {
   padding: 40px 16px;
   background-color: #3d1e3d;
-  /* Scrolled Header rengi */
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
@@ -86,7 +82,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  /* Kelimeler arası boşluk */
   width: 100%;
 }
 
@@ -131,7 +126,7 @@
   }
 }
 
-/* 2. THE NETWORK (Expanded List) */
+/* 2. THE NETWORK*/
 .network-section {
   padding: 96px 24px;
   background-color: #2d1b33;
@@ -168,7 +163,6 @@
   line-height: 1.8;
 }
 
-/* GRID STRUCTURE */
 .network-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -176,7 +170,6 @@
   width: 100%;
 }
 
-/* CARD STYLING */
 .hotel-card {
   background-color: #3d1e3d;
   border: 1px solid rgba(212, 175, 55, 0.2);
@@ -193,13 +186,11 @@
   border-color: rgba(212, 175, 55, 0.6);
 }
 
-/* Top Color Strip */
 .color-strip {
   height: 6px;
   width: 100%;
 }
 
-/* Pastel Colors (Film Palette) */
 .brown-strip {
   background-color: #a36a52;
 }
@@ -224,7 +215,6 @@
   background-color: #d4af37;
 }
 
-/* Glowing Avatars */
 .concierge-avatar {
   width: 60px;
   height: 60px;
@@ -261,7 +251,6 @@
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
-/* Card Content */
 .card-inner {
   padding: 24px;
   display: flex;
@@ -303,7 +292,6 @@
   opacity: 0.8;
 }
 
-/* Status Indicator */
 .status-indicator {
   display: flex;
   align-items: center;
@@ -353,9 +341,9 @@
 }
 
 
-/* =========================================
-   3. PHILOSOPHY SECTION (The Panache)
-   ========================================= */
+/* 
+   3. PHILOSOPHY SECTION 
+*/
 .philosophy-section {
   padding: 96px 0;
   background-color: #2d1b33;
@@ -378,7 +366,6 @@
   justify-content: center;
 }
 
-/* CSS Art: L'Air de Panache */
 .panache-bottle-container {
   position: relative;
   width: 160px;
@@ -486,7 +473,6 @@
   padding: 64px 0px;
   text-align: center;
   background-color: #25162a;
-  /* Footer Darker */
   color: #d4af37;
   border-top: 4px double rgba(212, 175, 55, 0.2);
 
@@ -510,9 +496,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* RESPONSIVE GRID */
-
-/* Tablet: 2 Sütun */
 @media (min-width: 768px) {
   .network-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -548,7 +531,6 @@
 
   /* PHILOSOPHY SECTION */
 
-  /*PERFUME*/
   .philosophy-container {
     flex-direction: row;
   }
@@ -581,10 +563,6 @@
     font-size: 1.125rem;
   }
 
-
-  /*philosophy-text*/
-
-
   .philosophy-text {
     width: 50%;
     text-align: left;
@@ -607,8 +585,6 @@
   }
 
   /*footer*/
-
-
   .footer-motto {
     font-size: 1.3rem;
   }
@@ -618,7 +594,6 @@
   }
 }
 
-/* Desktop: 3 Sütun */
 @media (min-width: 1280px) {
 
   .society-main-title {
