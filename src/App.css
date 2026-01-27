@@ -87,7 +87,8 @@ h6 {
 .memoirs-page,
 .patisserie-page,
 .society-page,
-.transportation-page {
+.transportation-page,
+.not-found-container {
   margin-top: 13.5rem;
   min-height: 100vh;
   padding-inline: 15px;
@@ -100,7 +101,8 @@ h6 {
   .memoirs-page,
   .patisserie-page,
   .society-page,
-  .transportation-page {
+  .transportation-page,
+  .not-found-container {
     padding-inline: 25px;
     margin-top: 14rem;
   }
@@ -113,7 +115,8 @@ h6 {
   .memoirs-page,
   .patisserie-page,
   .society-page,
-  .transportation-page {
+  .transportation-page,
+  .not-found-container {
     margin-top: 16.5rem;
     padding-inline: 40px;
   }
