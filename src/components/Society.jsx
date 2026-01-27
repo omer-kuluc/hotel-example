@@ -23,14 +23,47 @@ const Society = () => {
   // -----------------------------
 
   useEffect(() => {
-    // 1. Hero: Anahtarların Dönüşü (Home.jsx mantığıyla)
+    // 1. Hero: Anahtarların Dönüşü
     gsap.fromTo('.hero-emblem-keys',
       { rotation: 0, scale: 0.8, opacity: 0 },
       { rotation: 360, scale: 1, opacity: 1, duration: 1.5, ease: "back.out(1.2)" }
     );
 
     gsap.from('.society-title-char', {
-      y: 50, opacity: 0, stagger: 0.05, duration: 1, ease: 'power3.out', delay: 0.5
+      y: 100,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 1.2,
+      ease: 'back.out(1.7)',
+    });
+
+    // --- YENİ: Başlık ve Açıklama Metin Animasyonları ---
+    const textSections = gsap.utils.toArray('.network-header, .philosophy-text');
+
+    textSections.forEach((section) => {
+      const title = section.querySelector('.society-page-title');
+      const desc = section.querySelector('.society-page-desc');
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          toggleActions: 'play none none none',
+        }
+      });
+
+      tl.from(title, {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+      })
+        .from(desc, {
+          y: 15,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+        }, "-=0.5"); // Başlık bitmeden başlasın
     });
 
     // 2. Network Grid Animasyonu
@@ -41,7 +74,7 @@ const Society = () => {
       },
       y: 60,
       opacity: 0,
-      stagger: 0.15, // Kartlar sırayla gelsin
+      stagger: 0.15,
       duration: 1,
       ease: 'power3.out',
     });
@@ -69,7 +102,6 @@ const Society = () => {
   const titleText = "THE SOCIETY";
   const words = titleText.split(" ");
 
-
   return (
     <div className="society-page" ref={containerRef}>
 
@@ -84,10 +116,8 @@ const Society = () => {
             <div className="emblem-ring"></div>
           </div>
           <h1 className="society-main-title">
-            {/* Kelimeleri döndür */}
             {words.map((word, wordIndex) => (
               <span key={wordIndex} className="title-word">
-                {/* Her kelimenin harflerini döndür */}
                 {word.split('').map((char, charIndex) => (
                   <span key={charIndex} className="society-title-char" >
                     {char}
@@ -102,20 +132,18 @@ const Society = () => {
         </div>
       </section>
 
-      {/* THE NETWORK: EXPANDED LIST */}
+      {/* THE NETWORK */}
       <section className="network-section">
         <div className="network-container">
 
           <div className="network-header">
-            <h2 className="network-title">THE <span className="highlight">NETWORK</span></h2>
-            <p className="network-desc">
+            <h2 className="network-title society-page-title">THE <span className="highlight">NETWORK</span></h2>
+            <p className="network-desc society-page-desc">
               A concierge is never helpless. With just one phone call, they can connect with other members of the community across Europe. The chain never breaks, and service never falters.
             </p>
           </div>
 
           <div className="network-grid">
-
-            {/* 1. HOTEL IVANHOE (Brown - M. Ivan) */}
             <div className="hotel-card card-ivanhoe">
               <div className="color-strip brown-strip"></div>
               <div className="card-inner">
@@ -135,7 +163,6 @@ const Society = () => {
               </div>
             </div>
 
-            {/* 2. THE FLANAGAN (Orange - M. Georges) */}
             <div className="hotel-card card-flanagan">
               <div className="color-strip green-strip"></div>
               <div className="card-inner">
@@ -155,7 +182,6 @@ const Society = () => {
               </div>
             </div>
 
-            {/* 3. RITZ IMPERIAL (Green - M. Dino) */}
             <div className="hotel-card card-ritz">
               <div className="color-strip orange-strip"></div>
               <div className="card-inner">
@@ -175,7 +201,6 @@ const Society = () => {
               </div>
             </div>
 
-            {/* 4. PALACE HOTEL (Blue - M. Robin) */}
             <div className="hotel-card card-palace">
               <div className="color-strip blue-strip"></div>
               <div className="card-inner">
@@ -195,7 +220,6 @@ const Society = () => {
               </div>
             </div>
 
-            {/* 5. EXCELSIOR (Silver/Grey - M. Martin) */}
             <div className="hotel-card card-excelsior">
               <div className="color-strip silver-strip"></div>
               <div className="card-inner">
@@ -215,7 +239,6 @@ const Society = () => {
               </div>
             </div>
 
-            {/* 6. GLOBAL NETWORK (Summary Card) */}
             <div className="hotel-card card-global">
               <div className="color-strip gold-strip"></div>
               <div className="card-inner">
@@ -234,16 +257,13 @@ const Society = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-
-      {/* 3. PHILOSOPHY SECTION (Perfume) */}
+      {/* PHILOSOPHY SECTION */}
       <section className="philosophy-section">
         <div className="philosophy-container">
-
           <div className="philosophy-visual-wrapper">
             <div className="panache-bottle-container" >
               <div className="bottle-cap"></div>
@@ -255,15 +275,14 @@ const Society = () => {
                 </div>
                 <div className="bottle-liquid"></div>
               </div>
-
             </div>
           </div>
 
           <div className="philosophy-text">
-            <h3 className="philosophy-text-title">
+            <h3 className="philosophy-text-title society-page-title">
               THE <span className="highlight">SCENT</span>
             </h3>
-            <p className="philosophy-text-description">
+            <p className="philosophy-text-description society-page-desc">
               Each member always has a bottle on hand. You never know when you might need it, especially if you're in a tight spot. It's a lifesaver. </p>
             <div className="quote-block">
               <Quote size={20} className="quote-icon" />
@@ -273,7 +292,7 @@ const Society = () => {
         </div>
       </section>
 
-      {/* FOOTER CALL TO ACTION */}
+      {/* FOOTER */}
       <div className="society-footer">
         <div className="footer-content">
           <Star size={16} fill="#d4af37" color="#d4af37" />
