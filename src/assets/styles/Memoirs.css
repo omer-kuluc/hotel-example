@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Courier+Prime:wght@400;700&display=swap');
 
-/* GENEL */
 .memoirs-page {
   background-color: #2d1b33;
-  /* Otel Moru - Ana Arka Plan */
   overflow-x: hidden;
   padding-top: 80px;
-  /* Header boşluğu */
   font-family: 'Afacad', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-/* =========================================
-   1. HERO SECTION
-   ========================================= */
+/* 1. HERO SECTION */
 .memoirs-hero {
   padding: 40px 16px;
   background-color: #3d1e3d;
@@ -40,7 +35,6 @@
   outline: 4px solid #3d1e3d;
   outline-offset: -12px;
   background: rgba(45, 27, 51, 0.8);
-
   position: relative;
 }
 
@@ -103,9 +97,7 @@
   max-width: 400px;
 }
 
-/* =========================================
-   2. MEMOIRS BOOK SECTION
-   ========================================= */
+/* 2. MEMOIRS BOOK SECTION */
 .memoirs-book-section {
   padding: 96px 0;
   background-color: #2d1b33;
@@ -129,7 +121,6 @@
   justify-content: center;
 }
 
-/* Kitap: Artık 3D dönme yok, sadece statik görünüm */
 .book-cover {
   position: relative;
   width: 256px;
@@ -138,7 +129,6 @@
   padding: 16px;
   background-color: #fbc4d3;
   transform: rotate(-3deg);
-  /* Başlangıç hafif eğiklik */
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4);
 }
 
@@ -332,7 +322,7 @@
 }
 
 /* =========================================
-   4. ART SECTION (Güncellendi)
+   4. ART SECTION
    ========================================= */
 .art-section {
   padding: 96px 0;
@@ -379,7 +369,6 @@
   overflow: hidden;
 }
 
-/* Aile Portresi */
 .family-portrait {
   width: 100%;
   height: 100%;
@@ -394,7 +383,6 @@
   justify-content: center;
 }
 
-/* KONUMLAR */
 .item-gustave {
   bottom: 30px;
   left: 30px;
@@ -413,7 +401,6 @@
   right: 30px;
 }
 
-/* Gustave Tie */
 .gustave-tie {
   position: relative;
   display: flex;
@@ -449,7 +436,6 @@
   clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 80%);
 }
 
-/* Zero Hat - Pillbox Hat */
 .zero-hat {
   width: 70px;
   height: 40px;
@@ -484,18 +470,12 @@
   text-align: center;
 }
 
-/* Agatha Necklace (GÜNCELLENDİ: Görsele uygun tasarım) */
-/* =========================================
-   AGATHA NECKLACE (MOBILE FIRST)
-   ========================================= */
+/* AGATHA NECKLACE*/
 
-/* 1. Konteynır (Mobil: Küçük) */
 .agatha-necklace {
   position: relative;
   width: 60px;
-  /* 100px'den düşürüldü */
   height: 60px;
-  /* 100px'den düşürüldü */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -503,63 +483,47 @@
   left: 25px;
 }
 
-/* 2. Mavi Kurdeleler (Mobil: İnce ve Kısa) */
+/* 2. Mavi Kurdeleler  */
 .ribbon-left,
 .ribbon-right {
   position: absolute;
   width: 5px;
-  /* 8px'den düşürüldü */
   height: 30px;
-  /* 50px'den düşürüldü */
   background-color: #6a8db3;
-  /* Soluk mavi */
   top: -5px;
-  /* Konum ayarlandı */
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .ribbon-left {
   transform: rotate(15deg);
   left: 25px;
-  /* Mobilde merkeze hizalama */
 }
 
 .ribbon-right {
   transform: rotate(-15deg);
   right: 25px;
-  /* Mobilde merkeze hizalama */
 }
 
-/* 3. Pembe Kolye Ucu (Mobil: Küçük Yuvarlak) */
 .pendant-body {
   position: relative;
   width: 36px;
-  /* 60px'den düşürüldü */
   height: 36px;
-  /* 60px'den düşürüldü */
   background-color: #c7a1a0;
-  /* Pembemsi/kahve */
   border-radius: 50%;
   border: 1.5px solid #5c4033;
-  /* Çerçeve inceltildi */
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   z-index: 2;
   top: 8px;
-  /* Dikey konum ayarlandı */
 }
 
-/* 4. 'A' Harfi (Mobil: Küçük Font) */
 .pendant-letter {
   font-size: 1rem;
-  /* 2rem'den düşürüldü */
   color: #9e6a67;
   font-weight: bold;
 }
-
-
 
 .painting-label {
   position: absolute;
@@ -716,7 +680,6 @@
   font-weight: bold;
 }
 
-/* Ortak Metin Stilleri & ORTALAMA */
 .art-text,
 .memoirs-text,
 .job-text,
@@ -755,9 +718,7 @@
   gap: 8px;
 }
 
-/* =========================================
-   RESPONSIVE DESIGN (Tablet & Desktop)
-   ========================================= */
+
 @media (min-width: 768px) {
 
   .memoirs-page-title {
@@ -774,15 +735,12 @@
   .memoir-page-desc {
     font-size: 1.25rem;
     margin-inline: auto;
-
   }
 
   .memoirs-hero-desc {
     font-size: 1.2rem;
   }
 
-
-  /* ART SECTION */
   .art-container {
     flex-direction: row;
   }
@@ -822,8 +780,6 @@
   .memoirs-text {
     width: 50%;
   }
-
-
 
   /* JOB APPLICATION SECTION */
   .job-container {
