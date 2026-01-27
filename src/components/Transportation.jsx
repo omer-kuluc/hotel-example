@@ -9,7 +9,6 @@ const Transportation = () => {
   const containerRef = useRef(null);
 
   useLayoutEffect(() => {
-    // gsap.context tüm animasyonları bir arada tutar ve temizlemeyi (cleanup) kolaylaştırır
     let ctx = gsap.context(() => {
 
       // 1. Sayfa Giriş Animasyonu
@@ -26,6 +25,36 @@ const Transportation = () => {
         duration: 1,
         ease: 'back.out(1.7)',
       });
+
+      // --- YENİ: Araç Başlık ve Açıklama Animasyonları ---
+      const vehicleTexts = gsap.utils.toArray('.text-content');
+
+      vehicleTexts.forEach((section) => {
+        const title = section.querySelector('.vehicle-title');
+        const desc = section.querySelector('.vehicle-desc');
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          }
+        });
+
+        tl.from(title, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+        })
+          .from(desc, {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+          }, "-=0.5");
+      });
+      // --------------------------------------------------
 
       // 3. Tren Animasyonu (Sürekli dönen tekerlekler)
       gsap.to('.train-wheel', {
@@ -95,9 +124,9 @@ const Transportation = () => {
         }
       );
 
-    }, containerRef); // Scope olarak containerRef kullanıyoruz
+    }, containerRef);
 
-    return () => ctx.revert(); // Ekran değiştiğinde veya bileşen silindiğinde her şeyi temizle
+    return () => ctx.revert();
   }, []);
 
   const titleText = "TRANSIT OPTIONS";
@@ -128,13 +157,14 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 1. THE ZUBROWKA EXPRESS (Green Train) */}
+      {/* 1. THE ZUBROWKA EXPRESS */}
       <section className="train-section">
         <div className="train-section-container">
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">EXPRESS</span></h2>
             <p className="vehicle-desc">
-              The railway between Vunzt and Bemelstad. Fogged windows and border controls. It is important that your documents are with you so that you can feel more comfortable.
+              The railway between Vunzt and Bemelstad. Fogged windows and border controls.
+              It is important that your documents are with you so that you can feel more comfortable.
             </p>
           </div>
 
@@ -182,7 +212,7 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 2. THE CABLE CAR (Teleferik) */}
+      {/* 2. THE CABLE CAR */}
       <section className="cable-section">
         <div className="cable-section-container">
           <div className="text-content center-text">
@@ -198,7 +228,6 @@ const Transportation = () => {
               <div className="wire main-wire"></div>
               <div className="wire cross-wire"></div>
             </div>
-
             <div className="cable-cabin">
               <div className="hanger"></div>
               <div className="cabin-body">
@@ -210,13 +239,15 @@ const Transportation = () => {
         </div>
       </section>
 
-      {/* 3. THE FUNICULAR (Füniküler) */}
+      {/* 3. THE FUNICULAR */}
       <section className="funicular-section">
         <div className="funicularsection-container reverse-layout">
           <div className="text-content">
             <h2 className="vehicle-title">THE <span className="highlight">FUNICULAR</span></h2>
             <p className="vehicle-desc">
-              A steep rail system climbing to the location of the hotel. An impressive journey experience accompanied by the hum of the wind and the creaking of the tracks. </p>
+              A steep rail system climbing to the location of the hotel. An impressive journey
+              experience accompanied by the hum of the wind and the creaking of the tracks.
+            </p>
             <div className="badge-row">
               <Mountain size={16} color="#d4af37" /> <span>Steep Incline</span>
             </div>
