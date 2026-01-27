@@ -10,7 +10,6 @@
 }
 
 /* --- INTRO SECTION --- */
-/* --- INTRO SECTION --- */
 .intro-section {
   padding: 175px 0;
   background-color: #371044;
@@ -30,16 +29,13 @@
   gap: 50px;
 }
 
-/* İkon Sahnesi Dizilimi */
 .intro-icon-stage {
   position: relative;
   width: 100%;
   height: 220px;
-  /* Asansör hareketi için alan genişletildi */
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* En aşağıdan başlasın */
   padding-bottom: 20px;
 }
 
@@ -86,7 +82,6 @@
   width: 16px;
 }
 
-/* Metin Stilleri */
 .intro-content {
   text-align: center;
 }
@@ -132,7 +127,6 @@
 .concierge-section {
   padding: 96px 0;
   background-color: #2d1b33;
-  /* Budapest Dark Purple */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
   overflow: hidden;
 }
@@ -304,8 +298,6 @@
 
 /* concierge-mobile-end */
 
-/* ========== MOBİL KISIM ========== */
-
 /* patisserie-mobile-start */
 .patisserie-section {
   padding: 96px 0;
@@ -426,7 +418,6 @@
 
 /* patisserie-mobile-end */
 
-/* ========== MOBİL KISIM ========== */
 
 /* society-mobile-start */
 .society-section {
@@ -461,7 +452,6 @@
   justify-content: center;
 }
 
-/* Dairesel Animasyonlar */
 .orbit-outer {
   position: absolute;
   inset: 0;
@@ -531,7 +521,6 @@
   text-transform: uppercase;
 }
 
-/* Dekoratifler */
 .floating-phone {
   position: absolute;
   top: -16px;
@@ -608,18 +597,12 @@
 
 /* society-mobile-end */
 
-/* ========== MOBİL KISIM ========== */
-
 /* transport-mobile-start */
 .transport-section {
   padding: 96px 0;
-  /* Önceki mavimsi renk yerine Patisserie ile aynı PEMBE tonu */
   background: rgba(251, 196, 211, 0.1);
-
-  /* Üst ve Alt border eklenerek diğer "light" section'larla (Patisserie) eşitlendi */
   border-top: 4px double rgba(212, 175, 55, 0.2);
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
-
   overflow: hidden;
 }
 
@@ -642,9 +625,7 @@
 .golden-ticket {
   position: relative;
   width: 288px;
-  /* 72 units */
   height: 176px;
-  /* 44 units */
   background-color: #d4af37;
   border: 4px solid #3d1e3d;
   padding: 4px;
@@ -712,7 +693,6 @@
   margin-bottom: 24px;
   letter-spacing: 3.2px;
   color: #3d1e3d;
-  /* Daha okunaklı olması için dark purple */
 }
 
 .transport-button {
@@ -737,7 +717,6 @@
 .memoirs-section {
   padding: 96px 0;
   background-color: #2d1b33;
-  /* Budapest Dark Purple */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
   overflow: hidden;
 }
@@ -762,9 +741,7 @@
   position: relative;
   width: 256px;
   height: 340px;
-  /* Görseldeki Pudra Pembesi */
   background-color: #fbc4d3;
-  /* Kenar kontürü: Night Shadz (Koyu Kırmızı/Vişne) */
   border: 4px solid #b33f53;
   padding: 12px;
   transform: rotate(3deg);
@@ -781,7 +758,6 @@
 .book-inner {
   width: 100%;
   height: 100%;
-  /* İçteki ince çerçeve kontürü */
   border: 2px solid #b33f53;
   display: flex;
   flex-direction: column;
@@ -791,7 +767,6 @@
   text-align: center;
 }
 
-/* Otel illüstrasyonu yerine geçen ikon */
 .book-illustration-icon {
   color: #b33f53;
   opacity: 0.8;
@@ -813,7 +788,6 @@
 }
 
 .book-title {
-  /* Ana yazı rengi: Night Shadz */
   color: #b33f53 !important;
   font-family: 'Afacad', sans-serif;
   font-size: 26px;
@@ -848,7 +822,6 @@
   position: absolute;
   bottom: 20px;
   right: -15px;
-  /* Rozet: Filmdeki mühür/etiket havası */
   background-color: #b33f53;
   color: #fbc4d3;
   padding: 4px 12px;
@@ -883,7 +856,6 @@
 
 /* memoirs-mobile-end */
 
-/* ========== TABLET KISIM ========== */
 @media (width >=768px) {
 
   .intro-title {
@@ -902,7 +874,6 @@
 
   /* concierge-tablet-start */
   .concierge-container {
-    /* flex-direction: row; */
     flex-direction: row-reverse;
     gap: 45px;
     padding: 12px;
@@ -943,8 +914,6 @@
 
   /* society-tablet-start */
   .society-container {
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
     gap: 45px;
     flex-direction: row-reverse;
   }
@@ -966,8 +935,6 @@
 
   .society-actions {
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: flex-end; */
   }
 
   /* society-tablet-end */
@@ -977,7 +944,6 @@
     flex-direction: row;
     gap: 45px;
     padding: 12px;
-    /* Görsel solda, yazı sağda */
   }
 
   .golden-ticket {
@@ -1005,7 +971,6 @@
     flex-direction: row-reverse;
     gap: 45px;
     padding: 12px;
-    /* Görsel sağda, yazı solda */
   }
 
   .book-cover {
@@ -1035,8 +1000,6 @@
   /* memoirs-tablet-end */
 }
 
-
-/* ========== DESKTOP KISIM ========== */
 @media (width >=1280px) {
 
   .intro-float-icon {

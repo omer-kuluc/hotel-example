@@ -1,20 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* GENEL SAYFA YAPISI */
 .patisserie-page {
   background-color: #2d1b33;
-  /* Otelin koyu moru arka plan */
   overflow-x: hidden;
   padding-top: 80px;
-  /* Header payı */
 
 }
 
-/* HERO SECTION - MENDL'S */
 .mendl-hero {
   height: 80vh;
   background-color: #fbc4d3;
-  /* Mendl's Pembesi */
   border-bottom: 4px double #3d1e3d;
   padding: 40px 0px;
   display: flex;
@@ -130,7 +125,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* CSS ART: COURTESAN PASTRIES */
+/* COURTESAN PASTRIES */
 .courtesan-art {
   display: flex;
   flex-direction: column;
@@ -143,7 +138,6 @@
   width: 12px;
   height: 12px;
   background-color: #5c3a21;
-  /* Çikolata */
   border-radius: 50%;
   margin-bottom: -2px;
   z-index: 10;
@@ -153,7 +147,6 @@
   width: 20px;
   height: 10px;
   background-color: #fff;
-  /* Krema */
   border-radius: 10px;
   margin-bottom: -2px;
   z-index: 9;
@@ -163,7 +156,6 @@
   width: 50px;
   height: 45px;
   background-color: #d8bfd8;
-  /* Lavanta / Mor */
   border-radius: 50% 50% 40% 40%;
   border-top: 3px solid rgba(255, 255, 255, 0.4);
   z-index: 8;
@@ -173,7 +165,6 @@
   width: 30px;
   height: 12px;
   background-color: #aec6cf;
-  /* Mavi Krema */
   border-radius: 15px;
   margin-top: -5px;
   z-index: 7;
@@ -183,7 +174,6 @@
   width: 70px;
   height: 60px;
   background-color: #98fb98;
-  /* Fıstık Yeşili */
   border-radius: 50% 50% 45% 45%;
   border-top: 3px solid rgba(255, 255, 255, 0.4);
   margin-top: -5px;
@@ -194,7 +184,6 @@
   width: 40px;
   height: 14px;
   background-color: #fbc4d3;
-  /* Pembe Krema */
   border-radius: 20px;
   margin-top: -5px;
   z-index: 5;
@@ -204,7 +193,6 @@
   width: 90px;
   height: 80px;
   background-color: #fbc4d3;
-  /* Pembe Taban */
   border-radius: 50% 50% 40% 40%;
   border-top: 3px solid rgba(255, 255, 255, 0.4);
   margin-top: -5px;
@@ -220,7 +208,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* PRODUCT TEXT */
 .product-details,
 .delivery-text-area {
   text-align: center;
@@ -270,10 +257,8 @@
 }
 
 /* DELIVERY SECTION */
-/* DELIVERY SECTION */
 .delivery-section {
   background-color: #3e2646;
-  /* Açık Mavi Arka Plan */
   padding: 5rem 1.5rem;
   display: flex;
   justify-content: center;
@@ -282,9 +267,6 @@
   text-align: center;
 }
 
-/* DELIVERY CONTAINER */
-
-/* DELIVERY TEXT AREA */
 .delivery-text-area {
   color: #d89fac;
   letter-spacing: 0.05em;
@@ -295,7 +277,6 @@
   align-items: center;
 }
 
-/* SECTION TITLE */
 .delivery-title {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -311,13 +292,11 @@
   margin-bottom: 1rem;
 }
 
-/* SECTION TEXT */
 .delivery-desc {
   font-size: 1.125rem;
   margin-bottom: 2rem;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   line-height: 1.8;
   font-weight: 700;
   color: #df9dab;
@@ -335,10 +314,6 @@
   font-size: 1rem;
 }
 
-
-
-
-/* CSS ART: MENDL'S BOX */
 .box-visual-area {
   display: flex;
   justify-content: center;
@@ -378,12 +353,10 @@
   position: relative;
 }
 
-/* Ribbon & Decoration */
 .ribbon-vertical {
   width: 30px;
   height: 100%;
   background-color: #8196cf;
-  /* Koyu mavi kurdele */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -455,7 +428,6 @@
   gap: 8px;
 }
 
-/* RESPONSIVE */
 @media (width>=768px) {
   .mendl-title {
     font-size: 6rem;
@@ -466,14 +438,11 @@
     flex-direction: row;
     text-align: center;
     gap: 5rem;
-
   }
 
   .product-details,
   .delivery-text-area {
     text-align: center;
-
-    /* max-width: 500px; */
   }
 
   .product-title,
@@ -511,7 +480,6 @@
   .showcase-container,
   .delivery-container {
     gap: 10rem;
-
   }
 
   .product-title,
@@ -523,7 +491,6 @@
   .delivery-desc {
     font-size: 1.3rem;
   }
-
 
   .box-lid {
     width: 220px;
