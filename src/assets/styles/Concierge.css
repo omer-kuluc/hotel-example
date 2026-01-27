@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* GENEL AYARLAR */
 .concierge-page {
   background-color: #2d1b33;
-  /* Otel Moru - Ana Arka Plan */
   overflow-x: hidden;
   padding-top: 80px;
-  /* Header boşluğu */
 }
 
-/* 1. HERO SECTION */
 .gustave-hero {
   padding: 40px 16px;
-  /* Padding azaltıldı */
   background-color: #3d1e3d;
-  /* Daha koyu mor */
   border-bottom: 4px double rgba(212, 175, 55, 0.4);
   display: flex;
   justify-content: center;
@@ -29,7 +23,6 @@
   align-items: center;
   gap: 16px;
   padding: 0.35rem;
-  /* Padding azaltıldı */
   border: 4px solid #3d1e3d;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 20px 20px 0px rgba(61, 30, 61, 0.2);
@@ -43,13 +36,10 @@
   margin-bottom: 8px;
 }
 
-/* Hero İkonlarını biraz küçültelim */
 .crossed-keys-icon {
   position: relative;
   width: 48px;
-  /* 64'ten 48'e */
   height: 48px;
-  /* 64'ten 48'e */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,19 +58,15 @@
 }
 
 .badge-text {
-  /* font-family: 'Bebas Neue', sans-serif; */
   letter-spacing: 0.3em;
   font-size: 0.8rem;
-  /* Font küçültüldü */
   color: #fbc4d3;
-  /* Pembe */
   border: 1px solid #fbc4d3;
   padding: 4px 12px;
   border-radius: 20px;
 }
 
 .gustave-title {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   color: #d4af37;
   letter-spacing: 0.1em;
@@ -89,7 +75,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  /* Kelimeler arası boşluk */
   width: 100%;
 }
 
@@ -99,7 +84,6 @@
 
 .hero-divider {
   width: 60px;
-  /* 80'den 60'a */
   height: 2px;
   background-color: #fbc4d3;
   margin: 8px 0;
@@ -107,7 +91,6 @@
 
 .gustave-subtitle,
 .rudeness-quote {
-  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 1rem;
 }
@@ -123,10 +106,8 @@
   margin-top: 12px;
 }
 
-/* 2. PROFILE SECTION (Gustave Suit) */
 .profile-section {
   padding: 64px 0;
-  /* Padding azaltıldı */
   background-color: #2d1b33;
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
@@ -148,14 +129,10 @@
   justify-content: center;
 }
 
-/* CSS Art: Gustave's Suit - MOBİLDE KÜÇÜLTME */
 .gustave-suit-visual {
   width: 180px;
-  /* 220px'den 180px'e */
   height: 220px;
-  /* 260px'den 220px'e */
   background-color: #3d1e3d;
-  /* Suit Color */
   border: 2px solid #2d1b33;
   border-radius: 30px 30px 0 0;
   position: relative;
@@ -163,7 +140,6 @@
   justify-content: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  /* Mobilde biraz scale down yapabiliriz */
   transform: scale(0.9);
 }
 
@@ -171,10 +147,8 @@
   position: absolute;
   top: 0;
   width: 100px;
-  /* Orantılı küçültüldü */
   height: 120px;
   background-color: #fff;
-  /* Shirt */
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   z-index: 1;
 }
@@ -183,7 +157,6 @@
   width: 32px;
   height: 16px;
   background-color: #2d1b33;
-  /* Dark Tie */
   position: absolute;
   top: 20px;
   left: 50%;
@@ -207,7 +180,6 @@
   width: 50px;
   height: 150px;
   background-color: #4b284b;
-  /* Lighter Purple for Lapel */
   border: 1px solid #2d1b33;
 }
 
@@ -245,7 +217,6 @@
   position: absolute;
   top: 50px;
   left: 20px;
-  /* On the Lapel */
   z-index: 5;
   display: flex;
   transform: rotate(-15deg);
@@ -268,7 +239,6 @@
   width: 25px;
   height: 8px;
   background-color: #fff;
-  /* White Handkerchief */
   z-index: 4;
   transform: rotate(5deg);
   border-top: 2px solid #4b284b;
@@ -287,7 +257,6 @@
 }
 
 .profile-title {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
@@ -317,7 +286,6 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 0.9rem;
 }
@@ -327,11 +295,9 @@
 
 }
 
-/* 3. LEGACY SECTION (Lobby Boy) */
 .legacy-section {
   padding: 64px 0;
   background-color: rgba(251, 196, 211, 0.05);
-  /* Budapest Pink %5 */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
@@ -351,10 +317,8 @@
   justify-content: center;
 }
 
-/* CSS Art: Lobby Hat - MOBİLDE KÜÇÜLTME */
 .lobby-hat-visual {
   width: 160px;
-  /* 200'den 160'a */
   height: 160px;
   position: relative;
   display: flex;
@@ -371,12 +335,9 @@
 
 .hat-top {
   width: 130px;
-  /* Orantılı küçüldü */
   height: 65px;
   background-color: #3d1e3d;
-  /* Koyu Mor */
   border-radius: 50% 50% 0 0 / 30% 30% 0 0;
-  /* Pillbox şekli */
   position: relative;
   z-index: 2;
   border: 2px solid #2d1b33;
@@ -399,7 +360,6 @@
 }
 
 .hat-text {
-  /* font-family: 'Bebas Neue', sans-serif; */
   color: #d4af37;
   font-size: 1.2rem;
   letter-spacing: 0.1em;
@@ -417,7 +377,6 @@
 }
 
 .legacy-title {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 2rem;
   margin-bottom: 24px;
   letter-spacing: 0.1em;
@@ -429,7 +388,6 @@
 .poetry-section {
   padding: 64px 0;
   background-color: #2d1b33;
-  /* Dark Purple */
   border-bottom: 4px double rgba(212, 175, 55, 0.2);
 }
 
@@ -449,13 +407,11 @@
   justify-content: center;
 }
 
-/* CSS Art: Poetry Podium & Candle - MOBİLDE KÜÇÜLTME */
+/* CSS Art: Poetry Podium & Candle  */
 .poetry-visual {
   position: relative;
   width: 200px;
-  /* 240'tan 200'e */
   height: 240px;
-  /* 280'den 240'a */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -486,7 +442,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Open Book */
 .open-book {
   position: absolute;
   top: -18px;
@@ -499,7 +454,6 @@
   width: 50%;
   height: 100%;
   background-color: #fbc4d3;
-  /* Pink Paper */
   border: 1px solid #3d1e3d;
 }
 
@@ -551,7 +505,6 @@
   width: 8px;
   height: 12px;
   background-color: #d4af37;
-  /* Gold flame */
   border-radius: 50% 50% 20% 20%;
   box-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
   animation: flicker 0.1s infinite alternate;
@@ -580,7 +533,6 @@
 }
 
 .recital-time {
-  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 0.9rem;
   color: #fbc4d3;
@@ -610,14 +562,11 @@
   padding: 32px 0;
   text-align: center;
   background-color: #25162a;
-  /* Footer Darker */
   color: rgba(212, 175, 55, 0.6);
-  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
 }
 
 .footer-society-text {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 1em;
   color: #d4af37;
   letter-spacing: 0.2em;
@@ -626,9 +575,6 @@
 }
 
 
-/* ========== TABLET & DESKTOP DÜZENLEMELERİ (Ölçekleri geri yükle) ========== */
-
-/* Tablet (Home.css ile aynı breakpoint) */
 @media (width >=768px) {
 
   .gustave-hero-content {
@@ -663,7 +609,7 @@
     font-size: 1.15rem;
   }
 
-  /* Profile (Gustave Suit) - Boyutları artır */
+  /* Profile (Gustave Suit) */
   .profile-container {
     flex-direction: row;
   }
@@ -676,10 +622,9 @@
     width: 220px;
     height: 260px;
     transform: scale(1);
-    /* Orjinal boyut */
   }
 
-  /* Takım Elbise Detayları (Gerekirse) */
+  /* Suit Details */
   .suit-collar {
     width: 120px;
     height: 140px;
@@ -722,19 +667,12 @@
     text-align: left;
   }
 
-  /* 
-  .profile-text .section-description {
-    margin-left: 0;
-  } */
-
   .quote-block {
     justify-content: flex-start;
   }
 
-  /* Legacy (Lobby Boy) - Boyutları artır */
   .legacy-container {
     flex-direction: row-reverse;
-    /* Görsel sağda olsun */
   }
 
   .legacy-visual-wrapper {
@@ -745,7 +683,6 @@
     width: 200px;
     height: 200px;
     transform: rotate(-5deg) scale(1);
-    /* Orjinal boyut */
   }
 
   .hat-top {
@@ -767,12 +704,8 @@
     text-align: right;
   }
 
-  /* 
-  .profile-text .section-description {
-    margin-right: 0;
-  } */
 
-  /* Poetry (The Orator) - Boyutları artır */
+  /* Poetry (The Orator)  */
   .poetry-container {
     flex-direction: row;
   }
@@ -785,7 +718,6 @@
     width: 240px;
     height: 280px;
     transform: scale(1);
-    /* Orjinal boyut */
   }
 
   .podium-stand {
@@ -833,7 +765,7 @@
 
 }
 
-/* Desktop (Home.css ile aynı breakpoint) */
+/* Desktop*/
 @media (width >=1280px) {
   .gustave-title {
     font-size: 7rem;
