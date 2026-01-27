@@ -10,13 +10,11 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // --- GENEL SAYFA GİRİŞİ ---
     gsap.fromTo(".home-container",
       { opacity: 0 },
       { opacity: 1, duration: 1.2, ease: "power2.out" }
     );
 
-    // İkonların süzülme animasyonu
     gsap.to(".intro-float-icon", {
       y: 15,
       duration: 3,
@@ -25,30 +23,23 @@ function Home() {
       yoyo: true,
     });
 
-    // --- ASANSÖR SİMÜLASYONU (FLOOR LOGIC) ---
     const floors = gsap.utils.toArray('.floor-number');
     const elevatorTl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 0.5 });
 
-    const elevatorDuration = 10; // Hareket süresi
-    const elevatorStartOffset = 0.5; // ASANSÖRÜN 0. KATTA BEKLEME SÜRESİ (Fiziksel duruş)
-    const holdAtTop = 1.2; // 6. katta bekleme
+    const elevatorDuration = 10;
+    const elevatorStartOffset = 0.5;
+    const holdAtTop = 1.2;
     const step = elevatorDuration / (floors.length - 1);
 
-    // 1. Asansörün (Otel İkonu) Hareketi
-    // elevatorStartOffset (1.5s) kadar bekler, sonra harekete geçer.
     elevatorTl.to(".intro-main-hotel", {
       y: -200,
       duration: elevatorDuration,
       ease: "none"
     }, elevatorStartOffset);
 
-    // 2. Kat Numaralarının Senkronizasyonu
     floors.forEach((floor, i) => {
-      // 0. kat timeline başlar başlamaz (0. saniyede) parlar.
-      // Diğer katlar, asansör hareket etmeye başladıktan (1.5s + seyahat süresi) sonra yanar.
       const onTime = i === 0 ? 0 : elevatorStartOffset + (i * step);
 
-      // KATI YAK
       elevatorTl.to(floor, {
         color: "#ffffff",
         opacity: 1.5,
@@ -56,10 +47,7 @@ function Home() {
         duration: 0.1
       }, onTime);
 
-      // KATI SÖNDÜR
       if (i < floors.length - 1) {
-        // 0. kat, asansörün TAM HAREKET ETTİĞİ AN (1.5s) söner.
-        // Diğerleri bir sonraki kat yanacağı an söner.
         const offTime = i === 0 ? elevatorStartOffset : elevatorStartOffset + ((i + 1) * step);
 
         elevatorTl.to(floor, {
@@ -71,10 +59,8 @@ function Home() {
       }
     });
 
-    // 3. TEPE NOKTASINDA BEKLEME
     elevatorTl.to({}, { duration: holdAtTop });
 
-    // --- MİNİMAL METİN ANİMASYONLARI ---
     gsap.utils.toArray(".home-page-title").forEach(title => {
       gsap.from(title, {
         scrollTrigger: { trigger: title, start: "top 80%", toggleActions: "play none none none" },
@@ -89,7 +75,6 @@ function Home() {
       });
     });
 
-    // --- BUTON ANİMASYONLARI ---
     const buttons = gsap.utils.toArray("button[class$='-button']");
     buttons.forEach(btn => {
       gsap.from(btn, {
@@ -162,7 +147,6 @@ function Home() {
         </div>
       </section>
 
-      {/* DİĞER SECTIONLAR (Aynı Şekilde Devam Ediyor) */}
       <section className="concierge-section">
         <div className="concierge-container">
           <div className="perfume-wrapper">
