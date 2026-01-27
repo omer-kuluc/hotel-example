@@ -13,12 +13,10 @@ import NotFoundPage from './components/NotFoundPage.jsx'
 import Loading from './components/Loading.jsx'
 import Footer from './components/Footer.jsx'
 
-// Sayfa geçişlerinde içeriği saran ve animasyonla gösteren bileşen
 const PageWrapper = ({ children }) => {
   const location = useLocation();
 
   useLayoutEffect(() => {
-    // Sayfa değiştiğinde en tepeye at
     window.scrollTo(0, 0);
   }, [location.pathname]);
 

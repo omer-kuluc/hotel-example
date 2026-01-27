@@ -10,22 +10,17 @@
   transition: all 0.7s ease-in-out;
   padding-block: 10px;
   background-color: #5e2d5e;
-
 }
 
 .header.scrolled {
   background-color: #3d1e3d;
-  /* Koyu mor arka plan */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
   width: 100%;
-  /* Kapsayıcının tamamını kaplamaya çalışsın */
   max-width: 1200px;
-  /* AMA 1200px'i geçemesin (Sınırlama burada) */
   margin: 0 auto;
-  /* Kenarlardan kalan boşluğu eşitleyerek ortalasın */
   padding: 0 24px;
   display: flex;
   flex-direction: column;
@@ -76,7 +71,6 @@
 }
 
 .header-subtitle {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 1.2rem;
   font-style: italic;
   color: #fbc4d3;
@@ -91,9 +85,7 @@
   margin-top: 8px;
 }
 
-/* --- DÜZELTME BURADA --- */
 .nav-item {
-  /* font-family: 'Bebas Neue', sans-serif; */
   font-size: 16px;
   letter-spacing: 2.5px;
   color: #fbc4d3;
@@ -101,8 +93,6 @@
   text-decoration: none;
   padding: 4px;
   position: relative;
-
-  /* Bu iki satır sorunu çözer: */
   display: inline-block;
   width: fit-content;
 }
@@ -110,7 +100,6 @@
 .nav-item:hover {
   color: #d4af37;
   cursor: pointer;
-  /* CREDITS (p etiketi) için cursor eklendi */
 }
 
 .nav-item .underline {
@@ -127,7 +116,6 @@
   width: 100%;
 }
 
-/* Menü Butonu */
 .menu-button {
   display: block;
   position: absolute;
@@ -141,7 +129,6 @@
   z-index: 2;
 }
 
-/* Mobil Menü Overlay */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
@@ -174,7 +161,6 @@
 }
 
 .mobile-nav-item {
-  /* font-family: 'Playfair Display', serif; */
   font-style: italic;
   font-size: 24px;
   color: #fbc4d3;
@@ -194,14 +180,13 @@
 }
 
 .footer-text {
-  /* font-family: 'Bebas Neue', sans-serif; */
   color: #d4af37;
   text-transform: uppercase;
   letter-spacing: 1.6px;
 }
 
 /* --------------------------------------------------
-   CREDITS MODAL STYLES (GÜNCELLENDİ: Pembe/Mor/Altın)
+   CREDITS MODAL STYLES 
 -------------------------------------------------- */
 .credits-overlay {
   position: fixed;
@@ -210,7 +195,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(61, 30, 61, 0.8);
-  /* Koyu mor saydam perde */
   backdrop-filter: blur(5px);
   z-index: 1000;
   display: flex;
@@ -220,12 +204,10 @@
 }
 
 .credits-modal {
-  /* Mendl's Kutusu Pembesi */
   background-color: #fbc4d3;
   width: 90%;
   max-width: 500px;
   padding: 40px;
-  /* Otel Moru çerçeve */
   border: 4px double #5e2d5e;
   border-radius: 4px;
   position: relative;
@@ -249,7 +231,6 @@
 .close-modal-btn:hover {
   transform: scale(1.1);
   color: #d4af37;
-  /* Hover'da altın sarısı */
 }
 
 .credits-content {
@@ -261,13 +242,11 @@
 
 .credits-star {
   color: #d4af37;
-  /* Altın yıldız */
   margin-bottom: 8px;
 }
 
 .credits-title {
   color: #5e2d5e;
-  /* Koyu mor başlık */
   font-size: 1.4rem;
   letter-spacing: 0.2em;
   margin: 0;
@@ -278,12 +257,10 @@
   width: 60px;
   height: 2px;
   background-color: #d4af37;
-  /* Altın çizgi */
 }
 
 .credits-text {
   color: #5e2d5e;
-  /* Mor metin */
   font-size: 1.1rem;
   line-height: 1.6;
   font-family: 'Afacad', sans-serif;
@@ -318,7 +295,6 @@
   }
 }
 
-/* Mobil için */
 @media (width>=768px) {
   .header-content {
     gap: 32px;
@@ -340,7 +316,6 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    /* Elemanlar birbirine yapışmasın diye boşluk */
   }
 
   .middle-title-container .nav-item {
@@ -352,22 +327,18 @@
   }
 }
 
-/* Desktop için */
 @media (width>=1280px) {
   .header-title {
     font-size: 4rem;
-    /* Desktop başlık */
   }
 
   .nav-item {
     font-size: 16px;
-    /* Desktop nav item */
   }
 
 
   .middle-title-container {
     justify-content: space-around;
-    /* Elemanlar birbirine yapışmasın diye boşluk */
   }
 
   .nav-desktop {
