@@ -121,9 +121,9 @@ export default function Memoirs() {
 
           <h1 className="memoirs-page-title">
             {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 15px' }}>
+              <span key={wordIndex} className="title-word">
                 {word.split('').map((char, charIndex) => (
-                  <span key={charIndex} className="memoirs-title-char" style={{ display: 'inline-block' }}>
+                  <span key={charIndex} className="memoirs-title-char" >
                     {char}
                   </span>
                 ))}

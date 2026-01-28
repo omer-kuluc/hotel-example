@@ -60,6 +60,12 @@
   font-weight: 700;
 }
 
+.title-word {
+  display: 'inline-block';
+  white-space: 'nowrap';
+  margin: 0px 15px;
+}
+
 .memoirs-title-char {
   display: inline-block;
 }
