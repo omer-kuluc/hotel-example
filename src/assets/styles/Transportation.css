@@ -54,6 +54,12 @@
   width: 100%;
 }
 
+.trans-title-word {
+  display: 'inline-block';
+  white-space: 'nowrap';
+  margin: 0px 10px;
+}
+
 .trans-title-char {
   display: inline-block;
 }

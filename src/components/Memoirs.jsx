@@ -121,7 +121,7 @@ export default function Memoirs() {
 
           <h1 className="memoirs-page-title">
             {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="title-word">
+              <span key={wordIndex} className="memoirs-title-word">
                 {word.split('').map((char, charIndex) => (
                   <span key={charIndex} className="memoirs-title-char" >
                     {char}

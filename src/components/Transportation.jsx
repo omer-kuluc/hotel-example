@@ -134,9 +134,9 @@ const Transportation = () => {
           </div>
           <h1 className="trans-title">
             {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="title-word" style={{ display: 'inline-block', whiteSpace: 'nowrap', margin: '0 10px' }}>
+              <span key={wordIndex} className="trans-title-word">
                 {word.split('').map((char, charIndex) => (
-                  <span key={charIndex} className="trans-title-char" style={{ display: 'inline-block' }}>
+                  <span key={charIndex} className="trans-title-char" >
                     {char}
                   </span>
                 ))}

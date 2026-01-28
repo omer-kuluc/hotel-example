@@ -109,7 +109,7 @@ const Society = () => {
           </div>
           <h1 className="society-main-title">
             {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="title-word">
+              <span key={wordIndex} className="society-title-word">
                 {word.split('').map((char, charIndex) => (
                   <span key={charIndex} className="society-title-char" >
                     {char}
