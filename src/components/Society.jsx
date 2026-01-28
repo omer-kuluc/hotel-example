@@ -184,7 +184,7 @@ const Society = () => {
                 <span className="hotel-name">Palazzo Spricessa</span>
                 <div className="card-divider"></div>
                 <div className="location-info">
-                  <MapPin size={14} className="icon-small" /> <span>Lunafresca</span>
+                  <MapPin size={14} className="icon-small" /> <span>Lunafrenica</span>
                 </div>
                 <div className="status-indicator">
                   <div className="status-dot orange-dot"></div>
