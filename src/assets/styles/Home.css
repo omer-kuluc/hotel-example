@@ -9,6 +9,10 @@
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.home-container {
+  opacity: 0
+}
+
 /* --- INTRO SECTION --- */
 .intro-section {
   padding: 175px 0;

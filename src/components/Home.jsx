@@ -87,7 +87,7 @@ function Home() {
   }, []);
 
   return (
-    <div className='home-container' style={{ opacity: 0 }}>
+    <div className='home-container' >
       <section className="intro-section">
         <div className="intro-container">
           <div className="intro-icon-stage">
