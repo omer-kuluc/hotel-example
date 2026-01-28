@@ -66,16 +66,16 @@ const Loading = ({ onComplete }) => {
       <div className="corner bottom-right"></div>
 
       <div className="loading-content" ref={comp}>
-        <h2 className="loading-text-small" style={{ opacity: 0 }}>
+        <h2 className="loading-text-small">
           WHETHER YOUR SCREEN SIZE
         </h2>
 
-        <h1 className="loading-text-large" style={{ opacity: 0 }}>
+        <h1 className="loading-text-large">
           16:9 OR NOT
         </h1>
 
         <div className="loading-subtitle-container">
-          <p className="loading-subtitle" style={{ opacity: 0 }}>
+          <p className="loading-subtitle">
             YOU CAN WATCH IT ON ANY DEVICE
           </p>
         </div>
